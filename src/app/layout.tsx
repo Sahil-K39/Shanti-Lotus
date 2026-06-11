@@ -52,7 +52,7 @@ export const metadata: Metadata = {
       "A sacred return to your divine essence through ancient plant wisdom, alchemy, Tantra, and feminine embodiment.",
     images: [
       {
-        url: "/images/generated/shakti-loto-water-card-portrait.png",
+        url: "/images/generated/shakti-loto-water-card-portrait-hq.png",
         width: 1200,
         height: 630,
         alt: "Kunti Shakti Loto water ritual image",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Kunti Shakti Loto — Multidisciplinary Artist",
     description: "A sacred return to your divine essence.",
-    images: ["/images/generated/shakti-loto-water-card-portrait.png"],
+    images: ["/images/generated/shakti-loto-water-card-portrait-hq.png"],
   },
   robots: {
     index: true,

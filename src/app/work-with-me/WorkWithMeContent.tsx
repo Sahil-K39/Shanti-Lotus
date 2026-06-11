@@ -43,8 +43,8 @@ export default function WorkWithMeContent() {
               <Image
                 src={images.hero}
                 alt="Kunti Shakti Loto water ritual image from the provided card"
-                width={320}
-                height={320}
+                width={1000}
+                height={1000}
                 className="h-full w-full rounded-full object-cover"
                 priority
               />
