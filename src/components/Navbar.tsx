@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import BrandLogo from "@/components/BrandLogo";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -14,37 +15,6 @@ const navLinks = [
   { href: "/sacred-jewelry", label: "Sacred Jewelry" },
   { href: "/contact", label: "Contact" },
 ];
-
-function LotusMark() {
-  return (
-    <svg viewBox="0 0 64 64" aria-hidden="true" className="h-full w-full">
-      <path
-        d="M32 8c5.6 8.4 8.4 15.4 8.4 21 0 5.2-2.8 9.6-8.4 13.2-5.6-3.6-8.4-8-8.4-13.2C23.6 23.4 26.4 16.4 32 8Z"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      />
-      <path
-        d="M13.8 26.3c9.2.8 15.3 3.2 18.2 7.1-2.9 4-7.3 6-13.1 6-4.4 0-8.9-1.7-13.4-5.1 2.4-3.5 5.2-6.2 8.3-8Z"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      />
-      <path
-        d="M50.2 26.3c-9.2.8-15.3 3.2-18.2 7.1 2.9 4 7.3 6 13.1 6 4.4 0 8.9-1.7 13.4-5.1-2.4-3.5-5.2-6.2-8.3-8Z"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      />
-      <path
-        d="M32 42.2c4.2 1.8 7.1 5.2 8.7 10.2H23.3c1.6-5 4.5-8.4 8.7-10.2Z"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      />
-    </svg>
-  );
-}
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -79,11 +49,11 @@ export default function Navbar() {
       >
         <nav className="mx-auto flex max-w-[1500px] items-center justify-between px-5 md:px-10 xl:px-14" aria-label="Main navigation">
           <Link href="/" onClick={closeMenu} className="group flex items-center gap-3 text-lightGold" aria-label="Kunti Shakti Loto home">
-            <span className="grid h-10 w-10 place-items-center rounded-full border border-lightGold/35 bg-gold/5 shadow-[0_0_24px_rgba(214,168,90,0.18)] transition-transform duration-700 group-hover:rotate-45">
-              <LotusMark />
+            <span className="sacred-glow grid h-12 w-24 place-items-center border border-lightGold/28 bg-ink/68 px-1 transition-transform duration-700 group-hover:scale-[1.03] md:h-14 md:w-28">
+              <BrandLogo compact />
             </span>
-            <span className="font-display text-xl uppercase tracking-[0.18em] text-ivory md:text-2xl">
-              Shakti <span className="gold-text">Loto</span>
+            <span className="font-display text-lg uppercase leading-none tracking-[0.14em] text-ivory md:text-2xl">
+              Kunti <span className="gold-text">Shakti Loto</span>
             </span>
           </Link>
 
@@ -135,12 +105,8 @@ export default function Navbar() {
           >
             <div className="absolute inset-8 border border-lightGold/15" />
             <nav className="relative z-10 flex flex-col items-center gap-7 text-center" aria-label="Mobile navigation">
-              <div className="mb-2 flex items-center gap-2">
-                <span className="moon-phase crescent" />
-                <span className="moon-phase half" />
-                <span className="moon-phase full" />
-                <span className="moon-phase half" />
-                <span className="moon-phase crescent" />
+              <div className="mb-3 text-lightGold">
+                <BrandLogo />
               </div>
               {navLinks.map((link, index) => (
                 <motion.div

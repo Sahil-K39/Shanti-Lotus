@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import AnimatedSection from "@/components/AnimatedSection";
+import BrandLogo from "@/components/BrandLogo";
 import EditorialImage from "@/components/EditorialImage";
 import SacredIcon from "@/components/SacredIcon";
 import { brand, certifications, images, offerings, poeticPhrases, services } from "@/lib/brand";
@@ -70,7 +71,7 @@ function BackCardPanel() {
   return (
     <div className="sacred-glow mx-auto max-w-[760px] border border-lightGold/28 bg-[#0b0b0a] px-7 py-9 md:px-10 md:py-12">
       <div className="text-center">
-        <SacredIcon type="lotus" className="mx-auto h-12 w-12 text-lightGold" />
+        <BrandLogo className="justify-center" />
         <p className="mx-auto mt-6 max-w-sm text-sm uppercase leading-relaxed tracking-[0.14em] text-lightGold/85">
           Bridging ancient plant wisdom, alchemy and spirit to awaken the divine within.
         </p>
@@ -137,7 +138,7 @@ function BrandCardLanguage() {
       <div className="grid gap-5 md:grid-cols-2">
         <div className="border border-lightGold/25 bg-ink px-7 py-10 text-center">
           <MoonPhases />
-          <SacredIcon type="lotus" className="mx-auto mt-8 h-20 w-20 text-lightGold" />
+          <BrandLogo className="mt-8 justify-center" />
           <h3 className="mt-8 font-display text-4xl uppercase leading-none tracking-[0.1em] text-lightGold md:text-5xl">
             Kunti Shakti Loto
           </h3>
@@ -155,7 +156,7 @@ function BrandCardLanguage() {
 
         <div className="border border-lightGold/25 bg-ink px-7 py-10">
           <div className="text-center">
-            <SacredIcon type="lotus" className="mx-auto h-14 w-14 text-lightGold" />
+            <BrandLogo className="justify-center" />
             <p className="mx-auto mt-6 max-w-xs text-xs uppercase leading-relaxed tracking-[0.15em] text-lightGold/90">
               Bridging ancient plant wisdom, alchemy and spirit to awaken the divine within.
             </p>

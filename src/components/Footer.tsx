@@ -1,15 +1,6 @@
 import Link from "next/link";
+import BrandLogo from "@/components/BrandLogo";
 import { brand } from "@/lib/brand";
-
-function LotusMark() {
-  return (
-    <svg viewBox="0 0 72 72" aria-hidden="true" className="h-16 w-16 text-lightGold">
-      <path d="M36 8c7 10.4 10.5 19 10.5 25.7 0 6.6-3.5 12-10.5 16.4-7-4.4-10.5-9.8-10.5-16.4C25.5 27 29 18.4 36 8Z" fill="none" stroke="currentColor" strokeWidth="1.4" />
-      <path d="M14 30c11.6.9 19 3.9 22 9-3.6 5-9 7.5-16.2 7.5-5.7 0-10.9-2.1-15.8-6.3 2.7-4.1 6-7.5 10-10.2Z" fill="none" stroke="currentColor" strokeWidth="1.4" />
-      <path d="M58 30c-11.6.9-19 3.9-22 9 3.6 5 9 7.5 16.2 7.5 5.7 0 10.9-2.1 15.8-6.3-2.7-4.1-6-7.5-10-10.2Z" fill="none" stroke="currentColor" strokeWidth="1.4" />
-    </svg>
-  );
-}
 
 export default function Footer() {
   return (
@@ -17,7 +8,7 @@ export default function Footer() {
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-lightGold/70 to-transparent" />
       <div className="mx-auto grid max-w-[1300px] gap-14 lg:grid-cols-[1.1fr_0.9fr_0.8fr]">
         <div className="sacred-card p-8 md:p-10">
-          <LotusMark />
+          <BrandLogo />
           <h2 className="mt-6 font-display text-4xl leading-tight text-ivory">
             Kunti <span className="gold-text">Shakti Loto</span>
           </h2>
