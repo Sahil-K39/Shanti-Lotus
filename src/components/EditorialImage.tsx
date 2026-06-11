@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
 
 interface EditorialImageProps {
   src: string;
@@ -21,9 +20,6 @@ export default function EditorialImage({
   variant = "rounded",
   withBorder = false,
 }: EditorialImageProps) {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  // Determine the mask class based on the variant
   const maskClass = 
     variant === "pebble" ? "pebble-mask" :
     variant === "organic-1" ? "organic-mask-1" :
@@ -47,12 +43,8 @@ export default function EditorialImage({
         <motion.img
           src={src}
           alt={alt}
-          onLoad={() => setIsLoaded(true)}
-          initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ 
-            opacity: isLoaded ? 1 : 0, 
-            scale: isLoaded ? 1 : 1.05 
-          }}
+          initial={false}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5, ease: [0.25, 0.1, 0.25, 1] }}
           className={`w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-105 ${imageClassName}`}
         />

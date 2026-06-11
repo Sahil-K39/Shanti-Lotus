@@ -1,156 +1,118 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import AnimatedSection from '@/components/AnimatedSection';
-import EditorialImage from '@/components/EditorialImage';
+import Link from "next/link";
+import Image from "next/image";
+import AnimatedSection from "@/components/AnimatedSection";
+import EditorialImage from "@/components/EditorialImage";
+import SacredIcon from "@/components/SacredIcon";
+import { brand, images, offerings, poeticPhrases } from "@/lib/brand";
 
-const offerings = [
-  {
-    title: 'Shakta Tantra',
-    description: 'Awaken the creative force within through practices that honor the divine feminine and sacred union.',
-    image: '/images/generated/shakta-tantra-final.png',
-    span: 'col-span-12 md:col-span-8',
-    aspect: 'aspect-[16/9] md:aspect-[3/2]',
-    href: '/contact',
-  },
-  {
-    title: 'Devi Yoga',
-    description: 'A devotional yoga practice connecting you to the goddess energy, cultivating strength and grace.',
-    image: '/images/generated/devi-yoga-final.png',
-    span: 'col-span-12 md:col-span-4',
-    aspect: 'aspect-square md:aspect-[3/4]',
-    href: '/contact',
-  },
-  {
-    title: 'Ayurveda',
-    description: 'Ancient science of life and natural healing — return to balance through the wisdom of your elemental constitution.',
-    image: '/images/generated/lotus-philosophy.png',
-    span: 'col-span-12 md:col-span-4',
-    aspect: 'aspect-square md:aspect-[3/4]',
-    href: '/contact',
-  },
-  {
-    title: 'Divine Dance',
-    description: 'Sacred movement practices that free the body, awaken creative energy, and reconnect you to your feminine essence.',
-    image: '/images/generated/devi-yoga-final.png',
-    span: 'col-span-12 md:col-span-8',
-    aspect: 'aspect-[16/9] md:aspect-[3/2]',
-    href: '/contact',
-  },
-  {
-    title: 'Sacred Jewelry',
-    description: 'Handcrafted sacred adornments infused with intention, mantra, and the energy of ancient symbols.',
-    image: '/images/generated/sacred-rituals-final.png',
-    span: 'col-span-12 md:col-span-6',
-    aspect: 'aspect-[4/3]',
-    href: '/contact',
-  },
-  {
-    title: 'Alchemy & Botanicals',
-    description: 'Plant medicine wisdom and alchemical preparations for purification, healing, and spiritual expansion.',
-    image: '/images/generated/lotus-philosophy.png',
-    span: 'col-span-12 md:col-span-6',
-    aspect: 'aspect-[4/3]',
-    href: '/contact',
-  },
-  {
-    title: 'Rituals & Altars',
-    description: 'Sacred ceremonies and altar creation for honoring transitions, releasing the old, and inviting transformation.',
-    image: '/images/generated/sacred-rituals-final.png',
-    span: 'col-span-12',
-    aspect: 'aspect-[21/9]',
-    href: '/contact',
-  },
-  {
-    title: 'Retreats & Courses',
-    description: 'Immersive transformational experiences in sacred locations around the world.',
-    image: '/images/generated/shakti-hero-final.png',
-    span: 'col-span-12 md:col-span-4 md:col-start-5',
-    aspect: 'aspect-[3/4]',
-    href: '/retreats',
-  },
+const descriptions = [
+  "Tantric remembrance through mantra, ritual, subtle body devotion, and the living wisdom of Shakti.",
+  "Embodied goddess practice with breath, movement, stillness, and inner listening.",
+  "Elemental lifestyle guidance to restore rhythm, vitality, digestion, and balance.",
+  "Sacred movement to free expression, awaken sensual innocence, and open creative channels.",
+  "Talismans and adornments created as extensions of prayer, beauty, and protection.",
+  "Botanical preparations, plant devotion, and ritual alchemy for transformation.",
+  "Ceremonial altar craft for thresholds, release, blessing, and spiritual anchoring.",
+  "Immersive journeys and courses for remembrance, healing, and devotion.",
 ];
 
 export default function WorkWithMeContent() {
   return (
-    <div className="bg-surfaceDark text-ivory min-h-screen">
-      
-      {/* 1. EDITORIAL HEADER */}
-      <section className="pt-48 pb-24 px-6 relative max-w-[1200px] mx-auto text-center">
-        <AnimatedSection>
-          <span className="text-eyebrow text-antiqueGold mb-8 block">Sacred Offerings</span>
-          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl leading-tight font-light text-ivory mb-10">
-            Spaces to <br />
-            <span className="italic text-antiqueGold">Remember</span>
+    <div className="bg-ink text-ivory">
+      <section className="px-6 pb-24 pt-40 md:pt-48">
+        <AnimatedSection className="mx-auto max-w-5xl text-center">
+          <p className="text-eyebrow">Work With Me</p>
+          <h1 className="mt-6 font-display text-5xl leading-tight md:text-8xl">
+            Spaces to <span className="gold-text">Remember</span>
           </h1>
-          <p className="font-body text-lg font-light text-ivory/70 max-w-2xl mx-auto leading-relaxed">
-            Every offering is a sacred doorway. Step through to heal, awaken your creative energy, and return to the union of mind, body, and soul.
+          <p className="mx-auto mt-8 max-w-3xl text-base font-light leading-loose text-parchment/82 md:text-lg">
+            Spaces to remember, heal, and awaken your creative energy through the union of mind, body, and soul, so we may awaken our consciousness and liberate the spirit.
           </p>
-          <div className="w-[1px] h-24 bg-antiqueGold/40 mx-auto mt-16" />
+          <p className="mx-auto mt-5 max-w-3xl text-base font-light leading-loose text-parchment/82 md:text-lg">
+            I accompany you in awakening your creative energy and reconnecting with your inner wisdom through the path of self-exploration and self-knowledge.
+          </p>
         </AnimatedSection>
       </section>
 
-      {/* 2. ASYMMETRICAL BENTO GRID */}
-      <section className="px-6 py-16 md:py-32 max-w-[1400px] mx-auto">
-        <div className="grid grid-cols-12 gap-6 md:gap-10">
-          {offerings.map((offering, index) => (
-            <div key={offering.title} className={`${offering.span} group relative overflow-hidden rounded-[24px]`}>
-              <AnimatedSection delay={index * 0.1}>
-                <Link href={offering.href} className="block relative w-full h-full">
-                  
-                  {/* Image Background */}
-                  <EditorialImage 
-                    src={offering.image}
-                    alt={offering.title}
-                    variant="sharp"
-                    imageClassName="brightness-75 group-hover:brightness-100 transition-all duration-1000"
-                    className={`w-full ${offering.aspect}`}
-                  />
-                  
-                  {/* Heavy dark gradient at the bottom for text readability */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-deepPlum via-deepPlum/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-700 pointer-events-none" />
-
-                  {/* Content Overlay */}
-                  <div className="absolute inset-0 p-8 md:p-12 flex flex-col justify-end">
-                    <h3 className="font-display text-3xl md:text-4xl text-ivory mb-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
-                      {offering.title}
-                    </h3>
-                    <p className="font-body text-sm font-light text-ivory/70 leading-relaxed mb-6 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 delay-100 max-w-md">
-                      {offering.description}
-                    </p>
-                    
-                    <div className="flex items-center gap-3 text-xs font-body uppercase tracking-[0.2em] text-antiqueGold opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 delay-200">
-                      <span>Enter Doorway</span>
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                    </div>
-                  </div>
-
-                </Link>
-              </AnimatedSection>
+      <section className="px-6 pb-28">
+        <div className="mx-auto grid max-w-[1180px] gap-10 border-y border-lightGold/18 py-14 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+          <AnimatedSection direction="left">
+            <div className="sacred-glow relative mx-auto aspect-square max-w-sm overflow-hidden rounded-full border border-lightGold/35 bg-charcoal p-3">
+              <Image
+                src={images.hero}
+                alt="Kunti Shakti Loto water ritual image from the provided card"
+                width={320}
+                height={320}
+                className="h-full w-full rounded-full object-cover"
+                priority
+              />
+              <div className="absolute inset-3 rounded-full bg-gradient-to-t from-ink/35 via-transparent to-transparent" />
             </div>
+          </AnimatedSection>
+
+          <AnimatedSection direction="right" className="text-center lg:text-left">
+            <p className="text-eyebrow">From the Brand Card</p>
+            <h2 className="mt-5 font-display text-4xl leading-tight md:text-6xl">
+              <span className="gold-text">Kunti Shakti Loto</span>
+            </h2>
+            <p className="mt-7 max-w-2xl text-base font-light leading-loose text-parchment/82 lg:mx-0">
+              Bridging ancient plant wisdom, alchemy and spirit to awaken the divine within.
+            </p>
+            <div className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
+              {["Tantric Yogini", "Herbal Alchemist", "Plant Medicine Guide", "Ritual Jewelry", "Ayurveda"].map((item) => (
+                <span key={item} className="border border-lightGold/25 px-4 py-2 text-[10px] uppercase tracking-[0.2em] text-lightGold">
+                  {item}
+                </span>
+              ))}
+            </div>
+            <a
+              href={brand.contact.instagramUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-9 inline-flex border border-lightGold/45 px-8 py-4 text-[11px] uppercase tracking-[0.24em] text-lightGold transition-all duration-500 hover:bg-lightGold hover:text-ink"
+            >
+              View Instagram
+            </a>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      <section className="px-6 pb-28">
+        <div className="mx-auto grid max-w-[1350px] gap-5 md:grid-cols-2 xl:grid-cols-4">
+          {offerings.map((offering, index) => (
+            <AnimatedSection key={offering} delay={index * 0.05}>
+              <div className="sacred-card group flex h-full flex-col p-7 transition-all duration-500 hover:-translate-y-1 hover:border-lightGold/50">
+                <SacredIcon type={index % 2 ? "moon" : "lotus"} className="h-12 w-12 text-lightGold transition-transform duration-700 group-hover:rotate-12" />
+                <h2 className="mt-8 font-display text-3xl leading-tight text-ivory">{offering}</h2>
+                <p className="mt-5 flex-1 text-sm font-light leading-loose text-parchment/74">{descriptions[index]}</p>
+                <div className="gold-line mt-8" />
+              </div>
+            </AnimatedSection>
           ))}
         </div>
       </section>
 
-      {/* 3. PHILOSOPHY QUOTE */}
-      <section className="px-6 py-32 bg-deepPlum text-center border-t border-ivory/5">
-        <AnimatedSection>
-          <div className="mx-auto max-w-4xl">
-            <h2 className="font-display text-3xl md:text-5xl leading-[1.4] font-light text-ivory/90 mb-12">
-              &ldquo;I accompany you to awaken your creative energy and reconnect with your inner wisdom through the path of deep self-exploration.&rdquo;
+      <section className="px-6 py-28">
+        <div className="mx-auto grid max-w-[1250px] gap-12 lg:grid-cols-3">
+          <AnimatedSection className="lg:col-span-1">
+            <EditorialImage src={images.tantra} alt="Kunti Shakti Loto water ritual image from the provided card" variant="organic-1" withBorder className="aspect-[4/5] w-full" />
+          </AnimatedSection>
+          <AnimatedSection className="sacred-card p-8 md:p-12 lg:col-span-2">
+            <p className="text-eyebrow">A living container</p>
+            <h2 className="mt-5 font-display text-4xl leading-tight md:text-6xl">
+              <span className="gold-text">{poeticPhrases[3]}</span>
             </h2>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-4 px-12 py-5 border border-antiqueGold/40 text-antiqueGold hover:bg-antiqueGold hover:text-deepPlum transition-colors duration-700"
-            >
-              <span className="text-xs font-body uppercase tracking-[0.2em]">Book a Sacred Space</span>
+            <p className="mt-8 text-base font-light leading-loose text-parchment/80">
+              The work is intimate and devotional. Every session, ritual, training, or retreat is shaped as a space where the body can become a temple again, where ancestral memory can speak, and where the creative force can move with grace.
+            </p>
+            <Link href="/contact" className="mt-10 inline-flex border border-lightGold/45 px-8 py-4 text-[11px] uppercase tracking-[0.24em] text-lightGold transition-all duration-500 hover:bg-lightGold hover:text-ink">
+              Request a Space
             </Link>
-          </div>
-        </AnimatedSection>
+          </AnimatedSection>
+        </div>
       </section>
-      
     </div>
   );
 }

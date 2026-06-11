@@ -1,113 +1,73 @@
 import Link from "next/link";
+import { brand } from "@/lib/brand";
 
-const footerLinks = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About Kunti" },
-  { href: "/work-with-me", label: "Work With Me" },
-  { href: "/mentorship", label: "Mentorship" },
-  { href: "/retreats", label: "Retreats" },
-  { href: "/philosophy", label: "Philosophy" },
-];
+function LotusMark() {
+  return (
+    <svg viewBox="0 0 72 72" aria-hidden="true" className="h-16 w-16 text-lightGold">
+      <path d="M36 8c7 10.4 10.5 19 10.5 25.7 0 6.6-3.5 12-10.5 16.4-7-4.4-10.5-9.8-10.5-16.4C25.5 27 29 18.4 36 8Z" fill="none" stroke="currentColor" strokeWidth="1.4" />
+      <path d="M14 30c11.6.9 19 3.9 22 9-3.6 5-9 7.5-16.2 7.5-5.7 0-10.9-2.1-15.8-6.3 2.7-4.1 6-7.5 10-10.2Z" fill="none" stroke="currentColor" strokeWidth="1.4" />
+      <path d="M58 30c-11.6.9-19 3.9-22 9 3.6 5 9 7.5 16.2 7.5 5.7 0 10.9-2.1 15.8-6.3-2.7-4.1-6-7.5-10-10.2Z" fill="none" stroke="currentColor" strokeWidth="1.4" />
+    </svg>
+  );
+}
 
 export default function Footer() {
   return (
-    <footer className="bg-deepPlum text-ivory pt-24 pb-12 px-6 border-t border-antiqueGold/20">
-      <div className="max-w-[1400px] mx-auto">
-        
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-8 mb-24">
-          
-          {/* Brand Column */}
-          <div className="md:col-span-5 lg:col-span-4 flex flex-col items-start">
-            <Link href="/" className="flex items-center gap-4 mb-8 group" aria-label="Shakti Lotus - Home">
-              <div className="w-6 h-6 text-antiqueGold">
-                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-                  <path fillRule="evenodd" clipRule="evenodd" d="M24 4C24 4 28 12 28 18C28 22 26 24 24 26C22 24 20 22 20 18C20 12 24 4 24 4ZM4 24C4 24 12 20 18 20C22 20 24 22 26 24C24 26 22 28 18 28C12 28 4 24 4 24ZM44 24C44 24 36 28 30 28C26 28 24 26 22 24C24 22 26 20 30 20C36 20 44 24 44 24ZM24 44C24 44 20 36 20 30C20 26 22 24 24 22C26 24 28 26 28 30C28 36 24 44 24 44Z" fill="currentColor" />
-                </svg>
-              </div>
-              <span className="font-display text-xl tracking-[0.1em] text-ivory">
-                SHAKTI LOTUS
-              </span>
-            </Link>
-            
-            <p className="font-display italic text-2xl text-ivory/80 leading-relaxed max-w-sm mb-6">
-              A path back to your universal divine essence.
-            </p>
-            
-            <p className="font-body text-xs font-light tracking-wide leading-loose text-ivory/50 max-w-sm">
-              Shakti Lotus is a space for deep reconnection with vital energy — a portal created to remember the sacred that lives within you.
-            </p>
+    <footer className="relative border-t border-lightGold/15 bg-ink px-6 py-20 text-ivory">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-lightGold/70 to-transparent" />
+      <div className="mx-auto grid max-w-[1300px] gap-14 lg:grid-cols-[1.1fr_0.9fr_0.8fr]">
+        <div className="sacred-card p-8 md:p-10">
+          <LotusMark />
+          <h2 className="mt-6 font-display text-4xl leading-tight text-ivory">
+            Kunti <span className="gold-text">Shakti Loto</span>
+          </h2>
+          <p className="mt-5 max-w-lg font-body text-sm font-light leading-loose text-parchment/78">
+            Each space is an invitation to return to yourself, to inhabit your body as a temple, and to remember the wisdom that already lives within you.
+          </p>
+          <div className="mt-8 flex gap-2">
+            <span className="moon-phase crescent" />
+            <span className="moon-phase half" />
+            <span className="moon-phase full" />
+            <span className="moon-phase half" />
+            <span className="moon-phase crescent" />
           </div>
-
-          <div className="md:col-span-1 lg:col-span-2 hidden lg:block" />
-
-          {/* Navigation Column */}
-          <div className="md:col-span-3 lg:col-span-3">
-            <h4 className="text-eyebrow text-antiqueGold mb-8">Navigate</h4>
-            <ul className="space-y-4">
-              {footerLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="font-body text-sm tracking-widest text-ivory/60 hover:text-antiqueGold transition-colors duration-500 uppercase"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Connect Column */}
-          <div className="md:col-span-4 lg:col-span-3">
-            <h4 className="text-eyebrow text-antiqueGold mb-8">Connect</h4>
-            <ul className="space-y-6">
-              <li>
-                <a
-                  href="mailto:sanctuary@shaktilotus.com"
-                  className="font-body text-sm tracking-widest text-ivory/60 hover:text-antiqueGold transition-colors duration-500 uppercase flex items-center gap-4"
-                >
-                  <span className="w-8 h-[1px] bg-antiqueGold/40" />
-                  Email
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://instagram.com/shaktilotus"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-body text-sm tracking-widest text-ivory/60 hover:text-antiqueGold transition-colors duration-500 uppercase flex items-center gap-4"
-                >
-                  <span className="w-8 h-[1px] bg-antiqueGold/40" />
-                  Instagram
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://wa.me/0000000000"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-body text-sm tracking-widest text-ivory/60 hover:text-antiqueGold transition-colors duration-500 uppercase flex items-center gap-4"
-                >
-                  <span className="w-8 h-[1px] bg-antiqueGold/40" />
-                  WhatsApp
-                </a>
-              </li>
-            </ul>
-          </div>
-
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-ivory/10 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="font-display italic text-lg text-antiqueGold/70">
-            &ldquo;The sacred lives within you.&rdquo;
-          </p>
-          <p className="font-body text-[10px] tracking-[0.2em] text-ivory/40 uppercase">
-            © {new Date().getFullYear()} Shakti Lotus. All rights reserved.
-          </p>
+        <div>
+          <p className="text-eyebrow">Contact</p>
+          <div className="mt-8 space-y-5 text-sm text-parchment/78">
+            <p>
+              Instagram:{" "}
+              <a href={brand.contact.instagramUrl} target="_blank" rel="noreferrer" className="text-lightGold hover:text-ivory">
+                {brand.contact.instagram}
+              </a>
+            </p>
+            <p>Email: {brand.contact.email}</p>
+            <p>Phone: {brand.contact.phone}</p>
+            <p>Website: {brand.contact.website}</p>
+          </div>
+          <Link
+            href="/contact"
+            className="mt-9 inline-flex border border-lightGold/45 px-7 py-4 text-[10px] uppercase tracking-[0.25em] text-lightGold transition-all duration-500 hover:bg-lightGold hover:text-ink"
+          >
+            Contact
+          </Link>
         </div>
-        
+
+        <div>
+          <p className="text-eyebrow">Explore</p>
+          <div className="mt-8 grid gap-4 text-[11px] uppercase tracking-[0.18em] text-parchment/68">
+            <Link href="/about" className="hover:text-lightGold">About Kunti</Link>
+            <Link href="/work-with-me" className="hover:text-lightGold">Work With Me</Link>
+            <Link href="/rituals-sessions" className="hover:text-lightGold">Rituals & Sessions</Link>
+            <Link href="/retreats" className="hover:text-lightGold">Retreats & Courses</Link>
+            <Link href="/sacred-jewelry" className="hover:text-lightGold">Sacred Jewelry</Link>
+          </div>
+        </div>
+      </div>
+      <div className="mx-auto mt-14 flex max-w-[1300px] flex-col gap-3 border-t border-lightGold/10 pt-8 text-[10px] uppercase tracking-[0.22em] text-parchment/45 md:flex-row md:items-center md:justify-between">
+        <p>© {new Date().getFullYear()} Shakti Loto. All rights reserved.</p>
+        <p>The sacred lives within you.</p>
       </div>
     </footer>
   );

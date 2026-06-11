@@ -1,18 +1,50 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Kunti" },
   { href: "/work-with-me", label: "Work With Me" },
-  { href: "/mentorship", label: "Mentorship" },
-  { href: "/retreats", label: "Retreats" },
-  { href: "/philosophy", label: "Philosophy" },
+  { href: "/rituals-sessions", label: "Rituals & Sessions" },
+  { href: "/retreats", label: "Retreats & Courses" },
+  { href: "/sacred-jewelry", label: "Sacred Jewelry" },
+  { href: "/contact", label: "Contact" },
 ];
+
+function LotusMark() {
+  return (
+    <svg viewBox="0 0 64 64" aria-hidden="true" className="h-full w-full">
+      <path
+        d="M32 8c5.6 8.4 8.4 15.4 8.4 21 0 5.2-2.8 9.6-8.4 13.2-5.6-3.6-8.4-8-8.4-13.2C23.6 23.4 26.4 16.4 32 8Z"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
+      <path
+        d="M13.8 26.3c9.2.8 15.3 3.2 18.2 7.1-2.9 4-7.3 6-13.1 6-4.4 0-8.9-1.7-13.4-5.1 2.4-3.5 5.2-6.2 8.3-8Z"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
+      <path
+        d="M50.2 26.3c-9.2.8-15.3 3.2-18.2 7.1 2.9 4 7.3 6 13.1 6 4.4 0 8.9-1.7 13.4-5.1-2.4-3.5-5.2-6.2-8.3-8Z"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
+      <path
+        d="M32 42.2c4.2 1.8 7.1 5.2 8.7 10.2H23.3c1.6-5 4.5-8.4 8.7-10.2Z"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
+    </svg>
+  );
+}
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,151 +52,112 @@ export default function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 30);
+    const handleScroll = () => setScrolled(window.scrollY > 24);
     window.addEventListener("scroll", handleScroll);
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    document.body.style.overflow = isOpen ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
     };
   }, [isOpen]);
 
-  const isDarkPage = pathname === "/about" || pathname === "/philosophy" || pathname === "/mentorship";
-  const isDarkHeader = isDarkPage || (pathname === "/retreats" && !scrolled);
-
-  const headerBgClass = isDarkPage
-    ? scrolled
-      ? "bg-deepPlum/80 backdrop-blur-md border-b border-white/5 shadow-breathe"
-      : "bg-transparent"
-    : scrolled
-    ? "bg-ivory/80 backdrop-blur-md border-b border-antiqueGold/10 shadow-breathe"
-    : "bg-transparent";
-
-  const logoTextClass = isDarkHeader ? "text-ivory" : "text-textDark";
-
-  const getLinkColor = (href: string, isMobile = false) => {
-    if (pathname === href) return "text-antiqueGold";
-    const useDarkStyle = isMobile ? isDarkPage : isDarkHeader;
-    return useDarkStyle
-      ? "text-ivory/60 hover:text-antiqueGold"
-      : "text-textDark/60 hover:text-antiqueGold";
-  };
-
-  const ctaButtonClass = isDarkHeader
-    ? "border-antiqueGold/30 text-antiqueGold hover:bg-antiqueGold hover:text-deepPlum"
-    : "border-antiqueGold/40 text-antiqueGold hover:bg-antiqueGold hover:text-ivory";
-
-  const mobileMenuBgClass = isDarkPage ? "bg-deepPlum" : "bg-ivory";
-  const mobileBtnLineClass = isDarkHeader ? "bg-ivory" : "bg-textDark";
+  const closeMenu = () => setIsOpen(false);
 
   return (
     <>
       <motion.header
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-1000 ${headerBgClass} ${scrolled ? "py-2" : "py-6"}`}
+        initial={{ y: -80, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.9, ease: [0.25, 0.1, 0.25, 1] }}
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-700 ${
+          scrolled ? "bg-ink/82 py-3 shadow-[0_12px_42px_rgba(0,0,0,0.34)] backdrop-blur-xl" : "bg-transparent py-6"
+        }`}
       >
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16">
-          <nav className="flex items-center justify-between" aria-label="Main navigation">
-            
-            {/* Logo */}
-            <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-4 group z-50" aria-label="Shakti Lotus - Home">
-              <div className="w-7 h-7 text-antiqueGold transition-transform duration-1000 group-hover:rotate-[360deg]">
-                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full drop-shadow-sm">
-                  <path fillRule="evenodd" clipRule="evenodd" d="M24 4C24 4 28 12 28 18C28 22 26 24 24 26C22 24 20 22 20 18C20 12 24 4 24 4ZM4 24C4 24 12 20 18 20C22 20 24 22 26 24C24 26 22 28 18 28C12 28 4 24 4 24ZM44 24C44 24 36 28 30 28C26 28 24 26 22 24C24 22 26 20 30 20C36 20 44 24 44 24ZM24 44C24 44 20 36 20 30C20 26 22 24 24 22C26 24 28 26 28 30C28 36 24 44 24 44Z" fill="currentColor" />
-                </svg>
-              </div>
-              <span className={`font-display text-xl tracking-[0.1em] transition-colors duration-700 ${logoTextClass}`}>
-                SHAKTI LOTUS
-              </span>
-            </Link>
+        <nav className="mx-auto flex max-w-[1500px] items-center justify-between px-5 md:px-10 xl:px-14" aria-label="Main navigation">
+          <Link href="/" onClick={closeMenu} className="group flex items-center gap-3 text-lightGold" aria-label="Kunti Shakti Loto home">
+            <span className="grid h-10 w-10 place-items-center rounded-full border border-lightGold/35 bg-gold/5 shadow-[0_0_24px_rgba(214,168,90,0.18)] transition-transform duration-700 group-hover:rotate-45">
+              <LotusMark />
+            </span>
+            <span className="font-display text-xl uppercase tracking-[0.18em] text-ivory md:text-2xl">
+              Shakti <span className="gold-text">Loto</span>
+            </span>
+          </Link>
 
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-10">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`text-[10px] font-body tracking-[0.25em] uppercase transition-colors duration-500 relative group py-2 ${getLinkColor(link.href)}`}
-                >
-                  {link.label}
-                  <span className={`absolute bottom-0 left-0 w-full h-[1px] bg-antiqueGold origin-left scale-x-0 transition-transform duration-500 ease-out ${pathname === link.href ? 'scale-x-100' : 'group-hover:scale-x-100'}`} />
-                </Link>
-              ))}
-            </div>
+          <div className="hidden items-center gap-6 xl:flex">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`relative py-2 text-[10px] uppercase tracking-[0.22em] transition-colors duration-500 ${
+                  pathname === link.href ? "text-lightGold" : "text-parchment/70 hover:text-lightGold"
+                }`}
+              >
+                {link.label}
+                <span className={`absolute bottom-0 left-0 h-px w-full origin-left bg-lightGold transition-transform duration-500 ${
+                  pathname === link.href ? "scale-x-100" : "scale-x-0"
+                }`} />
+              </Link>
+            ))}
+          </div>
 
-            {/* Desktop CTA */}
-            <Link
-              href="/contact"
-              className={`hidden lg:inline-flex items-center px-8 py-3 rounded-none border text-[10px] font-body uppercase tracking-[0.2em] transition-all duration-700 ${ctaButtonClass}`}
-            >
-              Inquire
-            </Link>
+          <Link
+            href="/contact"
+            className="hidden border border-lightGold/45 px-6 py-3 text-[10px] uppercase tracking-[0.22em] text-lightGold transition-all duration-500 hover:bg-lightGold hover:text-ink xl:inline-flex"
+          >
+            Begin
+          </Link>
 
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden flex flex-col gap-1.5 p-2 z-50 relative"
-              aria-label={isOpen ? "Close menu" : "Open menu"}
-            >
-              <motion.span animate={isOpen ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }} className={`w-8 h-[1px] block origin-center transition-colors duration-500 ${isOpen ? (isDarkPage ? 'bg-ivory' : 'bg-textDark') : mobileBtnLineClass}`} />
-              <motion.span animate={isOpen ? { opacity: 0 } : { opacity: 1 }} className={`w-8 h-[1px] block transition-colors duration-500 ${isOpen ? (isDarkPage ? 'bg-ivory' : 'bg-textDark') : mobileBtnLineClass}`} />
-              <motion.span animate={isOpen ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }} className={`w-8 h-[1px] block origin-center transition-colors duration-500 ${isOpen ? (isDarkPage ? 'bg-ivory' : 'bg-textDark') : mobileBtnLineClass}`} />
-            </button>
-          </nav>
-        </div>
+          <button
+            type="button"
+            onClick={() => setIsOpen((open) => !open)}
+            className="relative z-50 flex h-11 w-11 flex-col items-center justify-center gap-1.5 border border-lightGold/30 text-lightGold xl:hidden"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+          >
+            <motion.span animate={isOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }} className="block h-px w-6 bg-current" />
+            <motion.span animate={isOpen ? { opacity: 0 } : { opacity: 1 }} className="block h-px w-6 bg-current" />
+            <motion.span animate={isOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }} className="block h-px w-6 bg-current" />
+          </button>
+        </nav>
       </motion.header>
 
-      {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: "-100%" }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: "-100%" }}
-            transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
-            className={`fixed inset-0 z-40 flex flex-col items-center justify-center pt-20 ${mobileMenuBgClass}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className="fixed inset-0 z-40 flex items-center justify-center bg-ink/96 px-6 backdrop-blur-xl xl:hidden"
           >
-            <nav className="flex flex-col items-center gap-10 w-full px-6" aria-label="Mobile navigation">
+            <div className="absolute inset-8 border border-lightGold/15" />
+            <nav className="relative z-10 flex flex-col items-center gap-7 text-center" aria-label="Mobile navigation">
+              <div className="mb-2 flex items-center gap-2">
+                <span className="moon-phase crescent" />
+                <span className="moon-phase half" />
+                <span className="moon-phase full" />
+                <span className="moon-phase half" />
+                <span className="moon-phase crescent" />
+              </div>
               {navLinks.map((link, index) => (
                 <motion.div
                   key={link.href}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 18 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2 + (index * 0.1), duration: 0.6 }}
+                  transition={{ delay: 0.08 * index, duration: 0.55 }}
                 >
                   <Link
                     href={link.href}
-                    onClick={() => setIsOpen(false)}
-                    className={`font-display text-4xl tracking-widest uppercase transition-colors duration-500 ${isDarkPage ? 'text-ivory/80 hover:text-antiqueGold' : 'text-textDark/80 hover:text-antiqueGold'}`}
+                    onClick={closeMenu}
+                    className="font-display text-3xl uppercase tracking-[0.12em] text-ivory transition-colors duration-500 hover:text-lightGold"
                   >
                     {link.label}
                   </Link>
                 </motion.div>
               ))}
-              
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8, duration: 0.6 }}
-                className="mt-8"
-              >
-                <Link
-                  href="/contact"
-                  onClick={() => setIsOpen(false)}
-                  className={`inline-flex items-center px-12 py-4 border text-xs font-body uppercase tracking-[0.25em] transition-all duration-700 ${isDarkPage ? 'border-antiqueGold text-antiqueGold hover:bg-antiqueGold hover:text-deepPlum' : 'border-textDark text-textDark hover:bg-textDark hover:text-ivory'}`}
-                >
-                  Begin Your Journey
-                </Link>
-              </motion.div>
             </nav>
           </motion.div>
         )}

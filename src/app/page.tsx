@@ -1,152 +1,256 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
 import AnimatedSection from "@/components/AnimatedSection";
 import EditorialImage from "@/components/EditorialImage";
+import SacredIcon from "@/components/SacredIcon";
+import { brand, certifications, images, offerings, poeticPhrases, services } from "@/lib/brand";
 
-const offerings = [
-  {
-    title: "Shakta Tantra",
-    eyebrow: "The Path of Power",
-    description: "Awaken the creative force within through mantra, breath, deity contemplation, and embodied ritual. A journey of remembering the body as an altar.",
-    image: "/images/generated/shakta-tantra-final.png",
-    detail: "Private rituals, subtle-body practice, lineage study",
-    link: "/work-with-me",
-  },
-  {
-    title: "Devi Yoga",
-    eyebrow: "Embodied Grace",
-    description: "A devotional physical and subtle practice connecting you to goddess energy. Cultivate strength, softness, intuition, and inner radiance through breath-led movement.",
-    image: "/images/generated/devi-yoga-final.png",
-    detail: "Somatic movement, pranayama, feminine embodiment",
-    link: "/work-with-me",
-  },
-  {
-    title: "Sacred Rituals",
-    eyebrow: "Ancestral Wisdom",
-    description: "Ceremonies of fire, water, earth, and air to honor transitions, release the old, and invite transformation. Reclaim the ancient art of gathering in reverence.",
-    image: "/images/generated/sacred-rituals-final.png",
-    detail: "Altars, ceremonies, life transitions, devotion",
-    link: "/work-with-me",
-  },
-];
+const icons = ["leaf", "alchemy", "moon", "flame", "ritual", "lotus", "star", "eye"] as const;
 
-const pillars = [
-  { value: "1:1", label: "Private mentorship" },
-  { value: "500hr", label: "Yoga lineage training" },
-  { value: "India", label: "Retreats and immersions" },
-];
+function MoonPhases() {
+  return (
+    <div className="flex items-center justify-center gap-3" aria-hidden="true">
+      <span className="moon-phase crescent" />
+      <span className="moon-phase half" />
+      <span className="moon-phase full" />
+      <span className="moon-phase half" />
+      <span className="moon-phase crescent" />
+    </div>
+  );
+}
 
-const process = [
-  {
-    step: "Listen",
-    text: "We begin with where you are: your body, your season, your devotion, and the questions that keep returning.",
-  },
-  {
-    step: "Practice",
-    text: "Your path is shaped through breath, mantra, movement, ritual, and grounded integration between sessions.",
-  },
-  {
-    step: "Embody",
-    text: "The work becomes less like something you visit and more like a way of walking through your ordinary life.",
-  },
-];
+function GoldDivider() {
+  return (
+    <div className="mx-auto flex w-full max-w-xs items-center gap-3 text-lightGold/75" aria-hidden="true">
+      <span className="h-px flex-1 bg-lightGold/45" />
+      <span className="h-1 w-1 rounded-full bg-current" />
+      <span className="moon-phase crescent scale-75" />
+      <span className="h-1 w-1 rounded-full bg-current" />
+      <span className="h-px flex-1 bg-lightGold/45" />
+    </div>
+  );
+}
+
+function ReferenceHeroCard() {
+  return (
+    <div className="sacred-glow mx-auto w-full max-w-[520px] border border-lightGold/35 bg-ink">
+      <div className="relative h-[430px] overflow-hidden md:h-[500px]">
+        <EditorialImage
+          src={images.hero}
+          alt="Kunti Shakti Loto water ritual image from the provided card"
+          variant="sharp"
+          imageClassName="h-full object-cover brightness-[0.82] saturate-[0.95]"
+          className="h-full w-full"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-ink/95" />
+      </div>
+      <div className="px-8 pb-10 pt-4 text-center">
+        <h1 className="font-display text-4xl uppercase leading-none tracking-[0.08em] text-lightGold md:text-5xl">
+          Kunti Shakti Loto
+        </h1>
+        <GoldDivider />
+        <p className="mt-4 text-sm uppercase tracking-[0.24em] text-ivory md:text-base">{brand.role}</p>
+        <p className="mt-5 text-sm uppercase leading-relaxed tracking-[0.16em] text-ivory">
+          Tantric Yogini <span className="text-lightGold">•</span> Herbal Alchemist <br />
+          Plant Medicine Guide
+        </p>
+        <GoldDivider />
+        <p className="mt-6 font-display text-2xl italic leading-tight text-lightGold/85">
+          A sacred return <br /> to your divine essence.
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function BackCardPanel() {
+  const primaryServices = services.slice(0, 5);
+
+  return (
+    <div className="sacred-glow mx-auto max-w-[760px] border border-lightGold/28 bg-[#0b0b0a] px-7 py-9 md:px-10 md:py-12">
+      <div className="text-center">
+        <SacredIcon type="lotus" className="mx-auto h-12 w-12 text-lightGold" />
+        <p className="mx-auto mt-6 max-w-sm text-sm uppercase leading-relaxed tracking-[0.14em] text-lightGold/85">
+          Bridging ancient plant wisdom, alchemy and spirit to awaken the divine within.
+        </p>
+        <GoldDivider />
+      </div>
+
+      <div className="mt-8 grid gap-8 md:grid-cols-[1fr_auto_1fr]">
+        <div className="space-y-6">
+          {primaryServices.map((service, index) => (
+            <div key={service.title} className="flex items-center gap-4">
+              <SacredIcon type={icons[index]} className="h-9 w-9 flex-none text-lightGold/80" />
+              <p className="text-xs uppercase leading-snug tracking-[0.1em] text-ivory">{service.title}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="hidden w-px bg-lightGold/45 md:block" />
+
+        <div className="text-center">
+          <p className="text-sm uppercase tracking-[0.15em] text-lightGold">Jewelry of the Soul</p>
+          <div className="mx-auto mt-4 grid h-24 w-24 place-items-center rounded-full border border-lightGold/35">
+            <SacredIcon type="star" className="h-16 w-16 text-lightGold" />
+          </div>
+          <p className="mx-auto mt-5 max-w-[15rem] text-sm leading-relaxed text-ivory/86">
+            sacred & ritual jewelry infused with intention, devotion and spirit.
+          </p>
+          <div className="mx-auto my-5 h-1 w-1 rounded-full bg-lightGold" />
+          <p className="text-sm uppercase leading-relaxed tracking-[0.12em] text-lightGold">Eco Conscious Clothing Brand</p>
+          <p className="mx-auto mt-3 max-w-[15rem] text-sm leading-relaxed text-ivory/86">
+            conscious designs created with love from the earth to your soul.
+          </p>
+        </div>
+      </div>
+
+      <div className="mt-8 grid gap-5 border-t border-lightGold/35 pt-7 md:grid-cols-[0.8fr_1.2fr]">
+        <div className="grid aspect-square place-items-center border border-lightGold/30 bg-ivory p-4 text-center text-ink">
+          <SacredIcon type="lotus" className="h-12 w-12 text-gold" />
+          <p className="mt-3 text-[10px] font-semibold uppercase tracking-[0.18em]">@kunti_shaktiloto</p>
+          <div className="mt-3 grid grid-cols-5 gap-1" aria-hidden="true">
+            {Array.from({ length: 25 }).map((_, index) => (
+              <span key={index} className={`h-1.5 w-1.5 ${index % 3 === 0 ? "bg-ink" : "bg-mutedGold/45"}`} />
+            ))}
+          </div>
+        </div>
+        <div className="space-y-3 text-sm text-ivory/85">
+          <p>Instagram: {brand.contact.instagram}</p>
+          <p>Email: {brand.contact.email}</p>
+          <p>Phone: {brand.contact.phone}</p>
+          <p>Website: {brand.contact.website}</p>
+        </div>
+      </div>
+
+      <div className="mt-6 border border-lightGold/45 px-5 py-4 text-center">
+        <p className="text-sm uppercase tracking-[0.17em] text-lightGold">Ayurveda Health Coach</p>
+        <p className="mt-2 text-xs text-parchment/82">Guiding you to balance body, mind and spirit through ancient Ayurvedic wisdom.</p>
+      </div>
+    </div>
+  );
+}
+
+function BrandCardLanguage() {
+  return (
+    <div className="sacred-glow border border-lightGold/24 bg-[#0b0b0a] p-5 md:p-7">
+      <div className="grid gap-5 md:grid-cols-2">
+        <div className="border border-lightGold/25 bg-ink px-7 py-10 text-center">
+          <MoonPhases />
+          <SacredIcon type="lotus" className="mx-auto mt-8 h-20 w-20 text-lightGold" />
+          <h3 className="mt-8 font-display text-4xl uppercase leading-none tracking-[0.1em] text-lightGold md:text-5xl">
+            Kunti Shakti Loto
+          </h3>
+          <GoldDivider />
+          <p className="mt-4 text-sm uppercase tracking-[0.24em] text-ivory">{brand.role}</p>
+          <p className="mt-5 text-xs uppercase leading-relaxed tracking-[0.16em] text-parchment">
+            Tantric Yogini <span className="text-lightGold">•</span> Herbal Alchemist <br />
+            Plant Medicine Guide
+          </p>
+          <GoldDivider />
+          <p className="mt-7 font-display text-2xl italic leading-tight text-lightGold/85">
+            A sacred return <br /> to your divine essence.
+          </p>
+        </div>
+
+        <div className="border border-lightGold/25 bg-ink px-7 py-10">
+          <div className="text-center">
+            <SacredIcon type="lotus" className="mx-auto h-14 w-14 text-lightGold" />
+            <p className="mx-auto mt-6 max-w-xs text-xs uppercase leading-relaxed tracking-[0.15em] text-lightGold/90">
+              Bridging ancient plant wisdom, alchemy and spirit to awaken the divine within.
+            </p>
+            <GoldDivider />
+          </div>
+          <div className="mt-8 space-y-5">
+            {services.slice(0, 5).map((service, index) => (
+              <div key={service.title} className="flex items-center gap-4">
+                <SacredIcon type={icons[index]} className="h-9 w-9 flex-none text-lightGold/85" />
+                <p className="text-xs uppercase leading-snug tracking-[0.12em] text-ivory">{service.title}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-9 border-t border-lightGold/25 pt-7 text-center">
+            <p className="text-sm uppercase tracking-[0.16em] text-lightGold">Jewelry of the Soul</p>
+            <p className="mx-auto mt-4 max-w-xs text-sm leading-relaxed text-parchment/82">
+              sacred & ritual jewelry infused with intention, devotion and spirit.
+            </p>
+            <p className="mt-6 text-sm uppercase tracking-[0.16em] text-lightGold">Eco Conscious Clothing Brand</p>
+            <p className="mx-auto mt-4 max-w-xs text-sm leading-relaxed text-parchment/82">
+              conscious designs created with love from the earth to your soul.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="mt-5 flex flex-col items-center justify-between gap-4 border-t border-lightGold/18 pt-5 text-center md:flex-row md:text-left">
+        <p className="text-xs uppercase leading-relaxed tracking-[0.18em] text-parchment/72">
+          Text, lotus marks, moon phases, sacred icons, and gold dividers translated from the original Shakti Loto card.
+        </p>
+        <a
+          href={brand.contact.instagramUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="border border-lightGold/40 px-5 py-3 text-[10px] uppercase tracking-[0.22em] text-lightGold transition-all duration-500 hover:bg-lightGold hover:text-ink"
+        >
+          Instagram
+        </a>
+      </div>
+    </div>
+  );
+}
+
+function PoeticDivider({ text }: { text: string }) {
+  return (
+    <section className="px-6 py-20">
+      <AnimatedSection className="mx-auto max-w-5xl text-center">
+        <MoonPhases />
+        <div className="gold-line mx-auto my-8 max-w-2xl" />
+        <p className="font-display text-3xl leading-tight text-ivory md:text-5xl">
+          <span className="gold-text">{text}</span>
+        </p>
+      </AnimatedSection>
+    </section>
+  );
+}
 
 export default function Home() {
   return (
-    <div className="bg-ivory text-textDark">
-      {/* 1. HERO SECTION */}
-      <section className="relative w-full min-h-[86svh] md:min-h-[92vh] flex items-center justify-center overflow-hidden bg-deepPlum pb-12 md:pb-10">
-        {/* Layered Background Imagery */}
-        <div className="absolute inset-0 z-0 opacity-55">
-          <EditorialImage
-            src="/images/generated/shakti-hero-final.png"
-            alt="Atmospheric sunset over water"
-            className="w-full h-full"
-            variant="sharp"
-          />
-        </div>
+    <div className="bg-ink text-ivory">
+      <section className="relative min-h-screen overflow-hidden px-6 py-24 md:py-28">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(214,168,90,0.18),transparent_32rem)]" />
+        <div className="absolute left-1/2 top-24 h-[78vw] max-h-[760px] w-[78vw] max-w-[760px] -translate-x-1/2 rounded-full border border-lightGold/10 opacity-60" />
+        <div className="absolute left-1/2 top-36 h-[58vw] max-h-[560px] w-[58vw] max-w-[560px] -translate-x-1/2 rounded-full border border-lightGold/10 opacity-60" />
 
-        <div className="absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(26,21,18,0.72),rgba(26,21,18,0.42)_45%,rgba(26,21,18,0.74))]" />
-        <div className="absolute inset-x-0 bottom-0 z-0 h-48 bg-gradient-to-t from-ivory via-ivory/25 to-transparent" />
+        <div className="relative z-10 mx-auto grid min-h-[78vh] max-w-[1320px] items-center gap-14 lg:grid-cols-[0.9fr_1.1fr]">
+          <AnimatedSection direction="left">
+            <ReferenceHeroCard />
+          </AnimatedSection>
 
-        {/* Content Block */}
-        <div className="relative z-10 max-w-5xl mx-auto px-6 pt-28 text-center md:pt-24">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5, ease: [0.25, 0.1, 0.25, 1] }}
-            className="flex flex-col items-center"
-          >
-            <span className="text-eyebrow text-antiqueGold mb-5 md:mb-6">
-              A return to the source
-            </span>
-
-            <h1 className="font-display text-4xl md:text-6xl xl:text-7xl leading-[1.08] font-light text-ivory mb-6 md:mb-8 drop-shadow-lg">
-              Awaken the <br />
-              <span className="italic text-antiqueGold">Inner Goddess</span>
-            </h1>
-
-            <p className="font-body text-base md:text-lg text-ivory/80 max-w-2xl font-light leading-relaxed mb-8">
-              A sacred space for deep reconnection with vital energy. Rooted in classical Tantra, Devi Yoga, Ayurveda, and feminine embodiment, this is a return to your universal divine essence.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 mb-9 md:mb-10">
-              <Link
-                href="/work-with-me"
-                className="group inline-flex min-h-14 items-center gap-4 border border-antiqueGold/50 bg-antiqueGold px-8 py-4 text-deepPlum transition-all duration-700 hover:bg-ivory hover:border-ivory"
-              >
-                <span className="text-xs font-body uppercase tracking-[0.2em] font-medium">Explore Offerings</span>
-                <span className="w-10 h-[1px] bg-current transition-all duration-700 group-hover:w-14" />
-              </Link>
-              <Link
-                href="/about"
-                className="inline-flex min-h-14 items-center border border-ivory/25 px-8 py-4 text-ivory transition-all duration-700 hover:border-antiqueGold hover:text-antiqueGold"
-              >
-                <span className="text-xs font-body uppercase tracking-[0.2em]">Meet Kunti</span>
-              </Link>
-            </div>
-
-            <div className="grid w-full max-w-3xl grid-cols-3 border-y border-ivory/15">
-              {pillars.map((pillar) => (
-                <div key={pillar.label} className="px-2 py-3 border-l first:border-l-0 border-ivory/15 md:px-6 md:py-4">
-                  <p className="font-display text-2xl text-antiqueGold md:text-3xl">{pillar.value}</p>
-                  <p className="mt-1 text-[9px] uppercase tracking-[0.14em] text-ivory/65 md:text-[10px] md:tracking-[0.22em]">{pillar.label}</p>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* 2. EDITORIAL INTRO */}
-      <section className="py-32 md:py-48 px-6 bg-ivory relative">
-        <div className="max-w-5xl mx-auto">
-          <AnimatedSection>
-            <div className="flex flex-col md:flex-row items-center gap-16 lg:gap-24">
-              <div className="w-full md:w-1/2">
-                <EditorialImage
-                  src="/images/generated/lotus-philosophy.png"
-                  alt="Lotus resting on calm water"
-                  variant="organic-1"
-                  withBorder
-                  className="w-full aspect-[4/5]"
-                />
-              </div>
-              <div className="w-full md:w-1/2 flex flex-col items-start">
-                <span className="text-eyebrow text-terracotta mb-6">The Philosophy</span>
-                <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-textDark leading-tight mb-8">
-                  Your body is <br /><span className="italic text-antiqueGold">a portal.</span>
-                </h2>
-                <p className="font-body text-textDark/70 leading-loose font-light mb-10 text-lg">
-                  We have forgotten the ancient memory that dwells in our blood. Shakti Lotus is an invitation to strip away the armor, to walk as a bridge between the earth and the spirit, and to remember that the sacred lives within you.
-                </p>
+          <AnimatedSection className="text-center lg:text-left" direction="right">
+            <div className="mx-auto max-w-2xl lg:mx-0">
+              <MoonPhases />
+              <p className="mt-10 text-eyebrow">Bridging ancient plant wisdom, alchemy and spirit</p>
+              <h2 className="mt-7 font-display text-5xl leading-[0.96] text-ivory md:text-7xl xl:text-8xl">
+                A sacred return to your <span className="gold-text">divine essence</span>
+              </h2>
+              <p className="mt-8 font-display text-3xl text-lightGold md:text-4xl">Kunti Shakti Loto</p>
+              <p className="mt-6 text-sm uppercase leading-relaxed tracking-[0.18em] text-parchment/82">
+                Multidisciplinary Artist <span className="text-lightGold">•</span> Tantric Yogini <span className="text-lightGold">•</span> Herbal Alchemist <span className="text-lightGold">•</span> Plant Medicine Guide
+              </p>
+              <p className="mt-8 max-w-xl text-base font-light leading-loose text-parchment/82 lg:mx-0">
+                Enter a handcrafted sanctuary of ritual, feminine remembrance, plant wisdom, tantra, and embodied spiritual guidance.
+              </p>
+              <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row lg:items-start">
                 <Link
-                  href="/philosophy"
-                  className="text-xs font-body font-medium uppercase tracking-[0.2em] text-terracotta hover:text-textDark transition-colors duration-500 border-b border-terracotta/30 pb-2"
+                  href="/work-with-me"
+                  className="sacred-glow border border-lightGold/50 bg-lightGold px-8 py-4 text-[11px] font-medium uppercase tracking-[0.24em] text-ink transition-all duration-500 hover:bg-ivory"
                 >
-                  Read the Philosophy
+                  Explore My Spaces
+                </Link>
+                <Link
+                  href="/about"
+                  className="border border-lightGold/30 px-8 py-4 text-[11px] uppercase tracking-[0.24em] text-lightGold transition-all duration-500 hover:bg-lightGold hover:text-ink"
+                >
+                  Meet Kunti
                 </Link>
               </div>
             </div>
@@ -154,138 +258,179 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. GUIDED PROCESS */}
-      <section className="px-6 py-24 bg-deepPlum text-ivory">
-        <div className="max-w-[1200px] mx-auto">
-          <AnimatedSection className="grid gap-14 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
-            <div>
-              <span className="text-eyebrow text-antiqueGold mb-6 block">How the work unfolds</span>
-              <h2 className="font-display text-4xl md:text-5xl leading-tight">
-                A path that is intimate, embodied, and precise.
-              </h2>
-            </div>
-            <div className="grid gap-6 md:grid-cols-3">
-              {process.map((item, index) => (
-                <div key={item.step} className="border-l border-antiqueGold/35 pl-6">
-                  <span className="font-display text-5xl text-antiqueGold/70">0{index + 1}</span>
-                  <h3 className="mt-6 font-display text-3xl text-ivory">{item.step}</h3>
-                  <p className="mt-4 font-body text-sm font-light leading-loose text-ivory/70">
-                    {item.text}
-                  </p>
-                </div>
-              ))}
+      <section className="px-6 py-20">
+        <div className="mx-auto grid max-w-[1320px] gap-12 lg:grid-cols-[1fr_1.05fr] lg:items-center">
+          <AnimatedSection className="text-center lg:text-left" direction="left">
+            <SacredIcon type="lotus" className="mx-auto h-14 w-14 text-lightGold lg:mx-0" />
+            <p className="mt-8 text-eyebrow">Reference Card Language</p>
+            <h2 className="mt-5 font-display text-5xl leading-tight text-ivory md:text-7xl">
+              Gold-on-dark spaces for <span className="gold-text">ritual work</span>
+            </h2>
+            <p className="mt-8 max-w-xl text-base font-light leading-loose text-parchment/80 lg:mx-0">
+              Plant medicine, alchemy, tantra, sacred adornment, and earth-conscious creation are held together as one elegant spiritual ecosystem.
+            </p>
+          </AnimatedSection>
+          <AnimatedSection direction="right">
+            <BrandCardLanguage />
+          </AnimatedSection>
+        </div>
+      </section>
+
+      <section className="px-6 py-16">
+        <AnimatedSection className="mx-auto max-w-4xl">
+          <BackCardPanel />
+        </AnimatedSection>
+      </section>
+
+      <section className="px-6 py-28">
+        <AnimatedSection className="mx-auto max-w-5xl text-center">
+          <p className="text-eyebrow">Shakti Loto</p>
+          <h2 className="mt-5 font-display text-4xl text-ivory md:text-6xl">
+            A path back to your <span className="gold-text">universal divine essence</span>
+          </h2>
+          <div className="gold-line mx-auto my-12 max-w-xl" />
+          <blockquote className="font-display text-2xl leading-[1.45] text-parchment md:text-4xl">
+            &ldquo;I invoke the ancient memory that lives within our blood.
+            Walking as a bridge between the Earth and the Spirit.
+            May ancestral wisdom awaken in every heart,
+            and guide the return to the purity of being,
+            to the sacred origin where all is one.&rdquo;
+          </blockquote>
+        </AnimatedSection>
+      </section>
+
+      <section className="px-6 py-28">
+        <div className="mx-auto grid max-w-[1250px] gap-14 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
+          <AnimatedSection direction="left">
+            <EditorialImage src={images.devi} alt="Kunti Shakti Loto water ritual image from the provided card" variant="organic-1" withBorder className="aspect-[4/5] w-full" />
+          </AnimatedSection>
+          <AnimatedSection direction="right" className="sacred-card p-8 md:p-12">
+            <p className="text-eyebrow">About</p>
+            <h2 className="mt-5 font-display text-4xl text-ivory md:text-6xl">Namaste, I am <span className="gold-text">Kunti</span></h2>
+            <div className="mt-8 space-y-5 text-base font-light leading-loose text-parchment/82">
+              <p>A Tantric Yogini and traveler of this Earth. I am here as a bridge between my ancestral roots of South America and the ancient wisdom and traditions of Asia.</p>
+              <p>I come to accompany you on the path of awakening your feminine essence and creative energy, holding space for the journey back to the ultimate truth, where the spirit remembers its purity.</p>
+              <p>My spiritual path and awakening began in Bolivia on December 21, 2012, during the awaited Pachakuti. It was there that I received the first codes and activation of the codes of the new humanity and the golden time that was arriving.</p>
+              <p>For more than a decade, I have traveled the world reconnecting with my being and ancestral wisdom, remembering, offering, and transmitting the path of the Great Mother Goddess.</p>
             </div>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* 4. ASYMMETRICAL OFFERINGS */}
-      <section className="py-32 px-6 bg-surface">
-        <div className="max-w-[1400px] mx-auto">
-          <AnimatedSection className="text-center mb-28">
-            <span className="text-eyebrow text-terracotta mb-4 block">Sacred Offerings</span>
-            <h2 className="font-display text-5xl md:text-6xl text-textDark">Choose Your Doorway</h2>
-            <p className="font-body text-lg font-light leading-relaxed text-textDark/65 max-w-2xl mx-auto mt-8">
-              Each doorway can stand alone, or become part of a deeper mentorship woven around your season of life.
-            </p>
+      <PoeticDivider text={poeticPhrases[0]} />
+
+      <section className="px-6 py-28">
+        <div className="mx-auto max-w-[1350px]">
+          <AnimatedSection className="mx-auto max-w-3xl text-center">
+            <p className="text-eyebrow">Sacred Spaces</p>
+            <h2 className="mt-5 font-display text-5xl text-ivory md:text-7xl">Services</h2>
           </AnimatedSection>
-
-          <div className="space-y-40">
-            {offerings.map((offering, index) => {
-              const isEven = index % 2 === 0;
-              return (
-                <AnimatedSection key={offering.title}>
-                  <div className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-12 lg:gap-32`}>
-                    {/* Image Side */}
-                    <div className="w-full md:w-1/2">
-                      <EditorialImage
-                        src={offering.image}
-                        alt={offering.title}
-                        variant={isEven ? "pebble" : "organic-2"}
-                        withBorder
-                        className="w-full aspect-[4/5] md:aspect-[3/4]"
-                      />
-                    </div>
-
-                    {/* Content Side */}
-                    <div className={`w-full md:w-1/2 flex flex-col ${isEven ? 'items-start text-left' : 'items-start md:items-end md:text-right'}`}>
-                      <span className="text-eyebrow text-terracotta mb-6">{offering.eyebrow}</span>
-                      <h3 className="font-display text-4xl md:text-5xl lg:text-6xl text-textDark mb-8">
-                        {offering.title}
-                      </h3>
-                      <p className={`font-body text-lg font-light text-textDark/70 leading-loose mb-12 max-w-md ${!isEven && 'md:ml-auto'}`}>
-                        {offering.description}
-                      </p>
-                      <p className={`text-xs uppercase tracking-[0.22em] text-antiqueGold mb-10 leading-relaxed ${!isEven && 'md:ml-auto'}`}>
-                        {offering.detail}
-                      </p>
-                      <Link
-                        href={offering.link}
-                        className="group flex items-center gap-4 text-xs font-body uppercase tracking-[0.2em] text-textDark hover:text-terracotta transition-colors duration-500"
-                      >
-                        {isEven ? (
-                          <>
-                            <span>Explore Path</span>
-                            <span className="w-12 h-[1px] bg-textDark/30 transition-all duration-500 group-hover:w-16 group-hover:bg-terracotta" />
-                          </>
-                        ) : (
-                          <>
-                            <span className="w-12 h-[1px] bg-textDark/30 transition-all duration-500 group-hover:w-16 group-hover:bg-terracotta hidden md:block" />
-                            <span>Explore Path</span>
-                            <span className="w-12 h-[1px] bg-textDark/30 transition-all duration-500 group-hover:w-16 group-hover:bg-terracotta md:hidden" />
-                          </>
-                        )}
-                      </Link>
-                    </div>
-
-                  </div>
-                </AnimatedSection>
-              );
-            })}
+          <div className="mt-16 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            {services.map((service, index) => (
+              <AnimatedSection key={service.title} delay={index * 0.04}>
+                <div className="sacred-card group h-full p-7 transition-all duration-500 hover:-translate-y-1 hover:border-lightGold/50">
+                  <SacredIcon type={icons[index]} className="h-12 w-12 text-lightGold transition-transform duration-700 group-hover:scale-110" />
+                  <h3 className="mt-8 font-display text-3xl leading-tight text-ivory">{service.title}</h3>
+                  <p className="mt-5 text-sm font-light leading-loose text-parchment/72">{service.description}</p>
+                </div>
+              </AnimatedSection>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 5. TESTIMONIAL */}
-      <section className="px-6 py-28 bg-ivory">
-        <AnimatedSection className="max-w-4xl mx-auto text-center">
-          <div className="w-[1px] h-20 bg-antiqueGold/40 mx-auto mb-12" />
-          <p className="font-display text-3xl md:text-5xl leading-[1.35] text-textDark">
-            &ldquo;This is not performance spirituality. It is a tender, exacting return to the body as a sacred teacher.&rdquo;
-          </p>
-          <p className="mt-8 text-eyebrow text-terracotta">Student reflection</p>
-        </AnimatedSection>
+      <section className="px-6 py-28">
+        <div className="mx-auto grid max-w-[1250px] gap-6 md:grid-cols-3">
+          {[
+            ["Individual Sessions — 1:1 Guidance", "Deep guidance to reconnect with your energy, release blockages, and return to your center."],
+            ["Ritual & Feminine Energy", "Spaces to activate your creative energy, heal your relationship with the feminine, and inhabit your body with presence."],
+            ["Spiritual Integration", "Practices and guidance to expand your consciousness and root your spirituality into everyday life."],
+          ].map(([title, text], index) => (
+            <AnimatedSection key={title} delay={index * 0.08}>
+              <div className="sacred-card h-full p-8">
+                <span className="font-display text-5xl text-lightGold/50">0{index + 1}</span>
+                <h3 className="mt-8 font-display text-3xl leading-tight text-ivory">{title}</h3>
+                <p className="mt-5 text-sm font-light leading-loose text-parchment/75">{text}</p>
+              </div>
+            </AnimatedSection>
+          ))}
+        </div>
       </section>
 
-      {/* 6. POETIC CLOSING CTA */}
-      <section className="relative py-44 px-6 bg-deepPlum overflow-hidden">
-        {/* Subtle background layer */}
-        <div className="absolute inset-0 z-0 opacity-20">
-          <EditorialImage
-            src="/images/generated/mentorship-atmosphere-final.png"
-            alt="Soft light and shadows"
-            variant="sharp"
-            className="w-full h-full"
-          />
-        </div>
+      <PoeticDivider text={poeticPhrases[1]} />
 
-        <div className="relative z-10 max-w-3xl mx-auto text-center">
+      <section className="px-6 py-28">
+        <div className="mx-auto max-w-[1180px]">
+          <AnimatedSection className="text-center">
+            <p className="text-eyebrow">Trainings & Certifications</p>
+            <h2 className="mt-5 font-display text-5xl text-ivory md:text-7xl">Lineage & Study</h2>
+          </AnimatedSection>
+          <div className="relative mt-16 space-y-6 before:absolute before:left-4 before:top-4 before:h-[calc(100%-2rem)] before:w-px before:bg-lightGold/25 md:before:left-1/2">
+            {certifications.map((item, index) => (
+              <AnimatedSection key={item.place} delay={index * 0.06}>
+                <div className={`relative grid gap-6 md:grid-cols-2 ${index % 2 ? "" : "md:text-right"}`}>
+                  <div className={index % 2 ? "md:col-start-2" : ""}>
+                    <div className="sacred-card relative ml-12 p-7 md:ml-0">
+                      <span className="absolute -left-[3.25rem] top-8 grid h-8 w-8 place-items-center rounded-full border border-lightGold/50 bg-ink text-[10px] text-lightGold md:left-auto md:right-[-1.05rem]">
+                        {index + 1}
+                      </span>
+                      <h3 className="font-display text-2xl leading-tight text-ivory">{item.title}</h3>
+                      <p className="mt-4 text-eyebrow">{item.place}</p>
+                    </div>
+                  </div>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 py-28">
+        <div className="mx-auto grid max-w-[1300px] gap-14 lg:grid-cols-[1fr_1fr] lg:items-center">
           <AnimatedSection>
-            <span className="text-eyebrow text-antiqueGold mb-8 block">Private Mentorship</span>
-            <h2 className="font-display text-4xl md:text-6xl text-ivory leading-tight mb-12">
-              Ready to meet yourself <br />
-              <span className="italic text-antiqueGold">in the deep?</span>
-            </h2>
-            <Link
-              href="/mentorship"
-              className="inline-flex items-center gap-4 px-12 py-5 bg-ivory text-deepPlum hover:bg-antiqueGold hover:text-ivory transition-colors duration-700"
-            >
-              <span className="text-xs font-body uppercase tracking-[0.2em] font-medium">Apply for Mentorship</span>
+            <p className="text-eyebrow">Work With Me</p>
+            <h2 className="mt-5 font-display text-5xl text-ivory md:text-7xl">Spaces to <span className="gold-text">Remember</span></h2>
+            <p className="mt-8 max-w-xl text-base font-light leading-loose text-parchment/80">
+              Spaces to remember, heal, and awaken your creative energy through the union of mind, body, and soul, so we may awaken our consciousness and liberate the spirit.
+            </p>
+            <p className="mt-6 max-w-xl text-base font-light leading-loose text-parchment/80">
+              I accompany you in awakening your creative energy and reconnecting with your inner wisdom through the path of self-exploration and self-knowledge.
+            </p>
+            <Link href="/work-with-me" className="mt-10 inline-flex border border-lightGold/45 px-8 py-4 text-[11px] uppercase tracking-[0.24em] text-lightGold hover:bg-lightGold hover:text-ink">
+              Explore Offerings
             </Link>
           </AnimatedSection>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {offerings.map((offering, index) => (
+              <AnimatedSection key={offering} delay={index * 0.04}>
+                <div className="border border-lightGold/18 bg-charcoal/62 p-5 text-sm uppercase tracking-[0.16em] text-parchment/82 transition-colors duration-500 hover:border-lightGold/50 hover:text-lightGold">
+                  {offering}
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
         </div>
       </section>
 
+      <PoeticDivider text={poeticPhrases[4]} />
+
+      <section className="relative overflow-hidden px-6 py-32">
+        <div className="absolute inset-0 opacity-35">
+          <EditorialImage src={images.atmosphere} alt="Back side artwork from the provided Shakti Loto card" variant="sharp" className="h-full w-full" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/82 to-ink/55" />
+        <AnimatedSection className="relative z-10 mx-auto max-w-4xl text-center">
+          <SacredIcon type="lotus" className="mx-auto h-16 w-16 text-lightGold" />
+          <p className="mt-10 font-display text-4xl leading-tight text-ivory md:text-6xl">
+            Each space is an invitation to return to yourself,
+            to inhabit your body as a temple,
+            and to remember the wisdom that already lives within you.
+          </p>
+          <Link href="/contact" className="sacred-glow mt-12 inline-flex bg-lightGold px-9 py-4 text-[11px] font-medium uppercase tracking-[0.24em] text-ink hover:bg-ivory">
+            Begin the Conversation
+          </Link>
+        </AnimatedSection>
+      </section>
     </div>
   );
 }

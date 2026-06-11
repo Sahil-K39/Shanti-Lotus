@@ -3,63 +3,46 @@
 import AnimatedSection from "@/components/AnimatedSection";
 import ContactForm from "@/components/ContactForm";
 import EditorialImage from "@/components/EditorialImage";
+import SacredIcon from "@/components/SacredIcon";
+import { brand, images } from "@/lib/brand";
 
 export default function ContactContent() {
   return (
-    <div className="bg-surfaceDark text-ivory min-h-screen">
-      
-      <section className="pt-48 pb-32 px-6">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
-            
-            {/* Left: Warm Intro */}
-            <div className="w-full lg:w-1/2">
-              <AnimatedSection>
-                <span className="text-eyebrow text-antiqueGold mb-8 block">Connect</span>
-                <h1 className="font-display text-5xl md:text-7xl leading-[1.1] font-light text-ivory mb-10">
-                  Begin Your <br />
-                  <span className="italic text-antiqueGold">Journey</span>
-                </h1>
-                
-                <div className="mb-12">
-                  <EditorialImage 
-                    src="/images/generated/lotus-philosophy.png"
-                    alt="Soft nature detail"
-                    variant="organic-2"
-                    className="w-32 h-32 opacity-70"
-                  />
-                </div>
+    <div className="bg-ink text-ivory">
+      <section className="px-6 pb-28 pt-40 md:pt-48">
+        <div className="mx-auto grid max-w-[1250px] gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <AnimatedSection direction="left">
+            <p className="text-eyebrow">Contact</p>
+            <h1 className="mt-6 font-display text-5xl leading-tight md:text-8xl">
+              Begin Your <span className="gold-text">Journey</span>
+            </h1>
+            <p className="mt-8 max-w-xl text-base font-light leading-loose text-parchment/82">
+              Write to share where you are, what you are seeking, and which space is calling you. The visual world follows the black, gold, lotus, moon, and ritual language from the Shakti Loto card.
+            </p>
 
-                <p className="font-body text-lg font-light text-ivory/70 leading-relaxed mb-12 max-w-md">
-                  Whether you are called to a private mentorship, an immersion in India, or simply wish to say hello, I am honored to hear from you. Please share a little about where you are on your path.
-                </p>
-
-                <div className="space-y-6">
-                  <div>
-                    <span className="text-eyebrow text-antiqueGold/60 block mb-2">Direct Email</span>
-                    <a href="mailto:sanctuary@shaktilotus.com" className="font-body text-ivory hover:text-antiqueGold transition-colors">sanctuary@shaktilotus.com</a>
-                  </div>
-                  <div>
-                    <span className="text-eyebrow text-antiqueGold/60 block mb-2">WhatsApp</span>
-                    <p className="font-body text-ivory">+91 91255 62555</p>
-                  </div>
-                </div>
-              </AnimatedSection>
+            <div className="mt-10 space-y-5 text-sm text-parchment/78">
+              <p>
+                Instagram:{" "}
+                <a href={brand.contact.instagramUrl} target="_blank" rel="noreferrer" className="text-lightGold hover:text-ivory">
+                  {brand.contact.instagram}
+                </a>
+              </p>
+              <p>Email: {brand.contact.email}</p>
+              <p>Phone: {brand.contact.phone}</p>
+              <p>Website: {brand.contact.website}</p>
             </div>
 
-            {/* Right: The Form Container */}
-            <div className="w-full lg:w-1/2">
-              <AnimatedSection delay={0.2}>
-                <div className="bg-ivory text-textDark p-10 md:p-16 rounded-tl-[80px] rounded-br-[80px]">
-                  <ContactForm />
-                </div>
-              </AnimatedSection>
+            <div className="mt-12 max-w-sm border border-lightGold/30 bg-charcoal/60 p-8 text-center">
+              <EditorialImage src={images.cardContactDetail} alt="Shakti Loto contact details from the provided card" variant="sharp" className="aspect-[27/17] w-full" />
             </div>
+          </AnimatedSection>
 
-          </div>
+          <AnimatedSection direction="right" className="sacred-card p-8 md:p-12">
+            <SacredIcon type="moon" className="mb-8 h-14 w-14 text-lightGold" />
+            <ContactForm />
+          </AnimatedSection>
         </div>
       </section>
-
     </div>
   );
 }

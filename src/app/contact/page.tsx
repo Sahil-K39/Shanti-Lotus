@@ -3,9 +3,9 @@ import ContactContent from './ContactContent';
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: 'Begin your journey back to the sacred within. Contact Kunti at Shakti Lotus for mentorship, retreats, and sacred offerings.',
+  description: 'Begin your journey back to the sacred within. Contact Kunti at Shakti Loto for rituals, retreats, and sacred offerings.',
   openGraph: {
-    title: 'Contact Kunti | Shakti Lotus',
+    title: 'Contact Kunti | Shakti Loto',
     description: 'Begin your journey back to the sacred within.',
   },
 };

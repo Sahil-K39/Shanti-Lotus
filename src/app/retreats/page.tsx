@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Retreats & Courses',
   description: 'Immersive spaces for transformation, healing, movement, ritual, and remembrance. Join Kunti for sacred retreats and courses.',
   openGraph: {
-    title: 'Retreats & Courses | Shakti Lotus',
+    title: 'Retreats & Courses | Shakti Loto',
     description: 'Immersive spaces for transformation, healing, movement, ritual, and remembrance.',
   },
 };
