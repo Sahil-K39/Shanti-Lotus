@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Jost } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -20,11 +22,24 @@ const jost = Jost({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://shaktiloto.com"),
   title: {
-    default: "Shakti Loto — Site Offline",
+    default: "Kunti Shakti Loto — Multidisciplinary Artist",
     template: "%s | Shakti Loto",
   },
-  description: "The Shakti Loto website is temporarily offline.",
-  keywords: ["Shakti Loto", "Kunti Shakti Loto"],
+  description:
+    "Shakti Loto is a sacred feminine space with Kunti for Tantra, plant medicine, rituals, Ayurveda, retreats, sacred jewelry, and creative energy awakening.",
+  keywords: [
+    "Shakti Loto",
+    "Kunti Shakti Loto",
+    "tantric yogini",
+    "plant medicine",
+    "sacred feminine",
+    "herbal alchemy",
+    "Shakta Tantra",
+    "Devi Yoga",
+    "Ayurveda",
+    "sacred jewelry",
+    "retreats",
+  ],
   authors: [{ name: "Kunti" }],
   creator: "Shakti Loto",
   openGraph: {
@@ -32,8 +47,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "/",
     siteName: "Shakti Loto",
-    title: "Shakti Loto — Site Offline",
-    description: "The Shakti Loto website is temporarily offline.",
+    title: "Kunti Shakti Loto — Multidisciplinary Artist",
+    description:
+      "A sacred return to your divine essence through ancient plant wisdom, alchemy, Tantra, and feminine embodiment.",
     images: [
       {
         url: "/images/generated/shakti-loto-water-card-portrait-hq.png",
@@ -45,13 +61,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shakti Loto — Site Offline",
-    description: "The Shakti Loto website is temporarily offline.",
+    title: "Kunti Shakti Loto — Multidisciplinary Artist",
+    description: "A sacred return to your divine essence.",
     images: ["/images/generated/shakti-loto-water-card-portrait-hq.png"],
   },
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
   },
 };
 
@@ -63,7 +79,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cormorant.variable} ${jost.variable}`}>
       <body className="sacred-bg font-body antialiased">
-        {children}
+        <Navbar />
+        <main className="min-h-screen">{children}</main>
+        <Footer />
       </body>
     </html>
   );
