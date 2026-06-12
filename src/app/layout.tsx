@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Jost } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -22,24 +20,11 @@ const jost = Jost({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://shaktiloto.com"),
   title: {
-    default: "Kunti Shakti Loto — Multidisciplinary Artist",
+    default: "Shakti Loto — Site Offline",
     template: "%s | Shakti Loto",
   },
-  description:
-    "Shakti Loto is a sacred feminine space with Kunti for Tantra, plant medicine, rituals, Ayurveda, retreats, sacred jewelry, and creative energy awakening.",
-  keywords: [
-    "Shakti Loto",
-    "Kunti Shakti Loto",
-    "tantric yogini",
-    "plant medicine",
-    "sacred feminine",
-    "herbal alchemy",
-    "Shakta Tantra",
-    "Devi Yoga",
-    "Ayurveda",
-    "sacred jewelry",
-    "retreats",
-  ],
+  description: "The Shakti Loto website is temporarily offline.",
+  keywords: ["Shakti Loto", "Kunti Shakti Loto"],
   authors: [{ name: "Kunti" }],
   creator: "Shakti Loto",
   openGraph: {
@@ -47,9 +32,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "/",
     siteName: "Shakti Loto",
-    title: "Kunti Shakti Loto — Multidisciplinary Artist",
-    description:
-      "A sacred return to your divine essence through ancient plant wisdom, alchemy, Tantra, and feminine embodiment.",
+    title: "Shakti Loto — Site Offline",
+    description: "The Shakti Loto website is temporarily offline.",
     images: [
       {
         url: "/images/generated/shakti-loto-water-card-portrait-hq.png",
@@ -61,13 +45,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kunti Shakti Loto — Multidisciplinary Artist",
-    description: "A sacred return to your divine essence.",
+    title: "Shakti Loto — Site Offline",
+    description: "The Shakti Loto website is temporarily offline.",
     images: ["/images/generated/shakti-loto-water-card-portrait-hq.png"],
   },
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
   },
 };
 
@@ -79,9 +63,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cormorant.variable} ${jost.variable}`}>
       <body className="sacred-bg font-body antialiased">
-        <Navbar />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
+        {children}
       </body>
     </html>
   );
