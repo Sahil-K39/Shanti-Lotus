@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 import BrandLogo from "@/components/BrandLogo";
 import LanguageTrigger from "@/components/LanguageTrigger";
 
-// Curated primary links for clean desktop display
 const desktopLinks = [
   { href: "/about", label: "About Kunti" },
   { href: "/work-with-me", label: "Work With Me" },
@@ -17,7 +16,6 @@ const desktopLinks = [
   { href: "/philosophy", label: "Philosophy" },
 ];
 
-// Full links for overlay mobile/tablet menu
 const allLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Kunti" },
@@ -57,36 +55,36 @@ export default function Navbar() {
         transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-700 ${
           scrolled
-            ? "border-b border-lightGold/20 bg-ink/95 py-2.5 backdrop-blur-xl shadow-altar"
-            : "bg-gradient-to-b from-ink/80 via-ink/40 to-transparent py-4"
+            ? "border-b border-lightGold/20 bg-ink/95 py-3 backdrop-blur-xl shadow-altar"
+            : "bg-gradient-to-b from-ink/90 via-ink/50 to-transparent py-5"
         }`}
       >
         <nav
           className="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10"
           aria-label="Main navigation"
         >
-          {/* Brand Logo - compact proportion */}
+          {/* BIG Brand Logo */}
           <Link
             href="/"
             onClick={closeMenu}
-            className="group flex items-center transition-transform duration-500 hover:scale-[1.02]"
+            className="group flex items-center transition-transform duration-500 hover:scale-[1.03]"
             aria-label="Shakti Loto - Home"
           >
-            <BrandLogo compact={true} />
+            <BrandLogo big={true} />
           </Link>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden items-center gap-6 xl:gap-8 lg:flex">
+          <div className="hidden items-center gap-6 xl:gap-9 lg:flex">
             {desktopLinks.map((link) => {
               const active = pathname === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`relative py-1.5 text-[10px] xl:text-[11px] uppercase tracking-[0.22em] font-medium transition-colors duration-400 ${
+                  className={`relative py-1.5 text-[10.5px] xl:text-[11.5px] uppercase tracking-[0.23em] font-medium transition-colors duration-400 ${
                     active
                       ? "text-lightGold"
-                      : "text-parchment/80 hover:text-lightGold"
+                      : "text-parchment/85 hover:text-lightGold"
                   }`}
                 >
                   {link.label}
@@ -105,14 +103,14 @@ export default function Navbar() {
             <LanguageTrigger />
             <Link
               href="/contact"
-              className="border border-lightGold/45 px-5 py-2 text-[10px] uppercase tracking-[0.25em] text-lightGold transition-all duration-500 hover:border-lightGold hover:bg-lightGold hover:text-ink"
+              className="border border-lightGold/50 px-6 py-2.5 text-[10.5px] uppercase tracking-[0.25em] text-lightGold transition-all duration-500 hover:border-lightGold hover:bg-lightGold hover:text-ink"
             >
               Begin
             </Link>
           </div>
 
           {/* Mobile / Tablet Controls */}
-          <div className="flex items-center gap-2.5 lg:hidden">
+          <div className="flex items-center gap-3 lg:hidden">
             <LanguageTrigger />
             <button
               type="button"
@@ -153,7 +151,7 @@ export default function Navbar() {
               aria-label="Mobile navigation"
             >
               <div className="mb-2 text-lightGold">
-                <BrandLogo compact={false} />
+                <BrandLogo big={true} />
               </div>
 
               {allLinks.map((link, index) => (

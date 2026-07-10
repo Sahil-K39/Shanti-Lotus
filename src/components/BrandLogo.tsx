@@ -4,20 +4,34 @@ type BrandLogoProps = {
   className?: string;
   showText?: boolean;
   compact?: boolean;
+  big?: boolean;
 };
 
-export default function BrandLogo({ className = "", showText = false, compact = false }: BrandLogoProps) {
-  const src = compact ? "/shakti-logo-assets/icon-192.png" : "/shakti-logo-assets/logo-crop-80.png";
+export default function BrandLogo({
+  className = "",
+  showText = false,
+  compact = false,
+  big = false,
+}: BrandLogoProps) {
+  const src = "/shakti-logo-assets/logo-crop-160.png";
+
+  const sizeClasses = big
+    ? "h-16 w-16 sm:h-20 sm:w-20 lg:h-24 lg:w-24 border-2 border-lightGold/50 shadow-[0_0_28px_rgba(200,169,107,0.35)]"
+    : compact
+    ? "h-11 w-11 border border-lightGold/30"
+    : "h-14 w-14 sm:h-16 sm:w-16 border border-lightGold/40";
 
   return (
-    <div className={`inline-flex items-center gap-3 text-lightGold ${className}`}>
-      <span className={compact ? "relative h-12 w-12 overflow-hidden rounded-full" : "relative h-20 w-20 overflow-hidden rounded-full md:h-24 md:w-24"}>
+    <div className={`inline-flex items-center gap-3.5 text-lightGold ${className}`}>
+      <span
+        className={`relative block overflow-hidden rounded-full bg-ink/90 transition-all duration-500 ${sizeClasses}`}
+      >
         <Image
           src={src}
           alt={showText ? "" : "Shakti Loto"}
           aria-hidden={showText ? "true" : undefined}
           fill
-          sizes={compact ? "48px" : "(min-width: 768px) 96px, 80px"}
+          sizes="128px"
           className="rounded-full object-cover"
         />
       </span>
