@@ -1,0 +1,319 @@
+/* Shakti Loto Website Design Tokens + Components */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&family=Montserrat:wght@300;400;500&display=swap');
+
+:root {
+  /* Colors */
+  --oro-divino: #C8A96B;
+  --oro-ritual: #B8904F;
+  --oro-claro: #E2C58F;
+  --verde-loto: #6F8F7A;
+  --turquesa-sagrado: #5E9E9B;
+  --azul-profundo: #4D667D;
+  --arena-sagrada: #EFE6DB;
+  --nude-ritual: #D8C8B6;
+  --cacao-profundo: #5A4636;
+  --blanco-ritual: #F8F5F1;
+
+  /* Typography: replace Canela with licensed webfont if available */
+  --font-heading: "Canela", "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-body: "Montserrat", "Inter", Arial, sans-serif;
+
+  --radius-soft: 28px;
+  --radius-round: 999px;
+  --shadow-soft: 0 24px 70px rgba(90, 70, 54, 0.12);
+  --border-gold: 1px solid rgba(200, 169, 107, 0.38);
+  --section-space: clamp(72px, 10vw, 140px);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--blanco-ritual);
+  color: var(--cacao-profundo);
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 1.75;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: inherit; text-decoration: none; }
+
+.shakti-page {
+  background:
+    radial-gradient(circle at top left, rgba(226, 197, 143, 0.18), transparent 28%),
+    linear-gradient(180deg, var(--blanco-ritual), var(--arena-sagrada));
+}
+
+.shakti-container {
+  width: min(1160px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.shakti-eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.36em;
+  text-transform: uppercase;
+  color: var(--oro-ritual);
+  font-weight: 400;
+}
+
+.shakti-heading-xl,
+.shakti-heading,
+.shakti-quote {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.04;
+  color: var(--oro-ritual);
+}
+
+.shakti-heading-xl {
+  font-size: clamp(54px, 9vw, 118px);
+}
+
+.shakti-heading {
+  font-size: clamp(42px, 6vw, 78px);
+}
+
+.shakti-quote {
+  font-size: clamp(30px, 4vw, 54px);
+}
+
+.shakti-text {
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  color: rgba(90, 70, 54, 0.86);
+}
+
+.shakti-divider {
+  width: 118px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--oro-divino), transparent);
+  margin: 28px auto;
+  position: relative;
+}
+
+.shakti-divider::after {
+  content: "✦";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -52%);
+  color: var(--oro-divino);
+  font-size: 12px;
+  background: var(--blanco-ritual);
+  padding: 0 10px;
+}
+
+.shakti-card {
+  background: rgba(248, 245, 241, 0.78);
+  border: var(--border-gold);
+  border-radius: var(--radius-soft);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(10px);
+}
+
+.shakti-hero {
+  min-height: 92vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: var(--section-space) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.shakti-hero::before {
+  content: "";
+  position: absolute;
+  inset: 12% 8% auto auto;
+  width: min(470px, 70vw);
+  height: min(470px, 70vw);
+  background: url('./assets/lotus-icon.svg') center/contain no-repeat;
+  opacity: 0.055;
+  pointer-events: none;
+}
+
+.shakti-hero-card {
+  width: min(720px, 100%);
+  padding: clamp(44px, 7vw, 88px);
+}
+
+.shakti-logo-mark {
+  width: 54px;
+  margin: 0 auto 28px;
+}
+
+.shakti-brand-name {
+  margin-top: 28px;
+  font-family: var(--font-heading);
+  font-size: clamp(34px, 5vw, 56px);
+  color: var(--oro-ritual);
+}
+
+.shakti-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 28px;
+  border-radius: var(--radius-round);
+  border: 1px solid var(--oro-divino);
+  background: var(--oro-divino);
+  color: var(--blanco-ritual);
+  font-family: var(--font-body);
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  transition: transform .3s ease, background .3s ease, color .3s ease;
+}
+
+.shakti-button:hover {
+  transform: translateY(-2px);
+  background: transparent;
+  color: var(--oro-ritual);
+}
+
+.shakti-section {
+  padding: var(--section-space) 0;
+}
+
+.shakti-split {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: clamp(36px, 7vw, 88px);
+  align-items: center;
+}
+
+.shakti-image-frame {
+  border-radius: 34px;
+  overflow: hidden;
+  border: 8px solid rgba(248, 245, 241, 0.72);
+  box-shadow: var(--shadow-soft);
+  background: var(--nude-ritual);
+}
+
+.shakti-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 4 / 5;
+}
+
+.shakti-practice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.shakti-practice-card {
+  padding: 34px;
+  min-height: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.shakti-practice-card h3 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: 38px;
+  line-height: 1.08;
+  color: var(--oro-ritual);
+}
+
+.shakti-practice-card p {
+  margin: 28px 0 0;
+  font-size: 14px;
+}
+
+.shakti-quote-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.shakti-quote-tile {
+  min-height: 230px;
+  padding: 30px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background: var(--arena-sagrada);
+  color: var(--oro-ritual);
+  position: relative;
+  overflow: hidden;
+}
+
+.shakti-quote-tile.dark {
+  background: var(--verde-loto);
+  color: var(--blanco-ritual);
+}
+
+.shakti-quote-tile.cacao {
+  background: var(--cacao-profundo);
+  color: var(--blanco-ritual);
+}
+
+.shakti-quote-tile .shakti-quote {
+  color: inherit;
+  font-size: clamp(28px, 3.4vw, 44px);
+}
+
+.shakti-color-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.shakti-swatch {
+  text-align: center;
+}
+
+.shakti-swatch-circle {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  margin: 0 auto 14px;
+  border: 1px solid rgba(90, 70, 54, 0.08);
+}
+
+.shakti-swatch strong {
+  display: block;
+  font-size: 13px;
+  color: var(--cacao-profundo);
+}
+
+.shakti-swatch span {
+  display: block;
+  font-size: 12px;
+  color: rgba(90, 70, 54, 0.72);
+}
+
+.shakti-footer {
+  padding: 60px 0;
+  background: var(--cacao-profundo);
+  color: var(--blanco-ritual);
+  text-align: center;
+}
+
+.shakti-footer .shakti-brand-name,
+.shakti-footer .shakti-heading,
+.shakti-footer .shakti-eyebrow {
+  color: var(--oro-claro);
+}
+
+@media (max-width: 900px) {
+  .shakti-split,
+  .shakti-practice-grid,
+  .shakti-quote-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .shakti-color-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

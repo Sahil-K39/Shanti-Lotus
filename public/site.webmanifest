@@ -1,0 +1,22 @@
+{
+  "name": "Kunti Shakti Loto",
+  "short_name": "Shakti Loto",
+  "description": "A sacred return to your divine essence.",
+  "icons": [
+    {
+      "src": "/shakti-logo-assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/shakti-logo-assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#B8904F",
+  "background_color": "#F8F5F1",
+  "display": "standalone"
+}

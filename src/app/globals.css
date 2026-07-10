@@ -1,27 +1,34 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #090807;
-  --color-charcoal: #11100E;
-  --color-ember: #17120D;
-  --color-gold: #B8863B;
-  --color-softGold: #D6A85A;
-  --color-lightGold: #E2C078;
-  --color-ivory: #F9F0DD;
-  --color-parchment: #D7C3A0;
-  --color-mutedGold: #9D7A43;
-  --color-roseSmoke: #B47867;
-  --color-sageSmoke: #7E8060;
-  --color-deepPlum: #1B1012;
-  --color-textDark: #F9F0DD;
-  --color-surface: #11100E;
-  --color-surfaceDark: #090807;
-  --color-antiqueGold: #D6A85A;
-  --color-terracotta: #B8863B;
+  --color-ink: #F8F5F1;
+  --color-charcoal: #EFE6DB;
+  --color-ember: #D8C8B6;
+  --color-gold: #B8904F;
+  --color-softGold: #C8A96B;
+  --color-lightGold: #C8A96B;
+  --color-ivory: #2F2A24;
+  --color-parchment: #3F3026;
+  --color-mutedGold: #7E5A2F;
+  --color-roseSmoke: #D8C8B6;
+  --color-sageSmoke: #6F8F7A;
+  --color-deepPlum: #3F3026;
+  --color-textDark: #2F2A24;
+  --color-surface: #EFE6DB;
+  --color-surfaceDark: #F8F5F1;
+  --color-antiqueGold: #C8A96B;
+  --color-terracotta: #B8904F;
+  --color-lotusGreen: #6F8F7A;
+  --color-sacredTurquoise: #5E9E9B;
+  --color-deepBlue: #4D667D;
+  --color-blancoRitual: #F8F5F1;
+  --color-arenaSagrada: #EFE6DB;
+  --color-nudeRitual: #D8C8B6;
+  --color-cacaoProfundo: #3F3026;
 
   --font-display: "Cormorant Garamond", serif;
   --font-cursive: "Snell Roundhand", "Apple Chancery", "Segoe Script", "Brush Script MT", cursive;
-  --font-body: "Jost", sans-serif;
+  --font-body: "Montserrat", sans-serif;
 }
 
 html {
@@ -35,16 +42,23 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   background:
-    radial-gradient(circle at 18% 8%, rgba(214, 168, 90, 0.12), transparent 32rem),
-    radial-gradient(circle at 82% 18%, rgba(180, 120, 103, 0.09), transparent 28rem),
-    linear-gradient(135deg, var(--color-ink), var(--color-charcoal) 46%, var(--color-ember));
+    radial-gradient(circle at 12% 8%, rgba(200, 169, 107, 0.24), transparent 28rem),
+    radial-gradient(circle at 88% 12%, rgba(94, 158, 155, 0.2), transparent 25rem),
+    radial-gradient(circle at 18% 58%, rgba(111, 143, 122, 0.18), transparent 26rem),
+    radial-gradient(circle at 82% 72%, rgba(77, 102, 125, 0.14), transparent 26rem),
+    radial-gradient(circle at 48% 38%, rgba(216, 200, 182, 0.28), transparent 22rem),
+    linear-gradient(135deg, var(--color-ink), var(--color-charcoal) 52%, var(--color-ink));
   color: var(--color-ivory);
   font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.75;
+  text-rendering: optimizeLegibility;
 }
 
 ::selection {
-  background: rgba(226, 192, 120, 0.35);
-  color: var(--color-ivory);
+  background: rgba(200, 169, 107, 0.36);
+  color: var(--color-textDark);
 }
 
 h1,
@@ -55,7 +69,20 @@ h5,
 h6 {
   font-family: var(--font-display);
   font-weight: 300;
+  line-height: 1.04;
   letter-spacing: 0;
+}
+
+p,
+li,
+input,
+textarea,
+button {
+  letter-spacing: 0.01em;
+}
+
+.sacred-bg .font-light {
+  font-weight: 400;
 }
 
 .font-display .italic,
@@ -71,11 +98,11 @@ h6 {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-ink);
+  background: var(--color-charcoal);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(var(--color-gold), var(--color-mutedGold));
+  background: linear-gradient(var(--color-lightGold), var(--color-lotusGreen));
   border-radius: 999px;
 }
 
@@ -129,8 +156,8 @@ h6 {
   z-index: -2;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(226, 192, 120, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(226, 192, 120, 0.025) 1px, transparent 1px);
+    linear-gradient(rgba(184, 144, 79, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(111, 143, 122, 0.04) 1px, transparent 1px);
   background-size: 78px 78px;
   mask-image: radial-gradient(circle at center, black, transparent 78%);
 }
@@ -142,12 +169,14 @@ h6 {
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(circle at 50% 0%, rgba(226, 192, 120, 0.09), transparent 30rem),
-    radial-gradient(circle at 5% 70%, rgba(184, 134, 59, 0.12), transparent 24rem);
+    radial-gradient(circle at 50% 0%, rgba(200, 169, 107, 0.16), transparent 30rem),
+    radial-gradient(circle at 5% 70%, rgba(94, 158, 155, 0.14), transparent 24rem),
+    radial-gradient(circle at 92% 45%, rgba(77, 102, 125, 0.1), transparent 22rem),
+    radial-gradient(circle at 48% 88%, rgba(90, 70, 54, 0.08), transparent 24rem);
 }
 
 .gold-text {
-  background: linear-gradient(105deg, #B8863B, #E2C078 45%, #D6A85A 72%, #8F6429);
+  background: linear-gradient(105deg, #7E5A2F, #B8904F 45%, #9F7945 72%, #3F3026);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -155,24 +184,169 @@ h6 {
 
 .gold-line {
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(226, 192, 120, 0.85), transparent);
+  background: linear-gradient(90deg, transparent, rgba(184, 144, 79, 0.78), transparent);
+  position: relative;
+}
+
+.gold-line::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 34px;
+  height: 34px;
+  transform: translate(-50%, -50%);
+  background: var(--color-ink) url("/shakti-elements/star-divider.svg") center / contain no-repeat;
 }
 
 .sacred-card {
-  border: 1px solid rgba(226, 192, 120, 0.22);
+  border: 1px solid rgba(184, 144, 79, 0.24);
+  border-radius: 22px;
   background:
-    linear-gradient(145deg, rgba(226, 192, 120, 0.06), transparent 42%),
-    rgba(17, 16, 14, 0.78);
+    linear-gradient(135deg, color-mix(in srgb, var(--section-accent, #C8A96B) 18%, transparent), transparent 46%),
+    linear-gradient(145deg, rgba(200, 169, 107, 0.12), transparent 42%),
+    rgba(248, 245, 241, 0.78);
   box-shadow:
-    0 24px 70px rgba(0, 0, 0, 0.34),
-    inset 0 1px 0 rgba(226, 192, 120, 0.1);
+    0 24px 70px rgba(90, 70, 54, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.54);
+}
+
+.sacred-bg main section {
+  --section-accent: #C8A96B;
+  --section-pair: #5E9E9B;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(248, 245, 241, 0.92), rgba(239, 230, 219, 0.86)),
+    radial-gradient(circle at 10% 18%, color-mix(in srgb, var(--section-accent) 24%, transparent), transparent 22rem) !important;
+}
+
+.sacred-bg main section::before {
+  content: none;
+  position: absolute;
+  inset: 0 0 auto 0;
+  z-index: 1;
+  height: 9px;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, #C8A96B, #B8904F, #E2C58F, #EFE6DB, #D8C8B6, #5A4636, #6F8F7A, #5E9E9B, #4D667D, #F8F5F1);
+}
+
+.sacred-bg main section::after {
+  content: "";
+  position: absolute;
+  right: clamp(18px, 8vw, 120px);
+  top: clamp(56px, 10vw, 140px);
+  z-index: 0;
+  width: clamp(160px, 28vw, 430px);
+  aspect-ratio: 1;
+  pointer-events: none;
+  background: url("/shakti-elements/lotus-icon.svg") center / contain no-repeat;
+  opacity: 0.035;
+}
+
+.sacred-bg main section:nth-of-type(6n + 1) {
+  --section-accent: #C8A96B;
+  --section-pair: #4D667D;
+  background:
+    radial-gradient(circle at 12% 14%, rgba(200, 169, 107, 0.24), transparent 22rem),
+    radial-gradient(circle at 88% 78%, rgba(226, 197, 143, 0.2), transparent 24rem),
+    linear-gradient(135deg, #F8F5F1, #EFE6DB) !important;
+}
+
+.sacred-bg main section:nth-of-type(6n + 2) {
+  --section-accent: #6F8F7A;
+  --section-pair: #B8904F;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(111, 143, 122, 0.25), transparent 22rem),
+    radial-gradient(circle at 82% 80%, rgba(248, 245, 241, 0.62), transparent 23rem),
+    linear-gradient(135deg, rgba(111, 143, 122, 0.16), #F8F5F1 54%, #EFE6DB) !important;
+}
+
+.sacred-bg main section:nth-of-type(6n + 3) {
+  --section-accent: #5E9E9B;
+  --section-pair: #5A4636;
+  background:
+    radial-gradient(circle at 78% 18%, rgba(94, 158, 155, 0.25), transparent 23rem),
+    radial-gradient(circle at 12% 88%, rgba(216, 200, 182, 0.34), transparent 24rem),
+    linear-gradient(135deg, #F8F5F1, rgba(94, 158, 155, 0.14)) !important;
+}
+
+.sacred-bg main section:nth-of-type(6n + 4) {
+  --section-accent: #4D667D;
+  --section-pair: #E2C58F;
+  background:
+    radial-gradient(circle at 16% 20%, rgba(77, 102, 125, 0.22), transparent 23rem),
+    radial-gradient(circle at 88% 86%, rgba(200, 169, 107, 0.24), transparent 24rem),
+    linear-gradient(135deg, rgba(77, 102, 125, 0.12), #F8F5F1 48%, #EFE6DB) !important;
+}
+
+.sacred-bg main section:nth-of-type(6n + 5) {
+  --section-accent: #5A4636;
+  --section-pair: #6F8F7A;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(90, 70, 54, 0.18), transparent 22rem),
+    radial-gradient(circle at 18% 84%, rgba(184, 144, 79, 0.24), transparent 24rem),
+    linear-gradient(135deg, #F8F5F1, rgba(216, 200, 182, 0.48)) !important;
+}
+
+.sacred-bg main section:nth-of-type(6n) {
+  --section-accent: #B8904F;
+  --section-pair: #5E9E9B;
+  background:
+    radial-gradient(circle at 16% 18%, rgba(184, 144, 79, 0.24), transparent 22rem),
+    radial-gradient(circle at 84% 84%, rgba(94, 158, 155, 0.22), transparent 24rem),
+    linear-gradient(135deg, #EFE6DB, #F8F5F1) !important;
+}
+
+.palette-band {
+  background:
+    linear-gradient(90deg, #C8A96B 0 10%, #B8904F 10% 20%, #E2C58F 20% 30%, #EFE6DB 30% 40%, #D8C8B6 40% 50%, #5A4636 50% 60%, #6F8F7A 60% 70%, #5E9E9B 70% 80%, #4D667D 80% 90%, #F8F5F1 90% 100%);
+}
+
+.palette-wash {
+  background:
+    radial-gradient(circle at 10% 10%, rgba(200, 169, 107, 0.24), transparent 18rem),
+    radial-gradient(circle at 28% 86%, rgba(184, 144, 79, 0.18), transparent 18rem),
+    radial-gradient(circle at 50% 38%, rgba(111, 143, 122, 0.18), transparent 20rem),
+    radial-gradient(circle at 78% 18%, rgba(94, 158, 155, 0.18), transparent 18rem),
+    radial-gradient(circle at 90% 82%, rgba(77, 102, 125, 0.16), transparent 18rem),
+    linear-gradient(135deg, #F8F5F1, #EFE6DB 45%, #D8C8B6);
 }
 
 .sacred-glow {
   box-shadow:
-    0 0 0 1px rgba(226, 192, 120, 0.26),
-    0 0 38px rgba(214, 168, 90, 0.18),
-    0 30px 90px rgba(0, 0, 0, 0.52);
+    0 0 0 1px rgba(184, 144, 79, 0.22),
+    0 0 38px rgba(200, 169, 107, 0.16),
+    0 30px 90px rgba(90, 70, 54, 0.14);
+}
+
+.sacred-visual {
+  background:
+    radial-gradient(circle at 50% 26%, rgba(200, 169, 107, 0.28), transparent 16rem),
+    radial-gradient(circle at 20% 78%, rgba(111, 143, 122, 0.2), transparent 18rem),
+    radial-gradient(circle at 84% 76%, rgba(94, 158, 155, 0.18), transparent 18rem),
+    linear-gradient(135deg, rgba(248, 245, 241, 0.98), rgba(239, 230, 219, 0.9));
+}
+
+.sacred-visual::before {
+  content: "";
+  position: absolute;
+  inset: 9%;
+  border: 1px solid rgba(184, 144, 79, 0.2);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.sacred-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, transparent 49.8%, rgba(184, 144, 79, 0.18) 50%, transparent 50.2%),
+    linear-gradient(0deg, transparent 49.8%, rgba(184, 144, 79, 0.12) 50%, transparent 50.2%);
+  opacity: 0.55;
 }
 
 .text-eyebrow {
@@ -202,7 +376,7 @@ h6 {
 }
 
 .editorial-border {
-  border: 1px solid rgba(226, 192, 120, 0.28);
+  border: 1px solid rgba(184, 144, 79, 0.28);
   padding: 10px;
 }
 
@@ -210,23 +384,23 @@ h6 {
   display: inline-block;
   width: 0.68rem;
   height: 0.68rem;
-  border: 1px solid rgba(226, 192, 120, 0.7);
+  border: 1px solid rgba(184, 144, 79, 0.7);
   border-radius: 999px;
-  box-shadow: 0 0 18px rgba(226, 192, 120, 0.16);
+  box-shadow: 0 0 18px rgba(200, 169, 107, 0.16);
 }
 
 .moon-phase.full {
-  background: rgba(226, 192, 120, 0.82);
+  background: rgba(200, 169, 107, 0.82);
 }
 
 .moon-phase.half {
-  background: linear-gradient(90deg, rgba(226, 192, 120, 0.82) 50%, transparent 50%);
+  background: linear-gradient(90deg, rgba(200, 169, 107, 0.82) 50%, transparent 50%);
 }
 
 .moon-phase.crescent {
   background:
-    radial-gradient(circle at 62% 50%, var(--color-charcoal) 0 42%, transparent 44%),
-    rgba(226, 192, 120, 0.82);
+    radial-gradient(circle at 62% 50%, var(--color-ink) 0 42%, transparent 44%),
+    rgba(200, 169, 107, 0.82);
 }
 
 .writing-mode-vertical {

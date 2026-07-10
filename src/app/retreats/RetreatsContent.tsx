@@ -4,18 +4,20 @@ import Link from "next/link";
 import AnimatedSection from "@/components/AnimatedSection";
 import EditorialImage from "@/components/EditorialImage";
 import SacredIcon from "@/components/SacredIcon";
-import { images } from "@/lib/brand";
+import { photos } from "@/lib/brand";
 
 const retreats = [
   {
     title: "Retreats",
     text: "Immersive spaces for transformation, healing, movement, ritual, and remembrance.",
-    image: images.landscape,
+    image: photos.mountainLakePrayer,
+    alt: "Mountain lake prayer retreat landscape",
   },
   {
     title: "Courses",
     text: "Guided study and practice containers for Tantra, Ayurveda, feminine embodiment, and spiritual integration.",
-    image: images.lotus,
+    image: photos.sacredTree,
+    alt: "Ancient sacred tree",
   },
 ];
 
@@ -23,10 +25,10 @@ export default function RetreatsContent() {
   return (
     <div className="bg-ink text-ivory">
       <section className="relative overflow-hidden px-6 pb-28 pt-40 md:pt-48">
-        <div className="absolute inset-0 opacity-30">
-          <EditorialImage src={images.atmosphere} alt="Back side artwork from the provided Shakti Loto card" variant="sharp" className="h-full w-full" />
+        <div className="absolute inset-0 opacity-35">
+          <EditorialImage src={photos.sacredTree} alt="Ancient sacred tree background" variant="sharp" imageClassName="h-full object-cover" className="h-full w-full" />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-ink/80 via-ink/88 to-ink" />
+        <div className="absolute inset-0 bg-gradient-to-b from-blancoRitual/72 via-blancoRitual/88 to-blancoRitual" />
         <AnimatedSection className="relative z-10 mx-auto max-w-5xl text-center">
           <p className="text-eyebrow">Retreats & Courses</p>
           <h1 className="mt-6 font-display text-5xl leading-tight md:text-8xl">
@@ -43,7 +45,7 @@ export default function RetreatsContent() {
           {retreats.map((item, index) => (
             <AnimatedSection key={item.title}>
               <div className={`grid gap-10 lg:grid-cols-2 lg:items-center ${index % 2 ? "lg:[&>*:first-child]:order-2" : ""}`}>
-                <EditorialImage src={item.image} alt={`Provided Shakti Loto card artwork for ${item.title}`} variant={index % 2 ? "organic-2" : "organic-1"} withBorder className="aspect-[4/3] w-full" />
+                <EditorialImage src={item.image} alt={item.alt} variant={index % 2 ? "organic-2" : "organic-1"} withBorder className="aspect-[4/3] w-full" />
                 <div className="sacred-card p-8 md:p-12">
                   <SacredIcon type={index ? "star" : "moon"} className="h-14 w-14 text-lightGold" />
                   <h2 className="mt-8 font-display text-5xl text-ivory">{item.title}</h2>

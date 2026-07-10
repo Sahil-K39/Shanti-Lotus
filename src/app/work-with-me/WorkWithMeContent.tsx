@@ -1,11 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import AnimatedSection from "@/components/AnimatedSection";
 import EditorialImage from "@/components/EditorialImage";
 import SacredIcon from "@/components/SacredIcon";
-import { brand, images, offerings, poeticPhrases } from "@/lib/brand";
+import { brand, offerings, photos, poeticPhrases } from "@/lib/brand";
 
 const descriptions = [
   "Tantric remembrance through mantra, ritual, subtle body devotion, and the living wisdom of Shakti.",
@@ -39,16 +38,8 @@ export default function WorkWithMeContent() {
       <section className="px-6 pb-28">
         <div className="mx-auto grid max-w-[1180px] gap-10 border-y border-lightGold/18 py-14 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           <AnimatedSection direction="left">
-            <div className="sacred-glow relative mx-auto aspect-square max-w-sm overflow-hidden rounded-full border border-lightGold/35 bg-charcoal p-3">
-              <Image
-                src={images.hero}
-                alt="Kunti Shakti Loto water ritual image from the provided card"
-                width={1000}
-                height={1000}
-                className="h-full w-full rounded-full object-cover"
-                priority
-              />
-              <div className="absolute inset-3 rounded-full bg-gradient-to-t from-ink/35 via-transparent to-transparent" />
+            <div className="sacred-glow mx-auto max-w-sm rounded-full border border-lightGold/30 bg-blancoRitual p-3">
+              <EditorialImage src={photos.redTempleDoor} alt="Kunti at a vivid red temple doorway" variant="sharp" imageClassName="rounded-full" className="aspect-square w-full rounded-full" />
             </div>
           </AnimatedSection>
 
@@ -97,7 +88,7 @@ export default function WorkWithMeContent() {
       <section className="px-6 py-28">
         <div className="mx-auto grid max-w-[1250px] gap-12 lg:grid-cols-3">
           <AnimatedSection className="lg:col-span-1">
-            <EditorialImage src={images.tantra} alt="Kunti Shakti Loto water ritual image from the provided card" variant="organic-1" withBorder className="aspect-[4/5] w-full" />
+            <EditorialImage src={photos.gardenPortrait} alt="Kunti in a garden portrait" variant="organic-1" withBorder className="aspect-[4/5] w-full" />
           </AnimatedSection>
           <AnimatedSection className="sacred-card p-8 md:p-12 lg:col-span-2">
             <p className="text-eyebrow">A living container</p>

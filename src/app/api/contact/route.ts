@@ -62,18 +62,18 @@ export async function POST(request: NextRequest) {
       replyTo: email,
       subject: `New Contact: ${interest || 'General Inquiry'} from ${name}`,
       html: `
-        <div style="font-family: 'Georgia', serif; max-width: 600px; margin: 0 auto; padding: 40px 20px; background: #090807;">
-          <h1 style="color: #E2C078; font-size: 24px; font-weight: 300; border-bottom: 1px solid #D6A85A; padding-bottom: 16px;">New Contact from Shakti Loto</h1>
+        <div style="font-family: 'Georgia', serif; max-width: 600px; margin: 0 auto; padding: 40px 20px; background: #F8F5F1;">
+          <h1 style="color: #B8904F; font-size: 24px; font-weight: 300; border-bottom: 1px solid #C8A96B; padding-bottom: 16px;">New Contact from Shakti Loto</h1>
           <div style="padding: 20px 0;">
-            <p style="color: #F9F0DD; margin: 8px 0;"><strong>Name:</strong> ${safeName}</p>
-            <p style="color: #F9F0DD; margin: 8px 0;"><strong>Email:</strong> ${safeEmail}</p>
-            ${phone ? `<p style="color: #F9F0DD; margin: 8px 0;"><strong>Phone/WhatsApp:</strong> ${safePhone}</p>` : ''}
-            ${interest ? `<p style="color: #F9F0DD; margin: 8px 0;"><strong>Interested In:</strong> ${safeInterest}</p>` : ''}
-            <div style="margin-top: 24px; padding: 20px; background-color: #17120D; border: 1px solid #B8863B;">
-              <p style="color: #D7C3A0; font-style: italic; white-space: pre-wrap;">${safeMessage}</p>
+            <p style="color: #5A4636; margin: 8px 0;"><strong>Name:</strong> ${safeName}</p>
+            <p style="color: #5A4636; margin: 8px 0;"><strong>Email:</strong> ${safeEmail}</p>
+            ${phone ? `<p style="color: #5A4636; margin: 8px 0;"><strong>Phone/WhatsApp:</strong> ${safePhone}</p>` : ''}
+            ${interest ? `<p style="color: #5A4636; margin: 8px 0;"><strong>Interested In:</strong> ${safeInterest}</p>` : ''}
+            <div style="margin-top: 24px; padding: 20px; background-color: #EFE6DB; border: 1px solid #B8904F;">
+              <p style="color: #2F2A24; font-style: italic; white-space: pre-wrap;">${safeMessage}</p>
             </div>
           </div>
-          <p style="color: #9D7A43; font-size: 12px; margin-top: 32px; text-align: center;">Sent from Shakti Loto Contact Form</p>
+          <p style="color: #9F7945; font-size: 12px; margin-top: 32px; text-align: center;">Sent from Shakti Loto Contact Form</p>
         </div>
       `,
     });

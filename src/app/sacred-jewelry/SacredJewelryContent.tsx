@@ -4,7 +4,7 @@ import Link from "next/link";
 import AnimatedSection from "@/components/AnimatedSection";
 import EditorialImage from "@/components/EditorialImage";
 import SacredIcon from "@/components/SacredIcon";
-import { images } from "@/lib/brand";
+import { photos } from "@/lib/brand";
 
 const pieces = [
   ["Protection", "Talismans held with mantra, intention, and ancient symbolism."],
@@ -30,7 +30,7 @@ export default function SacredJewelryContent() {
       <section className="px-6 pb-28">
         <div className="mx-auto grid max-w-[1200px] gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <AnimatedSection direction="left">
-            <EditorialImage src={images.ritual} alt="Gold ritual ornament from the provided Shakti Loto card" variant="organic-1" withBorder className="aspect-[4/5] w-full" />
+            <EditorialImage src={photos.redTempleDoor} alt="Kunti at a vivid red temple doorway" variant="organic-1" withBorder className="aspect-[4/5] w-full" />
           </AnimatedSection>
           <AnimatedSection direction="right">
             <div className="grid gap-5">

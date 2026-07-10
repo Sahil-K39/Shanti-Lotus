@@ -5,7 +5,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import BrandLogo from "@/components/BrandLogo";
 import EditorialImage from "@/components/EditorialImage";
 import SacredIcon from "@/components/SacredIcon";
-import { brand, certifications, images, offerings, poeticPhrases, services } from "@/lib/brand";
+import { brand, certifications, offerings, photos, poeticPhrases, services } from "@/lib/brand";
 
 const icons = ["leaf", "alchemy", "moon", "flame", "ritual", "lotus", "star", "eye"] as const;
 
@@ -35,29 +35,29 @@ function GoldDivider() {
 
 function ReferenceHeroCard() {
   return (
-    <div className="sacred-glow mx-auto w-full max-w-[520px] border border-lightGold/35 bg-ink">
-      <div className="relative h-[430px] overflow-hidden md:h-[500px]">
+    <div className="sacred-glow mx-auto w-full max-w-[430px] overflow-hidden rounded-[28px] border border-lightGold/30 bg-blancoRitual">
+      <div className="relative h-[250px] overflow-hidden sm:h-[350px] md:h-[410px]">
         <EditorialImage
-          src={images.hero}
-          alt="Kunti Shakti Loto water ritual image from the provided card"
+          src={photos.waterfallPrayer}
+          alt="Kunti Shakti Loto in prayer by a waterfall"
           variant="sharp"
-          imageClassName="h-full object-cover brightness-[0.82] saturate-[0.95]"
+          imageClassName="h-full object-cover brightness-[0.92] saturate-[0.95]"
           className="h-full w-full"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-ink/95" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-ink/92" />
       </div>
-      <div className="px-8 pb-10 pt-4 text-center">
-        <h1 className="font-display text-4xl uppercase leading-none tracking-[0.08em] text-lightGold md:text-5xl">
+      <div className="px-5 pb-7 pt-5 text-center md:px-8 md:pb-8">
+        <h1 className="font-display text-3xl uppercase leading-none tracking-[0.08em] text-lightGold md:text-4xl">
           Kunti Shakti Loto
         </h1>
         <GoldDivider />
-        <p className="mt-4 text-sm uppercase tracking-[0.24em] text-ivory md:text-base">{brand.role}</p>
-        <p className="mt-5 text-sm uppercase leading-relaxed tracking-[0.16em] text-ivory">
+        <p className="mt-3 text-xs uppercase tracking-[0.22em] text-ivory md:mt-4 md:text-base md:tracking-[0.24em]">{brand.role}</p>
+        <p className="mt-4 text-xs uppercase leading-relaxed tracking-[0.14em] text-ivory md:mt-5 md:text-sm md:tracking-[0.16em]">
           Tantric Yogini <span className="text-lightGold">•</span> Herbal Alchemist <br />
           Plant Medicine Guide
         </p>
         <GoldDivider />
-        <p className="mt-6 font-display text-2xl italic leading-tight text-lightGold/85">
+        <p className="mt-5 font-display text-2xl italic leading-tight text-lightGold/85 md:mt-6">
           A sacred return <br /> to your divine essence.
         </p>
       </div>
@@ -69,7 +69,7 @@ function BackCardPanel() {
   const primaryServices = services.slice(0, 5);
 
   return (
-    <div className="sacred-glow mx-auto max-w-[760px] border border-lightGold/28 bg-[#0b0b0a] px-7 py-9 md:px-10 md:py-12">
+    <div className="sacred-glow mx-auto max-w-[760px] border border-lightGold/28 bg-blancoRitual px-7 py-9 md:px-10 md:py-12">
       <div className="text-center">
         <BrandLogo className="justify-center" />
         <p className="mx-auto mt-6 max-w-sm text-sm uppercase leading-relaxed tracking-[0.14em] text-lightGold/85">
@@ -134,7 +134,7 @@ function BackCardPanel() {
 
 function BrandCardLanguage() {
   return (
-    <div className="sacred-glow border border-lightGold/24 bg-[#0b0b0a] p-5 md:p-7">
+    <div className="sacred-glow border border-lightGold/24 bg-blancoRitual p-5 md:p-7">
       <div className="grid gap-5 md:grid-cols-2">
         <div className="border border-lightGold/25 bg-ink px-7 py-10 text-center">
           <MoonPhases />
@@ -216,31 +216,27 @@ function PoeticDivider({ text }: { text: string }) {
 export default function Home() {
   return (
     <div className="bg-ink text-ivory">
-      <section className="relative min-h-screen overflow-hidden px-6 py-24 md:py-28">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(214,168,90,0.18),transparent_32rem)]" />
+      <section className="palette-wash relative min-h-screen overflow-hidden px-4 py-20 sm:px-6 md:py-28">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(200,169,107,0.16),transparent_32rem)]" />
         <div className="absolute left-1/2 top-24 h-[78vw] max-h-[760px] w-[78vw] max-w-[760px] -translate-x-1/2 rounded-full border border-lightGold/10 opacity-60" />
         <div className="absolute left-1/2 top-36 h-[58vw] max-h-[560px] w-[58vw] max-w-[560px] -translate-x-1/2 rounded-full border border-lightGold/10 opacity-60" />
 
-        <div className="relative z-10 mx-auto grid min-h-[78vh] max-w-[1320px] items-center gap-14 lg:grid-cols-[0.9fr_1.1fr]">
-          <AnimatedSection direction="left">
-            <ReferenceHeroCard />
-          </AnimatedSection>
-
-          <AnimatedSection className="text-center lg:text-left" direction="right">
+        <div className="relative z-10 mx-auto grid min-h-[78vh] max-w-[1180px] items-center gap-10 lg:grid-cols-[1.02fr_0.88fr]">
+          <AnimatedSection className="text-center lg:text-left" direction="left">
             <div className="mx-auto max-w-2xl lg:mx-0">
               <MoonPhases />
-              <p className="mt-10 text-eyebrow">Bridging ancient plant wisdom, alchemy and spirit</p>
-              <h2 className="mt-7 font-display text-5xl leading-[0.96] text-ivory md:text-7xl xl:text-8xl">
+              <p className="mt-7 text-eyebrow md:mt-10">Bridging ancient plant wisdom, alchemy and spirit</p>
+              <h2 className="mt-5 font-display text-4xl leading-[1.02] text-ivory sm:text-6xl md:mt-7 md:text-7xl md:leading-[0.98] xl:text-8xl">
                 A sacred return to your <span className="gold-text">divine essence</span>
               </h2>
-              <p className="mt-8 font-display text-3xl text-lightGold md:text-4xl">Kunti Shakti Loto</p>
-              <p className="mt-6 text-sm uppercase leading-relaxed tracking-[0.18em] text-parchment/82">
+              <p className="mt-6 font-display text-3xl text-lightGold md:mt-8 md:text-4xl">Kunti Shakti Loto</p>
+              <p className="mt-4 text-xs uppercase leading-relaxed tracking-[0.16em] text-parchment/82 md:mt-6 md:text-sm md:tracking-[0.18em]">
                 Multidisciplinary Artist <span className="text-lightGold">•</span> Tantric Yogini <span className="text-lightGold">•</span> Herbal Alchemist <span className="text-lightGold">•</span> Plant Medicine Guide
               </p>
-              <p className="mt-8 max-w-xl text-base font-light leading-loose text-parchment/82 lg:mx-0">
+              <p className="mt-5 max-w-xl text-sm font-light leading-relaxed text-parchment/82 md:mt-8 md:text-base md:leading-loose lg:mx-0">
                 Enter a handcrafted sanctuary of ritual, feminine remembrance, plant wisdom, tantra, and embodied spiritual guidance.
               </p>
-              <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row lg:items-start">
+              <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row md:mt-10 md:gap-4 lg:justify-start">
                 <Link
                   href="/work-with-me"
                   className="sacred-glow border border-lightGold/50 bg-lightGold px-8 py-4 text-[11px] font-medium uppercase tracking-[0.24em] text-ink transition-all duration-500 hover:bg-ivory"
@@ -256,16 +252,20 @@ export default function Home() {
               </div>
             </div>
           </AnimatedSection>
+
+          <AnimatedSection direction="right">
+            <ReferenceHeroCard />
+          </AnimatedSection>
         </div>
       </section>
 
-      <section className="px-6 py-20">
+      <section className="bg-arenaSagrada px-6 py-20">
         <div className="mx-auto grid max-w-[1320px] gap-12 lg:grid-cols-[1fr_1.05fr] lg:items-center">
           <AnimatedSection className="text-center lg:text-left" direction="left">
             <SacredIcon type="lotus" className="mx-auto h-14 w-14 text-lightGold lg:mx-0" />
-            <p className="mt-8 text-eyebrow">Reference Card Language</p>
+            <p className="mt-8 text-eyebrow">Brand Language</p>
             <h2 className="mt-5 font-display text-5xl leading-tight text-ivory md:text-7xl">
-              Gold-on-dark spaces for <span className="gold-text">ritual work</span>
+              Gold, lotus green, and ivory spaces for <span className="gold-text">ritual work</span>
             </h2>
             <p className="mt-8 max-w-xl text-base font-light leading-loose text-parchment/80 lg:mx-0">
               Plant medicine, alchemy, tantra, sacred adornment, and earth-conscious creation are held together as one elegant spiritual ecosystem.
@@ -277,13 +277,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-6 py-16">
+      <section className="bg-nudeRitual/70 px-6 py-16">
         <AnimatedSection className="mx-auto max-w-4xl">
           <BackCardPanel />
         </AnimatedSection>
       </section>
 
-      <section className="px-6 py-28">
+      <section className="bg-blancoRitual px-6 py-28">
         <AnimatedSection className="mx-auto max-w-5xl text-center">
           <p className="text-eyebrow">Shakti Loto</p>
           <h2 className="mt-5 font-display text-4xl text-ivory md:text-6xl">
@@ -300,10 +300,10 @@ export default function Home() {
         </AnimatedSection>
       </section>
 
-      <section className="px-6 py-28">
+      <section className="bg-lotusGreen/18 px-6 py-28">
         <div className="mx-auto grid max-w-[1250px] gap-14 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
           <AnimatedSection direction="left">
-            <EditorialImage src={images.devi} alt="Kunti Shakti Loto water ritual image from the provided card" variant="organic-1" withBorder className="aspect-[4/5] w-full" />
+            <EditorialImage src={photos.roseMeditation} alt="Kunti in meditation among roses" variant="organic-1" withBorder className="aspect-[4/5] w-full" />
           </AnimatedSection>
           <AnimatedSection direction="right" className="sacred-card p-8 md:p-12">
             <p className="text-eyebrow">About</p>
@@ -320,7 +320,7 @@ export default function Home() {
 
       <PoeticDivider text={poeticPhrases[0]} />
 
-      <section className="px-6 py-28">
+      <section className="bg-sacredTurquoise/14 px-6 py-28">
         <div className="mx-auto max-w-[1350px]">
           <AnimatedSection className="mx-auto max-w-3xl text-center">
             <p className="text-eyebrow">Sacred Spaces</p>
@@ -329,7 +329,7 @@ export default function Home() {
           <div className="mt-16 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {services.map((service, index) => (
               <AnimatedSection key={service.title} delay={index * 0.04}>
-                <div className="sacred-card group h-full p-7 transition-all duration-500 hover:-translate-y-1 hover:border-lightGold/50">
+                <div className="sacred-card group h-full overflow-hidden p-7 transition-all duration-500 hover:-translate-y-1 hover:border-lightGold/50">
                   <SacredIcon type={icons[index]} className="h-12 w-12 text-lightGold transition-transform duration-700 group-hover:scale-110" />
                   <h3 className="mt-8 font-display text-3xl leading-tight text-ivory">{service.title}</h3>
                   <p className="mt-5 text-sm font-light leading-loose text-parchment/72">{service.description}</p>
@@ -416,10 +416,10 @@ export default function Home() {
       <PoeticDivider text={poeticPhrases[4]} />
 
       <section className="relative overflow-hidden px-6 py-32">
-        <div className="absolute inset-0 opacity-35">
-          <EditorialImage src={images.atmosphere} alt="Back side artwork from the provided Shakti Loto card" variant="sharp" className="h-full w-full" />
+        <div className="absolute inset-0 opacity-40">
+          <EditorialImage src={photos.mountainLakePrayer} alt="Mountain lake prayer" variant="sharp" imageClassName="h-full object-cover" className="h-full w-full" />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/82 to-ink/55" />
+        <div className="absolute inset-0 bg-gradient-to-t from-blancoRitual via-blancoRitual/86 to-blancoRitual/58" />
         <AnimatedSection className="relative z-10 mx-auto max-w-4xl text-center">
           <SacredIcon type="lotus" className="mx-auto h-16 w-16 text-lightGold" />
           <p className="mt-10 font-display text-4xl leading-tight text-ivory md:text-6xl">

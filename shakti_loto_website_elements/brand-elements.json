@@ -1,0 +1,78 @@
+{
+  "brand": {
+    "name": "Shakti Loto",
+    "tagline": "Un camino de regreso a tu esencia divina universal",
+    "main_message": "Recordar quién eres es volver a la fuente.",
+    "vibe": ["sagrada", "femenina", "editorial", "espiritual", "lujosa", "cálida", "ancestral"]
+  },
+  "colors": [
+    { "name": "Oro Divino", "hex": "#C8A96B", "use": "primary gold, icons, logo, borders, dividers" },
+    { "name": "Oro Ritual", "hex": "#B8904F", "use": "heading accents, hover state, premium details" },
+    { "name": "Oro Claro", "hex": "#E2C58F", "use": "soft highlights and gradients" },
+    { "name": "Verde Loto", "hex": "#6F8F7A", "use": "green cards, sacred blocks, natural accent" },
+    { "name": "Turquesa Sagrado", "hex": "#5E9E9B", "use": "teal accents and image overlays" },
+    { "name": "Azul Profundo", "hex": "#4D667D", "use": "deep contrast sections and footer details" },
+    { "name": "Arena Sagrada", "hex": "#EFE6DB", "use": "warm background sections" },
+    { "name": "Nude Ritual", "hex": "#D8C8B6", "use": "muted cards and borders" },
+    { "name": "Cacao Profundo", "hex": "#5A4636", "use": "main body text and dark contrast blocks" },
+    { "name": "Blanco Ritual", "hex": "#F8F5F1", "use": "main website background and light cards" }
+  ],
+  "typography": {
+    "recommended": {
+      "heading": "Canela",
+      "body": "Montserrat Light",
+      "fallback_heading": "Cormorant Garamond, Playfair Display, Georgia, serif",
+      "fallback_body": "Montserrat, Inter, Arial, sans-serif",
+      "description": "Elegancia, espiritualidad y claridad. Una combinación que transmite lujo consciente, feminidad y profundidad con modernidad."
+    },
+    "options": [
+      {
+        "name": "Canela + Montserrat Light",
+        "mood": "Femenina, elegante, atemporal",
+        "heading_sample": "Un camino de regreso a tu esencia divina",
+        "body_sample": "Shakti Loto es un espacio de reconexión profunda con tu energía vital, donde lo ancestral y lo divino se entrelazan para despertar la conciencia del cuerpo, el corazón y el espíritu."
+      },
+      {
+        "name": "Saol Display + Neue Haas Grotesk Light",
+        "mood": "Artística, editorial, lujosa",
+        "heading_sample": "Florecer es regresar",
+        "body_sample": "Cada proceso es una oportunidad para transformar, sanar y expandir el ser. Un llamado a recordar quién eres, más allá de las formas."
+      },
+      {
+        "name": "Editorial New + Inter Light",
+        "mood": "Minimal, moderna, sofisticada",
+        "heading_sample": "Todo lo sagrado ya habita en ti.",
+        "body_sample": "A través del tantra, el movimiento consciente, la meditación y los rituales ancestrales, te acompaño a activar tu energía creadora y reconectar con tu sabiduría interna."
+      }
+    ]
+  },
+  "copy": {
+    "hero": {
+      "eyebrow": "Shakti Loto",
+      "headline": "Recordar quién eres es volver a la fuente.",
+      "subtitle": "Un camino de regreso a tu esencia divina universal"
+    },
+    "about": "Shakti Loto es un espacio de reconexión profunda con tu energía vital, donde lo ancestral y lo divino se entrelazan para despertar la conciencia del cuerpo, el corazón y el espíritu.",
+    "transformation": "Cada proceso es una oportunidad para transformar, sanar y expandir el ser. Un llamado a recordar quién eres, más allá de las formas.",
+    "practice": "A través del tantra, el movimiento consciente, la meditación y los rituales ancestrales, te acompaño a activar tu energía creadora y reconectar con tu sabiduría interna.",
+    "quotes": [
+      "Volver a ti es volver a la fuente.",
+      "Tu cuerpo es un templo vivo.",
+      "Florecer es regresar.",
+      "Todo lo sagrado ya habita en ti.",
+      "El camino espiritual también se encarna.",
+      "Tu esencia divina es tu verdad más pura.",
+      "Recordar también es sanar.",
+      "Habita tu cuerpo con presencia y amor."
+    ]
+  },
+  "motifs": [
+    "thin gold lines",
+    "small star/sparkle ornaments",
+    "lotus outline icon",
+    "faint lotus watermark",
+    "rounded ivory cards",
+    "earthy feminine wellness photography",
+    "letter-spaced uppercase labels"
+  ]
+}

@@ -98,18 +98,12 @@ export const poeticPhrases = [
   "Bridging ancient plant wisdom, alchemy and spirit to awaken the divine within",
 ];
 
-export const images = {
-  hero: "/images/generated/shakti-loto-water-card-portrait-hq.png",
-  cardFront: "/images/generated/shakti-loto-card-front-hq.png",
-  cardBack: "/images/generated/shakti-loto-card-back-hq.png",
-  cardContactDetail: "/images/generated/shakti-loto-card-contact-detail-hq.png",
-  cardLotusDetail: "/images/generated/shakti-loto-card-lotus-detail-hq.png",
-  goldRitualOrnament: "/images/generated/shakti-loto-gold-ritual-ornament-hq.png",
-  referenceFull: "/images/generated/shakti-loto-reference-full-hq.png",
-  lotus: "/images/generated/shakti-loto-card-lotus-detail-hq.png",
-  tantra: "/images/generated/shakti-loto-water-card-portrait-hq.png",
-  devi: "/images/generated/shakti-loto-water-card-portrait-hq.png",
-  ritual: "/images/generated/shakti-loto-gold-ritual-ornament-hq.png",
-  atmosphere: "/images/generated/shakti-loto-card-back-hq.png",
-  landscape: "/images/generated/shakti-loto-card-front-hq.png",
+export const photos = {
+  ancestralLineage: "/images/kunti/ancestral-lineage.jpg",
+  sacredTree: "/images/kunti/sacred-tree.jpg",
+  waterfallPrayer: "/images/kunti/waterfall-prayer.jpg",
+  redTempleDoor: "/images/kunti/red-temple-door.jpg",
+  gardenPortrait: "/images/kunti/garden-portrait.jpg",
+  roseMeditation: "/images/kunti/rose-meditation.jpg",
+  mountainLakePrayer: "/images/kunti/mountain-lake-prayer.jpg",
 };

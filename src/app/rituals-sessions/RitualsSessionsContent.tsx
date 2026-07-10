@@ -4,7 +4,7 @@ import Link from "next/link";
 import AnimatedSection from "@/components/AnimatedSection";
 import EditorialImage from "@/components/EditorialImage";
 import SacredIcon from "@/components/SacredIcon";
-import { images, poeticPhrases } from "@/lib/brand";
+import { photos, poeticPhrases } from "@/lib/brand";
 
 const spaces = [
   {
@@ -68,7 +68,7 @@ export default function RitualsSessionsContent() {
             </Link>
           </AnimatedSection>
           <AnimatedSection direction="right">
-            <EditorialImage src={images.ritual} alt="Gold ritual ornament from the provided Shakti Loto card" variant="organic-2" withBorder className="aspect-[4/5] w-full" />
+            <EditorialImage src={photos.waterfallPrayer} alt="Waterfall prayer ritual field" variant="organic-2" withBorder className="aspect-[4/5] w-full" />
           </AnimatedSection>
         </div>
       </section>
