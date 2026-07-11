@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import React, { createContext, useContext, useEffect, useState } from "react";
 
 export interface LanguageOption {
@@ -150,6 +151,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     SUPPORTED_LANGUAGES[0]
   );
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const savedCode = localStorage.getItem("shakti_lang_code");
@@ -172,7 +174,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
           };
         }).google.translate.TranslateElement(
           {
-            pageLanguage: "auto",
+            pageLanguage: "en",
             includedLanguages: SUPPORTED_LANGUAGES.map((l) => l.code).join(","),
             autoDisplay: false,
             multilanguagePage: true,
@@ -192,6 +194,17 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     addGoogleTranslateScript();
   }, []);
 
+  // Re-trigger translation when navigating between pages on client side
+  useEffect(() => {
+    if (currentLanguage.code !== "en") {
+      const select = document.querySelector(".goog-te-combo") as HTMLSelectElement | null;
+      if (select) {
+        select.value = currentLanguage.code;
+        select.dispatchEvent(new Event("change"));
+      }
+    }
+  }, [pathname, currentLanguage.code]);
+
   const applyLanguageAndRtl = (lang: LanguageOption) => {
     const isRtl = RTL_CODES.includes(lang.code) || Boolean(lang.rtl);
     const host = window.location.hostname;
@@ -200,15 +213,13 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     document.documentElement.setAttribute("lang", lang.code);
 
     if (lang.code === "en") {
-      // Clear translation cookies completely
       document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
       document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=${host};`;
       if (host.includes(".")) {
         document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.${host};`;
       }
     } else {
-      // Set translation cookies for both /auto/code and /en/code across all domain formats
-      const cookies = [`/auto/${lang.code}`, `/en/${lang.code}`];
+      const cookies = [`/en/${lang.code}`, `/auto/${lang.code}`];
       cookies.forEach((val) => {
         document.cookie = `googtrans=${val}; path=/;`;
         document.cookie = `googtrans=${val}; path=/; domain=${host};`;
@@ -219,22 +230,24 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     }
 
     const select = document.querySelector(".goog-te-combo") as HTMLSelectElement | null;
-    if (select && select.value !== lang.code) {
+    if (select) {
       select.value = lang.code;
       select.dispatchEvent(new Event("change"));
     }
   };
 
   const setLanguage = (lang: LanguageOption) => {
+    const previousCode = currentLanguage.code;
     setCurrentLanguageState(lang);
     localStorage.setItem("shakti_lang_code", lang.code);
     applyLanguageAndRtl(lang);
     setIsModalOpen(false);
 
-    // Force clean reload so Google Website Translator translates 100% of the DOM
-    setTimeout(() => {
-      window.location.reload();
-    }, 100);
+    if (lang.code !== previousCode) {
+      setTimeout(() => {
+        window.location.reload();
+      }, 80);
+    }
   };
 
   const isRtl = RTL_CODES.includes(currentLanguage.code) || Boolean(currentLanguage.rtl);
