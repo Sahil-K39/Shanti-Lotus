@@ -16,7 +16,7 @@ export default function BrandLogo({
   const src = "/shakti-logo-assets/logo-crop-160.png";
 
   const sizeClasses = big
-    ? "h-16 w-16 sm:h-20 sm:w-20 lg:h-24 lg:w-24 border-2 border-lightGold/50 shadow-[0_0_28px_rgba(200,169,107,0.35)]"
+    ? "h-14 w-14 sm:h-20 sm:w-20 lg:h-24 lg:w-24 border-2 border-lightGold/50 shadow-[0_0_28px_rgba(200,169,107,0.35)]"
     : compact
     ? "h-11 w-11 border border-lightGold/30"
     : "h-14 w-14 sm:h-16 sm:w-16 border border-lightGold/40";
