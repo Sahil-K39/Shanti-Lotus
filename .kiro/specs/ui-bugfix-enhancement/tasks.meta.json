@@ -1,0 +1,213 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1. Write bug condition exploration tests": [
+      {
+        "executionId": "88585a50-f681-4029-8695-9a25e939e8b5",
+        "chatSessionId": "sess_73b351e2-ac11-48d3-a4be-558aa145b190",
+        "timestamp": 1783840388384
+      },
+      {
+        "executionId": "88585a50-f681-4029-8695-9a25e939e8b5",
+        "chatSessionId": "sess_73b351e2-ac11-48d3-a4be-558aa145b190",
+        "timestamp": 1783840397976
+      },
+      {
+        "executionId": "88585a50-f681-4029-8695-9a25e939e8b5",
+        "chatSessionId": "sess_73b351e2-ac11-48d3-a4be-558aa145b190",
+        "timestamp": 1783840476393
+      }
+    ],
+    "2. Write preservation property tests (BEFORE implementing fixes)": [
+      {
+        "executionId": "88585a50-f681-4029-8695-9a25e939e8b5",
+        "chatSessionId": "sess_73b351e2-ac11-48d3-a4be-558aa145b190",
+        "timestamp": 1783840388473
+      },
+      {
+        "executionId": "88585a50-f681-4029-8695-9a25e939e8b5",
+        "chatSessionId": "sess_73b351e2-ac11-48d3-a4be-558aa145b190",
+        "timestamp": 1783840481621
+      },
+      {
+        "executionId": "88585a50-f681-4029-8695-9a25e939e8b5",
+        "chatSessionId": "sess_73b351e2-ac11-48d3-a4be-558aa145b190",
+        "timestamp": 1783841751308
+      }
+    ],
+    "3.1 Correct swapped color tokens in `globals.css @theme` block": [
+      {
+        "executionId": "88585a50-f681-4029-8695-9a25e939e8b5",
+        "chatSessionId": "sess_73b351e2-ac11-48d3-a4be-558aa145b190",
+        "timestamp": 1783840388494
+      },
+      {
+        "executionId": "88585a50-f681-4029-8695-9a25e939e8b5",
+        "chatSessionId": "sess_73b351e2-ac11-48d3-a4be-558aa145b190",
+        "timestamp": 1783841766611
+      },
+      {
+        "executionId": "88585a50-f681-4029-8695-9a25e939e8b5",
+        "chatSessionId": "sess_73b351e2-ac11-48d3-a4be-558aa145b190",
+        "timestamp": 1783841876964
+      }
+    ],
+    "3.2 Correct `ivory` value in `tailwind.config.ts`": [
+      {
+        "executionId": "88585a50-f681-4029-8695-9a25e939e8b5",
+        "chatSessionId": "sess_73b351e2-ac11-48d3-a4be-558aa145b190",
+        "timestamp": 1783840388511
+      },
+      {
+        "executionId": "88585a50-f681-4029-8695-9a25e939e8b5",
+        "chatSessionId": "sess_73b351e2-ac11-48d3-a4be-558aa145b190",
+        "timestamp": 1783841883267
+      },
+      {
+        "executionId": "88585a50-f681-4029-8695-9a25e939e8b5",
+        "chatSessionId": "sess_73b351e2-ac11-48d3-a4be-558aa145b190",
+        "timestamp": 1783841917623
+      }
+    ],
+    "4.1 Migrate `EditorialImage` from `<motion.img>` to `<Image>` with priority and error fallback": [
+      {
+        "executionId": "88585a50-f681-4029-8695-9a25e939e8b5",
+        "chatSessionId": "sess_73b351e2-ac11-48d3-a4be-558aa145b190",
+        "timestamp": 1783840388532
+      },
+      {
+        "executionId": "88585a50-f681-4029-8695-9a25e939e8b5",
+        "chatSessionId": "sess_73b351e2-ac11-48d3-a4be-558aa145b190",
+        "timestamp": 1783841924406
+      },
+      {
+        "executionId": "88585a50-f681-4029-8695-9a25e939e8b5",
+        "chatSessionId": "sess_73b351e2-ac11-48d3-a4be-558aa145b190",
+        "timestamp": 1783842046369
+      }
+    ],
+    "5.1 Wire `handleSubmit` to POST `/api/contact` with error handling": [
+      {
+        "executionId": "88585a50-f681-4029-8695-9a25e939e8b5",
+        "chatSessionId": "sess_73b351e2-ac11-48d3-a4be-558aa145b190",
+        "timestamp": 1783840388563
+      },
+      {
+        "executionId": "88585a50-f681-4029-8695-9a25e939e8b5",
+        "chatSessionId": "sess_73b351e2-ac11-48d3-a4be-558aa145b190",
+        "timestamp": 1783842052142
+      },
+      {
+        "executionId": "88585a50-f681-4029-8695-9a25e939e8b5",
+        "chatSessionId": "sess_73b351e2-ac11-48d3-a4be-558aa145b190",
+        "timestamp": 1783842119943
+      }
+    ],
+    "6. Fix — Create `/api/contact` route (if it doesn't already exist)": [
+      {
+        "executionId": "88585a50-f681-4029-8695-9a25e939e8b5",
+        "chatSessionId": "sess_73b351e2-ac11-48d3-a4be-558aa145b190",
+        "timestamp": 1783840388584
+      },
+      {
+        "executionId": "88585a50-f681-4029-8695-9a25e939e8b5",
+        "chatSessionId": "sess_73b351e2-ac11-48d3-a4be-558aa145b190",
+        "timestamp": 1783842126167
+      },
+      {
+        "executionId": "88585a50-f681-4029-8695-9a25e939e8b5",
+        "chatSessionId": "sess_73b351e2-ac11-48d3-a4be-558aa145b190",
+        "timestamp": 1783842133085
+      }
+    ],
+    "7.1 Create `PhilosophyContent` component": [
+      {
+        "executionId": "88585a50-f681-4029-8695-9a25e939e8b5",
+        "chatSessionId": "sess_73b351e2-ac11-48d3-a4be-558aa145b190",
+        "timestamp": 1783840388605
+      },
+      {
+        "executionId": "88585a50-f681-4029-8695-9a25e939e8b5",
+        "chatSessionId": "sess_73b351e2-ac11-48d3-a4be-558aa145b190",
+        "timestamp": 1783842138319
+      }
+    ],
+    "7.2 Replace redirect in `src/app/philosophy/page.tsx`": [
+      {
+        "executionId": "88585a50-f681-4029-8695-9a25e939e8b5",
+        "chatSessionId": "sess_73b351e2-ac11-48d3-a4be-558aa145b190",
+        "timestamp": 1783840388632
+      }
+    ],
+    "8.1 Create `MentorshipContent` component": [
+      {
+        "executionId": "88585a50-f681-4029-8695-9a25e939e8b5",
+        "chatSessionId": "sess_73b351e2-ac11-48d3-a4be-558aa145b190",
+        "timestamp": 1783840388649
+      }
+    ],
+    "8.2 Replace redirect in `src/app/mentorship/page.tsx`": [
+      {
+        "executionId": "88585a50-f681-4029-8695-9a25e939e8b5",
+        "chatSessionId": "sess_73b351e2-ac11-48d3-a4be-558aa145b190",
+        "timestamp": 1783840388667
+      }
+    ],
+    "9.1 Add missing navigation links to Footer \"Explore\" column": [
+      {
+        "executionId": "88585a50-f681-4029-8695-9a25e939e8b5",
+        "chatSessionId": "sess_73b351e2-ac11-48d3-a4be-558aa145b190",
+        "timestamp": 1783840388687
+      }
+    ],
+    "10.1 Add intermediate text-size breakpoint below 360px": [
+      {
+        "executionId": "88585a50-f681-4029-8695-9a25e939e8b5",
+        "chatSessionId": "sess_73b351e2-ac11-48d3-a4be-558aa145b190",
+        "timestamp": 1783840388704
+      }
+    ],
+    "11. Fix — Verify bug condition exploration tests now pass": [
+      {
+        "executionId": "88585a50-f681-4029-8695-9a25e939e8b5",
+        "chatSessionId": "sess_73b351e2-ac11-48d3-a4be-558aa145b190",
+        "timestamp": 1783840388724
+      }
+    ],
+    "12. Verify preservation tests still pass": [
+      {
+        "executionId": "88585a50-f681-4029-8695-9a25e939e8b5",
+        "chatSessionId": "sess_73b351e2-ac11-48d3-a4be-558aa145b190",
+        "timestamp": 1783840388748
+      }
+    ],
+    "13. Checkpoint — Ensure all tests pass": [
+      {
+        "executionId": "88585a50-f681-4029-8695-9a25e939e8b5",
+        "chatSessionId": "sess_73b351e2-ac11-48d3-a4be-558aa145b190",
+        "timestamp": 1783840388765
+      }
+    ],
+    "3. Fix — Color palette correction (`globals.css` + `tailwind.config.ts`)": [
+      {
+        "executionId": "88585a50-f681-4029-8695-9a25e939e8b5",
+        "chatSessionId": "sess_73b351e2-ac11-48d3-a4be-558aa145b190",
+        "timestamp": 1783841917654
+      }
+    ],
+    "4. Fix — `EditorialImage` Next.js Image migration": [
+      {
+        "executionId": "88585a50-f681-4029-8695-9a25e939e8b5",
+        "chatSessionId": "sess_73b351e2-ac11-48d3-a4be-558aa145b190",
+        "timestamp": 1783842046415
+      }
+    ],
+    "5. Fix — ContactForm real API integration": [
+      {
+        "executionId": "88585a50-f681-4029-8695-9a25e939e8b5",
+        "chatSessionId": "sess_73b351e2-ac11-48d3-a4be-558aa145b190",
+        "timestamp": 1783842119981
+      }
+    ]
+  }
+}

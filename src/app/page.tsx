@@ -5,7 +5,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import BrandLogo from "@/components/BrandLogo";
 import EditorialImage from "@/components/EditorialImage";
 import SacredIcon from "@/components/SacredIcon";
-import { brand, certifications, clientDrivePhotos, offerings, photos, poeticPhrases, services } from "@/lib/brand";
+import { brand, certifications, offerings, photos, poeticPhrases, services } from "@/lib/brand";
 
 const icons = ["leaf", "alchemy", "moon", "flame", "ritual", "lotus", "star", "eye"] as const;
 
@@ -355,86 +355,6 @@ export default function Home() {
               </div>
             </AnimatedSection>
           ))}
-        </div>
-      </section>
-
-      {/* Sacred Temple Visual Archive - Authentic Client Photography */}
-      <section className="px-4 sm:px-8 py-24 bg-parchment/30 border-y border-lightGold/15">
-        <div className="mx-auto max-w-[1350px]">
-          <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
-            <p className="text-eyebrow">Visual Archive</p>
-            <h2 className="mt-4 font-display text-4xl sm:text-6xl text-ivory font-light">
-              Moments from the Sacred Field
-            </h2>
-            <p className="mt-4 text-sm sm:text-base font-light text-parchment/80 leading-relaxed">
-              Authentic glimpses into Kunti&apos;s rituals, temple sanctuaries, floral altars, and deep embodiment ceremonies.
-            </p>
-          </AnimatedSection>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {[
-              {
-                src: photos.ancestralLineage,
-                title: "Sacred Altar Offerings",
-                caption: "Honoring the lineage of earth and spirit",
-                aspect: "aspect-[4/5]",
-              },
-              {
-                src: photos.sacredTree,
-                title: "Embodiment & Presence",
-                caption: "Reconnection with universal divine essence",
-                aspect: "aspect-[4/5]",
-              },
-              {
-                src: photos.waterfallPrayer,
-                title: "Cleansing Rituals",
-                caption: "Purification through elemental resonance",
-                aspect: "aspect-[4/5]",
-              },
-              {
-                src: photos.ritualAltar,
-                title: "Temple Sanctuary",
-                caption: "An intimate container for feminine activation",
-                aspect: "aspect-[4/5]",
-              },
-              {
-                src: photos.ceremonyField,
-                title: "Ceremonial Circle",
-                caption: "Soulful communion in stillness and sound",
-                aspect: "aspect-[4/5]",
-              },
-              {
-                src: photos.templeBlessing,
-                title: "Feminine Awakening",
-                caption: "Awakening radiant shakti energy within",
-                aspect: "aspect-[4/5]",
-              },
-            ].map((item, idx) => (
-              <AnimatedSection key={idx} delay={idx * 0.08}>
-                <div className="group relative overflow-hidden rounded-2xl border border-lightGold/25 bg-ink/60 shadow-altar transition-all duration-700 hover:border-lightGold hover:-translate-y-1.5">
-                  <EditorialImage
-                    src={item.src}
-                    alt={item.title}
-                    variant="sharp"
-                    imageClassName="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                    className={`${item.aspect} w-full`}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/20 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-100" />
-                  <div className="absolute bottom-0 inset-x-0 p-6 sm:p-7">
-                    <span className="text-[10px] uppercase tracking-[0.22em] text-lightGold block mb-1">
-                      0{idx + 1} // Ritual Archive
-                    </span>
-                    <h3 className="font-display text-2xl sm:text-3xl font-light text-ivory">
-                      {item.title}
-                    </h3>
-                    <p className="mt-2 text-xs sm:text-sm font-light text-parchment/80 leading-relaxed">
-                      {item.caption}
-                    </p>
-                  </div>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
         </div>
       </section>
 

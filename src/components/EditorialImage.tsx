@@ -1,6 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 interface EditorialImageProps {
   src: string;
@@ -19,7 +21,10 @@ export default function EditorialImage({
   imageClassName = "",
   variant = "rounded",
   withBorder = false,
+  priority,
 }: EditorialImageProps) {
+  const [imgError, setImgError] = useState(false);
+
   const maskClass = 
     variant === "pebble" ? "pebble-mask" :
     variant === "organic-1" ? "organic-mask-1" :
@@ -40,14 +45,27 @@ export default function EditorialImage({
       <div 
         className={`relative w-full h-full overflow-hidden z-10 bg-surfaceDark/10 ${maskClass}`}
       >
-        <motion.img
-          src={src}
-          alt={alt}
+        <motion.div
           initial={false}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5, ease: [0.25, 0.1, 0.25, 1] }}
-          className={`w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-105 ${imageClassName}`}
-        />
+        >
+          {!imgError ? (
+            <Image
+              fill
+              src={src}
+              alt={alt}
+              sizes="(max-width: 768px) 100vw, 50vw"
+              priority={priority}
+              onError={() => setImgError(true)}
+              className={`object-cover transition-transform duration-[2000ms] group-hover:scale-105 ${imageClassName}`}
+            />
+          ) : (
+            <div className="absolute inset-0 flex items-center justify-center bg-parchment/20">
+              <img src="/shakti-elements/lotus-icon.svg" className="h-16 w-16 opacity-40" alt="" />
+            </div>
+          )}
+        </motion.div>
         
         {/* Soft Inner Shadow / Contrast Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-deepPlum/40 via-transparent to-transparent pointer-events-none mix-blend-multiply" />

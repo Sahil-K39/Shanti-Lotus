@@ -25,14 +25,26 @@ export default function ContactForm({ defaultInterest = "" }: ContactFormProps) 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isInterestOpen, setIsInterestOpen] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate network request
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    setIsSubmitting(false);
-    setIsSuccess(true);
+    setError(null);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Something went wrong.");
+      setIsSuccess(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to send. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSuccess) {
@@ -204,6 +216,11 @@ export default function ContactForm({ defaultInterest = "" }: ContactFormProps) 
           {isSubmitting ? "Sending..." : "Send Message"}
         </span>
       </button>
+      {error && (
+        <p className="text-center text-[11px] uppercase tracking-[0.18em] text-terracotta/80 mt-2">
+          {error}
+        </p>
+      )}
 
     </form>
   );

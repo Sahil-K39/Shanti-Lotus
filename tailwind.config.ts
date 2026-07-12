@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ivory: "#2F2A24",
+        ivory: "#F8F5F1",
         lotusPink: "#D8C8B6",
         dustyRose: "#D8C8B6",
         terracotta: "#B8904F",

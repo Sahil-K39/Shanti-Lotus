@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #F8F5F1;
-  --color-charcoal: #EFE6DB;
+  --color-ink: #1E1A16;
+  --color-charcoal: #2F2A24;
   --color-ember: #D8C8B6;
   --color-gold: #B8904F;
   --color-softGold: #C8A96B;
   --color-lightGold: #C8A96B;
-  --color-ivory: #2F2A24;
-  --color-parchment: #3F3026;
+  --color-ivory: #F8F5F1;
+  --color-parchment: #EFE6DB;
   --color-mutedGold: #7E5A2F;
   --color-roseSmoke: #D8C8B6;
   --color-sageSmoke: #6F8F7A;
   --color-deepPlum: #3F3026;
   --color-textDark: #2F2A24;
   --color-surface: #EFE6DB;
-  --color-surfaceDark: #F8F5F1;
+  --color-surfaceDark: #2F2A24;
   --color-antiqueGold: #C8A96B;
   --color-terracotta: #B8904F;
   --color-lotusGreen: #6F8F7A;
@@ -25,6 +25,10 @@
   --color-arenaSagrada: #EFE6DB;
   --color-nudeRitual: #D8C8B6;
   --color-cacaoProfundo: #3F3026;
+  --color-lotusPink: #D8C8B6;
+  --shadow-altar: inset 0 8px 32px rgba(0,0,0,0.6), 0 16px 48px rgba(0,0,0,0.4);
+  --transition-duration-400: 400ms;
+  --transition-duration-1200: 1200ms;
 
   --font-display: "Cormorant Garamond", serif;
   --font-cursive: "Snell Roundhand", "Apple Chancery", "Segoe Script", "Brush Script MT", cursive;
