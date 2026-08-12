@@ -3,14 +3,16 @@
 import AnimatedSection from "@/components/AnimatedSection";
 import EditorialImage from "@/components/EditorialImage";
 import SacredIcon from "@/components/SacredIcon";
+import AuroraBackground from "@/components/AuroraBackground";
 import { photos } from "@/lib/brand";
 
 export default function Home() {
   return (
-    <div className="bg-ink text-ivory">
+    <div className="text-ivory relative z-0">
+      <AuroraBackground />
+      
       {/* 1. HERO */}
       <section className="relative min-h-screen overflow-hidden px-4 py-20 sm:px-6 md:py-28 flex flex-col items-center justify-center">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(200,169,107,0.16),transparent_32rem)]" />
         <div className="absolute left-1/2 top-1/2 h-[78vw] max-h-[760px] w-[78vw] max-w-[760px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-lightGold/10 opacity-60" />
         
         <div className="relative z-10 mx-auto max-w-4xl text-center">
@@ -32,10 +34,10 @@ export default function Home() {
       </section>
 
       {/* 2. THE JOURNEY */}
-      <section className="bg-lotusGreen/18 px-6 py-28">
+      <section className="relative z-10 px-6 py-28">
         <div className="mx-auto grid max-w-[1250px] gap-14 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
           <AnimatedSection direction="left">
-            <EditorialImage src={photos.roseMeditation} alt="Kunti in meditation" variant="organic-1" withBorder className="aspect-[4/5] w-full" />
+            <EditorialImage src={photos.mainPhoto} alt="Kunti water ritual" variant="organic-1" withBorder className="aspect-[4/5] w-full" />
           </AnimatedSection>
           <AnimatedSection direction="right" className="sacred-card p-8 md:p-12">
             <h2 className="font-display text-4xl text-lightGold md:text-5xl tracking-widest">THE JOURNEY</h2>
@@ -50,8 +52,8 @@ export default function Home() {
       </section>
 
       {/* 3. MY APPROACH (Manifesto) */}
-      <section className="bg-blancoRitual px-6 py-28">
-        <AnimatedSection className="mx-auto max-w-4xl text-center">
+      <section className="relative z-10 px-6 py-28">
+        <AnimatedSection className="mx-auto max-w-4xl text-center glass-panel p-8 md:p-12">
           <h2 className="font-display text-4xl text-lightGold md:text-5xl tracking-widest">
             MY APPROACH
           </h2>
@@ -95,10 +97,10 @@ export default function Home() {
       {/* 5. OUTRO */}
       <section className="relative overflow-hidden px-6 py-40">
         <div className="absolute inset-0 opacity-50">
-          <EditorialImage src={photos.mountainLakePrayer} alt="Mountain lake prayer" variant="sharp" imageClassName="h-full object-cover" className="h-full w-full" />
+          <EditorialImage src={photos.mainPhoto} alt="Kunti water ritual" variant="sharp" imageClassName="h-full object-cover" className="h-full w-full" />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-blancoRitual via-blancoRitual/90 to-blancoRitual/60" />
-        <AnimatedSection className="relative z-10 mx-auto max-w-3xl text-center">
+        <div className="absolute inset-0 bg-ink/40" />
+        <AnimatedSection className="relative z-10 mx-auto max-w-4xl text-center glass-panel p-8 md:p-12 mt-20">
           <SacredIcon type="lotus" className="mx-auto h-16 w-16 text-lightGold" />
           <p className="mt-10 font-display text-3xl tracking-widest text-lightGold">MORE THAN A PROJECT.</p>
           <div className="mt-8 space-y-2 font-display text-3xl leading-snug text-ivory md:text-5xl">

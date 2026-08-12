@@ -191,19 +191,29 @@ button {
   width: 34px;
   height: 34px;
   transform: translate(-50%, -50%);
-  background: var(--color-ink) url("/shakti-elements/star-divider.svg") center / contain no-repeat;
+  background: transparent url("/shakti-elements/star-divider.svg") center / contain no-repeat;
 }
 
 .sacred-card {
-  border: 1px solid rgba(184, 144, 79, 0.24);
-  border-radius: 22px;
-  background:
-    linear-gradient(135deg, color-mix(in srgb, var(--section-accent, #C8A96B) 18%, transparent), transparent 46%),
-    linear-gradient(145deg, rgba(200, 169, 107, 0.12), transparent 42%),
-    rgba(248, 245, 241, 0.78);
-  box-shadow:
-    0 24px 70px rgba(90, 70, 54, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.54);
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
 }
 
 .sacred-bg main section {
