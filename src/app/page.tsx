@@ -6,7 +6,7 @@ import SacredIcon from "@/components/SacredIcon";
 import AuroraBackground from "@/components/AuroraBackground";
 import { photos } from "@/lib/brand";
 import MasonryGallery from "@/components/MasonryGallery";
-import { galleryImages } from "@/lib/gallery";
+import { galleryMedia } from "@/lib/gallery";
 import Image from "next/image";
 
 export default function Home() {
@@ -88,8 +88,11 @@ export default function Home() {
             ].map(([title, text], index) => (
               <AnimatedSection key={title} delay={index * 0.08}>
                 <div className="sacred-card flex h-full min-h-[300px] flex-col items-center justify-center p-10 text-center transition-all duration-500 hover:-translate-y-1 hover:border-lightGold/50 group relative overflow-hidden">
-                  {galleryImages[index] && (
-                    <Image src={galleryImages[index]} alt={title} fill className="object-cover opacity-10 transition-opacity duration-700 group-hover:opacity-30" />
+                  {galleryMedia[index] && !galleryMedia[index].endsWith('.mp4') && (
+                    <Image src={galleryMedia[index]} alt={title} fill className="object-cover opacity-10 transition-opacity duration-700 group-hover:opacity-30" />
+                  )}
+                  {galleryMedia[index] && galleryMedia[index].endsWith('.mp4') && (
+                    <video src={galleryMedia[index]} autoPlay loop muted playsInline className="absolute inset-0 h-full w-full object-cover opacity-10 transition-opacity duration-700 group-hover:opacity-30" />
                   )}
                   <div className="absolute inset-0 bg-ink/40 pointer-events-none" />
                   <div className="relative z-10 pointer-events-none">

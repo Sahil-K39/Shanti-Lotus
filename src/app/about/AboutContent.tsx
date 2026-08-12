@@ -21,7 +21,7 @@ export default function AboutContent() {
       <section className="px-6 pb-28">
         <div className="mx-auto grid max-w-[1250px] gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <AnimatedSection direction="left" className="lg:sticky lg:top-28">
-            <EditorialImage src={photos.ancestralLineage} alt="Kunti honoring ancestral lineage" variant="organic-1" withBorder className="aspect-[3/4] w-full" />
+            <EditorialImage src={photos.mainPhoto} alt="Kunti honoring ancestral lineage" variant="organic-1" withBorder className="aspect-[3/4] w-full" />
           </AnimatedSection>
           <AnimatedSection direction="right" className="sacred-card p-8 md:p-12">
             <SacredIcon type="lotus" className="h-14 w-14 text-lightGold" />
