@@ -5,39 +5,23 @@ import EditorialImage from "@/components/EditorialImage";
 import SacredIcon from "@/components/SacredIcon";
 import { photos } from "@/lib/brand";
 
-function MoonPhases() {
-  return (
-    <div className="flex items-center justify-center gap-3" aria-hidden="true">
-      <span className="moon-phase crescent" />
-      <span className="moon-phase half" />
-      <span className="moon-phase full" />
-      <span className="moon-phase half" />
-      <span className="moon-phase crescent" />
-    </div>
-  );
-}
-
 export default function Home() {
   return (
     <div className="bg-ink text-ivory">
       {/* 1. HERO */}
-      <section className="palette-wash relative min-h-screen overflow-hidden px-4 py-20 sm:px-6 md:py-28 flex flex-col items-center justify-center">
+      <section className="relative min-h-screen overflow-hidden px-4 py-20 sm:px-6 md:py-28 flex flex-col items-center justify-center">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(200,169,107,0.16),transparent_32rem)]" />
         <div className="absolute left-1/2 top-1/2 h-[78vw] max-h-[760px] w-[78vw] max-w-[760px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-lightGold/10 opacity-60" />
         
         <div className="relative z-10 mx-auto max-w-4xl text-center">
           <AnimatedSection direction="up">
-            <MoonPhases />
-            <p className="mt-7 text-sm uppercase tracking-[0.24em] text-lightGold">
+            <h2 className="font-display text-5xl leading-[1.02] text-lightGold sm:text-6xl md:text-8xl">
+              SHAKTI LOTO
+            </h2>
+            <p className="mt-7 text-sm font-display text-2xl text-ivory">
               A journey back to the divine within.
             </p>
-            <h2 className="mt-5 font-display text-5xl leading-[1.02] text-ivory sm:text-6xl md:mt-7 md:text-8xl md:leading-[0.98]">
-              SHAKTI <span className="gold-text">LOTO</span>
-            </h2>
-            <p className="mt-6 text-xs uppercase leading-relaxed tracking-[0.16em] text-parchment/82 md:mt-8 md:text-sm md:tracking-[0.18em]">
-              REMEMBER <span className="text-lightGold">•</span> EMBODY <span className="text-lightGold">•</span> EXPLORE <span className="text-lightGold">•</span> RETURN <span className="text-lightGold">•</span> BLOSSOM
-            </p>
-            <div className="mx-auto mt-12 space-y-6 max-w-2xl text-base font-light leading-relaxed text-parchment/82 md:text-lg md:leading-loose">
+            <div className="mx-auto mt-12 space-y-6 max-w-3xl text-base font-light leading-relaxed text-parchment/82 md:text-lg md:leading-loose">
               <p>Shakti Loto is a space for deep reconnection with the life force — a living portal into the sacred that already exists within you.</p>
               <p>A place where ancestral wisdom, embodied practice, and the divine meet to awaken a deeper awareness of the body, the heart, and the spirit.</p>
               <p>It is an invitation to return to the Source — to the origin of who you are beneath the layers, beyond the forms, and closer to your essence.</p>
@@ -54,13 +38,12 @@ export default function Home() {
             <EditorialImage src={photos.roseMeditation} alt="Kunti in meditation" variant="organic-1" withBorder className="aspect-[4/5] w-full" />
           </AnimatedSection>
           <AnimatedSection direction="right" className="sacred-card p-8 md:p-12">
-            <p className="text-eyebrow">The Journey</p>
-            <h2 className="mt-5 font-display text-4xl text-ivory md:text-6xl">Guided by <span className="gold-text">Kunti</span></h2>
+            <h2 className="font-display text-4xl text-lightGold md:text-5xl tracking-widest">THE JOURNEY</h2>
             <div className="mt-8 space-y-5 text-base font-light leading-loose text-parchment/82">
-              <p>Tantric Yogini, traveler, and lifelong student of the sacred, Shakti Loto was born as a bridge between the ancestral wisdom of Latin America and the teachings, experiences, and encounters gathered across the world.</p>
+              <p>Guided by Kunti, Tantric Yogini, traveler, and lifelong student of the sacred, Shakti Loto was born as a bridge between the ancestral wisdom of Latin America and the teachings, experiences, and encounters gathered across the world.</p>
               <p>Through Tantra, conscious movement, meditation, Yoga, and ancestral ritual, Shakti Loto invites you to experience spirituality not only as something to understand, but as something to feel, embody, and live.</p>
-              <p>Here, the body becomes a temple. Movement becomes a language. Ritual becomes a doorway. And the journey becomes a return.</p>
-              <p>The path is a blossoming. Like the lotus rising from deep waters, each process carries the possibility of transformation, awakening, and expansion. Not becoming someone else. But remembering what has always been there.</p>
+              <p>Here, the body becomes a temple.<br />Movement becomes a language.<br />Ritual becomes a doorway.<br />And the journey becomes a return.</p>
+              <p>The path is a blossoming.<br />Like the lotus rising from deep waters, each process carries the possibility of transformation, awakening, and expansion.<br />Not becoming someone else.<br />But remembering what has always been there.</p>
             </div>
           </AnimatedSection>
         </div>
@@ -69,17 +52,16 @@ export default function Home() {
       {/* 3. MY APPROACH (Manifesto) */}
       <section className="bg-blancoRitual px-6 py-28">
         <AnimatedSection className="mx-auto max-w-4xl text-center">
-          <p className="text-eyebrow">My Approach</p>
-          <h2 className="mt-5 font-display text-4xl text-ivory md:text-6xl">
-            There is something within you <br className="hidden md:block" /><span className="gold-text">waiting to be remembered.</span>
+          <h2 className="font-display text-4xl text-lightGold md:text-5xl tracking-widest">
+            MY APPROACH
           </h2>
           <div className="gold-line mx-auto my-12 max-w-xl" />
           <blockquote className="space-y-6 font-display text-2xl leading-[1.45] text-parchment md:text-4xl">
-            <p>&ldquo;I am not here to guide you from above.</p>
+            <p>I am not here to guide you from above.</p>
             <p>I am here to create a space where you can listen more deeply, explore freely, and encounter your own inner wisdom.</p>
             <p>I do not believe that you need to become someone else.</p>
             <p>I believe there is something within you waiting to be remembered.</p>
-            <p>My role is not to give you all the answers, but to offer practices, experiences, and a space where your own questions can unfold.&rdquo;</p>
+            <p>My role is not to give you all the answers, but to offer practices, experiences, and a space where your own questions can unfold.</p>
           </blockquote>
         </AnimatedSection>
       </section>
@@ -88,7 +70,7 @@ export default function Home() {
       <section className="px-6 py-32">
         <div className="mx-auto max-w-[1250px]">
           <AnimatedSection className="mb-20 text-center">
-            <h2 className="font-display text-4xl text-ivory md:text-6xl">Shakti Loto <span className="gold-text">Invites You To</span></h2>
+            <h2 className="font-display text-4xl text-lightGold md:text-5xl tracking-widest">SHAKTI LOTO INVITES YOU TO</h2>
           </AnimatedSection>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {[
@@ -101,8 +83,7 @@ export default function Home() {
             ].map(([title, text], index) => (
               <AnimatedSection key={title} delay={index * 0.08}>
                 <div className="sacred-card flex h-full flex-col items-center justify-center p-10 text-center transition-all duration-500 hover:-translate-y-1 hover:border-lightGold/50">
-                  <span className="font-display text-5xl text-lightGold/40">0{index + 1}</span>
-                  <h3 className="mt-8 font-display text-3xl leading-tight text-ivory">{title}</h3>
+                  <h3 className="font-display text-3xl leading-tight text-ivory">{title}</h3>
                   <p className="mt-5 text-sm font-light leading-relaxed text-parchment/80">{text}</p>
                 </div>
               </AnimatedSection>
@@ -119,7 +100,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-t from-blancoRitual via-blancoRitual/90 to-blancoRitual/60" />
         <AnimatedSection className="relative z-10 mx-auto max-w-3xl text-center">
           <SacredIcon type="lotus" className="mx-auto h-16 w-16 text-lightGold" />
-          <p className="mt-10 text-sm uppercase tracking-[0.24em] text-lightGold">More than a project.</p>
+          <p className="mt-10 font-display text-3xl tracking-widest text-lightGold">MORE THAN A PROJECT.</p>
           <div className="mt-8 space-y-2 font-display text-3xl leading-snug text-ivory md:text-5xl">
             <p>A living experience.</p>
             <p>A call to return to the Source.</p>
@@ -132,7 +113,14 @@ export default function Home() {
           </div>
           <div className="mt-20">
             <h3 className="font-display text-5xl text-lightGold md:text-6xl">Shakti Loto</h3>
-            <p className="mt-4 text-xs uppercase tracking-[0.24em] text-parchment">A journey back to the divine within. *</p>
+            <p className="mt-4 text-xl font-display text-parchment">A journey back to the divine within. *</p>
+          </div>
+          <div className="mt-24 space-y-4">
+            <p className="text-sm uppercase tracking-[0.2em] text-lightGold">
+              REMEMBER · EMBODY · EXPLORE · RETURN · BLOSSOM
+            </p>
+            <p className="font-display text-2xl text-ivory">I do not believe that you need to become someone else.</p>
+            <p className="font-display text-2xl text-ivory">I believe there is something within you waiting to be remembered.</p>
           </div>
         </AnimatedSection>
       </section>
