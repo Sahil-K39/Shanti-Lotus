@@ -5,7 +5,16 @@ import { motion } from "framer-motion";
 export default function AuroraBackground() {
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden bg-ink">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(63,48,38,0.4),transparent_80%)]" />
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 h-full w-full object-cover opacity-20 mix-blend-screen"
+      >
+        <source src="/media/videos/hero-bg.mp4" type="video/mp4" />
+      </video>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(63,48,38,0.7),transparent_80%)] pointer-events-none" />
       
       {/* Lotus Green Blob */}
       <motion.div

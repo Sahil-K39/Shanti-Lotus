@@ -5,6 +5,9 @@ import EditorialImage from "@/components/EditorialImage";
 import SacredIcon from "@/components/SacredIcon";
 import AuroraBackground from "@/components/AuroraBackground";
 import { photos } from "@/lib/brand";
+import MasonryGallery from "@/components/MasonryGallery";
+import { galleryImages } from "@/lib/gallery";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -84,15 +87,24 @@ export default function Home() {
               ["Move through transformation and expansion", "with greater awareness, curiosity, and trust in your own process."],
             ].map(([title, text], index) => (
               <AnimatedSection key={title} delay={index * 0.08}>
-                <div className="sacred-card flex h-full flex-col items-center justify-center p-10 text-center transition-all duration-500 hover:-translate-y-1 hover:border-lightGold/50">
-                  <h3 className="font-display text-3xl leading-tight text-ivory">{title}</h3>
-                  <p className="mt-5 text-sm font-light leading-relaxed text-parchment/80">{text}</p>
+                <div className="sacred-card flex h-full min-h-[300px] flex-col items-center justify-center p-10 text-center transition-all duration-500 hover:-translate-y-1 hover:border-lightGold/50 group relative overflow-hidden">
+                  {galleryImages[index] && (
+                    <Image src={galleryImages[index]} alt={title} fill className="object-cover opacity-10 transition-opacity duration-700 group-hover:opacity-30" />
+                  )}
+                  <div className="absolute inset-0 bg-ink/40 pointer-events-none" />
+                  <div className="relative z-10 pointer-events-none">
+                    <h3 className="font-display text-3xl leading-tight text-ivory">{title}</h3>
+                    <p className="mt-5 text-sm font-light leading-relaxed text-parchment/80">{text}</p>
+                  </div>
                 </div>
               </AnimatedSection>
             ))}
           </div>
         </div>
       </section>
+
+      {/* 4.5 SACRED GALLERY */}
+      <MasonryGallery />
 
       {/* 5. OUTRO */}
       <section className="relative overflow-hidden px-6 py-40">
