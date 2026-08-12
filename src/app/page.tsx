@@ -231,10 +231,12 @@ export default function Home() {
               </h2>
               <p className="mt-6 font-display text-3xl text-lightGold md:mt-8 md:text-4xl">Kunti Shakti Loto</p>
               <p className="mt-4 text-xs uppercase leading-relaxed tracking-[0.16em] text-parchment/82 md:mt-6 md:text-sm md:tracking-[0.18em]">
-                Multidisciplinary Artist <span className="text-lightGold">•</span> Tantric Yogini <span className="text-lightGold">•</span> Herbal Alchemist <span className="text-lightGold">•</span> Plant Medicine Guide
+                REMEMBER <span className="text-lightGold">•</span> EMBODY <span className="text-lightGold">•</span> EXPLORE <span className="text-lightGold">•</span> RETURN <span className="text-lightGold">•</span> BLOSSOM
               </p>
               <p className="mt-5 max-w-xl text-sm font-light leading-relaxed text-parchment/82 md:mt-8 md:text-base md:leading-loose lg:mx-0">
-                Enter a handcrafted sanctuary of ritual, feminine remembrance, plant wisdom, tantra, and embodied spiritual guidance.
+                Shakti Loto is a space for deep reconnection with the life force — a living portal into the sacred that already exists within you.
+                <br /><br />
+                It is an invitation to return to the Source — to the origin of who you are beneath the layers, beyond the forms, and closer to your essence.
               </p>
               <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row md:mt-10 md:gap-4 lg:justify-start">
                 <Link
@@ -285,17 +287,15 @@ export default function Home() {
 
       <section className="bg-blancoRitual px-6 py-28">
         <AnimatedSection className="mx-auto max-w-5xl text-center">
-          <p className="text-eyebrow">Shakti Loto</p>
+          <p className="text-eyebrow">The Manifesto</p>
           <h2 className="mt-5 font-display text-4xl text-ivory md:text-6xl">
-            A path back to your <span className="gold-text">universal divine essence</span>
+            There is something within you <br className="hidden md:block" /><span className="gold-text">waiting to be remembered.</span>
           </h2>
           <div className="gold-line mx-auto my-12 max-w-xl" />
           <blockquote className="font-display text-2xl leading-[1.45] text-parchment md:text-4xl">
-            &ldquo;I invoke the ancient memory that lives within our blood.
-            Walking as a bridge between the Earth and the Spirit.
-            May ancestral wisdom awaken in every heart,
-            and guide the return to the purity of being,
-            to the sacred origin where all is one.&rdquo;
+            &ldquo;I do not believe that you need to become someone else.<br />
+            I believe there is something within you waiting to be remembered.<br /><br />
+            My role is not to give you all the answers, but to offer practices, experiences, and a space where your own questions can unfold.&rdquo;
           </blockquote>
         </AnimatedSection>
       </section>
@@ -306,13 +306,13 @@ export default function Home() {
             <EditorialImage src={photos.roseMeditation} alt="Kunti in meditation among roses" variant="organic-1" withBorder className="aspect-[4/5] w-full" />
           </AnimatedSection>
           <AnimatedSection direction="right" className="sacred-card p-8 md:p-12">
-            <p className="text-eyebrow">About</p>
-            <h2 className="mt-5 font-display text-4xl text-ivory md:text-6xl">Namaste, I am <span className="gold-text">Kunti</span></h2>
+            <p className="text-eyebrow">The Journey</p>
+            <h2 className="mt-5 font-display text-4xl text-ivory md:text-6xl">Guided by <span className="gold-text">Kunti</span></h2>
             <div className="mt-8 space-y-5 text-base font-light leading-loose text-parchment/82">
-              <p>A Tantric Yogini and traveler of this Earth. I am here as a bridge between my ancestral roots of South America and the ancient wisdom and traditions of Asia.</p>
-              <p>I come to accompany you on the path of awakening your feminine essence and creative energy, holding space for the journey back to the ultimate truth, where the spirit remembers its purity.</p>
-              <p>My spiritual path and awakening began in Bolivia on December 21, 2012, during the awaited Pachakuti. It was there that I received the first codes and activation of the codes of the new humanity and the golden time that was arriving.</p>
-              <p>For more than a decade, I have traveled the world reconnecting with my being and ancestral wisdom, remembering, offering, and transmitting the path of the Great Mother Goddess.</p>
+              <p>Tantric Yogini, traveler, and lifelong student of the sacred, Shakti Loto was born as a bridge between the ancestral wisdom of Latin America and the teachings, experiences, and encounters gathered across the world.</p>
+              <p>Through Tantra, conscious movement, meditation, Yoga, and ancestral ritual, Shakti Loto invites you to experience spirituality not only as something to understand, but as something to feel, embody, and live.</p>
+              <p>Here, the body becomes a temple. Movement becomes a language. Ritual becomes a doorway. And the journey becomes a return.</p>
+              <p>The path is a blossoming. Like the lotus rising from deep waters, each process carries the possibility of transformation, awakening, and expansion. Not becoming someone else. But remembering what has always been there.</p>
             </div>
           </AnimatedSection>
         </div>
@@ -341,20 +341,28 @@ export default function Home() {
       </section>
 
       <section className="px-6 py-28">
-        <div className="mx-auto grid max-w-[1250px] gap-6 md:grid-cols-3">
-          {[
-            ["Individual Sessions — 1:1 Guidance", "Deep guidance to reconnect with your energy, release blockages, and return to your center."],
-            ["Ritual & Feminine Energy", "Spaces to activate your creative energy, heal your relationship with the feminine, and inhabit your body with presence."],
-            ["Spiritual Integration", "Practices and guidance to expand your consciousness and root your spirituality into everyday life."],
-          ].map(([title, text], index) => (
-            <AnimatedSection key={title} delay={index * 0.08}>
-              <div className="sacred-card h-full p-8">
-                <span className="font-display text-5xl text-lightGold/50">0{index + 1}</span>
-                <h3 className="mt-8 font-display text-3xl leading-tight text-ivory">{title}</h3>
-                <p className="mt-5 text-sm font-light leading-loose text-parchment/75">{text}</p>
-              </div>
-            </AnimatedSection>
-          ))}
+        <div className="mx-auto max-w-[1250px]">
+          <div className="mb-16 text-center">
+            <h2 className="font-display text-4xl text-ivory md:text-5xl">Shakti Loto <span className="gold-text">Invites You To...</span></h2>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {[
+              ["Reconnect with the Source", "and explore the union of Shakti and Shiva — the feminine and masculine principles within."],
+              ["Awaken your inner power", "through conscious connection with your body and energy."],
+              ["Embody your body with love", "learning to listen to its language and wisdom."],
+              ["Explore spirituality", "as a lived experience rather than something separate from everyday life."],
+              ["Reconnect with ancient wisdom", "and the memories, rituals, and knowledge carried through generations."],
+              ["Move through expansion", "with greater awareness, curiosity, and trust in your own process."],
+            ].map(([title, text], index) => (
+              <AnimatedSection key={title} delay={index * 0.08}>
+                <div className="sacred-card h-full p-8 text-center transition-all duration-500 hover:-translate-y-1 hover:border-lightGold/50">
+                  <span className="font-display text-4xl text-lightGold/50">0{index + 1}</span>
+                  <h3 className="mt-6 font-display text-2xl leading-tight text-ivory">{title}</h3>
+                  <p className="mt-4 text-sm font-light leading-loose text-parchment/75">{text}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -422,10 +430,16 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-t from-blancoRitual via-blancoRitual/86 to-blancoRitual/58" />
         <AnimatedSection className="relative z-10 mx-auto max-w-4xl text-center">
           <SacredIcon type="lotus" className="mx-auto h-16 w-16 text-lightGold" />
-          <p className="mt-10 font-display text-4xl leading-tight text-ivory md:text-6xl">
-            Each space is an invitation to return to yourself,
-            to inhabit your body as a temple,
-            and to remember the wisdom that already lives within you.
+          <p className="mt-8 text-sm uppercase tracking-[0.24em] text-lightGold">More than a project.</p>
+          <p className="mt-6 font-display text-3xl leading-snug text-ivory md:text-5xl">
+            A living experience.<br />
+            A call to return to the Source.<br />
+            To listen to the body.<br />
+            To open the heart.<br />
+            To awaken the senses.<br />
+            To remember the wisdom within.<br />
+            To bloom from the depths.<br />
+            To remember who you are, beyond the forms.
           </p>
           <Link href="/contact" className="sacred-glow mt-12 inline-flex bg-lightGold px-9 py-4 text-[11px] font-medium uppercase tracking-[0.24em] text-ink hover:bg-ivory">
             Begin the Conversation

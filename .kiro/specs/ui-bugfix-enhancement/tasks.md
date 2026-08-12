@@ -137,7 +137,7 @@
 
 - [ ] 7. Fix — Philosophy page real content
 
-  - [-] 7.1 Create `PhilosophyContent` component
+  - [ ] 7.1 Create `PhilosophyContent` component
     - Create new file `src/components/PhilosophyContent.tsx` with `"use client"` directive (needed for AnimatedSection)
     - Add imports: `AnimatedSection`, `EditorialImage`, `Link` from `next/link`, `{ photos }` from `@/lib/brand`
     - Section 1 — Hero (`pt-40 pb-20 px-6 text-center`):
@@ -160,7 +160,7 @@
     - _Preservation: page remains reachable at /philosophy path linked in Navbar; dark-gold site palette used (not light reference HTML palette)_
     - _Requirements: 2.7, 3.6_
 
-  - [~] 7.2 Replace redirect in `src/app/philosophy/page.tsx`
+  - [ ] 7.2 Replace redirect in `src/app/philosophy/page.tsx`
     - Remove `import { redirect } from "next/navigation"` and `redirect("/")`
     - Replace with:
       ```tsx
@@ -174,7 +174,7 @@
 
 - [ ] 8. Fix — Mentorship page real content
 
-  - [~] 8.1 Create `MentorshipContent` component
+  - [ ] 8.1 Create `MentorshipContent` component
     - Create new file `src/components/MentorshipContent.tsx` with `"use client"` directive
     - Add imports: `AnimatedSection`, `SacredIcon`, `Link` from `next/link`, `{ motion, AnimatePresence }` from `framer-motion`, `{ useState }` from `react`
     - Section 1 — Hero (`pt-40 pb-20 px-6 text-center`):
@@ -209,7 +209,7 @@
     - _Preservation: Navbar mentorship link works; dark-gold palette used_
     - _Requirements: 2.8_
 
-  - [~] 8.2 Replace redirect in `src/app/mentorship/page.tsx`
+  - [ ] 8.2 Replace redirect in `src/app/mentorship/page.tsx`
     - Remove `import { redirect } from "next/navigation"` and `redirect("/rituals-sessions")`
     - Replace with:
       ```tsx
@@ -222,7 +222,7 @@
 
 - [ ] 9. Fix — Footer add Philosophy and Contact links
 
-  - [~] 9.1 Add missing navigation links to Footer "Explore" column
+  - [ ] 9.1 Add missing navigation links to Footer "Explore" column
     - Open `src/components/Footer.tsx`
     - In the "Explore" `<div>` grid, after the existing `<Link href="/sacred-jewelry">Sacred Jewelry</Link>`, append:
       ```tsx
@@ -237,7 +237,7 @@
 
 - [ ] 10. Fix — Hero heading sub-360px text size
 
-  - [~] 10.1 Add intermediate text-size breakpoint below 360px
+  - [ ] 10.1 Add intermediate text-size breakpoint below 360px
     - Open `src/app/page.tsx`
     - Find the hero `<h2>` with current classes:
       `"mt-5 font-display text-4xl leading-[1.02] text-ivory sm:text-6xl md:mt-7 md:text-7xl md:leading-[0.98] xl:text-8xl"`
@@ -250,7 +250,7 @@
     - _Preservation: heading renders at sm:text-6xl md:text-7xl xl:text-8xl on all viewports ≥ 360px — only base size changes_
     - _Requirements: 2.14, 3.9_
 
-- [~] 11. Fix — Verify bug condition exploration tests now pass
+- [ ] 11. Fix — Verify bug condition exploration tests now pass
   - **Property 1: Expected Behavior** - All Eight Bug Conditions Resolved
   - **IMPORTANT**: Re-run the SAME checks from task 1 — do NOT write new checks
   - The checks from task 1 encode the expected behavior; passing them confirms each bug is fixed
@@ -268,7 +268,7 @@
   - **EXPECTED OUTCOME**: All checks PASS (confirms all eight bugs are fixed)
   - _Requirements: 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 2.10, 2.11, 2.12, 2.13, 2.14_
 
-- [~] 12. Verify preservation tests still pass
+- [ ] 12. Verify preservation tests still pass
   - **Property 2: Preservation** - All Non-Buggy Behaviors Unchanged
   - **IMPORTANT**: Re-run the SAME observations from task 2 — do NOT write new tests
   - Run `next build` — confirm zero TypeScript errors and zero ESLint violations
@@ -282,7 +282,7 @@
   - **EXPECTED OUTCOME**: Tests PASS (confirms no regressions)
   - _Requirements: 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 3.10_
 
-- [~] 13. Checkpoint — Ensure all tests pass
+- [ ] 13. Checkpoint — Ensure all tests pass
   - Run `next build` and confirm it completes with zero TypeScript errors and zero ESLint violations
   - Verify the build output includes pages for `/philosophy` and `/mentorship` (no longer static redirect pages)
   - If any TypeScript or lint errors appear, fix them before marking complete

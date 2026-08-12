@@ -2,7 +2,7 @@ export const brand = {
   name: "Shakti Loto",
   fullName: "Kunti Shakti Loto",
   role: "Multidisciplinary Artist",
-  essence: "A sacred return to your divine essence.",
+  essence: "A journey back to the divine within.",
   contact: {
     instagram: "@kunti_shaktiloto",
     instagramUrl: "https://www.instagram.com/kunti_shaktiloto?igsh=c2M5dnVxZGZiemx0",
@@ -91,11 +91,11 @@ export const certifications = [
 ];
 
 export const poeticPhrases = [
-  "To remember is to return to yourself",
-  "Your body is a portal",
-  "The sacred lives within you",
-  "Awaken your creative energy",
-  "Bridging ancient plant wisdom, alchemy and spirit to awaken the divine within",
+  "I do not believe that you need to become someone else.",
+  "I believe there is something within you waiting to be remembered.",
+  "Here, the body becomes a temple. Movement becomes a language.",
+  "Ritual becomes a doorway. And the journey becomes a return.",
+  "A space for deep reconnection with the life force.",
 ];
 
 export const photos = {
