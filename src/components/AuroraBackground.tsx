@@ -10,7 +10,7 @@ export default function AuroraBackground() {
         loop
         muted
         playsInline
-        className="absolute inset-0 h-full w-full object-cover opacity-20 mix-blend-screen"
+        className="absolute inset-0 h-full w-full object-cover opacity-12 mix-blend-screen"
       >
         <source src="/media/videos/hero-bg.mp4" type="video/mp4" />
       </video>
@@ -28,7 +28,7 @@ export default function AuroraBackground() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute -top-[10%] -left-[10%] h-[60vw] w-[60vw] max-h-[800px] max-w-[800px] rounded-full bg-lotusGreen/15 blur-[120px] md:blur-[160px]"
+        className="absolute -top-[10%] -left-[10%] h-[60vw] w-[60vw] max-h-[800px] max-w-[800px] rounded-full bg-lotusGreen/8 blur-[120px] md:blur-[160px]"
       />
 
       {/* Gold Blob */}
@@ -43,7 +43,7 @@ export default function AuroraBackground() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute top-[20%] right-[10%] h-[50vw] w-[50vw] max-h-[700px] max-w-[700px] rounded-full bg-antiqueGold/15 blur-[100px] md:blur-[140px]"
+        className="absolute top-[20%] right-[10%] h-[50vw] w-[50vw] max-h-[700px] max-w-[700px] rounded-full bg-antiqueGold/8 blur-[100px] md:blur-[140px]"
       />
 
       {/* Sacred Turquoise Blob */}
@@ -58,7 +58,7 @@ export default function AuroraBackground() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute -bottom-[20%] left-[20%] h-[70vw] w-[70vw] max-h-[900px] max-w-[900px] rounded-full bg-sacredTurquoise/10 blur-[130px] md:blur-[180px]"
+        className="absolute -bottom-[20%] left-[20%] h-[70vw] w-[70vw] max-h-[900px] max-w-[900px] rounded-full bg-sacredTurquoise/6 blur-[130px] md:blur-[180px]"
       />
     </div>
   );

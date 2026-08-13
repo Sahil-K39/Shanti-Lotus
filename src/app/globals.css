@@ -445,3 +445,53 @@ html {
   box-shadow: none !important;
 }
 
+/* Editorial CTA buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+  background: var(--color-cacaoProfundo);
+  border: 1px solid rgba(157, 115, 50, 0.4);
+  border-radius: 9999px;
+  transition: all 0.5s ease;
+  box-shadow: 0 4px 20px rgba(63, 48, 38, 0.15);
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: var(--color-cacaoProfundo);
+  border-color: var(--color-cacaoProfundo);
+  box-shadow: 0 8px 30px rgba(63, 48, 38, 0.25);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-cacaoProfundo);
+  border-bottom: 1px solid rgba(63, 48, 38, 0.3);
+  transition: all 0.4s ease;
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-cacaoProfundo);
+  padding-left: 0.5rem;
+  letter-spacing: 0.15em;
+}
+
+.editorial-section {
+  padding: clamp(6rem, 12vw, 12rem) 0;
+}
+
+

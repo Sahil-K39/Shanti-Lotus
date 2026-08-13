@@ -1,7 +1,7 @@
 export const brand = {
   name: "Shakti Loto",
   fullName: "Kunti Shakti Loto",
-  role: "Multidisciplinary Artist",
+  role: "Tantric Yogini · Traveler · Guide",
   essence: "A journey back to the divine within.",
   contact: {
     instagram: "@kunti_shaktiloto",
@@ -11,6 +11,44 @@ export const brand = {
     website: "www.shaktiloto.com",
   },
 };
+
+export const homepageExperiences = [
+  {
+    title: "RITUALS",
+    description: "Sacred rituals and embodied practices designed to reconnect you with presence, intention, and the sacred.",
+    cta: "EXPLORE RITUALS →",
+    href: "/rituals-sessions",
+    image: "/media/gallery/IMG_0596.jpg"
+  },
+  {
+    title: "TANTRIC MOVEMENT",
+    description: "Movement as a pathway to awareness, embodiment, sensuality, and connection with the life force.",
+    cta: "EXPLORE MOVEMENT →",
+    href: "/rituals-sessions",
+    image: "/media/gallery/IMG_5374.jpg"
+  },
+  {
+    title: "RETREATS",
+    description: "Immersive journeys created to step away from the ordinary and reconnect with yourself, nature, and the sacred.",
+    cta: "EXPLORE RETREATS →",
+    href: "/retreats",
+    image: "/media/gallery/IMG_1873.jpg"
+  },
+  {
+    title: "COURSES & CIRCLES",
+    description: "Spaces for learning, practice, reflection, and conscious exploration — online and in person.",
+    cta: "EXPLORE COURSES →",
+    href: "/retreats",
+    image: "/media/gallery/IMG_3600.jpg"
+  },
+  {
+    title: "SACRED JEWELRY",
+    description: "Objects created with intention, symbolism, and a connection to the sacred.",
+    cta: "DISCOVER THE JEWELRY →",
+    href: "/sacred-jewelry",
+    image: "/media/gallery/IMG_2222.jpg"
+  }
+];
 
 export const services = [
   {
