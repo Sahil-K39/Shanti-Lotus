@@ -217,12 +217,12 @@ button {
 }
 
 .sacred-bg main section {
-  --section-accent: #C8A96B;
-  --section-pair: #5E9E9B;
+  --section-accent: var(--color-gold);
+  --section-pair: var(--color-sacredTurquoise);
   position: relative;
   overflow: hidden;
   background:
-    linear-gradient(135deg, rgba(248, 245, 241, 0.92), rgba(239, 230, 219, 0.86)),
+    linear-gradient(135deg, rgba(39, 30, 22, 0.92), rgba(58, 42, 32, 0.86)),
     radial-gradient(circle at 10% 18%, color-mix(in srgb, var(--section-accent) 24%, transparent), transparent 22rem) !important;
 }
 
@@ -234,7 +234,7 @@ button {
   height: 9px;
   pointer-events: none;
   background:
-    linear-gradient(90deg, #C8A96B, #B8904F, #E2C58F, #EFE6DB, #D8C8B6, #5A4636, #6F8F7A, #5E9E9B, #4D667D, #F8F5F1);
+    linear-gradient(90deg, var(--color-gold), var(--color-ember), var(--color-softGold), var(--color-charcoal), var(--color-nudeRitual), var(--color-deepPlum), var(--color-lotusGreen), var(--color-sacredTurquoise), var(--color-deepBlue), var(--color-ink));
 }
 
 .sacred-bg main section::after {
@@ -251,72 +251,72 @@ button {
 }
 
 .sacred-bg main section:nth-of-type(6n + 1) {
-  --section-accent: #C8A96B;
-  --section-pair: #4D667D;
+  --section-accent: var(--color-gold);
+  --section-pair: var(--color-deepBlue);
   background:
-    radial-gradient(circle at 12% 14%, rgba(200, 169, 107, 0.24), transparent 22rem),
-    radial-gradient(circle at 88% 78%, rgba(226, 197, 143, 0.2), transparent 24rem),
-    linear-gradient(135deg, #F8F5F1, #EFE6DB) !important;
+    radial-gradient(circle at 12% 14%, rgba(212, 163, 115, 0.15), transparent 22rem),
+    radial-gradient(circle at 88% 78%, rgba(227, 203, 168, 0.1), transparent 24rem),
+    linear-gradient(135deg, var(--color-ink), var(--color-charcoal)) !important;
 }
 
 .sacred-bg main section:nth-of-type(6n + 2) {
-  --section-accent: #6F8F7A;
-  --section-pair: #B8904F;
+  --section-accent: var(--color-lotusGreen);
+  --section-pair: var(--color-ember);
   background:
-    radial-gradient(circle at 18% 18%, rgba(111, 143, 122, 0.25), transparent 22rem),
-    radial-gradient(circle at 82% 80%, rgba(248, 245, 241, 0.62), transparent 23rem),
-    linear-gradient(135deg, rgba(111, 143, 122, 0.16), #F8F5F1 54%, #EFE6DB) !important;
+    radial-gradient(circle at 18% 18%, rgba(111, 143, 122, 0.15), transparent 22rem),
+    radial-gradient(circle at 82% 80%, rgba(39, 30, 22, 0.62), transparent 23rem),
+    linear-gradient(135deg, rgba(111, 143, 122, 0.08), var(--color-ink) 54%, var(--color-charcoal)) !important;
 }
 
 .sacred-bg main section:nth-of-type(6n + 3) {
-  --section-accent: #5E9E9B;
-  --section-pair: #5A4636;
+  --section-accent: var(--color-sacredTurquoise);
+  --section-pair: var(--color-deepPlum);
   background:
-    radial-gradient(circle at 78% 18%, rgba(94, 158, 155, 0.25), transparent 23rem),
-    radial-gradient(circle at 12% 88%, rgba(216, 200, 182, 0.34), transparent 24rem),
-    linear-gradient(135deg, #F8F5F1, rgba(94, 158, 155, 0.14)) !important;
+    radial-gradient(circle at 78% 18%, rgba(94, 158, 155, 0.15), transparent 23rem),
+    radial-gradient(circle at 12% 88%, rgba(213, 167, 149, 0.15), transparent 24rem),
+    linear-gradient(135deg, var(--color-ink), rgba(94, 158, 155, 0.08)) !important;
 }
 
 .sacred-bg main section:nth-of-type(6n + 4) {
-  --section-accent: #4D667D;
-  --section-pair: #E2C58F;
+  --section-accent: var(--color-deepBlue);
+  --section-pair: var(--color-softGold);
   background:
-    radial-gradient(circle at 16% 20%, rgba(77, 102, 125, 0.22), transparent 23rem),
-    radial-gradient(circle at 88% 86%, rgba(200, 169, 107, 0.24), transparent 24rem),
-    linear-gradient(135deg, rgba(77, 102, 125, 0.12), #F8F5F1 48%, #EFE6DB) !important;
+    radial-gradient(circle at 16% 20%, rgba(77, 102, 125, 0.15), transparent 23rem),
+    radial-gradient(circle at 88% 86%, rgba(212, 163, 115, 0.15), transparent 24rem),
+    linear-gradient(135deg, rgba(77, 102, 125, 0.08), var(--color-ink) 48%, var(--color-charcoal)) !important;
 }
 
 .sacred-bg main section:nth-of-type(6n + 5) {
-  --section-accent: #5A4636;
-  --section-pair: #6F8F7A;
+  --section-accent: var(--color-deepPlum);
+  --section-pair: var(--color-lotusGreen);
   background:
-    radial-gradient(circle at 82% 18%, rgba(90, 70, 54, 0.18), transparent 22rem),
-    radial-gradient(circle at 18% 84%, rgba(184, 144, 79, 0.24), transparent 24rem),
-    linear-gradient(135deg, #F8F5F1, rgba(216, 200, 182, 0.48)) !important;
+    radial-gradient(circle at 82% 18%, rgba(58, 42, 32, 0.4), transparent 22rem),
+    radial-gradient(circle at 18% 84%, rgba(177, 104, 75, 0.15), transparent 24rem),
+    linear-gradient(135deg, var(--color-ink), rgba(213, 167, 149, 0.1)) !important;
 }
 
 .sacred-bg main section:nth-of-type(6n) {
-  --section-accent: #B8904F;
-  --section-pair: #5E9E9B;
+  --section-accent: var(--color-ember);
+  --section-pair: var(--color-sacredTurquoise);
   background:
-    radial-gradient(circle at 16% 18%, rgba(184, 144, 79, 0.24), transparent 22rem),
-    radial-gradient(circle at 84% 84%, rgba(94, 158, 155, 0.22), transparent 24rem),
-    linear-gradient(135deg, #EFE6DB, #F8F5F1) !important;
+    radial-gradient(circle at 16% 18%, rgba(177, 104, 75, 0.15), transparent 22rem),
+    radial-gradient(circle at 84% 84%, rgba(94, 158, 155, 0.15), transparent 24rem),
+    linear-gradient(135deg, var(--color-charcoal), var(--color-ink)) !important;
 }
 
 .palette-band {
   background:
-    linear-gradient(90deg, #C8A96B 0 10%, #B8904F 10% 20%, #E2C58F 20% 30%, #EFE6DB 30% 40%, #D8C8B6 40% 50%, #5A4636 50% 60%, #6F8F7A 60% 70%, #5E9E9B 70% 80%, #4D667D 80% 90%, #F8F5F1 90% 100%);
+    linear-gradient(90deg, var(--color-gold) 0 10%, var(--color-ember) 10% 20%, var(--color-softGold) 20% 30%, var(--color-charcoal) 30% 40%, var(--color-nudeRitual) 40% 50%, var(--color-deepPlum) 50% 60%, var(--color-lotusGreen) 60% 70%, var(--color-sacredTurquoise) 70% 80%, var(--color-deepBlue) 80% 90%, var(--color-ink) 90% 100%);
 }
 
 .palette-wash {
   background:
-    radial-gradient(circle at 10% 10%, rgba(200, 169, 107, 0.24), transparent 18rem),
-    radial-gradient(circle at 28% 86%, rgba(184, 144, 79, 0.18), transparent 18rem),
-    radial-gradient(circle at 50% 38%, rgba(111, 143, 122, 0.18), transparent 20rem),
-    radial-gradient(circle at 78% 18%, rgba(94, 158, 155, 0.18), transparent 18rem),
-    radial-gradient(circle at 90% 82%, rgba(77, 102, 125, 0.16), transparent 18rem),
-    linear-gradient(135deg, #F8F5F1, #EFE6DB 45%, #D8C8B6);
+    radial-gradient(circle at 10% 10%, rgba(212, 163, 115, 0.15), transparent 18rem),
+    radial-gradient(circle at 28% 86%, rgba(177, 104, 75, 0.15), transparent 18rem),
+    radial-gradient(circle at 50% 38%, rgba(111, 143, 122, 0.15), transparent 20rem),
+    radial-gradient(circle at 78% 18%, rgba(94, 158, 155, 0.15), transparent 18rem),
+    radial-gradient(circle at 90% 82%, rgba(77, 102, 125, 0.15), transparent 18rem),
+    linear-gradient(135deg, var(--color-ink), var(--color-charcoal) 45%, var(--color-nudeRitual));
 }
 
 .sacred-glow {
@@ -491,7 +491,7 @@ html {
 }
 
 .editorial-section {
-  padding: clamp(6rem, 12vw, 12rem) 0;
+  padding: clamp(4rem, 10vw, 12rem) 0;
 }
 
 

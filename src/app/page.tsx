@@ -27,11 +27,11 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 mx-auto max-w-5xl text-center">
-          <AnimatedSection direction="up" className="space-y-8">
-            <h1 className="font-display text-6xl tracking-[0.15em] text-lightGold sm:text-7xl md:text-9xl uppercase font-light">
+          <AnimatedSection direction="up" className="space-y-6 md:space-y-8">
+            <h1 className="font-display text-4xl sm:text-6xl md:text-8xl lg:text-9xl tracking-[0.15em] text-lightGold uppercase font-light">
               SHAKTI LOTO
             </h1>
-            <p className="font-display text-2xl md:text-3xl text-parchment/90 max-w-2xl mx-auto italic font-light">
+            <p className="font-display text-xl md:text-3xl text-parchment/90 max-w-2xl mx-auto italic font-light px-4">
               A journey back to the divine within.
             </p>
           </AnimatedSection>
