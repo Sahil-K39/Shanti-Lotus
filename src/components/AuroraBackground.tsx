@@ -4,61 +4,50 @@ import { motion } from "framer-motion";
 
 export default function AuroraBackground() {
   return (
-    <div className="fixed inset-0 -z-10 overflow-hidden bg-ink">
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 h-full w-full object-cover opacity-12 mix-blend-screen"
-      >
-        <source src="/media/videos/hero-bg.mp4" type="video/mp4" />
-      </video>
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(63,48,38,0.7),transparent_80%)] pointer-events-none" />
-      
-      {/* Lotus Green Blob */}
+    <div className="fixed inset-0 -z-10 overflow-hidden bg-parchment">
+      {/* Soft warm glow top-left */}
       <motion.div
         animate={{
-          x: [0, 100, -50, 0],
-          y: [0, -80, 50, 0],
-          scale: [1, 1.1, 0.9, 1],
+          x: [0, 60, -30, 0],
+          y: [0, -40, 30, 0],
+          scale: [1, 1.08, 0.95, 1],
         }}
         transition={{
           duration: 25,
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute -top-[10%] -left-[10%] h-[60vw] w-[60vw] max-h-[800px] max-w-[800px] rounded-full bg-lotusGreen/8 blur-[120px] md:blur-[160px]"
+        className="absolute -top-[10%] -left-[10%] h-[60vw] w-[60vw] max-h-[800px] max-w-[800px] rounded-full bg-[#D8C8B6]/30 blur-[120px] md:blur-[160px]"
       />
 
-      {/* Gold Blob */}
+      {/* Soft gold glow center-right */}
       <motion.div
         animate={{
-          x: [0, -80, 60, 0],
-          y: [0, 100, -60, 0],
-          scale: [1, 1.2, 0.8, 1],
+          x: [0, -50, 40, 0],
+          y: [0, 60, -40, 0],
+          scale: [1, 1.1, 0.9, 1],
         }}
         transition={{
           duration: 28,
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute top-[20%] right-[10%] h-[50vw] w-[50vw] max-h-[700px] max-w-[700px] rounded-full bg-antiqueGold/8 blur-[100px] md:blur-[140px]"
+        className="absolute top-[20%] right-[10%] h-[50vw] w-[50vw] max-h-[700px] max-w-[700px] rounded-full bg-[#E2C5BF]/20 blur-[100px] md:blur-[140px]"
       />
 
-      {/* Sacred Turquoise Blob */}
+      {/* Subtle sage glow bottom */}
       <motion.div
         animate={{
-          x: [0, 120, -100, 0],
-          y: [0, -120, 80, 0],
-          scale: [1, 1.05, 0.95, 1],
+          x: [0, 80, -60, 0],
+          y: [0, -80, 50, 0],
+          scale: [1, 1.04, 0.96, 1],
         }}
         transition={{
           duration: 32,
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute -bottom-[20%] left-[20%] h-[70vw] w-[70vw] max-h-[900px] max-w-[900px] rounded-full bg-sacredTurquoise/6 blur-[130px] md:blur-[180px]"
+        className="absolute -bottom-[20%] left-[20%] h-[70vw] w-[70vw] max-h-[900px] max-w-[900px] rounded-full bg-[#6F8F7A]/8 blur-[130px] md:blur-[180px]"
       />
     </div>
   );

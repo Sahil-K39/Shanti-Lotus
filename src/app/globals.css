@@ -6,7 +6,7 @@
   --color-oroClaro: #E2C5BF;
   --color-arenaSagrada: #EFE6DB;
   --color-nudeRitual: #D8C8B6;
-  --color-cacaoProfundo: #4D667D;
+  --color-cacaoProfundo: #5A4636;
   --color-verdeLoto: #6F8F7A;
   --color-turquesaSagrado: #5E9E9B;
   --color-azulProfundo: #4D667D;
@@ -23,16 +23,16 @@
   --color-roseSmoke: #E2C5BF;
   --color-sageSmoke: #6F8F7A;
   --color-deepPlum: #4D667D;
-  --color-textDark: #EFE6DB;
-  --color-surface: #4D667D;
-  --color-surfaceDark: #4D667D;
+  --color-textDark: #4D667D;
+  --color-surface: #EFE6DB;
+  --color-surfaceDark: #D8C8B6;
   --color-antiqueGold: #B8904F;
   --color-terracotta: #B8904F;
   --color-lotusGreen: #6F8F7A;
   --color-sacredTurquoise: #5E9E9B;
   --color-deepBlue: #4D667D;
   --color-blancoRitual: #EFE6DB;
-  --shadow-altar: 0 16px 48px rgba(77, 102, 125, 0.08), 0 4px 16px rgba(77, 102, 125, 0.04);
+  --shadow-altar: 0 4px 24px rgba(77, 102, 125, 0.06);
   --transition-duration-400: 400ms;
   --transition-duration-1200: 1200ms;
 
@@ -46,10 +46,10 @@ body {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: var(--color-arenaSagrada);
+  background: #EFE6DB;
   overflow-x: hidden;
   max-width: 100vw;
-  color: var(--color-azulProfundo);
+  color: #4D667D;
   font-family: var(--font-body);
   font-size: 15px;
   font-weight: 400;
@@ -58,8 +58,8 @@ body {
 }
 
 ::selection {
-  background: rgba(200, 169, 107, 0.36);
-  color: var(--color-textDark);
+  background: rgba(200, 169, 107, 0.3);
+  color: #4D667D;
 }
 
 h1,
@@ -82,10 +82,6 @@ button {
   letter-spacing: 0.01em;
 }
 
-.sacred-bg .font-light {
-  font-weight: 400;
-}
-
 .font-display .italic,
 .font-display.italic {
   font-family: var(--font-cursive);
@@ -94,19 +90,25 @@ button {
   letter-spacing: 0;
 }
 
+/* Scrollbar — light theme */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-charcoal);
+  background: #EFE6DB;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(var(--color-lightGold), var(--color-lotusGreen));
+  background: #D8C8B6;
   border-radius: 999px;
 }
 
+::-webkit-scrollbar-thumb:hover {
+  background: #C8A96B;
+}
+
+/* Animations */
 @keyframes breathe {
   from {
     opacity: 0.44;
@@ -128,15 +130,6 @@ button {
   }
 }
 
-@keyframes shimmerGold {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
-}
-
 .animate-breathe {
   animation: breathe 8s ease-in-out infinite alternate;
 }
@@ -145,47 +138,32 @@ button {
   animation: slowDrift 10s ease-in-out infinite;
 }
 
+/* Sacred background — LIGHT theme */
 .sacred-bg {
   position: relative;
   isolation: isolate;
 }
 
+/* Remove the old dark grid pattern overlay */
 .sacred-bg::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-  pointer-events: none;
-  background-image:
-    linear-gradient(rgba(184, 144, 79, 0.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(111, 143, 122, 0.04) 1px, transparent 1px);
-  background-size: 78px 78px;
-  mask-image: radial-gradient(circle at center, black, transparent 78%);
+  content: none;
 }
 
+/* Remove the old dark radial gradient overlay */
 .sacred-bg::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background:
-    radial-gradient(circle at 50% 0%, rgba(200, 169, 107, 0.16), transparent 30rem),
-    radial-gradient(circle at 5% 70%, rgba(94, 158, 155, 0.14), transparent 24rem),
-    radial-gradient(circle at 92% 45%, rgba(77, 102, 125, 0.1), transparent 22rem),
-    radial-gradient(circle at 48% 88%, rgba(90, 70, 54, 0.08), transparent 24rem);
+  content: none;
 }
 
-.gold-text {
-  background: linear-gradient(105deg, #7E5A2F, #B8904F 45%, #9F7945 72%, #3F3026);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+/* Remove ALL nth-of-type section background overrides — they were adding dark muddy layers */
+.sacred-bg main section {
+  position: relative;
+  overflow: hidden;
 }
 
+/* Gold decorative line */
 .gold-line {
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(184, 144, 79, 0.78), transparent);
+  background: linear-gradient(90deg, transparent, rgba(200, 169, 107, 0.5), transparent);
   position: relative;
 }
 
@@ -200,168 +178,33 @@ button {
   background: transparent url("/shakti-elements/star-divider.svg") center / contain no-repeat;
 }
 
+/* Cards — light theme */
 .sacred-card {
-  background: rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(77, 102, 125, 0.08);
   border-radius: 24px;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 24px rgba(77, 102, 125, 0.04);
 }
 
 .glass-panel {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(77, 102, 125, 0.06);
   border-radius: 24px;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 24px rgba(77, 102, 125, 0.04);
 }
 
-.sacred-bg main section {
-  --section-accent: var(--color-gold);
-  --section-pair: var(--color-sacredTurquoise);
-  position: relative;
-  overflow: hidden;
-  background:
-    linear-gradient(135deg, var(--color-arenaSagrada), var(--color-nudeRitual)),
-    radial-gradient(circle at 10% 18%, color-mix(in srgb, var(--section-accent) 24%, transparent), transparent 22rem) !important;
+/* Gold gradient text */
+.gold-text {
+  color: #C8A96B;
 }
 
-.sacred-bg main section::before {
-  content: none;
-  position: absolute;
-  inset: 0 0 auto 0;
-  z-index: 1;
-  height: 9px;
-  pointer-events: none;
-  background:
-    linear-gradient(90deg, var(--color-gold), var(--color-ember), var(--color-softGold), var(--color-nudeRitual), var(--color-nudeRitual), var(--color-deepPlum), var(--color-lotusGreen), var(--color-sacredTurquoise), var(--color-deepBlue), var(--color-arenaSagrada));
-}
-
-.sacred-bg main section::after {
-  content: "";
-  position: absolute;
-  right: clamp(18px, 8vw, 120px);
-  top: clamp(56px, 10vw, 140px);
-  z-index: 0;
-  width: clamp(160px, 28vw, 430px);
-  aspect-ratio: 1;
-  pointer-events: none;
-  background: url("/shakti-elements/lotus-icon.svg") center / contain no-repeat;
-  opacity: 0.035;
-}
-
-.sacred-bg main section:nth-of-type(6n + 1) {
-  --section-accent: var(--color-gold);
-  --section-pair: var(--color-deepBlue);
-  background:
-    radial-gradient(circle at 12% 14%, rgba(212, 163, 115, 0.15), transparent 22rem),
-    radial-gradient(circle at 88% 78%, rgba(227, 203, 168, 0.1), transparent 24rem),
-    linear-gradient(135deg, var(--color-arenaSagrada), var(--color-nudeRitual)) !important;
-}
-
-.sacred-bg main section:nth-of-type(6n + 2) {
-  --section-accent: var(--color-lotusGreen);
-  --section-pair: var(--color-ember);
-  background:
-    radial-gradient(circle at 18% 18%, rgba(111, 143, 122, 0.15), transparent 22rem),
-    radial-gradient(circle at 82% 80%, var(--color-arenaSagrada), transparent 23rem),
-    linear-gradient(135deg, rgba(111, 143, 122, 0.08), var(--color-arenaSagrada) 54%, var(--color-nudeRitual)) !important;
-}
-
-.sacred-bg main section:nth-of-type(6n + 3) {
-  --section-accent: var(--color-sacredTurquoise);
-  --section-pair: var(--color-deepPlum);
-  background:
-    radial-gradient(circle at 78% 18%, rgba(94, 158, 155, 0.15), transparent 23rem),
-    radial-gradient(circle at 12% 88%, rgba(213, 167, 149, 0.15), transparent 24rem),
-    linear-gradient(135deg, var(--color-arenaSagrada), rgba(94, 158, 155, 0.08)) !important;
-}
-
-.sacred-bg main section:nth-of-type(6n + 4) {
-  --section-accent: var(--color-deepBlue);
-  --section-pair: var(--color-softGold);
-  background:
-    radial-gradient(circle at 16% 20%, rgba(77, 102, 125, 0.15), transparent 23rem),
-    radial-gradient(circle at 88% 86%, rgba(212, 163, 115, 0.15), transparent 24rem),
-    linear-gradient(135deg, rgba(77, 102, 125, 0.08), var(--color-arenaSagrada) 48%, var(--color-nudeRitual)) !important;
-}
-
-.sacred-bg main section:nth-of-type(6n + 5) {
-  --section-accent: var(--color-deepPlum);
-  --section-pair: var(--color-lotusGreen);
-  background:
-    radial-gradient(circle at 82% 18%, var(--color-arenaSagrada), transparent 22rem),
-    radial-gradient(circle at 18% 84%, rgba(177, 104, 75, 0.15), transparent 24rem),
-    linear-gradient(135deg, var(--color-arenaSagrada), rgba(213, 167, 149, 0.1)) !important;
-}
-
-.sacred-bg main section:nth-of-type(6n) {
-  --section-accent: var(--color-ember);
-  --section-pair: var(--color-sacredTurquoise);
-  background:
-    radial-gradient(circle at 16% 18%, rgba(177, 104, 75, 0.15), transparent 22rem),
-    radial-gradient(circle at 84% 84%, rgba(94, 158, 155, 0.15), transparent 24rem),
-    linear-gradient(135deg, var(--color-nudeRitual), var(--color-arenaSagrada)) !important;
-}
-
-.palette-band {
-  background:
-    linear-gradient(90deg, var(--color-gold) 0 10%, var(--color-ember) 10% 20%, var(--color-softGold) 20% 30%, var(--color-nudeRitual) 30% 40%, var(--color-nudeRitual) 40% 50%, var(--color-deepPlum) 50% 60%, var(--color-lotusGreen) 60% 70%, var(--color-sacredTurquoise) 70% 80%, var(--color-deepBlue) 80% 90%, var(--color-arenaSagrada) 90% 100%);
-}
-
-.palette-wash {
-  background:
-    radial-gradient(circle at 10% 10%, rgba(212, 163, 115, 0.15), transparent 18rem),
-    radial-gradient(circle at 28% 86%, rgba(177, 104, 75, 0.15), transparent 18rem),
-    radial-gradient(circle at 50% 38%, rgba(111, 143, 122, 0.15), transparent 20rem),
-    radial-gradient(circle at 78% 18%, rgba(94, 158, 155, 0.15), transparent 18rem),
-    radial-gradient(circle at 90% 82%, rgba(77, 102, 125, 0.15), transparent 18rem),
-    linear-gradient(135deg, var(--color-arenaSagrada), var(--color-nudeRitual) 45%, var(--color-nudeRitual));
-}
-
-.sacred-glow {
-  box-shadow:
-    0 0 0 1px rgba(184, 144, 79, 0.22),
-    0 0 38px rgba(200, 169, 107, 0.16),
-    0 30px 90px rgba(90, 70, 54, 0.14);
-}
-
-.sacred-visual {
-  background:
-    radial-gradient(circle at 50% 26%, rgba(200, 169, 107, 0.28), transparent 16rem),
-    radial-gradient(circle at 20% 78%, rgba(111, 143, 122, 0.2), transparent 18rem),
-    radial-gradient(circle at 84% 76%, rgba(94, 158, 155, 0.18), transparent 18rem),
-    linear-gradient(135deg, rgba(248, 245, 241, 0.98), rgba(239, 230, 219, 0.9));
-}
-
-.sacred-visual::before {
-  content: "";
-  position: absolute;
-  inset: 9%;
-  border: 1px solid rgba(184, 144, 79, 0.2);
-  border-radius: inherit;
-  pointer-events: none;
-}
-
-.sacred-visual::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background:
-    linear-gradient(90deg, transparent 49.8%, rgba(184, 144, 79, 0.18) 50%, transparent 50.2%),
-    linear-gradient(0deg, transparent 49.8%, rgba(184, 144, 79, 0.12) 50%, transparent 50.2%);
-  opacity: 0.55;
-}
-
+/* Eyebrow label style */
 .text-eyebrow {
-  color: var(--color-lightGold);
+  color: #C8A96B;
   font-family: var(--font-body);
   font-size: 0.68rem;
   font-weight: 500;
@@ -369,6 +212,7 @@ button {
   text-transform: uppercase;
 }
 
+/* Image masks */
 .pebble-mask {
   border-radius: 42% 58% 62% 38% / 44% 48% 52% 56%;
   transition: border-radius 1.2s ease, transform 1.2s ease;
@@ -387,38 +231,38 @@ button {
 }
 
 .editorial-border {
-  border: 1px solid rgba(184, 144, 79, 0.28);
+  border: 1px solid rgba(200, 169, 107, 0.2);
   padding: 10px;
 }
 
+/* Moon phases — adapted for light bg */
 .moon-phase {
   display: inline-block;
   width: 0.68rem;
   height: 0.68rem;
-  border: 1px solid rgba(184, 144, 79, 0.7);
+  border: 1px solid rgba(200, 169, 107, 0.5);
   border-radius: 999px;
-  box-shadow: 0 0 18px rgba(200, 169, 107, 0.16);
 }
 
 .moon-phase.full {
-  background: rgba(200, 169, 107, 0.82);
+  background: rgba(200, 169, 107, 0.6);
 }
 
 .moon-phase.half {
-  background: linear-gradient(90deg, rgba(200, 169, 107, 0.82) 50%, transparent 50%);
+  background: linear-gradient(90deg, rgba(200, 169, 107, 0.6) 50%, transparent 50%);
 }
 
 .moon-phase.crescent {
   background:
-    radial-gradient(circle at 62% 50%, var(--color-ink) 0 42%, transparent 44%),
-    rgba(200, 169, 107, 0.82);
+    radial-gradient(circle at 62% 50%, #EFE6DB 0 42%, transparent 44%),
+    rgba(200, 169, 107, 0.6);
 }
 
 .writing-mode-vertical {
   writing-mode: vertical-rl;
 }
 
-/* Flawless Google Translate UI & Layout Fixes */
+/* Google Translate UI Fixes */
 iframe.goog-te-banner-frame,
 iframe.skiptranslate,
 .skiptranslate > iframe,
@@ -451,7 +295,7 @@ html {
   box-shadow: none !important;
 }
 
-/* Editorial CTA buttons */
+/* CTA buttons — light theme */
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -461,19 +305,18 @@ html {
   font-size: 1.15rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--color-ink);
-  background: var(--color-cacaoProfundo);
-  border: 1px solid rgba(157, 115, 50, 0.4);
-  border-radius: 9999px;
+  color: #EFE6DB;
+  background: #4D667D;
+  border: 1px solid #4D667D;
+  border-radius: 0;
   transition: all 0.5s ease;
-  box-shadow: 0 4px 20px rgba(63, 48, 38, 0.15);
+  box-shadow: none;
 }
 
 .btn-primary:hover {
   background: transparent;
-  color: var(--color-cacaoProfundo);
-  border-color: var(--color-cacaoProfundo);
-  box-shadow: 0 8px 30px rgba(63, 48, 38, 0.25);
+  color: #4D667D;
+  border-color: #4D667D;
   transform: translateY(-2px);
 }
 
@@ -485,19 +328,46 @@ html {
   font-size: 1rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-cacaoProfundo);
-  border-bottom: 1px solid rgba(63, 48, 38, 0.3);
+  color: #4D667D;
+  border-bottom: 1px solid rgba(77, 102, 125, 0.3);
   transition: all 0.4s ease;
 }
 
 .btn-secondary:hover {
-  border-color: var(--color-cacaoProfundo);
+  border-color: #4D667D;
   padding-left: 0.5rem;
   letter-spacing: 0.15em;
 }
 
+/* Editorial section spacing */
 .editorial-section {
   padding: clamp(4rem, 10vw, 12rem) 0;
 }
 
+/* Palette-related decorative items */
+.palette-wash {
+  background: linear-gradient(135deg, #EFE6DB, #D8C8B6 45%, #D8C8B6);
+}
 
+.sacred-glow {
+  box-shadow: 0 4px 32px rgba(200, 169, 107, 0.1);
+}
+
+.sacred-visual {
+  background:
+    radial-gradient(circle at 50% 26%, rgba(200, 169, 107, 0.12), transparent 16rem),
+    linear-gradient(135deg, rgba(248, 245, 241, 0.98), rgba(239, 230, 219, 0.9));
+}
+
+.sacred-visual::before {
+  content: "";
+  position: absolute;
+  inset: 9%;
+  border: 1px solid rgba(200, 169, 107, 0.15);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.sacred-visual::after {
+  content: none;
+}
