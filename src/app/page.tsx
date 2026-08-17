@@ -4,6 +4,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import EditorialImage from "@/components/EditorialImage";
 import SacredIcon from "@/components/SacredIcon";
 import AuroraBackground from "@/components/AuroraBackground";
+import CollectionGrid from "@/components/CollectionGrid";
 import { photos } from "@/lib/brand";
 import Image from "next/image";
 
@@ -13,28 +14,32 @@ export default function Home() {
       <AuroraBackground />
       
       {/* 01 — HERO SECTION */}
-      <section className="relative min-h-screen overflow-hidden flex flex-col items-center justify-center px-6">
-        {/* One strong, atmospheric background image */}
-        <div className="absolute inset-0 z-0">
+      <section className="relative min-h-[90vh] lg:min-h-screen overflow-hidden flex flex-col lg:flex-row items-center pt-20 lg:pt-0">
+        <div className="relative z-10 w-full lg:w-1/2 px-6 lg:px-16 xl:px-24 flex flex-col justify-center text-center lg:text-left py-12 lg:py-0 order-2 lg:order-1">
+          <AnimatedSection direction="up" className="space-y-6 md:space-y-8 max-w-xl mx-auto lg:mx-0">
+            <h1 className="font-display text-5xl sm:text-7xl lg:text-8xl xl:text-9xl tracking-[0.1em] text-ink uppercase font-light leading-none">
+              SHAKTI LOTO
+            </h1>
+            <p className="font-display text-xl md:text-3xl text-ink/80 italic font-light">
+              A journey back to the divine within.
+            </p>
+            <div className="pt-4 lg:pt-8">
+              <a href="#offerings" className="inline-block border-b border-ink pb-1 text-sm tracking-[0.2em] uppercase text-ink hover:text-lightGold hover:border-lightGold transition-colors duration-300">
+                Explore The Offerings
+              </a>
+            </div>
+          </AnimatedSection>
+        </div>
+
+        <div className="relative z-0 w-full lg:w-1/2 h-[55vh] lg:h-screen order-1 lg:order-2 overflow-hidden">
+          <div className="absolute inset-0 bg-parchment/5 z-10" />
           <Image
             src={photos.mainPhoto}
             alt="Shakti Loto atmosphere"
             fill
             priority
-            className="object-cover object-[center_top] opacity-30 mix-blend-luminosity filter saturate-50"
+            className="object-cover object-[center_top]"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-parchment/30 via-parchment/60 to-parchment pointer-events-none" />
-        </div>
-
-        <div className="relative z-10 mx-auto max-w-5xl text-center">
-          <AnimatedSection direction="up" className="space-y-6 md:space-y-8">
-            <h1 className="font-display text-4xl sm:text-6xl md:text-8xl lg:text-9xl tracking-[0.15em] text-lightGold uppercase font-light">
-              SHAKTI LOTO
-            </h1>
-            <p className="font-display text-xl md:text-3xl text-ink max-w-2xl mx-auto italic font-light px-4">
-              A journey back to the divine within.
-            </p>
-          </AnimatedSection>
         </div>
       </section>
 
@@ -66,6 +71,20 @@ export default function Home() {
               REMEMBER <span className="mx-4 text-ink/30">·</span> EMBODY <span className="mx-4 text-ink/30">·</span> EXPLORE <span className="mx-4 text-ink/30">·</span> RETURN <span className="mx-4 text-ink/30">·</span> BLOSSOM
             </p>
           </AnimatedSection>
+        </div>
+      </section>
+
+      {/* 03.5 — THE OFFERINGS */}
+      <section id="offerings" className="px-6 py-24 md:py-32 relative z-10 bg-parchment/20">
+        <div className="mx-auto max-w-7xl">
+          <AnimatedSection direction="up" className="text-center space-y-4 mb-16 md:mb-24">
+            <span className="text-eyebrow text-ink/60">Discover</span>
+            <h2 className="font-display text-4xl md:text-5xl text-ink font-light tracking-[0.2em] uppercase">
+              THE OFFERINGS
+            </h2>
+            <div className="h-px w-24 bg-ink/10 mx-auto mt-8" />
+          </AnimatedSection>
+          <CollectionGrid />
         </div>
       </section>
 
@@ -121,108 +140,86 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 05 — MY APPROACH */}
-      <section className="editorial-section px-6 relative z-10 bg-surfaceDark/60">
-        <div className="mx-auto max-w-[1250px] grid gap-16 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
-          <AnimatedSection direction="left" className="space-y-10 sacred-card p-10 md:p-16 border border-lightGold/10">
-            <div className="space-y-2">
-              <span className="text-eyebrow">The Space Holder</span>
-              <h2 className="font-display text-4xl md:text-6xl text-lightGold font-light tracking-wide uppercase">
-                MY APPROACH
-              </h2>
-            </div>
-
-            <blockquote className="space-y-6 text-lg md:text-xl font-light text-ink">
-              <p className="italic text-2xl md:text-3xl font-display text-lightGold">
-                “I am not here to guide you from above.”
-              </p>
-              <p>
-                I am here to create a space where you can listen more deeply, explore freely, and encounter your own inner wisdom.
-              </p>
-              
-              <div className="py-4 border-l-2 border-terracotta pl-6 my-8">
-                <p className="text-xl md:text-2xl font-display text-ink italic">
-                  I do not believe that you need to become someone else.
-                </p>
-                <p className="text-xl md:text-2xl font-display text-ink italic pt-2">
-                  I believe there is something within you waiting to be remembered.
-                </p>
-              </div>
-
-              <p>
-                My role is not to give you all the answers, but to offer practices, experiences, and a space where your own questions can unfold.
-              </p>
-            </blockquote>
-          </AnimatedSection>
-
-          <AnimatedSection direction="right">
-            <EditorialImage 
-              src={photos.gardenPortrait} 
-              alt="Kunti holding space" 
-              variant="organic-2" 
-              withBorder 
-              className="aspect-[3/4] w-full max-w-sm mx-auto opacity-85 mix-blend-luminosity filter saturate-50 hover:saturate-100 hover:mix-blend-normal transition-all duration-1000"
-              imageClassName="object-[center_top]" 
-            />
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* 06 — SHAKTI LOTO INVITES YOU TO */}
-      <section className="editorial-section px-6 relative z-10">
-        <div className="mx-auto max-w-[1250px] space-y-16">
-          <AnimatedSection direction="up" className="text-center space-y-2">
-            <span className="text-eyebrow">The Invitation</span>
-            <h2 className="font-display text-3xl md:text-5xl text-lightGold font-light tracking-widest uppercase">
-              SHAKTI LOTO INVITES YOU TO
+      {/* 05 — THE JOURNAL & TRAVEL */}
+      <section className="px-6 py-24 relative z-10 bg-parchment border-t border-ink/5">
+        <div className="mx-auto max-w-7xl">
+          <AnimatedSection direction="up" className="text-center space-y-4 mb-20">
+            <span className="text-eyebrow text-ink/60">Journal</span>
+            <h2 className="font-display text-4xl md:text-5xl text-ink font-light tracking-[0.2em] uppercase">
+              STORIES & TRAVEL
             </h2>
+            <div className="h-px w-24 bg-ink/10 mx-auto mt-8" />
           </AnimatedSection>
-          
-          <div className="grid gap-x-12 gap-y-16 md:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                title: "Reconnect with the Source",
-                desc: "and explore the union of Shakti and Shiva — the feminine and masculine principles within."
-              },
-              {
-                title: "Awaken your sensitivity and inner power",
-                desc: "through conscious connection with your body and energy."
-              },
-              {
-                title: "Embody your body with presence and love",
-                desc: "learning to listen to its language and wisdom."
-              },
-              {
-                title: "Explore spirituality as a lived experience",
-                desc: "rather than something separate from everyday life."
-              },
-              {
-                title: "Reconnect with ancestral wisdom",
-                desc: "and the memories, rituals, and knowledge carried through generations."
-              },
-              {
-                title: "Move through transformation and expansion",
-                desc: "with greater awareness, curiosity, and trust in your own process."
-              }
-            ].map((pillar, index) => (
-              <AnimatedSection key={pillar.title} delay={index * 0.1}>
-                <div className="space-y-4 group">
-                  <div className="h-px w-12 bg-terracotta/40 group-hover:bg-terracotta group-hover:w-24 transition-all duration-700" />
-                  <h3 className="font-display text-2xl text-lightGold font-medium leading-snug">
-                    {pillar.title}
-                  </h3>
-                  <p className="text-base font-light leading-relaxed text-ink/90">
-                    {pillar.desc}
-                  </p>
+
+          <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-center">
+            <AnimatedSection direction="left" className="order-2 md:order-1 space-y-8 max-w-lg mx-auto md:mx-0">
+              <p className="text-lg md:text-xl font-light text-ink/90 leading-loose italic">
+                “I do not believe that you need to become someone else. I believe there is something within you waiting to be remembered.”
+              </p>
+              <div className="h-px w-12 bg-ink/20" />
+              <p className="text-base font-light text-ink/70 leading-relaxed">
+                My role is not to give you all the answers, but to offer practices, experiences, and a space where your own questions can unfold. Through travel, ancestral wisdom, and conscious movement, we journey back to the source.
+              </p>
+              <div className="pt-4">
+                <Link href="/about" className="inline-block border-b border-ink/30 pb-1 text-xs tracking-[0.2em] uppercase text-ink hover:text-lightGold hover:border-lightGold transition-colors">
+                  Read the Journal
+                </Link>
+              </div>
+            </AnimatedSection>
+            
+            <AnimatedSection direction="right" className="order-1 md:order-2 relative">
+              <div className="relative aspect-[4/5] w-full max-w-[400px] mx-auto rotate-2 hover:rotate-0 transition-transform duration-700 bg-white p-4 shadow-sm border border-ink/5">
+                <div className="relative w-full h-full">
+                  <Image 
+                    src={photos.gardenPortrait} 
+                    alt="Travel Journal" 
+                    fill 
+                    className="object-cover" 
+                  />
                 </div>
-              </AnimatedSection>
-            ))}
+              </div>
+              <div className="absolute -bottom-8 -left-8 aspect-square w-32 md:w-48 -rotate-6 bg-white p-2 shadow-sm border border-ink/5 hidden md:block">
+                <div className="relative w-full h-full">
+                  <Image 
+                    src={photos.waterfallPrayer} 
+                    alt="Ritual" 
+                    fill 
+                    className="object-cover grayscale hover:grayscale-0 transition-all duration-700" 
+                  />
+                </div>
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
 
+      {/* 06 — WORK WITH ME BANNER */}
+      <section className="relative px-6 py-32 flex flex-col items-center justify-center text-center overflow-hidden">
+        <div className="absolute inset-0 bg-[#E8DFD5] z-0" />
+        {/* Subtle noise/texture overlay */}
+        <div className="absolute inset-0 opacity-[0.03] z-[1] mix-blend-overlay bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')]" />
+        
+        <AnimatedSection className="relative z-10 mx-auto max-w-3xl space-y-10">
+          <span className="text-eyebrow text-ink/60">Custom Journeys</span>
+          <h2 className="font-display text-4xl md:text-6xl text-ink font-light tracking-[0.1em] uppercase">
+            WORK WITH ME
+          </h2>
+          <p className="text-lg md:text-xl font-light text-ink/80 leading-relaxed max-w-2xl mx-auto">
+            Whether you are looking for a personalized 1:1 mentorship, a custom sacred jewelry piece, or to join an upcoming retreat, I am here to guide the unfolding.
+          </p>
+          <div className="pt-6">
+            <Link 
+              href="/contact"
+              className="inline-block border border-ink px-10 py-4 text-xs uppercase tracking-[0.25em] text-ink hover:bg-ink hover:text-parchment transition-colors duration-500"
+            >
+              Begin Your Journey
+            </Link>
+          </div>
+        </AnimatedSection>
+      </section>
+
       {/* 07 — CLOSING CTA */}
-      <section className="relative overflow-hidden px-6 py-40 flex flex-col items-center justify-center text-center border-t border-lightGold/10">
+      <section className="relative overflow-hidden px-6 py-40 flex flex-col items-center justify-center text-center border-t border-ink/10">
         <div className="absolute inset-0 z-0 opacity-15">
           <Image
             src={photos.roseMeditation}

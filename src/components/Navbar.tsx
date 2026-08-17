@@ -57,8 +57,8 @@ export default function Navbar() {
         transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-700 ${
           scrolled
-            ? "border-b border-lightGold/20 bg-ink/95 py-2.5 sm:py-3 backdrop-blur-xl shadow-altar"
-            : "bg-gradient-to-b from-ink/90 via-ink/50 to-transparent py-4 sm:py-5"
+            ? "border-b border-lightGold/10 bg-parchment/80 py-2.5 sm:py-3 backdrop-blur-xl shadow-altar"
+            : "bg-transparent py-4 sm:py-6"
         }`}
       >
         <nav
@@ -86,7 +86,7 @@ export default function Navbar() {
                   className={`relative py-1.5 text-[10.5px] xl:text-[11.5px] uppercase tracking-[0.23em] font-medium transition-colors duration-400 ${
                     active
                       ? "text-lightGold"
-                      : "text-parchment/85 hover:text-lightGold"
+                      : "text-ink/85 hover:text-lightGold"
                   }`}
                 >
                   {link.label}
@@ -105,7 +105,7 @@ export default function Navbar() {
             <LanguageTrigger />
             <Link
               href="/contact"
-              className="border border-lightGold/50 px-6 py-2.5 text-[10.5px] uppercase tracking-[0.25em] text-lightGold transition-all duration-500 hover:border-lightGold hover:bg-lightGold hover:text-ink"
+              className="border border-ink/30 px-6 py-2.5 text-[10.5px] uppercase tracking-[0.25em] text-ink transition-all duration-500 hover:border-lightGold hover:bg-lightGold hover:text-parchment"
             >
               Begin
             </Link>
@@ -117,7 +117,7 @@ export default function Navbar() {
             <button
               type="button"
               onClick={() => setIsOpen((open) => !open)}
-              className="relative z-50 flex h-10 w-10 flex-col items-center justify-center gap-1.5 border border-lightGold/30 text-lightGold hover:border-lightGold transition-colors"
+              className="relative z-50 flex h-10 w-10 flex-col items-center justify-center gap-1.5 border border-ink/20 text-ink hover:border-ink transition-colors"
               aria-label={isOpen ? "Close menu" : "Open menu"}
             >
               <motion.span
@@ -145,9 +145,9 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.35 }}
-            className="fixed inset-0 z-40 flex items-center justify-center bg-ink/98 px-5 sm:px-8 backdrop-blur-2xl lg:hidden"
+            className="fixed inset-0 z-40 flex items-center justify-center bg-parchment/95 px-5 sm:px-8 backdrop-blur-2xl lg:hidden"
           >
-            <div className="absolute inset-5 border border-lightGold/15 pointer-events-none" />
+            <div className="absolute inset-5 border border-ink/10 pointer-events-none" />
             <nav
               className="relative z-10 flex flex-col items-center gap-4 sm:gap-5 text-center max-h-[85vh] w-full overflow-y-auto py-6"
               aria-label="Mobile navigation"
@@ -167,7 +167,7 @@ export default function Navbar() {
                     href={link.href}
                     onClick={closeMenu}
                     className={`font-display text-xl sm:text-3xl uppercase tracking-[0.14em] transition-colors duration-300 ${
-                      pathname === link.href ? "text-lightGold" : "text-ivory/90 hover:text-lightGold"
+                      pathname === link.href ? "text-lightGold" : "text-ink/90 hover:text-lightGold"
                     }`}
                   >
                     {link.label}
@@ -186,7 +186,7 @@ export default function Navbar() {
                     closeMenu();
                     setIsModalOpen(true);
                   }}
-                  className="w-full border border-antiqueGold/40 py-2.5 text-[11px] uppercase tracking-[0.2em] text-ivory/90 hover:border-antiqueGold transition-colors"
+                  className="w-full border border-ink/20 py-2.5 text-[11px] uppercase tracking-[0.2em] text-ink/90 hover:border-ink transition-colors"
                 >
                   Language: <span className="text-lightGold font-medium">{currentLanguage.name}</span>
                 </button>
@@ -194,7 +194,7 @@ export default function Navbar() {
                 <Link
                   href="/contact"
                   onClick={closeMenu}
-                  className="w-full border border-lightGold bg-lightGold/10 py-3.5 text-xs uppercase tracking-[0.25em] text-lightGold hover:bg-lightGold hover:text-ink transition-colors text-center font-medium"
+                  className="w-full border border-ink bg-ink/5 py-3.5 text-xs uppercase tracking-[0.25em] text-ink hover:bg-ink hover:text-parchment transition-colors text-center font-medium"
                 >
                   Begin Journey
                 </Link>
