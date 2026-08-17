@@ -1,31 +1,37 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #271e16;
-  --color-charcoal: #3A2A20;
-  --color-ember: #B1684B;
-  --color-gold: #D4A373;
-  --color-softGold: #E3CBA8;
-  --color-lightGold: #D4A373;
-  --color-ivory: #F4E9D8;
-  --color-parchment: #F4E9D8;
-  --color-mutedGold: #D5A795;
-  --color-roseSmoke: #B1684B;
-  --color-sageSmoke: #4D6A58;
-  --color-deepPlum: #3A2A20;
-  --color-textDark: #271e16;
-  --color-surface: #3A2A20;
-  --color-surfaceDark: #271e16;
-  --color-antiqueGold: #D4A373;
-  --color-terracotta: #B1684B;
+  --color-oroDivino: #C8A96B;
+  --color-oroRitual: #B8904F;
+  --color-oroClaro: #E2C5BF;
+  --color-arenaSagrada: #EFE6DB;
+  --color-nudeRitual: #D8C8B6;
+  --color-cacaoProfundo: #5A4636;
+  --color-verdeLoto: #6F8F7A;
+  --color-turquesaSagrado: #5E9E9B;
+  --color-azulProfundo: #4D667D;
+  
+  --color-ink: #EFE6DB;
+  --color-charcoal: #D8C8B6;
+  --color-ember: #B8904F;
+  --color-gold: #C8A96B;
+  --color-softGold: #E2C5BF;
+  --color-lightGold: #C8A96B;
+  --color-ivory: #5A4636;
+  --color-parchment: #5A4636;
+  --color-mutedGold: #E2C5BF;
+  --color-roseSmoke: #E2C5BF;
+  --color-sageSmoke: #6F8F7A;
+  --color-deepPlum: #4D667D;
+  --color-textDark: #5A4636;
+  --color-surface: #EFE6DB;
+  --color-surfaceDark: #D8C8B6;
+  --color-antiqueGold: #B8904F;
+  --color-terracotta: #B8904F;
   --color-lotusGreen: #6F8F7A;
   --color-sacredTurquoise: #5E9E9B;
   --color-deepBlue: #4D667D;
-  --color-blancoRitual: #F4E9D8;
-  --color-arenaSagrada: #E3CBA8;
-  --color-nudeRitual: #D5A795;
-  --color-cacaoProfundo: #3A2A20;
-  --color-lotusPink: #D5A795;
+  --color-blancoRitual: #EFE6DB;
   --shadow-altar: 0 16px 48px rgba(90, 70, 54, 0.08), 0 4px 16px rgba(90, 70, 54, 0.04);
   --transition-duration-400: 400ms;
   --transition-duration-1200: 1200ms;
@@ -222,7 +228,7 @@ button {
   position: relative;
   overflow: hidden;
   background:
-    linear-gradient(135deg, rgba(39, 30, 22, 0.92), rgba(58, 42, 32, 0.86)),
+    linear-gradient(135deg, var(--color-ink), var(--color-charcoal)),
     radial-gradient(circle at 10% 18%, color-mix(in srgb, var(--section-accent) 24%, transparent), transparent 22rem) !important;
 }
 
@@ -264,7 +270,7 @@ button {
   --section-pair: var(--color-ember);
   background:
     radial-gradient(circle at 18% 18%, rgba(111, 143, 122, 0.15), transparent 22rem),
-    radial-gradient(circle at 82% 80%, rgba(39, 30, 22, 0.62), transparent 23rem),
+    radial-gradient(circle at 82% 80%, var(--color-ink), transparent 23rem),
     linear-gradient(135deg, rgba(111, 143, 122, 0.08), var(--color-ink) 54%, var(--color-charcoal)) !important;
 }
 
@@ -290,7 +296,7 @@ button {
   --section-accent: var(--color-deepPlum);
   --section-pair: var(--color-lotusGreen);
   background:
-    radial-gradient(circle at 82% 18%, rgba(58, 42, 32, 0.4), transparent 22rem),
+    radial-gradient(circle at 82% 18%, var(--color-ink), transparent 22rem),
     radial-gradient(circle at 18% 84%, rgba(177, 104, 75, 0.15), transparent 24rem),
     linear-gradient(135deg, var(--color-ink), rgba(213, 167, 149, 0.1)) !important;
 }

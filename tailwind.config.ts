@@ -9,29 +9,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#271e16",
-        cacaoProfundo: "#3A2A20",
-        terracotta: "#B1684B",
-        sand: "#E3CBA8",
-        parchment: "#F4E9D8",
-        lightGold: "#D4A373",
-        lotusPink: "#D5A795",
-        sage: "#6F8F7A",
-        emerald: "#5E9E9B",
-        antiqueGold: "#C8A96B",
-        surface: "#3A2A20",
-        textDark: "#F4E9D8",
-        muted: "#B1684B",
-        accent: "#D4A373",
-        surfaceDark: "#271e16",
-        warmCream: "#F4E9D8",
-        blancoRitual: "#F4E9D8",
-        arenaSagrada: "#E3CBA8",
-        nudeRitual: "#D5A795",
-        lotusGreen: "#6F8F7A",
-        sacredTurquoise: "#5E9E9B",
-        deepBlue: "#4D667D",
-        ivory: "#F4E9D8",
+        oroDivino: "#C8A96B",
+        oroRitual: "#B8904F",
+        oroClaro: "#E2C5BF",
+        arenaSagrada: "#EFE6DB",
+        nudeRitual: "#D8C8B6",
+        cacaoProfundo: "#5A4636",
+        verdeLoto: "#6F8F7A",
+        turquesaSagrado: "#5E9E9B",
+        azulProfundo: "#4D667D",
+        // Semantic aliases based on the brand kit
+        ink: "#5A4636", // Cacao Profundo as darkest text
+        parchment: "#EFE6DB", // Arena Sagrada as light background
+        charcoal: "#4D667D", // Azul profundo
+        terracotta: "#B8904F", // Oro Ritual
+        lightGold: "#C8A96B", // Oro Divino
+        surface: "#EFE6DB",
       },
       fontFamily: {
         display: ['"Cormorant Garamond"', "serif"],
