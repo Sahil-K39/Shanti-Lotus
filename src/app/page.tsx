@@ -41,13 +41,13 @@ export default function Home() {
             <p className="font-display text-lg md:text-2xl text-white/80 italic font-light pt-2">
               A journey back to the divine within.
             </p>
-            <div className="pt-6">
+            <div className="pt-10">
               <a
                 href="#welcome"
-                className="inline-block w-8 h-8 border border-white/40 rounded-full flex items-center justify-center animate-bounce"
+                className="inline-flex w-12 h-12 border border-white/30 rounded-full items-center justify-center animate-bounce hover:bg-white/10 transition-colors"
                 aria-label="Scroll down"
               >
-                <svg className="w-3 h-3 text-white/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <svg className="w-4 h-4 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
               </a>
