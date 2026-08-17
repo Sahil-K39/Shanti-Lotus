@@ -36,6 +36,7 @@ export default function MasonryGallery() {
                   alt={`Gallery visual ${i}`}
                   width={800} 
                   height={1000} 
+                  quality={95}
                   sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                   className={`w-full h-auto object-cover transition-all duration-1000 group-hover:scale-110 ${loaded[src] ? 'opacity-100 blur-0' : 'opacity-0 blur-md'}`}
                   onLoad={() => setLoaded(prev => ({ ...prev, [src]: true }))}

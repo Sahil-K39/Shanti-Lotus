@@ -24,6 +24,7 @@ export default function Home() {
           alt="Shakti Loto"
           fill
           priority
+          quality={100}
           className="object-cover object-[center_20%]"
         />
         {/* Soft gradient overlay for text readability */}
@@ -85,6 +86,7 @@ export default function Home() {
             src="/media/gallery/IMG_5374.jpg"
             alt="Conscious Movement"
             fill
+            quality={95}
             className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-[1.03]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
@@ -100,6 +102,7 @@ export default function Home() {
             src="/media/gallery/IMG_0596.jpg"
             alt="Sacred Rituals"
             fill
+            quality={95}
             className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-[1.03]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
@@ -156,6 +159,7 @@ export default function Home() {
           src={photos.sacredTree}
           alt="The Journey"
           fill
+          quality={100}
           className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#2a2a2a]/70 via-[#2a2a2a]/30 to-transparent" />
@@ -208,6 +212,7 @@ export default function Home() {
               src={src}
               alt={`Gallery ${i + 1}`}
               fill
+              quality={95}
               className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-[1.05]"
             />
           </div>
@@ -249,6 +254,7 @@ export default function Home() {
           src={photos.roseMeditation}
           alt="A living experience"
           fill
+          quality={95}
           className="object-cover"
         />
         <div className="absolute inset-0 bg-[#2a2a2a]/50" />

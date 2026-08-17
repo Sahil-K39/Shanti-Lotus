@@ -98,6 +98,7 @@ export default function RetreatsContent() {
                     src={item.image}
                     alt={item.alt}
                     fill
+                    quality={95}
                     className="object-cover transition-transform duration-[2000ms] hover:scale-105"
                   />
                 </div>

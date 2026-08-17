@@ -57,6 +57,7 @@ export default function EditorialImage({
               alt={alt}
               sizes="(max-width: 768px) 100vw, 50vw"
               priority={priority}
+              quality={95}
               onError={() => setImgError(true)}
               className={`object-cover transition-transform duration-[2000ms] group-hover:scale-105 ${imageClassName}`}
             />
