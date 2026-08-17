@@ -47,9 +47,8 @@ export default function WorkWithMeContent() {
               <EditorialImage
                 src={photos.redTempleDoor}
                 alt="Kunti at a vivid red temple doorway"
-                variant="sharp"
-                imageClassName="rounded-full"
-                className="aspect-square w-full rounded-full"
+                variant="circle"
+                className="aspect-square w-full"
               />
             </div>
           </AnimatedSection>

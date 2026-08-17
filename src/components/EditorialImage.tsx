@@ -9,7 +9,7 @@ interface EditorialImageProps {
   alt: string;
   className?: string;
   imageClassName?: string;
-  variant?: "pebble" | "organic-1" | "organic-2" | "rounded" | "sharp";
+  variant?: "pebble" | "organic-1" | "organic-2" | "rounded" | "circle" | "sharp";
   withBorder?: boolean;
   priority?: boolean;
 }
@@ -30,6 +30,7 @@ export default function EditorialImage({
     variant === "organic-1" ? "organic-mask-1" :
     variant === "organic-2" ? "organic-mask-2" :
     variant === "rounded" ? "rounded-[32px]" :
+    variant === "circle" ? "rounded-full" :
     "rounded-none";
 
   return (
