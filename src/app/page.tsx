@@ -4,6 +4,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import AuroraBackground from "@/components/AuroraBackground";
 import CollectionGrid from "@/components/CollectionGrid";
 import EditorialImage from "@/components/EditorialImage";
+import SacredIcon from "@/components/SacredIcon";
 import { photos } from "@/lib/brand";
 import Image from "next/image";
 import Link from "next/link";
