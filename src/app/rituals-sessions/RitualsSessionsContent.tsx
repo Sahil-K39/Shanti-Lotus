@@ -26,49 +26,72 @@ const spaces = [
 
 export default function RitualsSessionsContent() {
   return (
-    <div className="overflow-hidden bg-ink text-ivory">
+    <div className="bg-[#EFE6DB] text-[#4D667D]">
+      {/* Hero Section */}
       <section className="px-6 pb-24 pt-40 md:pt-48">
-        <AnimatedSection className="mx-auto max-w-5xl text-center">
-          <p className="text-eyebrow">Rituals & Sessions</p>
-          <h1 className="mt-6 font-display text-5xl leading-tight md:text-8xl">
-            Your body is <span className="gold-text">a portal</span>
+        <AnimatedSection className="mx-auto max-w-5xl text-center space-y-6">
+          <p className="text-[10px] tracking-[0.3em] uppercase text-[#4D667D]/60 font-medium">
+            Rituals & Sessions
+          </p>
+          <h1 className="font-display text-5xl leading-[1.1] md:text-7xl uppercase font-light text-[#4D667D]">
+            Your body is <span className="italic text-[#C8A96B]">a portal</span>
           </h1>
-          <p className="mx-auto mt-8 max-w-3xl text-base font-light leading-loose text-parchment/82 md:text-lg">
+          <div className="h-px w-20 bg-[#C8A96B]/50 mx-auto mt-8" />
+          <p className="mx-auto mt-8 max-w-3xl text-base md:text-lg font-light leading-[2] text-[#4D667D]/80">
             Private containers for energy clearing, feminine remembrance, spiritual integration, and the sacred return to your center.
           </p>
         </AnimatedSection>
       </section>
 
-      <section className="px-6 pb-28">
+      {/* Spaces Cards */}
+      <section className="px-6 pb-28 bg-[#EFE6DB]">
         <div className="mx-auto grid max-w-[1220px] gap-6 md:grid-cols-3">
           {spaces.map((space, index) => (
-            <AnimatedSection key={space.title} delay={index * 0.08}>
-              <div className="sacred-card h-full p-8">
-                <SacredIcon type={space.icon} className="h-14 w-14 text-lightGold" />
-                <h2 className="mt-8 font-display text-3xl leading-tight text-ivory">{space.title}</h2>
-                <p className="mt-6 text-sm font-light leading-loose text-parchment/75">{space.text}</p>
+            <AnimatedSection key={space.title} delay={index * 0.08} direction="up">
+              <div className="bg-white/40 h-full p-8 shadow-sm border border-[#4D667D]/5 transition-transform duration-500 hover:-translate-y-1">
+                <SacredIcon type={space.icon} className="h-12 w-12 text-[#C8A96B]" />
+                <h2 className="mt-8 font-display text-2xl leading-[1.3] text-[#4D667D] font-light">
+                  {space.title}
+                </h2>
+                <p className="mt-6 text-sm font-light leading-[1.9] text-[#4D667D]/75">
+                  {space.text}
+                </p>
               </div>
             </AnimatedSection>
           ))}
         </div>
       </section>
 
-      <section className="px-6 py-28">
+      {/* Ritual Field Section */}
+      <section className="px-6 py-28 bg-white/30">
         <div className="mx-auto grid max-w-[1140px] gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-          <AnimatedSection direction="left" className="sacred-card p-8 md:p-12">
-            <p className="text-eyebrow">Ritual Field</p>
-            <h2 className="mt-5 font-display text-4xl leading-tight md:text-6xl">
-              <span className="gold-text">{poeticPhrases[2]}</span>
+          <AnimatedSection direction="left" className="bg-white/40 p-8 md:p-12 shadow-sm border border-[#4D667D]/5">
+            <p className="text-[10px] tracking-[0.3em] uppercase text-[#4D667D]/60 font-medium">
+              Ritual Field
+            </p>
+            <h2 className="mt-5 font-display text-4xl leading-[1.3] md:text-6xl font-light text-[#4D667D]">
+              <span className="italic text-[#C8A96B]">{poeticPhrases[2]}</span>
             </h2>
-            <p className="mt-8 text-base font-light leading-loose text-parchment/80">
+            <p className="mt-8 text-base md:text-lg font-light leading-[2] text-[#4D667D]/80">
               Each session is shaped with breath, listening, ritual symbolism, plant allies, energetic care, and practical integration. The work is not to become someone else, but to return to the original wisdom already moving within you.
             </p>
-            <Link href="/contact" className="mt-10 inline-flex border border-lightGold/45 px-8 py-4 text-[11px] uppercase tracking-[0.24em] text-lightGold transition-all duration-500 hover:bg-lightGold hover:text-ink">
-              Inquire
-            </Link>
+            <div className="pt-4">
+              <Link
+                href="/contact"
+                className="mt-6 inline-block border border-[#4D667D] px-8 py-3.5 text-[10px] uppercase tracking-[0.25em] text-[#4D667D] transition-all duration-500 hover:bg-[#4D667D] hover:text-[#EFE6DB]"
+              >
+                Inquire
+              </Link>
+            </div>
           </AnimatedSection>
           <AnimatedSection direction="right">
-            <EditorialImage src={photos.waterfallPrayer} alt="Waterfall prayer ritual field" variant="organic-2" withBorder className="aspect-[4/5] w-full" />
+            <EditorialImage
+              src={photos.waterfallPrayer}
+              alt="Waterfall prayer ritual field"
+              variant="organic-2"
+              withBorder
+              className="aspect-[4/5] w-full"
+            />
           </AnimatedSection>
         </div>
       </section>

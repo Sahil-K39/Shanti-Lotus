@@ -57,10 +57,13 @@ export default function Navbar() {
         transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-700 ${
           scrolled
-            ? "border-b border-lightGold/10 bg-parchment/80 py-2.5 sm:py-3 backdrop-blur-xl shadow-altar"
-            : "bg-transparent py-4 sm:py-6"
+            ? "bg-parchment/95 py-2.5 sm:py-3 backdrop-blur-xl shadow-altar"
+            : "bg-parchment/50 backdrop-blur-sm py-4 sm:py-6"
         }`}
       >
+        {/* Full Palette Gradient Border */}
+        <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#C8A96B] via-[#B8904F] via-[#E2C5BF] via-[#EFE6DB] via-[#D8C8B6] via-[#5A4636] via-[#6F8F7A] via-[#5E9E9B] to-[#4D667D]" />
+        
         <nav
           className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-8 lg:px-10"
           aria-label="Main navigation"

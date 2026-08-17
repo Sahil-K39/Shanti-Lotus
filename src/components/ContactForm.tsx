@@ -1,14 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface ContactFormProps {
   defaultInterest?: string;
 }
 
 const interestOptions = [
-  "1:1 Guidance",
+  "1:1 Mentorship",
   "Rituals & Sessions",
   "Retreats & Courses",
   "Sacred Jewelry",
@@ -19,6 +19,7 @@ export default function ContactForm({ defaultInterest = "" }: ContactFormProps) 
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     interest: defaultInterest,
     message: "",
   });
@@ -50,89 +51,123 @@ export default function ContactForm({ defaultInterest = "" }: ContactFormProps) 
   if (isSuccess) {
     return (
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
-        className="py-16 text-center"
+        className="py-12 text-center"
       >
-        <div className="mx-auto mb-6 h-12 w-12 text-antiqueGold">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M5 13l4 4L19 7" />
+        <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-[#C8A96B]/15 text-[#C8A96B]">
+          <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="mb-4 font-display text-3xl text-ivory md:text-4xl">Message Received</h3>
-        <p className="font-body text-parchment/70 font-light">
-          Thank you for reaching out. We will connect with you shortly.
+        <h3 className="font-display text-3xl md:text-4xl font-light text-[#4D667D]">
+          Message Received
+        </h3>
+        <p className="mt-4 font-light text-base leading-relaxed text-[#4D667D]/75 max-w-md mx-auto">
+          Thank you for reaching out. Your words have been received with love and reverence. I will connect with you shortly.
         </p>
+        <button
+          type="button"
+          onClick={() => {
+            setIsSuccess(false);
+            setFormData({ name: "", email: "", phone: "", interest: defaultInterest, message: "" });
+          }}
+          className="mt-8 inline-flex items-center justify-center rounded-full border border-[#4D667D]/20 px-8 py-3 text-xs uppercase tracking-[0.2em] text-[#4D667D] transition-all hover:bg-[#4D667D] hover:text-[#EFE6DB]"
+        >
+          Send Another Message
+        </button>
       </motion.div>
     );
   }
 
   return (
-    <form onSubmit={handleSubmit} className="mx-auto w-full max-w-[35rem] space-y-7 rounded-[24px] border border-lightGold/20 bg-blancoRitual/78 p-4 shadow-[0_24px_80px_rgba(90,70,54,0.12)] backdrop-blur-xl sm:p-6 md:space-y-8 md:rounded-[30px] md:p-8">
-      
+    <form onSubmit={handleSubmit} className="mx-auto w-full max-w-[35rem] space-y-6">
       {/* Name Input */}
-      <div className="relative group">
+      <div>
+        <label
+          htmlFor="name"
+          className="mb-2 block text-[10px] md:text-[11px] font-medium uppercase tracking-[0.2em] text-[#4D667D]/70"
+        >
+          Your Name <span className="text-[#C8A96B]">*</span>
+        </label>
         <input
           type="text"
           id="name"
           required
-          className="peer w-full rounded-[18px] border border-lightGold/15 bg-blancoRitual/86 px-4 py-4 font-body text-[15px] font-light leading-none text-ivory shadow-[inset_0_1px_0_rgba(255,255,255,0.72)] transition-all placeholder-transparent focus:border-lightGold focus:outline-none focus:ring-4 focus:ring-lightGold/12 sm:px-5 md:text-base"
-          placeholder="Your Name"
+          placeholder="Enter your full name"
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+          className="w-full rounded-2xl border border-[#4D667D]/15 bg-white/70 px-5 py-4 font-light text-[15px] text-[#4D667D] placeholder-[#4D667D]/35 shadow-sm transition-all duration-300 hover:border-[#4D667D]/30 focus:border-[#C8A96B] focus:bg-white focus:outline-none focus:ring-4 focus:ring-[#C8A96B]/15"
         />
-        <label
-          htmlFor="name"
-          className="absolute left-4 top-4 font-body text-[15px] font-light text-parchment/55 transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-[15px] peer-focus:-top-5 peer-focus:left-0 peer-focus:text-[11px] peer-focus:uppercase peer-focus:tracking-[0.18em] peer-focus:text-lightGold sm:left-5"
-          style={formData.name ? { top: '-1.25rem', left: '0', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em' } : {}}
-        >
-          Your Name
-        </label>
       </div>
 
       {/* Email Input */}
-      <div className="relative group">
+      <div>
+        <label
+          htmlFor="email"
+          className="mb-2 block text-[10px] md:text-[11px] font-medium uppercase tracking-[0.2em] text-[#4D667D]/70"
+        >
+          Your Email <span className="text-[#C8A96B]">*</span>
+        </label>
         <input
           type="email"
           id="email"
           required
-          className="peer w-full rounded-[18px] border border-lightGold/15 bg-blancoRitual/86 px-4 py-4 font-body text-[15px] font-light leading-none text-ivory shadow-[inset_0_1px_0_rgba(255,255,255,0.72)] transition-all placeholder-transparent focus:border-lightGold focus:outline-none focus:ring-4 focus:ring-lightGold/12 sm:px-5 md:text-base"
-          placeholder="Your Email"
+          placeholder="youremail@example.com"
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+          className="w-full rounded-2xl border border-[#4D667D]/15 bg-white/70 px-5 py-4 font-light text-[15px] text-[#4D667D] placeholder-[#4D667D]/35 shadow-sm transition-all duration-300 hover:border-[#4D667D]/30 focus:border-[#C8A96B] focus:bg-white focus:outline-none focus:ring-4 focus:ring-[#C8A96B]/15"
         />
+      </div>
+
+      {/* Phone Input */}
+      <div>
         <label
-          htmlFor="email"
-          className="absolute left-4 top-4 font-body text-[15px] font-light text-parchment/55 transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-[15px] peer-focus:-top-5 peer-focus:left-0 peer-focus:text-[11px] peer-focus:uppercase peer-focus:tracking-[0.18em] peer-focus:text-lightGold sm:left-5"
-          style={formData.email ? { top: '-1.25rem', left: '0', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em' } : {}}
+          htmlFor="phone"
+          className="mb-2 block text-[10px] md:text-[11px] font-medium uppercase tracking-[0.2em] text-[#4D667D]/70"
         >
-          Your Email
+          Phone / WhatsApp <span className="text-[#4D667D]/40">(optional)</span>
         </label>
+        <input
+          type="tel"
+          id="phone"
+          placeholder="+1 (555) 000-0000"
+          value={formData.phone}
+          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+          className="w-full rounded-2xl border border-[#4D667D]/15 bg-white/70 px-5 py-4 font-light text-[15px] text-[#4D667D] placeholder-[#4D667D]/35 shadow-sm transition-all duration-300 hover:border-[#4D667D]/30 focus:border-[#C8A96B] focus:bg-white focus:outline-none focus:ring-4 focus:ring-[#C8A96B]/15"
+        />
       </div>
 
       {/* Interest Dropdown */}
       <div className="relative">
-        <label htmlFor="interest-native" className="mb-3 block text-[10px] font-medium uppercase tracking-[0.24em] text-parchment/68 md:text-[11px]">
+        <label
+          id="contact-interest-label"
+          className="mb-2 block text-[10px] md:text-[11px] font-medium uppercase tracking-[0.2em] text-[#4D667D]/70"
+        >
           Area of Interest
         </label>
-        <input id="interest-native" name="interest" type="hidden" value={formData.interest} />
         <button
           type="button"
+          aria-labelledby="contact-interest-label"
           aria-haspopup="listbox"
           aria-expanded={isInterestOpen}
           onClick={() => setIsInterestOpen((open) => !open)}
-          className={`group flex min-h-14 w-full items-center justify-between gap-4 rounded-[18px] border px-4 py-4 text-left font-body text-[15px] font-light leading-snug shadow-[inset_0_1px_0_rgba(255,255,255,0.78),0_18px_45px_rgba(90,70,54,0.08)] backdrop-blur-xl transition-all duration-300 sm:px-5 md:text-base ${
+          className={`group flex min-h-[56px] w-full items-center justify-between gap-4 rounded-2xl border px-5 py-4 text-left font-light text-[15px] shadow-sm backdrop-blur-sm transition-all duration-300 ${
             isInterestOpen
-              ? "border-lightGold bg-blancoRitual ring-4 ring-lightGold/15"
-              : "border-lightGold/24 bg-blancoRitual/78 hover:border-lightGold/55 hover:bg-blancoRitual"
+              ? "border-[#C8A96B] bg-white ring-4 ring-[#C8A96B]/15"
+              : "border-[#4D667D]/15 bg-white/70 hover:border-[#4D667D]/30 hover:bg-white"
           }`}
         >
-          <span className={`min-w-0 flex-1 ${formData.interest ? "text-ivory" : "text-parchment/55"}`}>
+          <span className={formData.interest ? "text-[#4D667D]" : "text-[#4D667D]/40"}>
             {formData.interest || "Select an area of interest"}
           </span>
-          <span className={`grid h-8 w-8 flex-none place-items-center rounded-full border border-lightGold/25 bg-arenaSagrada text-lightGold transition-transform duration-300 ${isInterestOpen ? "rotate-180" : ""}`}>
-            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.6} d="M6 9l6 6 6-6" />
+          <span
+            className={`grid h-7 w-7 flex-none place-items-center rounded-full border border-[#4D667D]/15 bg-[#EFE6DB] text-[#4D667D] transition-transform duration-300 ${
+              isInterestOpen ? "rotate-180 text-[#C8A96B] border-[#C8A96B]" : ""
+            }`}
+          >
+            <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M6 9l6 6 6-6" />
             </svg>
           </span>
         </button>
@@ -146,82 +181,93 @@ export default function ContactForm({ defaultInterest = "" }: ContactFormProps) 
           />
         )}
 
-        {isInterestOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -8, scale: 0.98 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: -8, scale: 0.98 }}
-            transition={{ duration: 0.18, ease: [0.25, 0.1, 0.25, 1] }}
-            role="listbox"
-            className="absolute z-30 mt-3 w-full overflow-hidden rounded-[20px] border border-lightGold/24 bg-blancoRitual/95 p-2 shadow-[0_28px_80px_rgba(90,70,54,0.18)] backdrop-blur-2xl"
-          >
-            {interestOptions.map((option) => {
-              const selected = formData.interest === option;
-              return (
-                <button
-                  key={option}
-                  type="button"
-                  role="option"
-                  aria-selected={selected}
-                  onClick={() => {
-                    setFormData({ ...formData, interest: option });
-                    setIsInterestOpen(false);
-                  }}
-                  className={`flex min-h-11 w-full items-center justify-between gap-4 rounded-[14px] px-4 py-3 text-left text-[13px] font-light leading-snug transition-all duration-200 md:text-sm ${
-                    selected
-                      ? "bg-lightGold text-textDark"
-                      : "text-parchment hover:bg-arenaSagrada hover:text-ivory"
-                  }`}
-                >
-                  <span>{option}</span>
-                  {selected && (
-                    <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M5 13l4 4L19 7" />
-                    </svg>
-                  )}
-                </button>
-              );
-            })}
-          </motion.div>
-        )}
+        <AnimatePresence>
+          {isInterestOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -6, scale: 0.99 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -6, scale: 0.99 }}
+              transition={{ duration: 0.16 }}
+              role="listbox"
+              className="absolute z-30 mt-2 w-full overflow-hidden rounded-2xl border border-[#4D667D]/15 bg-[#EFE6DB] p-2 shadow-xl backdrop-blur-xl"
+            >
+              {interestOptions.map((option) => {
+                const selected = formData.interest === option;
+                return (
+                  <button
+                    key={option}
+                    type="button"
+                    role="option"
+                    aria-selected={selected}
+                    onClick={() => {
+                      setFormData({ ...formData, interest: option });
+                      setIsInterestOpen(false);
+                    }}
+                    className={`flex min-h-[44px] w-full items-center justify-between gap-3 rounded-xl px-4 py-2.5 text-left text-sm font-light transition-all duration-200 ${
+                      selected
+                        ? "bg-[#C8A96B] text-white font-normal"
+                        : "text-[#4D667D] hover:bg-white/80 hover:text-[#4D667D]"
+                    }`}
+                  >
+                    <span>{option}</span>
+                    {selected && (
+                      <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    )}
+                  </button>
+                );
+              })}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
       {/* Message Textarea */}
-      <div className="relative group pt-4 md:pt-5">
+      <div>
+        <label
+          htmlFor="message"
+          className="mb-2 block text-[10px] md:text-[11px] font-medium uppercase tracking-[0.2em] text-[#4D667D]/70"
+        >
+          Your Message <span className="text-[#C8A96B]">*</span>
+        </label>
         <textarea
           id="message"
           required
-          rows={4}
-          className="peer w-full resize-none rounded-[18px] border border-lightGold/15 bg-blancoRitual/86 px-4 py-4 font-body text-[15px] font-light leading-relaxed text-ivory shadow-[inset_0_1px_0_rgba(255,255,255,0.72)] transition-all placeholder-transparent focus:border-lightGold focus:outline-none focus:ring-4 focus:ring-lightGold/12 sm:px-5 md:text-base"
-          placeholder="Your Message"
+          rows={5}
+          placeholder="Share what is calling you..."
           value={formData.message}
           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+          className="w-full resize-none rounded-2xl border border-[#4D667D]/15 bg-white/70 px-5 py-4 font-light text-[15px] leading-relaxed text-[#4D667D] placeholder-[#4D667D]/35 shadow-sm transition-all duration-300 hover:border-[#4D667D]/30 focus:border-[#C8A96B] focus:bg-white focus:outline-none focus:ring-4 focus:ring-[#C8A96B]/15"
         />
-        <label
-          htmlFor="message"
-          className="absolute left-4 top-8 font-body text-[15px] font-light text-parchment/55 transition-all peer-placeholder-shown:top-8 peer-placeholder-shown:text-[15px] peer-focus:left-0 peer-focus:top-0 peer-focus:text-[11px] peer-focus:uppercase peer-focus:tracking-[0.18em] peer-focus:text-lightGold sm:left-5"
-          style={formData.message ? { top: '0', left: '0', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em' } : {}}
-        >
-          Your Message
-        </label>
       </div>
 
       {/* Submit Button */}
       <button
         type="submit"
         disabled={isSubmitting}
-        className="flex min-h-14 w-full items-center justify-center gap-4 rounded-[18px] border border-lightGold/45 px-5 py-4 text-lightGold transition-all duration-500 hover:bg-lightGold hover:text-ink disabled:opacity-50"
+        className="group relative flex min-h-[56px] w-full items-center justify-center overflow-hidden rounded-2xl bg-[#4D667D] px-6 py-4 text-xs font-medium uppercase tracking-[0.25em] text-[#EFE6DB] shadow-md transition-all duration-500 hover:bg-[#C8A96B] hover:text-white disabled:opacity-50"
       >
-        <span className="font-body text-[11px] font-medium uppercase tracking-[0.22em]">
-          {isSubmitting ? "Sending..." : "Send Message"}
+        <span className="relative z-10 flex items-center gap-2">
+          {isSubmitting ? (
+            <>
+              <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
+              </svg>
+              <span>Sending...</span>
+            </>
+          ) : (
+            "Send Message"
+          )}
         </span>
       </button>
+
       {error && (
-        <p className="text-center text-[11px] uppercase tracking-[0.18em] text-terracotta/80 mt-2">
+        <p className="rounded-xl bg-rose-50 border border-rose-200/80 p-3 text-center text-xs text-rose-700">
           {error}
         </p>
       )}
-
     </form>
   );
 }
