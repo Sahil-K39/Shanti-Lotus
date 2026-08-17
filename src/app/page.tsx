@@ -31,7 +31,7 @@ export default function Home() {
             <h1 className="font-display text-4xl sm:text-6xl md:text-8xl lg:text-9xl tracking-[0.15em] text-lightGold uppercase font-light">
               SHAKTI LOTO
             </h1>
-            <p className="font-display text-xl md:text-3xl text-parchment max-w-2xl mx-auto italic font-light px-4">
+            <p className="font-display text-xl md:text-3xl text-ink max-w-2xl mx-auto italic font-light px-4">
               A journey back to the divine within.
             </p>
           </AnimatedSection>
@@ -41,7 +41,7 @@ export default function Home() {
       {/* 02 — THE INVITATION */}
       <section className="editorial-section px-6 relative z-10 text-center">
         <div className="mx-auto max-w-4xl space-y-12">
-          <AnimatedSection direction="up" className="space-y-8 text-lg md:text-xl font-light leading-loose text-parchment/90">
+          <AnimatedSection direction="up" className="space-y-8 text-lg md:text-xl font-light leading-loose text-ink/90">
             <p>
               Shakti Loto is a space for deep reconnection with the life force — a living portal into the sacred that already exists within you.
             </p>
@@ -59,11 +59,11 @@ export default function Home() {
       </section>
 
       {/* 03 — DIFFERENTIAL LANGUAGE MANIFESTO */}
-      <section className="px-6 py-20 relative z-10 bg-charcoal/40 text-center border-y border-lightGold/10">
+      <section className="px-6 py-20 relative z-10 bg-surfaceDark/60 text-center border-y border-lightGold/10">
         <div className="mx-auto max-w-5xl">
           <AnimatedSection direction="up">
             <p className="font-display text-lg md:text-2xl tracking-[0.3em] uppercase text-lightGold/80 font-light">
-              REMEMBER <span className="mx-4 text-parchment/30">·</span> EMBODY <span className="mx-4 text-parchment/30">·</span> EXPLORE <span className="mx-4 text-parchment/30">·</span> RETURN <span className="mx-4 text-parchment/30">·</span> BLOSSOM
+              REMEMBER <span className="mx-4 text-ink/30">·</span> EMBODY <span className="mx-4 text-ink/30">·</span> EXPLORE <span className="mx-4 text-ink/30">·</span> RETURN <span className="mx-4 text-ink/30">·</span> BLOSSOM
             </p>
           </AnimatedSection>
         </div>
@@ -90,7 +90,7 @@ export default function Home() {
               </h2>
             </div>
             
-            <div className="space-y-6 text-base md:text-lg font-light leading-relaxed md:leading-loose text-parchment/90">
+            <div className="space-y-6 text-base md:text-lg font-light leading-relaxed md:leading-loose text-ink/90">
               <p>
                 Guided by Kunti, Tantric Yogini, traveler, and lifelong student of the sacred, Shakti Loto was born as a bridge between the ancestral wisdom of Latin America and the teachings, experiences, and encounters gathered across the world.
               </p>
@@ -108,11 +108,11 @@ export default function Home() {
               <p>And the journey becomes a return.</p>
             </div>
             
-            <div className="pt-6 space-y-6 text-base font-light leading-relaxed text-parchment/90">
+            <div className="pt-6 space-y-6 text-base font-light leading-relaxed text-ink/90">
               <p>
                 The path is a blossoming. Like the lotus rising from deep waters, each process carries the possibility of transformation, awakening, and expansion.
               </p>
-              <p className="font-medium text-parchment italic text-xl font-display">
+              <p className="font-medium text-ink italic text-xl font-display">
                 Not becoming someone else.<br />
                 But remembering what has always been there.
               </p>
@@ -122,7 +122,7 @@ export default function Home() {
       </section>
 
       {/* 05 — MY APPROACH */}
-      <section className="editorial-section px-6 relative z-10 bg-charcoal/40">
+      <section className="editorial-section px-6 relative z-10 bg-surfaceDark/60">
         <div className="mx-auto max-w-[1250px] grid gap-16 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
           <AnimatedSection direction="left" className="space-y-10 sacred-card p-10 md:p-16 border border-lightGold/10">
             <div className="space-y-2">
@@ -132,7 +132,7 @@ export default function Home() {
               </h2>
             </div>
 
-            <blockquote className="space-y-6 text-lg md:text-xl font-light text-parchment">
+            <blockquote className="space-y-6 text-lg md:text-xl font-light text-ink">
               <p className="italic text-2xl md:text-3xl font-display text-lightGold">
                 “I am not here to guide you from above.”
               </p>
@@ -141,10 +141,10 @@ export default function Home() {
               </p>
               
               <div className="py-4 border-l-2 border-terracotta pl-6 my-8">
-                <p className="text-xl md:text-2xl font-display text-parchment italic">
+                <p className="text-xl md:text-2xl font-display text-ink italic">
                   I do not believe that you need to become someone else.
                 </p>
-                <p className="text-xl md:text-2xl font-display text-parchment italic pt-2">
+                <p className="text-xl md:text-2xl font-display text-ink italic pt-2">
                   I believe there is something within you waiting to be remembered.
                 </p>
               </div>
@@ -211,7 +211,7 @@ export default function Home() {
                   <h3 className="font-display text-2xl text-lightGold font-medium leading-snug">
                     {pillar.title}
                   </h3>
-                  <p className="text-base font-light leading-relaxed text-parchment/90">
+                  <p className="text-base font-light leading-relaxed text-ink/90">
                     {pillar.desc}
                   </p>
                 </div>
@@ -231,21 +231,21 @@ export default function Home() {
             className="object-cover mix-blend-luminosity"
           />
         </div>
-        <div className="absolute inset-0 bg-ink/80" />
+        <div className="absolute inset-0 bg-parchment/80" />
         
         <AnimatedSection className="relative z-10 mx-auto max-w-4xl space-y-12">
           <div className="space-y-6">
             <h2 className="font-display text-4xl md:text-5xl text-lightGold font-light tracking-widest uppercase">
               MORE THAN A PROJECT.
             </h2>
-            <p className="font-display text-3xl md:text-4xl text-parchment/90 italic">
+            <p className="font-display text-3xl md:text-4xl text-ink/90 italic">
               A living experience.
             </p>
           </div>
 
           <div className="gold-line mx-auto max-w-xs my-8" />
 
-          <div className="font-display text-xl md:text-3xl text-parchment/80 space-y-3 font-light italic">
+          <div className="font-display text-xl md:text-3xl text-ink/80 space-y-3 font-light italic">
             <p>A call to return to the Source.</p>
             <p>To listen to the body.</p>
             <p>To open the heart.</p>
@@ -260,7 +260,7 @@ export default function Home() {
             <h3 className="font-display text-3xl tracking-[0.2em] text-lightGold uppercase font-light">
               Shakti Loto
             </h3>
-            <p className="text-sm tracking-[0.3em] uppercase text-parchment/60 font-light">
+            <p className="text-sm tracking-[0.3em] uppercase text-ink/60 font-light">
               A journey back to the divine within. *
             </p>
           </div>
