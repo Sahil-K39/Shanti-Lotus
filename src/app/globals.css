@@ -6,12 +6,12 @@
   --color-oroClaro: #E2C5BF;
   --color-arenaSagrada: #EFE6DB;
   --color-nudeRitual: #D8C8B6;
-  --color-cacaoProfundo: #5A4636;
+  --color-cacaoProfundo: #4D667D;
   --color-verdeLoto: #6F8F7A;
   --color-turquesaSagrado: #5E9E9B;
   --color-azulProfundo: #4D667D;
   
-  --color-ink: #5A4636;
+  --color-ink: #4D667D;
   --color-charcoal: #4D667D;
   --color-ember: #B8904F;
   --color-gold: #C8A96B;
@@ -24,7 +24,7 @@
   --color-sageSmoke: #6F8F7A;
   --color-deepPlum: #4D667D;
   --color-textDark: #EFE6DB;
-  --color-surface: #5A4636;
+  --color-surface: #4D667D;
   --color-surfaceDark: #4D667D;
   --color-antiqueGold: #B8904F;
   --color-terracotta: #B8904F;
@@ -32,7 +32,7 @@
   --color-sacredTurquoise: #5E9E9B;
   --color-deepBlue: #4D667D;
   --color-blancoRitual: #EFE6DB;
-  --shadow-altar: 0 16px 48px rgba(90, 70, 54, 0.08), 0 4px 16px rgba(90, 70, 54, 0.04);
+  --shadow-altar: 0 16px 48px rgba(77, 102, 125, 0.08), 0 4px 16px rgba(77, 102, 125, 0.04);
   --transition-duration-400: 400ms;
   --transition-duration-1200: 1200ms;
 
@@ -49,7 +49,7 @@ body {
   background: var(--color-arenaSagrada);
   overflow-x: hidden;
   max-width: 100vw;
-  color: var(--color-cacaoProfundo);
+  color: var(--color-azulProfundo);
   font-family: var(--font-body);
   font-size: 15px;
   font-weight: 400;

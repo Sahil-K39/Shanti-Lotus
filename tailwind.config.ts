@@ -19,12 +19,12 @@ const config: Config = {
         turquesaSagrado: "#5E9E9B",
         azulProfundo: "#4D667D",
         // Semantic aliases based on the brand kit
-        ink: "#5A4636", // Cacao Profundo as darkest background
+        ink: "#4D667D", // Cacao Profundo as darkest background
         parchment: "#EFE6DB", // Arena Sagrada as light text
         charcoal: "#4D667D", // Azul profundo
         terracotta: "#B8904F", // Oro Ritual
         lightGold: "#C8A96B", // Oro Divino
-        surface: "#5A4636",
+        surface: "#4D667D",
       },
       fontFamily: {
         display: ['"Cormorant Garamond"', "serif"],
