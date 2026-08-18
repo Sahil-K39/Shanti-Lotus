@@ -4,8 +4,8 @@ export const brand = {
   role: "Tantric Yogini · Traveler · Guide",
   essence: "A journey back to the divine within.",
   contact: {
-    instagram: "@kunti_shaktiloto",
-    instagramUrl: "https://www.instagram.com/kunti_shaktiloto?igsh=c2M5dnVxZGZiemx0",
+    instagram: "@shakti_loto_",
+    instagramUrl: "https://www.instagram.com/shakti_loto_/",
     email: "shaktiloto@gmail.com",
     phone: "+56 9 3652 9117",
     website: "www.shaktiloto.com",
