@@ -144,5 +144,5 @@ export const photos = {
   gardenPortrait: "/images/kunti/garden-portrait.jpg",
   roseMeditation: "/images/kunti/rose-meditation.jpg",
   mountainLakePrayer: "/images/kunti/mountain-lake-prayer.jpg",
-  mainPhoto: "/shakti-elements/kunti-main.jpg",
+  mainPhoto: "/images/kunti/river-blessing.jpg",
 };
