@@ -33,13 +33,13 @@ export default function Home() {
         {/* Centered bottom text — minimal, editorial */}
         <div className="absolute inset-x-0 bottom-0 z-10 pb-16 md:pb-24 text-center px-6">
           <AnimatedSection direction="up" className="space-y-4">
-            <p className="text-[10px] md:text-xs tracking-[0.4em] uppercase text-white/70 font-light">
+            <p className="text-xs sm:text-sm md:text-base tracking-[0.4em] uppercase text-white/90 font-medium drop-shadow-sm">
               Tantric Yogini · Traveler · Guide
             </p>
-            <h1 className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl tracking-[0.12em] text-white uppercase font-light leading-[0.9]">
+            <h1 className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl tracking-[0.12em] text-white uppercase font-light leading-[0.9] drop-shadow-md">
               Shakti Loto
             </h1>
-            <p className="font-display text-lg md:text-2xl text-white/80 italic font-light pt-2">
+            <p className="font-display text-xl sm:text-2xl md:text-3xl text-white/90 italic font-light pt-2 drop-shadow-sm">
               A journey back to the divine within.
             </p>
             <div className="pt-10">
@@ -91,8 +91,8 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
           <div className="absolute bottom-8 left-8 right-8 md:bottom-12 md:left-12">
-            <p className="text-[10px] tracking-[0.3em] uppercase text-white/60 mb-2">Explore</p>
-            <h3 className="font-display text-3xl md:text-4xl text-white font-light tracking-wide">
+            <p className="text-xs md:text-sm tracking-[0.3em] uppercase text-white/80 mb-2 font-medium drop-shadow-sm">Explore</p>
+            <h3 className="font-display text-4xl md:text-5xl text-white font-light tracking-wide drop-shadow-md">
               Tantric Movement
             </h3>
           </div>
@@ -107,8 +107,8 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
           <div className="absolute bottom-8 left-8 right-8 md:bottom-12 md:left-12">
-            <p className="text-[10px] tracking-[0.3em] uppercase text-white/60 mb-2">Discover</p>
-            <h3 className="font-display text-3xl md:text-4xl text-white font-light tracking-wide">
+            <p className="text-xs md:text-sm tracking-[0.3em] uppercase text-white/80 mb-2 font-medium drop-shadow-sm">Discover</p>
+            <h3 className="font-display text-4xl md:text-5xl text-white font-light tracking-wide drop-shadow-md">
               Sacred Rituals
             </h3>
           </div>
@@ -166,16 +166,16 @@ export default function Home() {
         <div className="absolute inset-0 flex items-center z-10">
           <div className="px-8 md:px-20 max-w-2xl">
             <AnimatedSection direction="left" className="space-y-6">
-              <p className="text-[10px] tracking-[0.35em] uppercase text-white/60 font-medium">The Path</p>
-              <h2 className="font-display text-4xl md:text-6xl lg:text-7xl text-white font-light tracking-wide uppercase leading-[0.95]">
+              <p className="text-xs sm:text-sm tracking-[0.35em] uppercase text-white/80 font-medium drop-shadow-sm">The Path</p>
+              <h2 className="font-display text-5xl md:text-6xl lg:text-7xl text-white font-light tracking-wide uppercase leading-[0.95] drop-shadow-md">
                 The Journey
               </h2>
-              <div className="h-px w-16 bg-white/30" />
-              <p className="text-base md:text-lg font-light text-white/80 leading-[2] max-w-lg">
+              <div className="h-px w-16 bg-white/50" />
+              <p className="text-lg md:text-xl font-light text-white/90 leading-[2] max-w-lg drop-shadow-sm">
                 Through Tantra, conscious movement, meditation, Yoga, and ancestral ritual, Shakti Loto invites you to experience spirituality not only as something to understand, but as something to feel, embody, and live.
               </p>
               <div className="pt-4">
-                <Link href="/about" className="inline-block border border-white/40 px-8 py-3 text-[10px] tracking-[0.25em] uppercase text-white/90 hover:bg-white hover:text-[#4D667D] transition-all duration-500">
+                <Link href="/about" className="inline-block border border-white/60 px-8 py-3 text-xs tracking-[0.25em] uppercase text-white hover:bg-white hover:text-[#4D667D] transition-all duration-500 font-medium">
                   Read More
                 </Link>
               </div>
@@ -260,14 +260,14 @@ export default function Home() {
         <div className="absolute inset-0 bg-[#2a2a2a]/50" />
         <div className="relative z-10 text-center px-6">
           <AnimatedSection className="space-y-6">
-            <h2 className="font-display text-4xl md:text-6xl text-white font-light tracking-[0.12em] uppercase">
+            <h2 className="font-display text-5xl md:text-6xl text-white font-light tracking-[0.12em] uppercase drop-shadow-md">
               More Than a Project.
             </h2>
-            <p className="font-display text-xl md:text-3xl text-white/80 italic font-light">
+            <p className="font-display text-2xl md:text-4xl text-white/90 italic font-light drop-shadow-sm">
               A living experience.
             </p>
             <div className="pt-6">
-              <SacredIcon type="lotus" className="mx-auto h-7 w-7 text-[#C8A96B]/70" />
+              <SacredIcon type="lotus" className="mx-auto h-8 w-8 text-[#C8A96B]/90" />
             </div>
           </AnimatedSection>
         </div>
