@@ -47,7 +47,7 @@ export default function PhilosophyContent() {
       {/* ═══════════════════════════════════════════
           01 — HERO SECTION
           ═══════════════════════════════════════════ */}
-      <section className="px-6 pb-24 pt-40 md:pt-48">
+      <section className="px-6 pb-12 md:pb-24 pt-28 md:pt-48">
         <AnimatedSection className="mx-auto max-w-5xl text-center space-y-6">
           <p className="text-[10px] tracking-[0.3em] uppercase text-[#4D667D]/60 font-medium">
             Philosophy & Vision
@@ -65,7 +65,7 @@ export default function PhilosophyContent() {
       {/* ═══════════════════════════════════════════
           02 — CORE VISION SPREAD
           ═══════════════════════════════════════════ */}
-      <section className="px-6 pb-28 bg-[#EFE6DB]">
+      <section className="px-6 pb-16 md:pb-28 bg-[#EFE6DB]">
         <div className="mx-auto grid max-w-[1250px] gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <AnimatedSection direction="left" className="lg:sticky lg:top-28">
             <EditorialImage
@@ -100,7 +100,7 @@ export default function PhilosophyContent() {
       {/* ═══════════════════════════════════════════
           03 — POETIC MANIFESTO STRIP
           ═══════════════════════════════════════════ */}
-      <section className="px-6 py-28 bg-white/30">
+      <section className="px-6 py-16 md:py-28 bg-white/30">
         <AnimatedSection className="mx-auto max-w-4xl text-center space-y-8">
           <p className="text-[10px] tracking-[0.3em] uppercase text-[#4D667D]/50 font-medium">
             The Living Essence
@@ -118,7 +118,7 @@ export default function PhilosophyContent() {
       {/* ═══════════════════════════════════════════
           04 — FOUR PILLARS GRID
           ═══════════════════════════════════════════ */}
-      <section className="px-6 py-32 bg-[#EFE6DB]">
+      <section className="px-6 py-16 md:py-32 bg-[#EFE6DB]">
         <div className="mx-auto max-w-[1200px]">
           <AnimatedSection className="text-center space-y-6">
             <p className="text-[10px] tracking-[0.3em] uppercase text-[#4D667D]/50 font-medium">
@@ -160,7 +160,7 @@ export default function PhilosophyContent() {
       {/* ═══════════════════════════════════════════
           05 — EDITORIAL DUAL FEATURE
           ═══════════════════════════════════════════ */}
-      <section className="px-6 pb-28 bg-[#EFE6DB]">
+      <section className="px-6 pb-16 md:pb-28 bg-[#EFE6DB]">
         <div className="mx-auto grid max-w-[1250px] gap-12 lg:grid-cols-2 lg:items-center">
           <AnimatedSection direction="left" className="order-2 lg:order-1 bg-white/40 p-8 md:p-12 shadow-sm border border-[#4D667D]/5 space-y-6">
             <p className="text-[10px] tracking-[0.3em] uppercase text-[#4D667D]/50 font-medium">
@@ -206,7 +206,7 @@ export default function PhilosophyContent() {
       {/* ═══════════════════════════════════════════
           06 — CLOSING CTA SECTION
           ══════════════════════════════════════════ */}
-      <section className="px-6 py-28 md:py-36 bg-white/30 text-center">
+      <section className="px-6 py-16 md:py-28 md:py-36 bg-white/30 text-center">
         <AnimatedSection className="mx-auto max-w-3xl space-y-8">
           <SacredIcon type="moon" className="mx-auto h-12 w-12 text-[#C8A96B]" />
           <p className="text-[10px] tracking-[0.35em] uppercase text-[#C8A96B] font-medium">

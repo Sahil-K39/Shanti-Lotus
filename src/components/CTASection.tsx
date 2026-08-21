@@ -26,7 +26,7 @@ export default function CTASection({
   return (
     <section
       ref={ref}
-      className={`relative py-28 overflow-hidden ${
+      className={`relative py-16 md:py-28 overflow-hidden ${
         dark ? "bg-deepPlum" : "bg-surface"
       }`}
     >

@@ -66,7 +66,7 @@ export default function RetreatsContent() {
       {/* ═══════════════════════════════════════════
           01 — HERO BANNER
           ═══════════════════════════════════════════ */}
-      <section className="relative overflow-hidden px-6 pb-20 pt-36 md:pb-28 md:pt-48">
+      <section className="relative overflow-hidden px-6 pb-20 pt-36 md:pb-16 md:pb-28 md:pt-48">
         <AnimatedSection className="relative z-10 mx-auto max-w-4xl text-center space-y-6">
           <p className="text-[10px] md:text-xs tracking-[0.35em] uppercase text-[#C8A96B] font-medium">
             Immersive Containers
@@ -84,7 +84,7 @@ export default function RetreatsContent() {
       {/* ═══════════════════════════════════════════
           02 — RETREATS & COURSES OFFERINGS
           ═══════════════════════════════════════════ */}
-      <section className="px-6 pb-28">
+      <section className="px-6 pb-16 md:pb-28">
         <div className="mx-auto grid max-w-[1250px] gap-20 md:gap-28">
           {retreatOfferings.map((item, index) => (
             <AnimatedSection key={item.title}>
@@ -153,7 +153,7 @@ export default function RetreatsContent() {
       {/* ═══════════════════════════════════════════
           03 — PILLARS / ESSENTIAL ELEMENTS
           ═══════════════════════════════════════════ */}
-      <section className="border-t border-[#4D667D]/10 bg-white/30 px-6 py-24 md:py-32">
+      <section className="border-t border-[#4D667D]/10 bg-white/30 px-6 py-16 md:py-16 md:py-32">
         <div className="mx-auto max-w-[1250px]">
           <AnimatedSection className="text-center space-y-4 mb-16 md:mb-20">
             <p className="text-[10px] md:text-xs tracking-[0.35em] uppercase text-[#C8A96B] font-medium">
@@ -186,7 +186,7 @@ export default function RetreatsContent() {
       {/* ═══════════════════════════════════════════
           04 — POETIC MANIFESTO QUOTE
           ═══════════════════════════════════════════ */}
-      <section className="px-6 py-24 md:py-36 bg-[#EFE6DB]">
+      <section className="px-6 py-16 md:py-36 bg-[#EFE6DB]">
         <div className="mx-auto max-w-3xl text-center">
           <AnimatedSection direction="up" className="space-y-6">
             <SacredIcon type="lotus" className="mx-auto h-8 w-8 text-[#C8A96B]/60" />
@@ -207,7 +207,7 @@ export default function RetreatsContent() {
       {/* ═══════════════════════════════════════════
           05 — CALL TO ACTION / INQUIRY BANNER
           ═══════════════════════════════════════════ */}
-      <section className="border-t border-[#4D667D]/10 bg-[#D8C8B6]/20 px-6 py-24 md:py-32">
+      <section className="border-t border-[#4D667D]/10 bg-[#D8C8B6]/20 px-6 py-16 md:py-16 md:py-32">
         <div className="mx-auto max-w-3xl text-center">
           <AnimatedSection className="space-y-6">
             <p className="text-[10px] md:text-xs tracking-[0.35em] uppercase text-[#C8A96B] font-medium">

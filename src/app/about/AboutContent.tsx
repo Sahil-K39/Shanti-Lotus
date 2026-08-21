@@ -8,7 +8,7 @@ import { certifications, photos, poeticPhrases } from "@/lib/brand";
 export default function AboutContent() {
   return (
     <div className="bg-[#EFE6DB] text-[#4D667D]">
-      <section className="px-6 pb-24 pt-40 md:pt-48">
+      <section className="px-6 pb-12 md:pb-24 pt-28 md:pt-48">
         <AnimatedSection className="mx-auto max-w-5xl text-center space-y-6">
           <p className="text-[10px] tracking-[0.3em] uppercase text-[#4D667D]/60 font-medium">About Kunti</p>
           <h1 className="font-display text-5xl leading-[1.1] md:text-7xl uppercase font-light text-[#4D667D]">
@@ -18,7 +18,7 @@ export default function AboutContent() {
         </AnimatedSection>
       </section>
 
-      <section className="px-6 pb-28 bg-[#EFE6DB]">
+      <section className="px-6 pb-16 md:pb-28 bg-[#EFE6DB]">
         <div className="mx-auto grid max-w-[1250px] gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <AnimatedSection direction="left" className="lg:sticky lg:top-28">
             <EditorialImage src={photos.mainPhoto} alt="Kunti honoring ancestral lineage" variant="organic-1" withBorder className="aspect-[3/4] w-full" />
@@ -36,7 +36,7 @@ export default function AboutContent() {
         </div>
       </section>
 
-      <section className="px-6 py-28 bg-white/30">
+      <section className="px-6 py-16 md:py-28 bg-white/30">
         <AnimatedSection className="mx-auto max-w-4xl text-center space-y-8">
           <p className="font-display text-3xl leading-[1.5] md:text-5xl italic text-[#C8A96B] font-light">
             {poeticPhrases[0]}
@@ -48,7 +48,7 @@ export default function AboutContent() {
         </AnimatedSection>
       </section>
 
-      <section className="px-6 py-32 bg-[#EFE6DB]">
+      <section className="px-6 py-16 md:py-32 bg-[#EFE6DB]">
         <div className="mx-auto max-w-[1180px]">
           <AnimatedSection className="text-center space-y-6">
             <p className="text-[10px] tracking-[0.3em] uppercase text-[#4D667D]/50 font-medium">Trainings & Certifications</p>

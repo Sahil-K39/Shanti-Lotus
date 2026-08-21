@@ -51,7 +51,7 @@ export default function ContactContent() {
 
   return (
     <div className="min-h-screen bg-[#EFE6DB] text-[#4D667D]">
-      <section className="px-6 pb-24 pt-36 sm:px-8 md:pb-32 md:pt-48">
+      <section className="px-6 pb-12 md:pb-24 pt-36 sm:px-8 md:pb-32 md:pt-48">
         <div className="mx-auto grid max-w-[1200px] gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           
           {/* Left Column: Info & Editorial Photo */}

@@ -9,7 +9,7 @@ export default function MasonryGallery() {
   const [loaded, setLoaded] = useState<Record<string, boolean>>({});
 
   return (
-    <section className="relative z-10 px-4 py-32 md:px-8">
+    <section className="relative z-10 px-4 py-16 md:py-32 md:px-8">
       <AnimatedSection className="mx-auto max-w-7xl">
         <div className="mb-20 text-center">
           <h2 className="font-display text-4xl text-lightGold md:text-5xl tracking-widest">SACRED GALLERY</h2>

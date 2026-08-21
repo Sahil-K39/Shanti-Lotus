@@ -31,7 +31,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#2a2a2a]/60 via-transparent to-[#2a2a2a]/20" />
 
         {/* Centered bottom text — minimal, editorial */}
-        <div className="absolute inset-x-0 bottom-0 z-10 pb-16 md:pb-24 text-center px-6">
+        <div className="absolute inset-x-0 bottom-0 z-10 pb-16 md:pb-12 md:pb-24 text-center px-6">
           <AnimatedSection direction="up" className="space-y-4">
             <p className="text-xs sm:text-sm md:text-base tracking-[0.4em] uppercase text-white/90 font-medium drop-shadow-sm">
               Tantric Yogini · Traveler · Guide
@@ -61,7 +61,7 @@ export default function Home() {
           02 — WELCOME / INTRO
           Clean, centered text. Lots of breathing room.
           ═══════════════════════════════════════════ */}
-      <section id="welcome" className="px-6 py-28 md:py-40 bg-[#EFE6DB]">
+      <section id="welcome" className="px-6 py-16 md:py-16 md:py-28 lg:py-40 bg-[#EFE6DB]">
         <div className="mx-auto max-w-2xl text-center">
           <AnimatedSection direction="up" className="space-y-10">
             <SacredIcon type="lotus" className="mx-auto h-8 w-8 text-[#C8A96B]/50" />
@@ -119,7 +119,7 @@ export default function Home() {
           04 — MANIFESTO QUOTE
           Full-width centered quote, very editorial
           ═══════════════════════════════════════════ */}
-      <section className="px-6 py-28 md:py-40 bg-[#EFE6DB]">
+      <section className="px-6 py-16 md:py-16 md:py-28 lg:py-40 bg-[#EFE6DB]">
         <div className="mx-auto max-w-3xl text-center">
           <AnimatedSection direction="up" className="space-y-8">
             <p className="font-display text-2xl md:text-4xl lg:text-5xl text-[#4D667D] italic font-light leading-[1.5]">
@@ -138,7 +138,7 @@ export default function Home() {
           05 — THE OFFERINGS / COLLECTION GRID
           Visual-first masonry grid, like a shop
           ═══════════════════════════════════════════ */}
-      <section id="offerings" className="px-6 md:px-12 py-24 md:py-36 bg-white/30">
+      <section id="offerings" className="px-6 md:px-12 py-16 md:py-36 bg-white/30">
         <div className="mx-auto max-w-7xl">
           <AnimatedSection direction="up" className="text-center space-y-4 mb-20 md:mb-28">
             <p className="text-[10px] tracking-[0.35em] uppercase text-[#C8A96B] font-medium">Discover</p>
@@ -223,7 +223,7 @@ export default function Home() {
           09 — WORK WITH ME
           Clean CTA banner
           ═══════════════════════════════════════════ */}
-      <section className="px-6 py-28 md:py-40 bg-[#EFE6DB]">
+      <section className="px-6 py-16 md:py-16 md:py-28 lg:py-40 bg-[#EFE6DB]">
         <div className="mx-auto max-w-3xl text-center">
           <AnimatedSection className="space-y-8">
             <p className="text-[10px] tracking-[0.35em] uppercase text-[#C8A96B] font-medium">Custom Journeys</p>

@@ -28,7 +28,7 @@ export default function SacredJewelryContent() {
   return (
     <div className="bg-[#EFE6DB] text-[#4D667D]">
       {/* Hero Header */}
-      <section className="px-6 pb-24 pt-40 md:pt-48 bg-[#EFE6DB]">
+      <section className="px-6 pb-12 md:pb-24 pt-28 md:pt-48 bg-[#EFE6DB]">
         <AnimatedSection className="mx-auto max-w-5xl text-center space-y-6">
           <p className="text-[10px] tracking-[0.3em] uppercase text-[#4D667D]/60 font-medium">
             Sacred Jewelry / Shop
@@ -44,7 +44,7 @@ export default function SacredJewelryContent() {
       </section>
 
       {/* Main Content Grid */}
-      <section className="px-6 pb-28 bg-[#EFE6DB]">
+      <section className="px-6 pb-16 md:pb-28 bg-[#EFE6DB]">
         <div className="mx-auto grid max-w-[1200px] gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <AnimatedSection direction="left">
             <EditorialImage

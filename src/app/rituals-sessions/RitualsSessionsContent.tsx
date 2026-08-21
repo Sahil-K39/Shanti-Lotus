@@ -28,7 +28,7 @@ export default function RitualsSessionsContent() {
   return (
     <div className="bg-[#EFE6DB] text-[#4D667D]">
       {/* Hero Section */}
-      <section className="px-6 pb-24 pt-40 md:pt-48">
+      <section className="px-6 pb-12 md:pb-24 pt-28 md:pt-48">
         <AnimatedSection className="mx-auto max-w-5xl text-center space-y-6">
           <p className="text-[10px] tracking-[0.3em] uppercase text-[#4D667D]/60 font-medium">
             Rituals & Sessions
@@ -44,7 +44,7 @@ export default function RitualsSessionsContent() {
       </section>
 
       {/* Spaces Cards */}
-      <section className="px-6 pb-28 bg-[#EFE6DB]">
+      <section className="px-6 pb-16 md:pb-28 bg-[#EFE6DB]">
         <div className="mx-auto grid max-w-[1220px] gap-6 md:grid-cols-3">
           {spaces.map((space, index) => (
             <AnimatedSection key={space.title} delay={index * 0.08} direction="up">
@@ -63,7 +63,7 @@ export default function RitualsSessionsContent() {
       </section>
 
       {/* Ritual Field Section */}
-      <section className="px-6 py-28 bg-white/30">
+      <section className="px-6 py-16 md:py-28 bg-white/30">
         <div className="mx-auto grid max-w-[1140px] gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <AnimatedSection direction="left" className="bg-white/40 p-8 md:p-12 shadow-sm border border-[#4D667D]/5">
             <p className="text-[10px] tracking-[0.3em] uppercase text-[#4D667D]/60 font-medium">

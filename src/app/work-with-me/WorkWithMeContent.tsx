@@ -21,7 +21,7 @@ export default function WorkWithMeContent() {
   return (
     <div className="bg-[#EFE6DB] text-[#4D667D]">
       {/* Hero Section */}
-      <section className="px-6 pb-24 pt-40 md:pt-48">
+      <section className="px-6 pb-12 md:pb-24 pt-28 md:pt-48">
         <AnimatedSection className="mx-auto max-w-5xl text-center space-y-6">
           <p className="text-[10px] md:text-xs tracking-[0.35em] uppercase text-[#C8A96B] font-medium">
             Work With Me
@@ -40,7 +40,7 @@ export default function WorkWithMeContent() {
       </section>
 
       {/* Brand Card / Profile Section */}
-      <section className="px-6 pb-28">
+      <section className="px-6 pb-16 md:pb-28">
         <div className="mx-auto grid max-w-[1180px] gap-10 border-y border-[#C8A96B]/20 py-14 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           <AnimatedSection direction="left">
             <div className="mx-auto max-w-sm rounded-full border border-[#C8A96B]/30 bg-white/40 p-3 shadow-sm">
@@ -86,7 +86,7 @@ export default function WorkWithMeContent() {
       </section>
 
       {/* Offerings Grid */}
-      <section className="px-6 pb-28">
+      <section className="px-6 pb-16 md:pb-28">
         <div className="mx-auto grid max-w-[1350px] gap-6 md:grid-cols-2 xl:grid-cols-4">
           {offerings.map((offering, index) => (
             <AnimatedSection key={offering} delay={index * 0.05}>
@@ -109,7 +109,7 @@ export default function WorkWithMeContent() {
       </section>
 
       {/* Living Container CTA Section */}
-      <section className="px-6 py-28">
+      <section className="px-6 py-16 md:py-28">
         <div className="mx-auto grid max-w-[1250px] gap-12 lg:grid-cols-3">
           <AnimatedSection className="lg:col-span-1">
             <EditorialImage
