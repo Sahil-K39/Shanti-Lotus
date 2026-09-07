@@ -25,6 +25,7 @@ export default function Home() {
           fill
           priority
           quality={100}
+          unoptimized={true}
           className="object-cover object-[center_20%]"
         />
         {/* Soft gradient overlay for text readability */}
