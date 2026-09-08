@@ -26,7 +26,7 @@ export default function Home() {
           priority
           quality={100}
           unoptimized={true}
-          className="object-cover object-[65%_25%]"
+          className="object-cover object-[65%_10%]"
         />
         {/* Soft gradient overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
