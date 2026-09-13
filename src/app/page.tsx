@@ -8,6 +8,8 @@ import { photos } from "@/lib/brand";
 import Image from "next/image";
 import Link from "next/link";
 
+import mainHeroPhoto from "../../public/images/kunti/sunset-water-blessing.jpg";
+
 export default function Home() {
   return (
     <div className="relative z-0">
@@ -20,12 +22,12 @@ export default function Home() {
       <section className="relative w-full aspect-[819/1024] max-h-[100dvh] md:aspect-auto md:h-screen overflow-hidden">
         {/* Full background image */}
         <Image
-          src={photos.mainPhoto}
+          src={mainHeroPhoto}
           alt="Shakti Loto"
           fill
           priority
-          quality={100}
-          unoptimized={true}
+          quality={95}
+          placeholder="blur"
           className="object-cover object-[65%_10%]"
         />
         {/* Soft gradient overlay for text readability */}
