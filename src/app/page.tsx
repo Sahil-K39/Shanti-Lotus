@@ -34,9 +34,6 @@ export default function Home() {
         {/* Centered bottom text — minimal, editorial */}
         <div className="absolute inset-x-0 bottom-0 z-10 pb-16 md:pb-12 md:pb-24 text-center px-6">
           <AnimatedSection direction="up" className="space-y-4 md:space-y-5">
-            <p className="text-xs sm:text-sm md:text-lg tracking-[0.4em] uppercase text-white font-medium drop-shadow-md">
-              Tantric Yogini · Traveler · Guide
-            </p>
             <h1 className="font-display text-5xl sm:text-7xl md:text-9xl lg:text-[10rem] tracking-[0.12em] text-white uppercase font-light leading-[0.85] drop-shadow-lg">
               Shakti Loto
             </h1>
