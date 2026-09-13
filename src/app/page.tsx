@@ -17,7 +17,7 @@ export default function Home() {
           01 — FULL-BLEED HERO
           Immersive, magazine-style. Image dominates.
           ═══════════════════════════════════════════ */}
-      <section className="relative h-screen overflow-hidden">
+      <section className="relative w-full aspect-[819/1024] max-h-[100dvh] md:aspect-auto md:h-screen overflow-hidden">
         {/* Full background image */}
         <Image
           src={photos.mainPhoto}
