@@ -9,6 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import mainHeroPhoto from "../../public/images/kunti/sunset-water-blessing.jpg";
+import mainHeroPhotoMobile from "../../public/images/kunti/sunset-water-blessing-mobile.jpg";
 
 export default function Home() {
   return (
@@ -19,17 +20,32 @@ export default function Home() {
           01 — FULL-BLEED HERO
           Immersive, magazine-style. Image dominates.
           ═══════════════════════════════════════════ */}
-      <section className="relative w-full aspect-[819/1024] max-h-[100dvh] md:aspect-auto md:h-screen overflow-hidden mt-20 md:mt-0">
-        {/* Full background image */}
-        <Image
-          src={mainHeroPhoto}
-          alt="Shakti Loto"
-          fill
-          priority
-          quality={95}
-          placeholder="blur"
-          className="object-cover object-[65%_10%]"
-        />
+      <section className="relative w-full aspect-[900/1004] max-h-[100dvh] md:aspect-auto md:h-screen overflow-hidden mt-20 md:mt-0">
+        {/* Desktop background image */}
+        <div className="hidden md:block absolute inset-0">
+          <Image
+            src={mainHeroPhoto}
+            alt="Shakti Loto"
+            fill
+            priority
+            quality={95}
+            placeholder="blur"
+            className="object-cover object-[65%_10%]"
+          />
+        </div>
+
+        {/* Mobile background image */}
+        <div className="block md:hidden absolute inset-0">
+          <Image
+            src={mainHeroPhotoMobile}
+            alt="Shakti Loto"
+            fill
+            priority
+            quality={95}
+            placeholder="blur"
+            className="object-cover object-top"
+          />
+        </div>
         {/* Soft gradient overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
 
