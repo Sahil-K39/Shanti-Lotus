@@ -78,29 +78,29 @@ function TimelineNode({
 
       {/* Content */}
       <div
-        className={`flex-1 p-8 rounded-2xl backdrop-blur-sm border transition-colors duration-700 ${
+        className={`flex-1 p-8 rounded-2xl border-2 transition-colors duration-700 ${
           dark
-            ? "bg-surfaceDark/30 border-surfaceDark shadow-altar hover:border-terracotta/30"
-            : "bg-surface/60 border-lotusPink/10 shadow-breathe hover:shadow-glow"
+            ? "bg-[#261710] border-[#D8C8B6]/30 shadow-md"
+            : "bg-[#F8F5F1] border-[#D8C8B6] shadow-sm"
         }`}
       >
         <span
-          className={`font-display tracking-widest text-sm uppercase block mb-3 ${
-            dark ? "text-antiqueGold" : "text-antiqueGold"
+          className={`font-display tracking-widest text-xs uppercase block mb-3 font-bold ${
+            dark ? "text-[#E2C98F]" : "text-[#8C6527]"
           }`}
         >
           {item.label}
         </span>
         <h3
-          className={`text-2xl font-display mb-4 ${
-            dark ? "text-ivory" : "text-textDark"
+          className={`text-2xl font-display mb-4 font-medium ${
+            dark ? "text-[#FFFFFF]" : "text-[#261710]"
           }`}
         >
           {item.title}
         </h3>
         <p
-          className={`font-body font-light leading-[1.8] ${
-            dark ? "text-ivory/70" : "text-textDark/60"
+          className={`font-body font-normal leading-[1.8] ${
+            dark ? "text-[#F8F5F1]" : "text-[#33231A]"
           }`}
         >
           {item.description}

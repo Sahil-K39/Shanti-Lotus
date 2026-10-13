@@ -62,20 +62,20 @@ const pillars = [
 
 export default function RetreatsContent() {
   return (
-    <div className="bg-[#EFE6DB] text-[#4D667D]">
+    <div className="bg-[#EFE6DB] text-[#261710]">
       {/* ═══════════════════════════════════════════
           01 — HERO BANNER
           ═══════════════════════════════════════════ */}
       <section className="relative overflow-hidden px-6 pb-20 pt-36 md:pb-16 md:pb-28 md:pt-48">
         <AnimatedSection className="relative z-10 mx-auto max-w-4xl text-center space-y-6">
-          <p className="text-[10px] md:text-xs tracking-[0.35em] uppercase text-[#C8A96B] font-medium">
+          <p className="text-xs tracking-[0.25em] uppercase text-[#261710] font-bold">
             Immersive Containers
           </p>
-          <h1 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-[#4D667D] uppercase tracking-[0.08em] leading-tight">
+          <h1 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal text-[#261710] uppercase tracking-[0.08em] leading-tight">
             Journeys into the Sacred
           </h1>
-          <div className="h-px w-16 bg-[#C8A96B]/40 mx-auto mt-6" />
-          <p className="mx-auto max-w-2xl text-base md:text-lg font-light leading-[2] text-[#4D667D]/80">
+          <div className="h-0.5 w-16 bg-[#8C6527]/50 mx-auto mt-6" />
+          <p className="mx-auto max-w-2xl text-base md:text-lg font-normal leading-[2] text-[#33231A]">
             Immersive containers to awaken consciousness, liberate the spirit, and root devotion into the body through nature, ritual, and sacred study.
           </p>
         </AnimatedSection>
@@ -93,7 +93,7 @@ export default function RetreatsContent() {
                   index % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""
                 }`}
               >
-                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-[#4D667D]/10 bg-white/40 shadow-sm">
+                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border-2 border-[#D8C8B6] bg-[#F8F5F1] shadow-sm">
                   <Image
                     src={item.image}
                     alt={item.alt}
@@ -103,32 +103,32 @@ export default function RetreatsContent() {
                   />
                 </div>
 
-                <div className="rounded-3xl border border-[#4D667D]/10 bg-white/60 p-8 md:p-12 backdrop-blur-sm shadow-sm space-y-6">
-                  <SacredIcon type={item.icon} className="h-10 w-10 text-[#C8A96B]" />
+                <div className="rounded-3xl border-2 border-[#D8C8B6] bg-[#F8F5F1] p-8 md:p-12 shadow-sm space-y-6">
+                  <SacredIcon type={item.icon} className="h-10 w-10 text-[#8C6527]" />
                   <div>
-                    <p className="text-[10px] tracking-[0.25em] uppercase text-[#C8A96B] font-medium">
+                    <p className="text-xs tracking-[0.2em] uppercase text-[#261710] font-bold">
                       {item.subtitle}
                     </p>
-                    <h2 className="mt-2 font-display text-3xl md:text-5xl font-light text-[#4D667D] tracking-wide">
+                    <h2 className="mt-2 font-display text-3xl md:text-5xl font-medium text-[#261710] tracking-wide">
                       {item.title}
                     </h2>
                   </div>
 
-                  <p className="text-base font-light leading-[2] text-[#4D667D]/80">
+                  <p className="text-base font-normal leading-[2] text-[#33231A]">
                     {item.text}
                   </p>
 
                   <div className="pt-2">
-                    <p className="text-[10px] tracking-[0.2em] uppercase text-[#4D667D]/60 font-semibold mb-3">
+                    <p className="text-xs tracking-[0.18em] uppercase text-[#261710] font-bold mb-3">
                       What is included & explored:
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                       {item.highlights.map((highlight) => (
                         <div
                           key={highlight}
-                          className="flex items-center gap-2 text-xs font-light text-[#4D667D]/80"
+                          className="flex items-center gap-2 text-xs font-medium text-[#261710]"
                         >
-                          <span className="h-1.5 w-1.5 rounded-full bg-[#C8A96B]" />
+                          <span className="h-1.5 w-1.5 rounded-full bg-[#8C6527]" />
                           <span>{highlight}</span>
                         </div>
                       ))}
@@ -138,7 +138,7 @@ export default function RetreatsContent() {
                   <div className="pt-4">
                     <Link
                       href="/contact"
-                      className="inline-block border border-[#4D667D] px-8 py-3.5 text-[10px] uppercase tracking-[0.25em] text-[#4D667D] hover:bg-[#4D667D] hover:text-[#EFE6DB] transition-all duration-500"
+                      className="inline-block bg-[#261710] px-8 py-3.5 text-xs font-semibold uppercase tracking-[0.2em] text-[#FFFFFF] hover:bg-[#3D2C20] transition-all duration-300 rounded-full shadow-sm"
                     >
                       Inquire & Reserve
                     </Link>
@@ -153,27 +153,27 @@ export default function RetreatsContent() {
       {/* ═══════════════════════════════════════════
           03 — PILLARS / ESSENTIAL ELEMENTS
           ═══════════════════════════════════════════ */}
-      <section className="border-t border-[#4D667D]/10 bg-white/30 px-6 py-16 md:py-16 md:py-32">
+      <section className="border-t border-[#D8C8B6] bg-white/60 px-6 py-16 md:py-32">
         <div className="mx-auto max-w-[1250px]">
           <AnimatedSection className="text-center space-y-4 mb-16 md:mb-20">
-            <p className="text-[10px] md:text-xs tracking-[0.35em] uppercase text-[#C8A96B] font-medium">
+            <p className="text-xs tracking-[0.25em] uppercase text-[#261710] font-bold">
               The Architecture
             </p>
-            <h2 className="font-display text-3xl md:text-5xl font-light uppercase tracking-[0.1em] text-[#4D667D]">
+            <h2 className="font-display text-3xl md:text-5xl font-normal uppercase tracking-[0.08em] text-[#261710]">
               Essential Pillars of Our Containers
             </h2>
-            <div className="h-px w-16 bg-[#C8A96B]/40 mx-auto" />
+            <div className="h-0.5 w-16 bg-[#8C6527]/50 mx-auto" />
           </AnimatedSection>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {pillars.map((pillar, idx) => (
               <AnimatedSection key={pillar.title} delay={idx * 0.08}>
-                <div className="h-full rounded-2xl border border-[#4D667D]/10 bg-white/60 p-7 backdrop-blur-sm shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#C8A96B]/40">
-                  <SacredIcon type={pillar.icon} className="h-8 w-8 text-[#C8A96B]" />
-                  <h3 className="mt-6 font-display text-xl font-medium tracking-wide text-[#4D667D]">
+                <div className="h-full rounded-2xl border-2 border-[#D8C8B6] bg-[#F8F5F1] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#261710]">
+                  <SacredIcon type={pillar.icon} className="h-8 w-8 text-[#8C6527]" />
+                  <h3 className="mt-6 font-display text-xl font-bold tracking-wide text-[#261710]">
                     {pillar.title}
                   </h3>
-                  <p className="mt-3 text-sm font-light leading-relaxed text-[#4D667D]/70">
+                  <p className="mt-3 text-sm font-normal leading-relaxed text-[#33231A]">
                     {pillar.desc}
                   </p>
                 </div>
@@ -189,16 +189,16 @@ export default function RetreatsContent() {
       <section className="px-6 py-16 md:py-36 bg-[#EFE6DB]">
         <div className="mx-auto max-w-3xl text-center">
           <AnimatedSection direction="up" className="space-y-6">
-            <SacredIcon type="lotus" className="mx-auto h-8 w-8 text-[#C8A96B]/60" />
-            <p className="font-display text-2xl md:text-4xl italic font-light text-[#4D667D] leading-[1.6]">
+            <SacredIcon type="lotus" className="mx-auto h-8 w-8 text-[#8C6527]" />
+            <p className="font-display text-2xl md:text-4xl italic font-normal text-[#261710] leading-[1.6]">
               "{poeticPhrases[2]} {poeticPhrases[3]}"
             </p>
             <div className="flex items-center justify-center gap-4 pt-4">
-              <div className="h-px w-12 bg-[#C8A96B]/40" />
-              <p className="text-xs tracking-[0.3em] uppercase text-[#4D667D]/50 font-medium">
+              <div className="h-0.5 w-12 bg-[#8C6527]/50" />
+              <p className="text-xs tracking-[0.25em] uppercase text-[#261710] font-bold">
                 Kunti Shakti Loto
               </p>
-              <div className="h-px w-12 bg-[#C8A96B]/40" />
+              <div className="h-0.5 w-12 bg-[#8C6527]/50" />
             </div>
           </AnimatedSection>
         </div>
@@ -207,22 +207,22 @@ export default function RetreatsContent() {
       {/* ═══════════════════════════════════════════
           05 — CALL TO ACTION / INQUIRY BANNER
           ═══════════════════════════════════════════ */}
-      <section className="border-t border-[#4D667D]/10 bg-[#D8C8B6]/20 px-6 py-16 md:py-16 md:py-32">
+      <section className="border-t border-[#D8C8B6] bg-white/60 px-6 py-16 md:py-32">
         <div className="mx-auto max-w-3xl text-center">
           <AnimatedSection className="space-y-6">
-            <p className="text-[10px] md:text-xs tracking-[0.35em] uppercase text-[#C8A96B] font-medium">
+            <p className="text-xs tracking-[0.25em] uppercase text-[#261710] font-bold">
               Upcoming Gatherings
             </p>
-            <h2 className="font-display text-4xl md:text-6xl font-light uppercase tracking-[0.1em] text-[#4D667D]">
+            <h2 className="font-display text-4xl md:text-6xl font-normal uppercase tracking-[0.08em] text-[#261710]">
               Begin Your Journey
             </h2>
-            <p className="text-base md:text-lg font-light leading-[2] text-[#4D667D]/80 max-w-xl mx-auto">
+            <p className="text-base md:text-lg font-normal leading-[2] text-[#33231A] max-w-xl mx-auto">
               Spaces are intentionally kept intimate to preserve depth and energetic integrity. Contact us to receive the current dates, registration details, or custom group offerings.
             </p>
             <div className="pt-4">
               <Link
                 href="/contact"
-                className="inline-block border border-[#4D667D] px-10 py-4 text-[10px] uppercase tracking-[0.25em] text-[#4D667D] hover:bg-[#4D667D] hover:text-[#EFE6DB] transition-all duration-500"
+                className="inline-block bg-[#261710] px-10 py-4 text-xs font-semibold uppercase tracking-[0.2em] text-[#FFFFFF] hover:bg-[#3D2C20] transition-all duration-300 rounded-full shadow-md"
               >
                 Inquire for Next Dates
               </Link>

@@ -87,21 +87,21 @@ export default function ServiceCard({
         delay: index * 0.1,
         ease: [0.25, 0.1, 0.25, 1],
       }}
-      className="group bg-surface/60 backdrop-blur-sm p-8 md:p-10 rounded-[40px] border border-lotusPink/10 shadow-breathe hover:shadow-glow hover:-translate-y-2 transition-all duration-700"
+      className="group bg-[#F8F5F1] p-8 md:p-10 rounded-[40px] border border-[#D8C8B6] shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-700"
     >
-      <div className="text-antiqueGold mb-6 transition-transform duration-700 group-hover:scale-110">
+      <div className="text-[#8C6527] mb-6 transition-transform duration-700 group-hover:scale-110">
         {iconMap[icon] || iconMap.lotus}
       </div>
-      <h3 className="font-display text-2xl mb-4 text-textDark group-hover:text-terracotta transition-colors duration-500">
+      <h3 className="font-display text-2xl mb-4 text-[#261710] font-medium group-hover:text-[#8C6527] transition-colors duration-500">
         {title}
       </h3>
-      <p className="text-sm font-body font-light text-textDark/60 leading-relaxed mb-6">
+      <p className="text-sm font-body font-normal text-[#33231A] leading-relaxed mb-6">
         {description}
       </p>
       {buttonText && (
         <button
           onClick={onButtonClick}
-          className="inline-flex items-center gap-2 text-xs font-body font-medium uppercase tracking-[0.15em] text-antiqueGold hover:text-terracotta transition-colors duration-500 group/btn"
+          className="inline-flex items-center gap-2 text-xs font-body font-bold uppercase tracking-[0.18em] text-[#261710] hover:text-[#8C6527] transition-colors duration-500 group/btn"
         >
           {buttonText}
           <svg

@@ -8,37 +8,40 @@ import { photos, poeticPhrases } from "@/lib/brand";
 
 const spaces = [
   {
-    title: "Individual Sessions — 1:1 Guidance",
-    text: "Deep guidance to reconnect with your energy, release blockages, and return to your center.",
-    icon: "eye" as const,
-  },
-  {
-    title: "Ritual & Feminine Energy",
-    text: "Spaces to activate your creative energy, heal your relationship with the feminine, and inhabit your body with presence.",
+    title: "Ritual and Feminine Energy",
+    text: "Spaces to activate your creative energy, heal your bond with the feminine, and inhabit your body with presence.",
     icon: "moon" as const,
+    color: "text-[#2C4A63]",
   },
   {
     title: "Spiritual Integration",
-    text: "Practices and guidance to expand your consciousness and root your spirituality into everyday life.",
+    text: "Practices and guidance to expand your consciousness and root your spirituality in daily life.",
     icon: "lotus" as const,
+    color: "text-[#8C6527]",
+  },
+  {
+    title: "Deep Mentorship",
+    text: "Deep support to reconnect with your energy, release blockages, and return to your center.",
+    icon: "eye" as const,
+    color: "text-[#2C4A63]",
   },
 ];
 
 export default function RitualsSessionsContent() {
   return (
-    <div className="bg-[#EFE6DB] text-[#4D667D]">
+    <div className="bg-[#EFE6DB] text-[#261710]">
       {/* Hero Section */}
       <section className="px-6 pb-12 md:pb-24 pt-28 md:pt-48">
         <AnimatedSection className="mx-auto max-w-5xl text-center space-y-6">
-          <p className="text-[10px] tracking-[0.3em] uppercase text-[#4D667D]/60 font-medium">
-            Rituals & Sessions
+          <p className="text-xs tracking-[0.3em] uppercase text-[#8C6527] font-bold">
+            Individual Sessions | 1:1 Mentorship
           </p>
-          <h1 className="font-display text-5xl leading-[1.1] md:text-7xl uppercase font-light text-[#4D667D]">
-            Your body is <span className="italic text-[#C8A96B]">a portal</span>
+          <h1 className="font-display text-5xl leading-[1.1] md:text-7xl uppercase font-normal text-[#261710]">
+            Your body is <span className="italic text-[#8C6527]">a portal</span>
           </h1>
-          <div className="h-px w-20 bg-[#C8A96B]/50 mx-auto mt-8" />
-          <p className="mx-auto mt-8 max-w-3xl text-base md:text-lg font-light leading-[2] text-[#4D667D]/80">
-            Private containers for energy clearing, feminine remembrance, spiritual integration, and the sacred return to your center.
+          <div className="h-0.5 w-20 bg-[#8C6527] mx-auto mt-8" />
+          <p className="mx-auto mt-8 max-w-3xl text-base md:text-lg font-normal leading-[2] text-[#33231A]">
+            Spaces to activate your creative energy, heal your bond with the feminine, and inhabit your body with presence.
           </p>
         </AnimatedSection>
       </section>
@@ -48,12 +51,12 @@ export default function RitualsSessionsContent() {
         <div className="mx-auto grid max-w-[1220px] gap-6 md:grid-cols-3">
           {spaces.map((space, index) => (
             <AnimatedSection key={space.title} delay={index * 0.08} direction="up">
-              <div className="bg-white/40 h-full p-8 shadow-sm border border-[#4D667D]/5 transition-transform duration-500 hover:-translate-y-1">
-                <SacredIcon type={space.icon} className="h-12 w-12 text-[#C8A96B]" />
-                <h2 className="mt-8 font-display text-2xl leading-[1.3] text-[#4D667D] font-light">
+              <div className="bg-[#F8F5F1] h-full p-8 shadow-sm border-2 border-[#D8C8B6] rounded-2xl transition-all duration-500 hover:border-[#8C6527] hover:-translate-y-1">
+                <SacredIcon type={space.icon} className={`h-12 w-12 ${space.color}`} />
+                <h2 className="mt-8 font-display text-2xl leading-[1.3] text-[#261710] font-medium">
                   {space.title}
                 </h2>
-                <p className="mt-6 text-sm font-light leading-[1.9] text-[#4D667D]/75">
+                <p className="mt-6 text-sm font-normal leading-[1.9] text-[#33231A]">
                   {space.text}
                 </p>
               </div>
@@ -63,24 +66,24 @@ export default function RitualsSessionsContent() {
       </section>
 
       {/* Ritual Field Section */}
-      <section className="px-6 py-16 md:py-28 bg-white/30">
+      <section className="px-6 py-16 md:py-28 bg-[#F8F5F1] border-y-2 border-[#D8C8B6]">
         <div className="mx-auto grid max-w-[1140px] gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-          <AnimatedSection direction="left" className="bg-white/40 p-8 md:p-12 shadow-sm border border-[#4D667D]/5">
-            <p className="text-[10px] tracking-[0.3em] uppercase text-[#4D667D]/60 font-medium">
-              Ritual Field
+          <AnimatedSection direction="left" className="bg-[#EFE6DB] p-8 md:p-12 shadow-sm border-2 border-[#D8C8B6] rounded-3xl">
+            <p className="text-xs tracking-[0.3em] uppercase text-[#8C6527] font-bold">
+              Identity Anchor
             </p>
-            <h2 className="mt-5 font-display text-4xl leading-[1.3] md:text-6xl font-light text-[#4D667D]">
-              <span className="italic text-[#C8A96B]">{poeticPhrases[2]}</span>
+            <h2 className="mt-5 font-display text-4xl leading-[1.3] md:text-6xl font-normal text-[#261710]">
+              <span className="italic text-[#8C6527]">{poeticPhrases[2]}</span>
             </h2>
-            <p className="mt-8 text-base md:text-lg font-light leading-[2] text-[#4D667D]/80">
-              Each session is shaped with breath, listening, ritual symbolism, plant allies, energetic care, and practical integration. The work is not to become someone else, but to return to the original wisdom already moving within you.
+            <p className="mt-8 font-serif italic text-lg md:text-xl font-normal leading-[2] text-[#33231A]">
+              “Each space is an invitation to return to yourself, to inhabit your body as a temple, and to remember the wisdom that already lives within you.”
             </p>
             <div className="pt-4">
               <Link
                 href="/contact"
-                className="mt-6 inline-block border border-[#4D667D] px-8 py-3.5 text-[10px] uppercase tracking-[0.25em] text-[#4D667D] transition-all duration-500 hover:bg-[#4D667D] hover:text-[#EFE6DB]"
+                className="mt-6 inline-block rounded-full bg-[#261710] px-8 py-3.5 text-xs font-bold uppercase tracking-[0.25em] text-[#FFFFFF] transition-all duration-500 hover:bg-[#8C6527] shadow-md"
               >
-                Inquire
+                Contact
               </Link>
             </div>
           </AnimatedSection>

@@ -19,21 +19,21 @@ const descriptions = [
 
 export default function WorkWithMeContent() {
   return (
-    <div className="bg-[#EFE6DB] text-[#4D667D]">
+    <div className="bg-[#EFE6DB] text-[#261710]">
       {/* Hero Section */}
       <section className="px-6 pb-12 md:pb-24 pt-28 md:pt-48">
         <AnimatedSection className="mx-auto max-w-5xl text-center space-y-6">
-          <p className="text-[10px] md:text-xs tracking-[0.35em] uppercase text-[#C8A96B] font-medium">
+          <p className="text-xs tracking-[0.35em] uppercase text-[#8C6527] font-bold">
             Work With Me
           </p>
-          <h1 className="font-display text-5xl leading-tight md:text-8xl font-light text-[#4D667D]">
-            Spaces to <span className="text-[#C8A96B] italic">Remember</span>
+          <h1 className="font-display text-5xl leading-tight md:text-8xl font-normal text-[#261710]">
+            Spaces to <span className="text-[#8C6527] italic">Remember</span>
           </h1>
-          <div className="h-px w-16 bg-[#C8A96B]/40 mx-auto" />
-          <p className="mx-auto max-w-3xl text-base font-light leading-relaxed text-[#4D667D]/80 md:text-lg">
+          <div className="h-0.5 w-16 bg-[#8C6527] mx-auto" />
+          <p className="mx-auto max-w-3xl text-base font-normal leading-relaxed text-[#33231A] md:text-lg">
             Spaces to remember, heal, and awaken your creative energy through the union of mind, body, and soul, so we may awaken our consciousness and liberate the spirit.
           </p>
-          <p className="mx-auto max-w-3xl text-base font-light leading-relaxed text-[#4D667D]/80 md:text-lg">
+          <p className="mx-auto max-w-3xl text-base font-normal leading-relaxed text-[#33231A] md:text-lg">
             I accompany you in awakening your creative energy and reconnecting with your inner wisdom through the path of self-exploration and self-knowledge.
           </p>
         </AnimatedSection>
@@ -41,9 +41,9 @@ export default function WorkWithMeContent() {
 
       {/* Brand Card / Profile Section */}
       <section className="px-6 pb-16 md:pb-28">
-        <div className="mx-auto grid max-w-[1180px] gap-10 border-y border-[#C8A96B]/20 py-14 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+        <div className="mx-auto grid max-w-[1180px] gap-10 border-y-2 border-[#D8C8B6] py-14 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           <AnimatedSection direction="left">
-            <div className="mx-auto max-w-sm rounded-full border border-[#C8A96B]/30 bg-white/40 p-3 shadow-sm">
+            <div className="mx-auto max-w-sm rounded-full border-2 border-[#D8C8B6] bg-[#F8F5F1] p-3 shadow-sm">
               <EditorialImage
                 src={photos.redTempleDoor}
                 alt="Kunti at a vivid red temple doorway"
@@ -54,20 +54,20 @@ export default function WorkWithMeContent() {
           </AnimatedSection>
 
           <AnimatedSection direction="right" className="text-center lg:text-left">
-            <p className="text-[10px] tracking-[0.35em] uppercase text-[#C8A96B] font-medium">
-              From the Brand Card
+            <p className="text-xs tracking-[0.35em] uppercase text-[#8C6527] font-bold">
+              Tantric Yogini · Traveler of this Earth
             </p>
-            <h2 className="mt-5 font-display text-4xl leading-tight text-[#4D667D] md:text-6xl font-light">
-              <span className="text-[#C8A96B]">Kunti Shakti Loto</span>
+            <h2 className="mt-5 font-display text-4xl leading-tight text-[#261710] md:text-6xl font-normal">
+              <span className="text-[#8C6527]">Kunti</span>
             </h2>
-            <p className="mt-7 max-w-2xl text-base font-light leading-relaxed text-[#4D667D]/80 lg:mx-0">
-              Bridging ancient plant wisdom, alchemy and spirit to awaken the divine within.
+            <p className="mt-7 max-w-2xl text-base font-normal leading-relaxed text-[#33231A] lg:mx-0">
+              I am here as a bridge between my ancestral roots in South America and the ancient wisdom and traditions of Asia. I come to accompany you on the path of awakening your feminine essence and your creative energy.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
-              {["Tantric Yogini", "Herbal Alchemist", "Plant Medicine Guide", "Ritual Jewelry", "Ayurveda"].map((item) => (
+              {["South America", "Asia", "Pachakuti 2012", "Shakta Tantra", "Devi Yoga"].map((item) => (
                 <span
                   key={item}
-                  className="rounded-full border border-[#C8A96B]/30 bg-white/50 px-4 py-2 text-[10px] uppercase tracking-[0.2em] text-[#4D667D]/80"
+                  className="rounded-full border-2 border-[#D8C8B6] bg-[#F8F5F1] px-4 py-2 text-xs uppercase tracking-[0.2em] text-[#261710] font-semibold"
                 >
                   {item}
                 </span>
@@ -77,9 +77,9 @@ export default function WorkWithMeContent() {
               href={brand.contact.instagramUrl}
               target="_blank"
               rel="noreferrer"
-              className="mt-9 inline-flex border border-[#4D667D] px-8 py-4 text-[11px] uppercase tracking-[0.24em] text-[#4D667D] transition-all duration-500 hover:bg-[#4D667D] hover:text-[#EFE6DB]"
+              className="mt-9 inline-flex rounded-full bg-[#261710] px-8 py-4 text-xs uppercase tracking-[0.24em] text-[#FFFFFF] font-bold transition-all duration-500 hover:bg-[#8C6527] shadow-md"
             >
-              View Instagram
+              Instagram @shakti_loto_
             </a>
           </AnimatedSection>
         </div>
@@ -90,18 +90,18 @@ export default function WorkWithMeContent() {
         <div className="mx-auto grid max-w-[1350px] gap-6 md:grid-cols-2 xl:grid-cols-4">
           {offerings.map((offering, index) => (
             <AnimatedSection key={offering} delay={index * 0.05}>
-              <div className="group flex h-full flex-col rounded-2xl border border-[#4D667D]/10 bg-white/50 p-7 shadow-sm backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#C8A96B]/50 hover:bg-white/80">
+              <div className="group flex h-full flex-col rounded-2xl border-2 border-[#D8C8B6] bg-[#F8F5F1] p-7 shadow-sm backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#8C6527] hover:shadow-md">
                 <SacredIcon
                   type={index % 2 ? "moon" : "lotus"}
-                  className="h-10 w-10 text-[#C8A96B] transition-transform duration-700 group-hover:rotate-12"
+                  className="h-10 w-10 text-[#8C6527] transition-transform duration-700 group-hover:rotate-12"
                 />
-                <h2 className="mt-8 font-display text-2xl leading-tight text-[#4D667D] font-light md:text-3xl">
+                <h2 className="mt-8 font-display text-2xl leading-tight text-[#261710] font-medium md:text-3xl">
                   {offering}
                 </h2>
-                <p className="mt-4 flex-1 text-sm font-light leading-relaxed text-[#4D667D]/75">
+                <p className="mt-4 flex-1 text-sm font-normal leading-relaxed text-[#33231A]">
                   {descriptions[index]}
                 </p>
-                <div className="mt-8 h-px w-full bg-[#C8A96B]/30" />
+                <div className="mt-8 h-px w-full bg-[#D8C8B6]" />
               </div>
             </AnimatedSection>
           ))}
@@ -120,22 +120,22 @@ export default function WorkWithMeContent() {
               className="aspect-[4/5] w-full"
             />
           </AnimatedSection>
-          <AnimatedSection className="flex flex-col justify-center rounded-2xl border border-[#4D667D]/10 bg-white/60 p-8 shadow-sm backdrop-blur-md md:p-12 lg:col-span-2">
-            <p className="text-[10px] tracking-[0.35em] uppercase text-[#C8A96B] font-medium">
-              A living container
+          <AnimatedSection className="flex flex-col justify-center rounded-3xl border-2 border-[#D8C8B6] bg-[#F8F5F1] p-8 shadow-sm backdrop-blur-md md:p-12 lg:col-span-2">
+            <p className="text-xs tracking-[0.35em] uppercase text-[#8C6527] font-bold">
+              Identity Anchor
             </p>
-            <h2 className="mt-5 font-display text-4xl leading-tight text-[#4D667D] md:text-6xl font-light">
-              <span className="text-[#C8A96B]">{poeticPhrases[3]}</span>
+            <h2 className="mt-5 font-display text-4xl leading-tight text-[#261710] md:text-6xl font-normal">
+              <span className="text-[#8C6527]">{poeticPhrases[3]}</span>
             </h2>
-            <p className="mt-8 text-base font-light leading-relaxed text-[#4D667D]/80">
-              The work is intimate and devotional. Every session, ritual, training, or retreat is shaped as a space where the body can become a temple again, where ancestral memory can speak, and where the creative force can move with grace.
+            <p className="mt-8 font-serif italic text-xl md:text-2xl font-normal leading-relaxed text-[#33231A]">
+              “Each space is an invitation to return to yourself, to inhabit your body as a temple, and to remember the wisdom that already lives within you.”
             </p>
             <div className="pt-4">
               <Link
                 href="/contact"
-                className="mt-6 inline-flex border border-[#4D667D] px-8 py-4 text-[11px] uppercase tracking-[0.24em] text-[#4D667D] transition-all duration-500 hover:bg-[#4D667D] hover:text-[#EFE6DB]"
+                className="mt-6 inline-flex rounded-full bg-[#261710] px-8 py-4 text-xs uppercase tracking-[0.24em] text-[#FFFFFF] font-bold transition-all duration-500 hover:bg-[#8C6527] shadow-md"
               >
-                Request a Space
+                Contact
               </Link>
             </div>
           </AnimatedSection>

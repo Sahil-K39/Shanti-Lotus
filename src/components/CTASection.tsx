@@ -27,13 +27,13 @@ export default function CTASection({
     <section
       ref={ref}
       className={`relative py-16 md:py-28 overflow-hidden ${
-        dark ? "bg-deepPlum" : "bg-surface"
+        dark ? "bg-[#261710]" : "bg-[#EFE6DB]"
       }`}
     >
       {/* Ambient glow */}
       <div
         className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full blur-3xl pointer-events-none ${
-          dark ? "bg-terracotta/10" : "bg-lotusPink/10"
+          dark ? "bg-[#B8904F]/10" : "bg-[#6F8F7A]/10"
         }`}
       />
 
@@ -42,8 +42,8 @@ export default function CTASection({
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1 }}
-          className={`font-display text-3xl md:text-4xl italic leading-snug mb-4 ${
-            dark ? "text-ivory" : "text-textDark"
+          className={`font-display text-3xl md:text-4xl italic leading-snug mb-4 font-normal ${
+            dark ? "text-[#FFFFFF]" : "text-[#261710]"
           }`}
         >
           {title}
@@ -54,8 +54,8 @@ export default function CTASection({
             initial={{ opacity: 0, y: 15 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className={`text-lg font-body font-light mb-10 ${
-              dark ? "text-ivory/60" : "text-textDark/60"
+            className={`text-lg font-body font-normal mb-10 ${
+              dark ? "text-[#F8F5F1]" : "text-[#33231A]"
             }`}
           >
             {subtitle}
@@ -69,10 +69,10 @@ export default function CTASection({
         >
           <Link
             href={buttonHref}
-            className={`inline-flex items-center gap-3 px-10 py-4 rounded-full text-sm font-body font-medium uppercase tracking-[0.15em] transition-all duration-700 ${
+            className={`inline-flex items-center gap-3 px-10 py-4 rounded-full text-xs font-body font-semibold uppercase tracking-[0.2em] transition-all duration-500 shadow-md ${
               dark
-                ? "bg-antiqueGold text-deepPlum hover:bg-ivory"
-                : "border border-antiqueGold/40 text-antiqueGold hover:bg-antiqueGold hover:text-ivory"
+                ? "bg-[#E2C98F] text-[#261710] hover:bg-[#FFFFFF]"
+                : "bg-[#261710] text-[#FFFFFF] hover:bg-[#3D2C20]"
             }`}
           >
             {buttonText}

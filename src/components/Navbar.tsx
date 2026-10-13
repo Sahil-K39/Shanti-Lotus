@@ -2,19 +2,20 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import BrandLogo from "@/components/BrandLogo";
 import LanguageTrigger from "@/components/LanguageTrigger";
 import { useLanguage } from "@/context/LanguageContext";
 
 const desktopLinks = [
   { href: "/about", label: "About Kunti" },
   { href: "/work-with-me", label: "Work With Me" },
-  { href: "/rituals-sessions", label: "Rituals" },
+  { href: "/rituals-sessions", label: "Rituals & Sessions" },
   { href: "/retreats", label: "Retreats" },
   { href: "/sacred-jewelry", label: "Jewelry" },
   { href: "/philosophy", label: "Philosophy" },
+  { href: "/contact", label: "Contact" },
 ];
 
 const allLinks = [
@@ -35,7 +36,7 @@ export default function Navbar() {
   const { currentLanguage, setIsModalOpen } = useLanguage();
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 24);
+    const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -51,96 +52,129 @@ export default function Navbar() {
 
   return (
     <>
-      <motion.header
-        initial={{ y: -80, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
-        className={`fixed inset-x-0 top-0 z-50 transition-all duration-700 ${
-          scrolled
-            ? "bg-parchment/95 py-2.5 sm:py-3 backdrop-blur-xl shadow-altar"
-            : "bg-parchment/50 backdrop-blur-sm py-4 sm:py-6"
-        }`}
-      >
-        {/* Full Palette Gradient Border */}
-        <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#C8A96B] via-[#B8904F] via-[#E2C5BF] via-[#EFE6DB] via-[#D8C8B6] via-[#5A4636] via-[#6F8F7A] via-[#5E9E9B] to-[#4D667D]" />
-        
-        <nav
-          className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-8 lg:px-10"
-          aria-label="Main navigation"
+      {/* ══════════════════════════════════════════════════════════════
+          UNIFIED FIXED HEADER: TOP TICKER + MAIN NAV (ZERO OVERLAP)
+          Styled with warm Cacao Profundo (#5A4636) & Brand Golds
+          ══════════════════════════════════════════════════════════════ */}
+      <header className="fixed inset-x-0 top-0 z-50 flex flex-col shadow-lg">
+        {/* Top Ticker / Marquee Banner — ALEIA Style */}
+        <div className="w-full bg-[#3D2C20] border-b border-[#C8A96B]/30 text-[11px] sm:text-xs tracking-[0.22em] uppercase text-[#F8F5F1] py-2.5 overflow-hidden select-none font-medium">
+          <div className="flex whitespace-nowrap animate-marquee items-center justify-around">
+            <span className="mx-8 font-serif italic normal-case tracking-wider text-[#E2C98F] text-sm">“To remember is to return to yourself”</span>
+            <span className="mx-8 text-[#F8F5F1]"><span className="text-[#6F8F7A] font-bold">✦</span> Your body is a portal</span>
+            <span className="mx-8 font-serif italic normal-case tracking-wider text-[#E2C98F] text-sm">“The sacred lives within you”</span>
+            <span className="mx-8 text-[#F8F5F1]"><span className="text-[#5E9E9B] font-bold">✦</span> Awaken your creative energy</span>
+            <span className="mx-8 font-serif italic normal-case tracking-wider text-[#E2C98F] text-sm">“To remember is to return to yourself”</span>
+            <span className="mx-8 text-[#F8F5F1]"><span className="text-[#6F8F7A] font-bold">✦</span> Shakti Lotus · South America & Asia</span>
+          </div>
+        </div>
+
+        {/* Main Navigation Bar */}
+        <div
+          className={`w-full transition-all duration-500 ${
+            scrolled
+              ? "bg-[#4D382A]/98 py-2.5 backdrop-blur-xl border-b border-[#C8A96B]/30 shadow-md"
+              : "bg-[#4D382A]/95 py-3 backdrop-blur-md border-b border-[#D8C8B6]/25"
+          }`}
         >
-          {/* BIG Brand Logo */}
-          <Link
-            href="/"
-            onClick={closeMenu}
-            className="group flex items-center transition-transform duration-500 hover:scale-[1.03]"
-            aria-label="Shakti Loto - Home"
-          >
-            <BrandLogo big={true} />
-          </Link>
-
-          {/* Desktop Navigation Links */}
-          <div className="hidden items-center gap-6 xl:gap-9 lg:flex">
-            {desktopLinks.map((link) => {
-              const active = pathname === link.href;
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`relative py-1.5 text-[10.5px] xl:text-[11.5px] uppercase tracking-[0.23em] font-medium transition-colors duration-400 ${
-                    active
-                      ? "text-lightGold"
-                      : "text-ink/85 hover:text-lightGold"
-                  }`}
-                >
-                  {link.label}
-                  <span
-                    className={`absolute bottom-0 left-0 h-px w-full origin-left bg-lightGold transition-transform duration-400 ${
-                      active ? "scale-x-100" : "scale-x-0"
-                    }`}
+          <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between gap-3 sm:gap-6">
+              {/* LEFT: Logo & Brand Name */}
+              <Link
+                href="/"
+                onClick={closeMenu}
+                className="group flex items-center gap-2.5 sm:gap-3 flex-shrink-0 transition-transform duration-300 hover:scale-[1.02]"
+                aria-label="Shakti Lotus - Home"
+              >
+                <div className="relative h-11 w-11 sm:h-12 sm:w-12 md:h-13 md:w-13 overflow-hidden rounded-full border border-[#C8A96B]/60 bg-[#3D2C20] shadow-[0_0_15px_rgba(200,169,107,0.3)] flex-shrink-0">
+                  <Image
+                    src="/shakti-logo-assets/shakti-loto-logo.png"
+                    alt="Shakti Lotus"
+                    fill
+                    priority
+                    sizes="52px"
+                    className="object-cover p-0.5 rounded-full"
                   />
+                </div>
+                <div className="flex flex-col text-left">
+                  <span className="font-display text-lg sm:text-xl md:text-2xl uppercase tracking-[0.2em] text-[#FFFFFF] font-normal leading-none group-hover:text-[#E2C98F] transition-colors whitespace-nowrap">
+                    SHAKTI LOTUS
+                  </span>
+                  <span className="text-[9px] sm:text-[10px] tracking-[0.28em] uppercase text-[#E2C98F] mt-1 font-semibold whitespace-nowrap">
+                    South America · Asia
+                  </span>
+                </div>
+              </Link>
+
+              {/* CENTER/RIGHT: Desktop Nav Links (Clean, Single Line, No Wrapping) */}
+              <nav
+                className="hidden xl:flex items-center gap-4 2xl:gap-6 flex-shrink-0"
+                aria-label="Main navigation"
+              >
+                {desktopLinks.map((link) => {
+                  const active = pathname === link.href;
+                  return (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className={`relative py-1 whitespace-nowrap text-[11px] 2xl:text-xs uppercase tracking-[0.16em] font-semibold transition-colors duration-300 ${
+                        active
+                          ? "text-[#E2C98F]"
+                          : "text-[#FFFFFF] hover:text-[#E2C98F]"
+                      }`}
+                    >
+                      {link.label}
+                      <span
+                        className={`absolute -bottom-1 left-0 h-0.5 w-full origin-left bg-[#C8A96B] transition-transform duration-300 ${
+                          active ? "scale-x-100" : "scale-x-0"
+                        }`}
+                      />
+                    </Link>
+                  );
+                })}
+              </nav>
+
+              {/* RIGHT: Language Selector & Portal CTA */}
+              <div className="flex items-center gap-2.5 sm:gap-3 flex-shrink-0">
+                <LanguageTrigger />
+
+                <Link
+                  href="/contact"
+                  className="hidden sm:inline-flex rounded-full bg-[#F8F5F1] px-5 py-2 text-[11px] uppercase tracking-[0.18em] text-[#2E1F16] font-bold transition-all duration-300 hover:bg-[#C8A96B] hover:text-[#1A110B] shadow-md"
+                >
+                  Portal
                 </Link>
-              );
-            })}
-          </div>
 
-          {/* Right Actions: Language Selector + CTA */}
-          <div className="hidden items-center gap-4 lg:flex">
-            <LanguageTrigger />
-            <Link
-              href="/contact"
-              className="border border-ink/30 px-6 py-2.5 text-[10.5px] uppercase tracking-[0.25em] text-ink transition-all duration-500 hover:border-lightGold hover:bg-lightGold hover:text-parchment"
-            >
-              Begin
-            </Link>
+                {/* Mobile / Tablet Menu Button */}
+                <button
+                  type="button"
+                  onClick={() => setIsOpen((open) => !open)}
+                  className="xl:hidden relative z-50 flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-full border border-[#EFE6DB]/30 text-[#EFE6DB] hover:border-[#E2C98F] transition-colors"
+                  aria-label={isOpen ? "Close menu" : "Open menu"}
+                >
+                  <motion.span
+                    animate={isOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
+                    className="block h-px w-5 bg-current"
+                  />
+                  <motion.span
+                    animate={isOpen ? { opacity: 0 } : { opacity: 1 }}
+                    className="block h-px w-5 bg-current"
+                  />
+                  <motion.span
+                    animate={isOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
+                    className="block h-px w-5 bg-current"
+                  />
+                </button>
+              </div>
+            </div>
           </div>
+        </div>
+      </header>
 
-          {/* Mobile / Tablet Controls */}
-          <div className="flex items-center gap-2 sm:gap-3 lg:hidden">
-            <LanguageTrigger />
-            <button
-              type="button"
-              onClick={() => setIsOpen((open) => !open)}
-              className="relative z-50 flex h-10 w-10 flex-col items-center justify-center gap-1.5 border border-ink/20 text-ink hover:border-ink transition-colors"
-              aria-label={isOpen ? "Close menu" : "Open menu"}
-            >
-              <motion.span
-                animate={isOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
-                className="block h-px w-5 bg-current"
-              />
-              <motion.span
-                animate={isOpen ? { opacity: 0 } : { opacity: 1 }}
-                className="block h-px w-5 bg-current"
-              />
-              <motion.span
-                animate={isOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
-                className="block h-px w-5 bg-current"
-              />
-            </button>
-          </div>
-        </nav>
-      </motion.header>
-
-      {/* Mobile Overlay Menu */}
+      {/* ══════════════════════════════════════════════════════════════
+          MOBILE / TABLET FULLSCREEN DRAWER (LUXURY AESTHETIC)
+          Warm Cacao Profundo backdrop with gold & sacred sand accents
+          ══════════════════════════════════════════════════════════════ */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -148,29 +182,47 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.35 }}
-            className="fixed inset-0 z-40 flex items-center justify-center bg-parchment/95 px-5 sm:px-8 backdrop-blur-2xl lg:hidden"
+            className="fixed inset-0 z-40 flex items-center justify-center bg-[#5A4636]/98 px-6 backdrop-blur-2xl xl:hidden"
           >
-            <div className="absolute inset-5 border border-ink/10 pointer-events-none" />
+            <div className="absolute inset-6 border border-[#C8A96B]/25 rounded-3xl pointer-events-none" />
+
             <nav
-              className="relative z-10 flex flex-col items-center gap-4 sm:gap-5 text-center max-h-[85vh] w-full overflow-y-auto py-6"
+              className="relative z-10 flex flex-col items-center gap-4 text-center max-h-[85vh] w-full overflow-y-auto py-8"
               aria-label="Mobile navigation"
             >
-              <div className="mb-2 text-lightGold">
-                <BrandLogo big={true} />
+              <div className="relative h-16 w-16 mb-2 overflow-hidden rounded-full border border-[#C8A96B]/50 bg-[#4A3828] shadow-[0_0_20px_rgba(200,169,107,0.3)]">
+                <Image
+                  src="/shakti-logo-assets/shakti-loto-logo.png"
+                  alt="Shakti Lotus"
+                  fill
+                  sizes="64px"
+                  className="object-cover p-1 rounded-full"
+                />
               </div>
+
+              <div className="mb-4">
+                <span className="font-display text-2xl uppercase tracking-[0.2em] text-[#FFFFFF] font-medium">
+                  SHAKTI LOTUS
+                </span>
+                <p className="text-[10px] uppercase tracking-[0.25em] text-[#E2C98F] font-semibold mt-1">
+                  South America · Asia
+                </p>
+              </div>
+
+              <div className="h-px w-16 bg-[#C8A96B]/40 mb-3" />
 
               {allLinks.map((link, index) => (
                 <motion.div
                   key={link.href}
-                  initial={{ opacity: 0, y: 12 }}
+                  initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.04 * index, duration: 0.35 }}
+                  transition={{ delay: 0.03 * index, duration: 0.3 }}
                 >
                   <Link
                     href={link.href}
                     onClick={closeMenu}
-                    className={`font-display text-xl sm:text-3xl uppercase tracking-[0.14em] transition-colors duration-300 ${
-                      pathname === link.href ? "text-lightGold" : "text-ink/90 hover:text-lightGold"
+                    className={`font-display text-xl uppercase tracking-[0.18em] transition-colors duration-300 ${
+                      pathname === link.href ? "text-[#E2C98F]" : "text-[#EFE6DB]/90 hover:text-[#E2C98F]"
                     }`}
                   >
                     {link.label}
@@ -179,27 +231,28 @@ export default function Navbar() {
               ))}
 
               <motion.div
-                initial={{ opacity: 0, y: 12 }}
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.04 * allLinks.length, duration: 0.35 }}
-                className="mt-3 flex flex-col items-center gap-3 w-full max-w-xs"
+                transition={{ delay: 0.03 * allLinks.length, duration: 0.3 }}
+                className="mt-4 flex flex-col items-center gap-3 w-full max-w-xs"
               >
                 <button
+                  type="button"
                   onClick={() => {
                     closeMenu();
                     setIsModalOpen(true);
                   }}
-                  className="w-full border border-ink/20 py-2.5 text-[11px] uppercase tracking-[0.2em] text-ink/90 hover:border-ink transition-colors"
+                  className="w-full rounded-full border border-[#C8A96B]/40 py-2.5 text-[10px] uppercase tracking-[0.25em] text-[#EFE6DB] hover:border-[#E2C98F] transition-colors"
                 >
-                  Language: <span className="text-lightGold font-medium">{currentLanguage.name}</span>
+                  Language: <span className="text-[#E2C98F] font-medium">{currentLanguage.name}</span>
                 </button>
 
                 <Link
                   href="/contact"
                   onClick={closeMenu}
-                  className="w-full border border-ink bg-ink/5 py-3.5 text-xs uppercase tracking-[0.25em] text-ink hover:bg-ink hover:text-parchment transition-colors text-center font-medium"
+                  className="w-full rounded-full bg-[#C8A96B] py-3 text-xs uppercase tracking-[0.25em] text-[#5A4636] font-semibold hover:bg-[#F8F5F1] transition-colors text-center shadow-lg"
                 >
-                  Begin Journey
+                  Contact
                 </Link>
               </motion.div>
             </nav>

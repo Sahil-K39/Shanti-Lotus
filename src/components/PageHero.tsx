@@ -20,22 +20,22 @@ export default function PageHero({
   return (
     <section
       className={`relative min-h-[60vh] flex items-center justify-center overflow-hidden ${
-        dark ? "bg-deepPlum text-ivory" : "bg-ivory text-textDark"
+        dark ? "bg-[#261710] text-[#F8F5F1]" : "bg-[#F8F5F1] text-[#261710]"
       }`}
     >
       {/* Background atmospheric elements */}
       <div
         className={`absolute top-20 right-[-10%] w-[600px] h-[600px] rounded-full blur-3xl animate-breathe pointer-events-none ${
           dark
-            ? "bg-terracotta/10"
-            : "bg-lotusPink/10"
+            ? "bg-[#B8904F]/10"
+            : "bg-[#6F8F7A]/10"
         }`}
       />
       <div
         className={`absolute bottom-20 left-[-10%] w-[500px] h-[700px] rounded-full blur-3xl animate-breathe pointer-events-none ${
           dark
-            ? "bg-antiqueGold/5"
-            : "bg-antiqueGold/5"
+            ? "bg-[#B8904F]/5"
+            : "bg-[#B8904F]/5"
         }`}
         style={{ animationDelay: "-4s" }}
       />
@@ -49,7 +49,7 @@ export default function PageHero({
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
-          className="font-display text-5xl md:text-6xl lg:text-7xl mb-6 leading-tight tracking-wide"
+          className="font-display text-5xl md:text-6xl lg:text-7xl mb-6 leading-tight tracking-wide font-normal"
         >
           {title}
         </motion.h1>
@@ -63,9 +63,9 @@ export default function PageHero({
               delay: 0.3,
               ease: [0.25, 0.1, 0.25, 1],
             }}
-            className={`text-lg md:text-xl font-body font-light leading-relaxed max-w-2xl ${
+            className={`text-lg md:text-xl font-body font-normal leading-relaxed max-w-2xl ${
               alignment === "center" ? "mx-auto" : ""
-            } ${dark ? "text-ivory/70" : "text-muted"}`}
+            } ${dark ? "text-[#F8F5F1]" : "text-[#33231A]"}`}
           >
             {subtitle}
           </motion.p>
@@ -76,9 +76,9 @@ export default function PageHero({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2, delay: 0.6 }}
-            className={`mt-10 font-display text-xl md:text-2xl italic leading-relaxed max-w-2xl ${
+            className={`mt-10 font-display text-xl md:text-2xl italic leading-relaxed max-w-2xl font-normal ${
               alignment === "center" ? "mx-auto" : ""
-            } ${dark ? "text-antiqueGold/70" : "text-antiqueGold/80"}`}
+            } ${dark ? "text-[#E2C98F]" : "text-[#8C6527]"}`}
           >
             &ldquo;{quote}&rdquo;
           </motion.blockquote>

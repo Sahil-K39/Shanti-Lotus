@@ -50,57 +50,57 @@ export default function ContactContent() {
   };
 
   return (
-    <div className="min-h-screen bg-[#EFE6DB] text-[#4D667D]">
+    <div className="min-h-screen bg-[#EFE6DB] text-[#261710]">
       <section className="px-6 pb-12 md:pb-24 pt-36 sm:px-8 md:pb-32 md:pt-48">
         <div className="mx-auto grid max-w-[1200px] gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           
           {/* Left Column: Info & Editorial Photo */}
           <AnimatedSection direction="left" className="space-y-10 text-center lg:text-left">
             <div>
-              <p className="text-[10px] tracking-[0.35em] uppercase text-[#C8A96B] font-medium">
+              <p className="text-xs tracking-[0.25em] uppercase text-[#261710] font-bold">
                 Contact
               </p>
-              <h1 className="mt-4 font-display text-4xl sm:text-6xl md:text-7xl font-light uppercase tracking-wide leading-[1.08] text-[#4D667D]">
-                Begin Your <span className="italic text-[#C8A96B]">Journey</span>
+              <h1 className="mt-4 font-display text-4xl sm:text-6xl md:text-7xl font-normal uppercase tracking-wide leading-[1.08] text-[#261710]">
+                Begin Your <span className="italic text-[#8C6527] font-serif">Journey</span>
               </h1>
-              <div className="h-px w-16 bg-[#C8A96B]/50 my-6 mx-auto lg:mx-0" />
-              <p className="max-w-xl text-base font-light leading-[2] text-[#4D667D]/80 mx-auto lg:mx-0">
+              <div className="h-0.5 w-16 bg-[#8C6527]/50 my-6 mx-auto lg:mx-0" />
+              <p className="max-w-xl text-base font-normal leading-[2] text-[#33231A] mx-auto lg:mx-0">
                 Write to share where you are, what you are seeking, and which space is calling you. Your message will be met with clarity, care, and presence.
               </p>
             </div>
 
             {/* Contact Pills */}
-            <div className="mx-auto grid max-w-md gap-3 text-sm text-[#4D667D]/85 lg:mx-0">
+            <div className="mx-auto grid max-w-md gap-3 text-sm text-[#261710] lg:mx-0">
               <a
                 href={brand.contact.instagramUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="group flex items-center justify-between rounded-2xl border border-[#4D667D]/10 bg-white/50 px-5 py-3.5 shadow-sm backdrop-blur-sm transition-all duration-300 hover:border-[#C8A96B]/50 hover:bg-white/80"
+                className="group flex items-center justify-between rounded-2xl border-2 border-[#D8C8B6] bg-[#F8F5F1] px-5 py-3.5 shadow-sm transition-all duration-300 hover:border-[#261710] hover:bg-white"
               >
-                <span className="font-light">Instagram</span>
-                <span className="font-normal text-[#C8A96B] group-hover:text-[#4D667D] transition-colors">
+                <span className="font-semibold">Instagram</span>
+                <span className="font-bold text-[#8C6527] group-hover:text-[#261710] transition-colors">
                   {brand.contact.instagram}
                 </span>
               </a>
 
-              <div className="flex items-center justify-between rounded-2xl border border-[#4D667D]/10 bg-white/50 px-5 py-3.5 shadow-sm backdrop-blur-sm">
-                <span className="font-light">Email</span>
-                <span className="font-normal text-[#4D667D]">{brand.contact.email}</span>
+              <div className="flex items-center justify-between rounded-2xl border-2 border-[#D8C8B6] bg-[#F8F5F1] px-5 py-3.5 shadow-sm">
+                <span className="font-semibold">Email</span>
+                <span className="font-bold text-[#261710]">{brand.contact.email}</span>
               </div>
 
-              <div className="flex items-center justify-between rounded-2xl border border-[#4D667D]/10 bg-white/50 px-5 py-3.5 shadow-sm backdrop-blur-sm">
-                <span className="font-light">Phone</span>
-                <span className="font-normal text-[#4D667D]">{brand.contact.phone}</span>
+              <div className="flex items-center justify-between rounded-2xl border-2 border-[#D8C8B6] bg-[#F8F5F1] px-5 py-3.5 shadow-sm">
+                <span className="font-semibold">Phone</span>
+                <span className="font-bold text-[#261710]">{brand.contact.phone}</span>
               </div>
 
-              <div className="flex items-center justify-between rounded-2xl border border-[#4D667D]/10 bg-white/50 px-5 py-3.5 shadow-sm backdrop-blur-sm">
-                <span className="font-light">Website</span>
-                <span className="font-normal text-[#4D667D]">{brand.contact.website}</span>
+              <div className="flex items-center justify-between rounded-2xl border-2 border-[#D8C8B6] bg-[#F8F5F1] px-5 py-3.5 shadow-sm">
+                <span className="font-semibold">Website</span>
+                <span className="font-bold text-[#261710]">{brand.contact.website}</span>
               </div>
             </div>
 
             {/* Editorial Portrait */}
-            <div className="mx-auto max-w-sm rounded-[28px] border border-[#4D667D]/10 bg-white/40 p-4 shadow-sm backdrop-blur-sm lg:mx-0">
+            <div className="mx-auto max-w-sm rounded-[28px] border-2 border-[#D8C8B6] bg-[#F8F5F1] p-4 shadow-sm lg:mx-0">
               <EditorialImage
                 src={photos.gardenPortrait}
                 alt="Kunti garden portrait"
@@ -113,8 +113,8 @@ export default function ContactContent() {
 
           {/* Right Column: Contact Form */}
           <AnimatedSection direction="right">
-            <div className="rounded-[32px] border border-[#4D667D]/10 bg-white/60 p-6 sm:p-8 md:p-10 shadow-[0_12px_40px_rgba(77,102,125,0.05)] backdrop-blur-xl">
-              <SacredIcon type="lotus" className="mx-auto mb-8 h-10 w-10 text-[#C8A96B]" />
+            <div className="rounded-[32px] border-2 border-[#D8C8B6] bg-[#F8F5F1] p-6 sm:p-8 md:p-10 shadow-sm">
+              <SacredIcon type="lotus" className="mx-auto mb-8 h-10 w-10 text-[#8C6527]" />
 
               {isSuccess ? (
                 <motion.div
@@ -122,15 +122,15 @@ export default function ContactContent() {
                   animate={{ opacity: 1, y: 0 }}
                   className="py-12 text-center"
                 >
-                  <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-[#C8A96B]/15 text-[#C8A96B]">
+                  <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-[#8C6527]/15 text-[#8C6527]">
                     <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M5 13l4 4L19 7" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <h3 className="font-display text-3xl md:text-4xl font-light text-[#4D667D]">
+                  <h3 className="font-display text-3xl md:text-4xl font-medium text-[#261710]">
                     Message Received
                   </h3>
-                  <p className="mt-4 font-light text-base leading-relaxed text-[#4D667D]/75 max-w-md mx-auto">
+                  <p className="mt-4 font-normal text-base leading-relaxed text-[#33231A] max-w-md mx-auto">
                     Thank you for reaching out. Your words have been received with love and reverence. I will connect with you shortly.
                   </p>
                   <button
@@ -139,7 +139,7 @@ export default function ContactContent() {
                       setIsSuccess(false);
                       setFormData({ name: "", email: "", phone: "", interest: "", message: "" });
                     }}
-                    className="mt-8 inline-flex items-center justify-center rounded-full border border-[#4D667D]/20 px-8 py-3 text-xs uppercase tracking-[0.2em] text-[#4D667D] transition-all hover:bg-[#4D667D] hover:text-[#EFE6DB]"
+                    className="mt-8 inline-flex items-center justify-center rounded-full bg-[#261710] px-8 py-3.5 text-xs font-semibold uppercase tracking-[0.2em] text-[#FFFFFF] transition-all hover:bg-[#3D2C20]"
                   >
                     Send Another Message
                   </button>
@@ -150,9 +150,9 @@ export default function ContactContent() {
                   <div>
                     <label
                       htmlFor="name"
-                      className="mb-2 block text-[10px] md:text-[11px] font-medium uppercase tracking-[0.2em] text-[#4D667D]/70"
+                      className="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-[#261710]"
                     >
-                      Your Name <span className="text-[#C8A96B]">*</span>
+                      Your Name <span className="text-[#A8422B]">*</span>
                     </label>
                     <input
                       type="text"
@@ -161,7 +161,7 @@ export default function ContactContent() {
                       placeholder="Enter your full name"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full rounded-2xl border border-[#4D667D]/15 bg-white/70 px-5 py-4 font-light text-[15px] text-[#4D667D] placeholder-[#4D667D]/35 shadow-sm transition-all duration-300 hover:border-[#4D667D]/30 focus:border-[#C8A96B] focus:bg-white focus:outline-none focus:ring-4 focus:ring-[#C8A96B]/15"
+                      className="w-full rounded-2xl border-2 border-[#D8C8B6] bg-white px-5 py-4 font-normal text-[15px] text-[#261710] placeholder-[#736357] shadow-sm transition-all duration-300 hover:border-[#261710] focus:border-[#261710] focus:bg-white focus:outline-none focus:ring-4 focus:ring-[#8C6527]/15"
                     />
                   </div>
 
@@ -169,9 +169,9 @@ export default function ContactContent() {
                   <div>
                     <label
                       htmlFor="email"
-                      className="mb-2 block text-[10px] md:text-[11px] font-medium uppercase tracking-[0.2em] text-[#4D667D]/70"
+                      className="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-[#261710]"
                     >
-                      Your Email <span className="text-[#C8A96B]">*</span>
+                      Your Email <span className="text-[#A8422B]">*</span>
                     </label>
                     <input
                       type="email"
@@ -180,7 +180,7 @@ export default function ContactContent() {
                       placeholder="youremail@example.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full rounded-2xl border border-[#4D667D]/15 bg-white/70 px-5 py-4 font-light text-[15px] text-[#4D667D] placeholder-[#4D667D]/35 shadow-sm transition-all duration-300 hover:border-[#4D667D]/30 focus:border-[#C8A96B] focus:bg-white focus:outline-none focus:ring-4 focus:ring-[#C8A96B]/15"
+                      className="w-full rounded-2xl border-2 border-[#D8C8B6] bg-white px-5 py-4 font-normal text-[15px] text-[#261710] placeholder-[#736357] shadow-sm transition-all duration-300 hover:border-[#261710] focus:border-[#261710] focus:bg-white focus:outline-none focus:ring-4 focus:ring-[#8C6527]/15"
                     />
                   </div>
 
@@ -188,9 +188,9 @@ export default function ContactContent() {
                   <div>
                     <label
                       htmlFor="phone"
-                      className="mb-2 block text-[10px] md:text-[11px] font-medium uppercase tracking-[0.2em] text-[#4D667D]/70"
+                      className="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-[#261710]"
                     >
-                      Phone / WhatsApp <span className="text-[#4D667D]/40">(optional)</span>
+                      Phone / WhatsApp <span className="text-[#736357] font-normal tracking-normal lowercase">(optional)</span>
                     </label>
                     <input
                       type="tel"
@@ -198,7 +198,7 @@ export default function ContactContent() {
                       placeholder="+1 (555) 000-0000"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full rounded-2xl border border-[#4D667D]/15 bg-white/70 px-5 py-4 font-light text-[15px] text-[#4D667D] placeholder-[#4D667D]/35 shadow-sm transition-all duration-300 hover:border-[#4D667D]/30 focus:border-[#C8A96B] focus:bg-white focus:outline-none focus:ring-4 focus:ring-[#C8A96B]/15"
+                      className="w-full rounded-2xl border-2 border-[#D8C8B6] bg-white px-5 py-4 font-normal text-[15px] text-[#261710] placeholder-[#736357] shadow-sm transition-all duration-300 hover:border-[#261710] focus:border-[#261710] focus:bg-white focus:outline-none focus:ring-4 focus:ring-[#8C6527]/15"
                     />
                   </div>
 
@@ -206,7 +206,7 @@ export default function ContactContent() {
                   <div className="relative">
                     <label
                       id="interest-label"
-                      className="mb-2 block text-[10px] md:text-[11px] font-medium uppercase tracking-[0.2em] text-[#4D667D]/70"
+                      className="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-[#261710]"
                     >
                       Area of Interest
                     </label>
@@ -216,22 +216,22 @@ export default function ContactContent() {
                       aria-haspopup="listbox"
                       aria-expanded={isInterestOpen}
                       onClick={() => setIsInterestOpen((open) => !open)}
-                      className={`group flex min-h-[56px] w-full items-center justify-between gap-4 rounded-2xl border px-5 py-4 text-left font-light text-[15px] shadow-sm backdrop-blur-sm transition-all duration-300 ${
+                      className={`group flex min-h-[56px] w-full items-center justify-between gap-4 rounded-2xl border-2 px-5 py-4 text-left font-normal text-[15px] shadow-sm transition-all duration-300 ${
                         isInterestOpen
-                          ? "border-[#C8A96B] bg-white ring-4 ring-[#C8A96B]/15"
-                          : "border-[#4D667D]/15 bg-white/70 hover:border-[#4D667D]/30 hover:bg-white"
+                          ? "border-[#261710] bg-white ring-4 ring-[#8C6527]/15"
+                          : "border-[#D8C8B6] bg-white hover:border-[#261710]"
                       }`}
                     >
-                      <span className={formData.interest ? "text-[#4D667D]" : "text-[#4D667D]/40"}>
+                      <span className={formData.interest ? "text-[#261710] font-medium" : "text-[#736357]"}>
                         {formData.interest || "Select an area of interest"}
                       </span>
                       <span
-                        className={`grid h-7 w-7 flex-none place-items-center rounded-full border border-[#4D667D]/15 bg-[#EFE6DB] text-[#4D667D] transition-transform duration-300 ${
-                          isInterestOpen ? "rotate-180 text-[#C8A96B] border-[#C8A96B]" : ""
+                        className={`grid h-7 w-7 flex-none place-items-center rounded-full border border-[#D8C8B6] bg-[#EFE6DB] text-[#261710] transition-transform duration-300 ${
+                          isInterestOpen ? "rotate-180 text-[#8C6527] border-[#8C6527]" : ""
                         }`}
                       >
                         <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M6 9l6 6 6-6" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 9l6 6 6-6" />
                         </svg>
                       </span>
                     </button>
@@ -253,7 +253,7 @@ export default function ContactContent() {
                           exit={{ opacity: 0, y: -6, scale: 0.99 }}
                           transition={{ duration: 0.16 }}
                           role="listbox"
-                          className="absolute z-30 mt-2 w-full overflow-hidden rounded-2xl border border-[#4D667D]/15 bg-[#EFE6DB] p-2 shadow-xl backdrop-blur-xl"
+                          className="absolute z-30 mt-2 w-full overflow-hidden rounded-2xl border-2 border-[#D8C8B6] bg-[#F8F5F1] p-2 shadow-xl"
                         >
                           {interestOptions.map((option) => {
                             const selected = formData.interest === option;
@@ -267,10 +267,10 @@ export default function ContactContent() {
                                   setFormData({ ...formData, interest: option });
                                   setIsInterestOpen(false);
                                 }}
-                                className={`flex min-h-[44px] w-full items-center justify-between gap-3 rounded-xl px-4 py-2.5 text-left text-sm font-light transition-all duration-200 ${
+                                className={`flex min-h-[44px] w-full items-center justify-between gap-3 rounded-xl px-4 py-2.5 text-left text-sm font-medium transition-all duration-200 ${
                                   selected
-                                    ? "bg-[#C8A96B] text-white font-normal"
-                                    : "text-[#4D667D] hover:bg-white/80 hover:text-[#4D667D]"
+                                    ? "bg-[#261710] text-[#FFFFFF]"
+                                    : "text-[#261710] hover:bg-white hover:text-[#261710]"
                                 }`}
                               >
                                 <span>{option}</span>
@@ -291,9 +291,9 @@ export default function ContactContent() {
                   <div>
                     <label
                       htmlFor="message"
-                      className="mb-2 block text-[10px] md:text-[11px] font-medium uppercase tracking-[0.2em] text-[#4D667D]/70"
+                      className="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-[#261710]"
                     >
-                      Your Message <span className="text-[#C8A96B]">*</span>
+                      Your Message <span className="text-[#A8422B]">*</span>
                     </label>
                     <textarea
                       id="message"
@@ -302,7 +302,7 @@ export default function ContactContent() {
                       placeholder="Share what is calling you..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full resize-none rounded-2xl border border-[#4D667D]/15 bg-white/70 px-5 py-4 font-light text-[15px] leading-relaxed text-[#4D667D] placeholder-[#4D667D]/35 shadow-sm transition-all duration-300 hover:border-[#4D667D]/30 focus:border-[#C8A96B] focus:bg-white focus:outline-none focus:ring-4 focus:ring-[#C8A96B]/15"
+                      className="w-full resize-none rounded-2xl border-2 border-[#D8C8B6] bg-white px-5 py-4 font-normal text-[15px] leading-relaxed text-[#261710] placeholder-[#736357] shadow-sm transition-all duration-300 hover:border-[#261710] focus:border-[#261710] focus:bg-white focus:outline-none focus:ring-4 focus:ring-[#8C6527]/15"
                     />
                   </div>
 
@@ -310,7 +310,7 @@ export default function ContactContent() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="group relative flex min-h-[56px] w-full items-center justify-center overflow-hidden rounded-2xl bg-[#4D667D] px-6 py-4 text-xs font-medium uppercase tracking-[0.25em] text-[#EFE6DB] shadow-md transition-all duration-500 hover:bg-[#C8A96B] hover:text-white disabled:opacity-50"
+                    className="group relative flex min-h-[56px] w-full items-center justify-center overflow-hidden rounded-2xl bg-[#261710] px-6 py-4 text-xs font-bold uppercase tracking-[0.25em] text-[#FFFFFF] shadow-md transition-all duration-500 hover:bg-[#3D2C20] disabled:opacity-50"
                   >
                     <span className="relative z-10 flex items-center gap-2">
                       {isSubmitting ? (

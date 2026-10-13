@@ -1,72 +1,72 @@
 "use client";
 
 import AnimatedSection from "@/components/AnimatedSection";
-import AuroraBackground from "@/components/AuroraBackground";
-import CollectionGrid from "@/components/CollectionGrid";
 import SacredIcon from "@/components/SacredIcon";
-import { photos } from "@/lib/brand";
+import {
+  brand,
+  certifications,
+  individualSessions,
+  photos,
+  sacredPhrases,
+  workWithMeSpaces,
+} from "@/lib/brand";
 import Image from "next/image";
 import Link from "next/link";
 
 import mainHeroPhoto from "../../public/images/kunti/sunset-water-blessing.jpg";
-import mainHeroPhotoMobile from "../../public/images/kunti/sunset-water-blessing-mobile.jpg";
 
 export default function Home() {
   return (
-    <div className="relative z-0">
-      <AuroraBackground />
-
+    <div className="relative z-0 bg-[#EFE6DB] text-[#261710] selection:bg-[#C8A96B]/40 selection:text-[#1A110B]">
       {/* ═══════════════════════════════════════════
-          01 — FULL-BLEED HERO
-          Immersive, magazine-style. Image dominates.
+          01 — EDITORIAL HERO (PURE RAW PHOTOGRAPHY)
+          Raw, authentic, unedited photography.
+          High-contrast typography for 100% visibility.
           ═══════════════════════════════════════════ */}
-      <section className="relative w-full aspect-[900/1004] max-h-[100dvh] md:aspect-auto md:h-screen overflow-hidden mt-20 md:mt-0">
-        {/* Desktop background image */}
-        <div className="hidden md:block absolute inset-0">
+      <section className="relative min-h-screen w-full flex items-end justify-center overflow-hidden pb-16 md:pb-24 pt-44">
+        {/* Raw unedited photo */}
+        <div className="absolute inset-0">
           <Image
             src={mainHeroPhoto}
-            alt="Shakti Loto"
+            alt="Shakti Lotus - Kunti"
             fill
             priority
-            quality={95}
-            placeholder="blur"
-            className="object-cover object-[65%_10%]"
+            quality={100}
+            unoptimized
+            className="object-cover object-[65%_10%] md:object-[65%_10%]"
           />
         </div>
 
-        {/* Mobile background image */}
-        <div className="block md:hidden absolute inset-0">
-          <Image
-            src={mainHeroPhotoMobile}
-            alt="Shakti Loto"
-            fill
-            priority
-            quality={95}
-            placeholder="blur"
-            className="object-cover object-top"
-          />
-        </div>
-        {/* Soft gradient overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+        {/* Natural gradient at the bottom for crisp text readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1A110B]/95 via-[#1A110B]/45 to-transparent pointer-events-none" />
 
-        {/* Centered bottom text — minimal, editorial */}
-        <div className="absolute inset-x-0 bottom-0 z-10 pb-16 md:pb-12 md:pb-24 text-center px-6">
-          <AnimatedSection direction="up" className="space-y-4 md:space-y-5">
-            <h1 className="font-display text-5xl sm:text-7xl md:text-9xl lg:text-[10rem] tracking-[0.12em] text-white uppercase font-light leading-[0.85] drop-shadow-lg">
-              Shakti Loto
+        {/* Hero Content */}
+        <div className="relative z-10 mx-auto max-w-4xl px-6 text-center text-[#FFFFFF]">
+          <AnimatedSection direction="up" className="space-y-4 sm:space-y-6">
+            <div className="inline-flex flex-col items-center gap-2">
+              <div className="inline-flex items-center gap-2 rounded-full bg-[#1A110B]/80 backdrop-blur-md px-6 py-2 border border-[#C8A96B]/60 shadow-xl">
+                <span className="text-xs sm:text-[13px] uppercase tracking-[0.3em] text-[#F8F5F1] font-semibold">
+                  South America · Asia
+                </span>
+              </div>
+              <div className="h-0.5 w-20 bg-[#C8A96B]" />
+            </div>
+
+            <h1 className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl uppercase tracking-[0.16em] font-normal leading-none text-[#FFFFFF] drop-shadow-[0_4px_30px_rgba(0,0,0,0.85)]">
+              Shakti Lotus
             </h1>
-            <p className="font-display text-lg sm:text-2xl md:text-4xl text-white italic font-light pt-2 md:pt-3 drop-shadow-md">
-              A journey back to the divine within.
+
+            <p className="font-serif italic text-xl sm:text-2xl md:text-3xl text-[#FFFFFF] font-normal drop-shadow-[0_2px_15px_rgba(0,0,0,0.9)] tracking-wide">
+              A path back to your universal divine essence
             </p>
-            <div className="pt-10">
+
+            {/* Exactly client specified button */}
+            <div className="pt-6 sm:pt-8 flex items-center justify-center">
               <a
-                href="#welcome"
-                className="inline-flex w-12 h-12 border border-white/30 rounded-full items-center justify-center animate-bounce hover:bg-white/10 transition-colors"
-                aria-label="Scroll down"
+                href="#spaces"
+                className="inline-block rounded-full bg-[#FFFFFF] px-10 py-4 text-xs font-bold uppercase tracking-[0.22em] text-[#261710] transition-all duration-500 hover:bg-[#C8A96B] hover:text-[#1A110B] shadow-2xl hover:scale-105"
               >
-                <svg className="w-4 h-4 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                </svg>
+                Explore my spaces (photos)
               </a>
             </div>
           </AnimatedSection>
@@ -74,216 +74,325 @@ export default function Home() {
       </section>
 
       {/* ═══════════════════════════════════════════
-          02 — WELCOME / INTRO
-          Clean, centered text. Lots of breathing room.
+          02 — SACRED INVOCATION
+          Client's exact invocation with deep crisp dark cacao text
           ═══════════════════════════════════════════ */}
-      <section id="welcome" className="px-6 py-16 md:py-16 md:py-28 lg:py-40 bg-[#EFE6DB]">
-        <div className="mx-auto max-w-2xl text-center">
-          <AnimatedSection direction="up" className="space-y-10">
-            <SacredIcon type="lotus" className="mx-auto h-8 w-8 text-[#C8A96B]/50" />
-            <h2 className="font-display text-3xl md:text-4xl text-[#4D667D] font-light leading-[1.5] tracking-wide">
-              Welcome to my visual space
-            </h2>
-            <div className="h-px w-16 bg-[#C8A96B]/40 mx-auto" />
-            <p className="text-base md:text-lg font-light leading-[2.1] text-[#4D667D]/80">
-              Shakti Loto is a space for deep reconnection with the life force — where ancestral wisdom, embodied practice, and the divine meet to awaken a deeper awareness of the body, the heart, and the spirit.
-            </p>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════
-          03 — EDITORIAL IMAGE STRIP
-          Two side-by-side photos, like a magazine spread
-          ═══════════════════════════════════════════ */}
-      <section className="grid grid-cols-1 md:grid-cols-2">
-        <div className="relative aspect-[4/5] md:aspect-auto md:h-[80vh] overflow-hidden group">
-          <Image
-            src="/media/gallery/IMG_5374.jpg"
-            alt="Conscious Movement"
-            fill
-            quality={95}
-            className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-[1.03]"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-          <div className="absolute bottom-8 left-8 right-8 md:bottom-12 md:left-12">
-            <p className="text-xs md:text-base tracking-[0.3em] uppercase text-white mb-2 font-medium drop-shadow-md">Explore</p>
-            <h3 className="font-display text-4xl md:text-6xl text-white font-light tracking-wide drop-shadow-lg">
-              Tantric Movement
-            </h3>
-          </div>
-        </div>
-        <div className="relative aspect-[4/5] md:aspect-auto md:h-[80vh] overflow-hidden group">
-          <Image
-            src="/media/gallery/IMG_0596.jpg"
-            alt="Sacred Rituals"
-            fill
-            quality={95}
-            className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-[1.03]"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-          <div className="absolute bottom-8 left-8 right-8 md:bottom-12 md:left-12">
-            <p className="text-xs md:text-base tracking-[0.3em] uppercase text-white mb-2 font-medium drop-shadow-md">Discover</p>
-            <h3 className="font-display text-4xl md:text-6xl text-white font-light tracking-wide drop-shadow-lg">
-              Sacred Rituals
-            </h3>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════
-          04 — MANIFESTO QUOTE
-          Full-width centered quote, very editorial
-          ═══════════════════════════════════════════ */}
-      <section className="px-6 py-16 md:py-16 md:py-28 lg:py-40 bg-[#EFE6DB]">
-        <div className="mx-auto max-w-3xl text-center">
+      <section id="invocation" className="bg-[#EFE6DB] py-24 md:py-36 px-6 border-b border-[#C8A96B]/30">
+        <div className="mx-auto max-w-4xl text-center">
           <AnimatedSection direction="up" className="space-y-8">
-            <p className="font-display text-2xl md:text-4xl lg:text-5xl text-[#4D667D] italic font-light leading-[1.5]">
-              "I do not believe that you need to become someone else. I believe there is something within you waiting to be remembered."
-            </p>
+            <SacredIcon type="lotus" className="mx-auto h-9 w-9 text-[#8C6527]" />
+
+            <blockquote className="font-serif italic text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] text-[#261710] font-normal leading-[1.6] max-w-3xl mx-auto">
+              “I invoke the ancient memory that dwells in our blood.
+              <br className="hidden sm:inline" />
+              Walking as a bridge between the earth and the spirit.
+              <br className="hidden sm:inline" />
+              May ancestral wisdom awaken in every heart,
+              <br className="hidden sm:inline" />
+              and guide the return to the purity of being, to the sacred origin where all is one.”
+            </blockquote>
+
             <div className="flex items-center justify-center gap-4 pt-4">
-              <div className="h-px w-12 bg-[#C8A96B]/40" />
-              <p className="text-xs tracking-[0.3em] uppercase text-[#4D667D]/50 font-medium">Kunti</p>
-              <div className="h-px w-12 bg-[#C8A96B]/40" />
+              <div className="h-px w-16 bg-[#261710]/40" />
+              <span className="font-display text-xl uppercase tracking-[0.25em] text-[#261710] font-semibold">
+                Kunti
+              </span>
+              <div className="h-px w-16 bg-[#261710]/40" />
             </div>
           </AnimatedSection>
         </div>
       </section>
 
       {/* ═══════════════════════════════════════════
-          05 — THE OFFERINGS / COLLECTION GRID
-          Visual-first masonry grid, like a shop
+          03 — 4 SACRED PHRASES (IDENTITY ANCHORS)
+          Cards in Blanco Ritual (#F8F5F1) with crisp text
           ═══════════════════════════════════════════ */}
-      <section id="offerings" className="px-6 md:px-12 py-16 md:py-36 bg-white/30">
-        <div className="mx-auto max-w-7xl">
-          <AnimatedSection direction="up" className="text-center space-y-4 mb-20 md:mb-28">
-            <p className="text-[10px] tracking-[0.35em] uppercase text-[#C8A96B] font-medium">Discover</p>
-            <h2 className="font-display text-4xl md:text-6xl text-[#4D667D] font-light tracking-[0.12em] uppercase">
-              The Offerings
+      <section className="bg-[#EFE6DB] py-20 md:py-32 px-6 border-b border-[#C8A96B]/20">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-[#261710] font-normal uppercase tracking-wide">
+              Shakti Lotus
             </h2>
-          </AnimatedSection>
-          <CollectionGrid />
+            <div className="h-0.5 w-16 bg-[#8C6527] mx-auto mt-4" />
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {sacredPhrases.map((phrase, idx) => (
+              <div
+                key={idx}
+                className="rounded-2xl border-2 border-[#D8C8B6] bg-[#F8F5F1] p-8 text-center shadow-sm transition-all duration-500 hover:border-[#8C6527] hover:shadow-md hover:-translate-y-1 flex flex-col items-center justify-center min-h-[160px]"
+              >
+                <SacredIcon
+                  type="lotus"
+                  className={`mb-4 h-6 w-6 ${idx % 2 === 0 ? "text-[#8C6527]" : "text-[#4D667D]"}`}
+                />
+                <p className="font-display text-xl text-[#261710] font-medium leading-snug">
+                  “{phrase}”
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* ═══════════════════════════════════════════
-          06 — FULL-BLEED JOURNEY IMAGE
-          Huge immersive photo with text overlay
+          04 — INDIVIDUAL SESSIONS | 1:1 MENTORSHIP
+          Client's exact heading & 3 offerings
+          High-contrast cards, readable description & button
           ═══════════════════════════════════════════ */}
-      <section className="relative h-[70vh] md:h-[85vh] overflow-hidden">
-        <Image
-          src={photos.sacredTree}
-          alt="The Journey"
-          fill
-          quality={100}
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#2a2a2a]/70 via-[#2a2a2a]/30 to-transparent" />
-        <div className="absolute inset-0 flex items-center z-10">
-          <div className="px-8 md:px-20 max-w-2xl">
-            <AnimatedSection direction="left" className="space-y-4 md:space-y-6">
-              <p className="text-xs sm:text-base tracking-[0.35em] uppercase text-white font-medium drop-shadow-md">The Path</p>
-              <h2 className="font-display text-4xl md:text-7xl lg:text-8xl text-white font-light tracking-wide uppercase leading-[0.95] drop-shadow-lg">
-                The Journey
-              </h2>
-              <div className="h-px w-16 md:w-20 bg-white/70" />
-              <p className="text-base md:text-2xl font-light text-white leading-[1.8] max-w-xl drop-shadow-md">
-                Through Tantra, conscious movement, meditation, Yoga, and ancestral ritual, Shakti Loto invites you to experience spirituality not only as something to understand, but as something to feel, embody, and live.
-              </p>
-              <div className="pt-4 md:pt-6">
-                <Link href="/about" className="inline-block border border-white/80 px-8 py-3 md:px-10 md:py-4 text-xs md:text-sm tracking-[0.25em] uppercase text-white hover:bg-white hover:text-[#4D667D] transition-all duration-500 font-semibold drop-shadow-md">
-                  Read More
+      <section id="sessions" className="bg-[#EFE6DB] py-20 md:py-36 px-6">
+        <div className="mx-auto max-w-6xl">
+          <AnimatedSection direction="up" className="text-center space-y-4 mb-16 md:mb-24">
+            <h2 className="font-display text-4xl sm:text-5xl md:text-6xl text-[#261710] font-normal tracking-wide uppercase">
+              Individual Sessions | 1:1 Mentorship
+            </h2>
+            <div className="h-0.5 w-16 bg-[#8C6527] mx-auto" />
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {individualSessions.map((session, index) => (
+              <div
+                key={index}
+                className="group relative flex flex-col justify-between overflow-hidden rounded-[32px] bg-[#F8F5F1] border-2 border-[#D8C8B6] p-8 sm:p-10 transition-all duration-500 hover:border-[#8C6527] hover:shadow-xl hover:-translate-y-1.5"
+              >
+                <div className="relative mb-6 h-56 w-full overflow-hidden rounded-2xl">
+                  <Image
+                    src={session.image}
+                    alt={session.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1A110B]/85 via-transparent to-transparent" />
+                  <span className="absolute bottom-3 left-4 font-display text-2xl font-semibold text-[#FFFFFF] bg-[#1A110B]/70 rounded-xl px-3.5 py-1 backdrop-blur-sm drop-shadow-md">
+                    {session.number}
+                  </span>
+                </div>
+
+                <div className="flex-1 space-y-3">
+                  <h3 className="font-display text-2xl md:text-3xl font-medium uppercase tracking-wide text-[#261710]">
+                    {session.title}
+                  </h3>
+                  <p className="text-[15px] font-normal leading-relaxed text-[#33231A]">
+                    {session.description}
+                  </p>
+                </div>
+
+                <div className="mt-8 pt-4 border-t border-[#D8C8B6]">
+                  <Link
+                    href={session.href}
+                    className="inline-flex items-center gap-2 rounded-full bg-[#33231A] px-6 py-2.5 text-xs uppercase tracking-[0.2em] text-[#FFFFFF] font-semibold transition-all hover:bg-[#C8A96B] hover:text-[#1A110B] shadow-sm"
+                  >
+                    <span>{session.cta}</span>
+                    <span>→</span>
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════
+          05 — ABOUT KUNTI
+          Exact heading, subtitle & bio from client
+          Crisp white & cream text on warm Cacao Profundo
+          ═══════════════════════════════════════════ */}
+      <section id="about" className="bg-[#4D382A] text-[#F8F5F1] py-24 md:py-36 px-6 relative overflow-hidden">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            {/* Arched Portrait Column */}
+            <div className="lg:col-span-5 order-2 lg:order-1">
+              <div className="relative mx-auto max-w-md">
+                <div className="relative aspect-[3/4] w-full overflow-hidden rounded-t-[180px] rounded-b-3xl border-2 border-[#D8C8B6] shadow-2xl">
+                  <Image
+                    src={photos.roseMeditation}
+                    alt="Kunti - Tantric Yogini"
+                    fill
+                    quality={95}
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1A110B]/90 via-transparent to-transparent" />
+                  <div className="absolute bottom-6 inset-x-0 text-center px-4">
+                    <p className="font-display text-3xl text-[#FFFFFF] font-normal drop-shadow-md">Kunti</p>
+                    <p className="text-xs tracking-[0.3em] uppercase text-[#E2C98F] font-bold drop-shadow-md">Tantric Yogini</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Story & Biography Column — Exact Client Words */}
+            <div className="lg:col-span-7 order-1 lg:order-2 space-y-6">
+              <div className="space-y-2">
+                <h2 className="font-display text-4xl sm:text-5xl md:text-6xl text-[#FFFFFF] font-normal leading-tight">
+                  Namaste, I am Kunti
+                </h2>
+                <p className="font-display text-2xl md:text-3xl text-[#E2C98F] italic font-normal">
+                  Tantric Yogini, traveler of this Earth
+                </p>
+              </div>
+
+              <div className="h-0.5 w-20 bg-[#C8A96B]" />
+
+              <div className="space-y-4 text-base md:text-[17px] font-normal leading-[1.9] text-[#F8F5F1]">
+                <p>
+                  I am here as a bridge between my ancestral roots in South America and the ancient wisdom and traditions of Asia.
+                </p>
+                <p>
+                  I come to accompany you on the path of awakening your feminine essence and your creative energy, holding the space for the journey back to the ultimate truth, where the spirit remembers its purity.
+                </p>
+                <p>
+                  My path and spiritual awakening began in Bolivia on December 21, 2012, during the long-awaited{" "}
+                  <strong className="font-bold text-[#E2C98F] tracking-wide">PACHAKUTI</strong>. It was there that I received the first codes and the activation of the codes of the new humanity and the golden age that was arriving.
+                </p>
+                <p>
+                  I have traveled the world for over a decade, reconnecting with my being and ancestral knowledge—remembering, offering, and transmitting the path of the Great Mother Goddess.
+                </p>
+              </div>
+
+              <div className="pt-4 flex flex-wrap gap-4">
+                <Link
+                  href="/about"
+                  className="rounded-full bg-[#C8A96B] px-9 py-4 text-xs font-bold uppercase tracking-[0.25em] text-[#1A110B] transition-all duration-500 hover:bg-[#FFFFFF] shadow-lg"
+                >
+                  About Kunti
+                </Link>
+                <Link
+                  href="/contact"
+                  className="rounded-full border-2 border-[#FFFFFF] px-9 py-4 text-xs font-bold uppercase tracking-[0.25em] text-[#FFFFFF] transition-all duration-500 hover:bg-[#FFFFFF] hover:text-[#1A110B]"
+                >
+                  Contact
                 </Link>
               </div>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════
-          07 — POETIC STRIP
-          Horizontal mantra, very Lexie-style
-          ═══════════════════════════════════════════ */}
-      <section className="px-6 py-12 md:py-16 bg-[#D8C8B6]/30 text-center overflow-hidden">
-        <AnimatedSection direction="up">
-          <p className="font-display text-sm md:text-base tracking-[0.35em] uppercase text-[#4D667D]/60 font-light whitespace-nowrap">
-            Remember &nbsp;✦&nbsp; Embody &nbsp;✦&nbsp; Explore &nbsp;✦&nbsp; Return &nbsp;✦&nbsp; Blossom
-          </p>
-        </AnimatedSection>
-      </section>
-
-      {/* ═══════════════════════════════════════════
-          08 — TRAVEL GALLERY STRIP
-          3-column image strip, Instagram-like
-          ═══════════════════════════════════════════ */}
-      <section className="grid grid-cols-2 md:grid-cols-4">
-        {[
-          "/media/gallery/IMG_9749.jpg",
-          "/media/gallery/IMG_1873.jpg",
-          "/media/gallery/IMG_2222.jpg",
-          "/media/gallery/IMG_8613.jpg",
-        ].map((src, i) => (
-          <div key={i} className="relative aspect-square overflow-hidden group">
-            <Image
-              src={src}
-              alt={`Gallery ${i + 1}`}
-              fill
-              quality={95}
-              className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-[1.05]"
-            />
-          </div>
-        ))}
-      </section>
-
-      {/* ═══════════════════════════════════════════
-          09 — WORK WITH ME
-          Clean CTA banner
-          ═══════════════════════════════════════════ */}
-      <section className="px-6 py-16 md:py-16 md:py-28 lg:py-40 bg-[#EFE6DB]">
-        <div className="mx-auto max-w-3xl text-center">
-          <AnimatedSection className="space-y-8">
-            <p className="text-[10px] tracking-[0.35em] uppercase text-[#C8A96B] font-medium">Custom Journeys</p>
-            <h2 className="font-display text-4xl md:text-6xl text-[#4D667D] font-light tracking-[0.1em] uppercase">
-              Work With Me
-            </h2>
-            <p className="text-base md:text-lg font-light text-[#4D667D]/70 leading-[2] max-w-2xl mx-auto">
-              Whether you are looking for a personalized 1:1 mentorship, a custom sacred jewelry piece, or to join an upcoming retreat — I am here to guide the unfolding.
-            </p>
-            <div className="pt-4">
-              <Link
-                href="/contact"
-                className="inline-block border border-[#4D667D] px-10 py-4 text-[10px] uppercase tracking-[0.25em] text-[#4D667D] hover:bg-[#4D667D] hover:text-[#EFE6DB] transition-all duration-500"
-              >
-                Begin Your Journey
-              </Link>
             </div>
-          </AnimatedSection>
+          </div>
         </div>
       </section>
 
       {/* ═══════════════════════════════════════════
-          10 — CLOSING FULL-BLEED IMAGE
-          Final emotional impact, like Lexie's footer
+          06 — TRAININGS & CERTIFICATIONS
+          Exact client list & titles
+          High-contrast blue institutions and dark location tags
           ═══════════════════════════════════════════ */}
-      <section className="relative h-[60vh] md:h-[70vh] overflow-hidden flex items-center justify-center">
+      <section className="bg-[#EFE6DB] py-20 md:py-32 px-6 border-y border-[#C8A96B]/25">
+        <div className="mx-auto max-w-5xl">
+          <AnimatedSection direction="up" className="text-center space-y-3 mb-16">
+            <h2 className="font-display text-4xl sm:text-5xl text-[#261710] font-normal tracking-wide uppercase">
+              TRAININGS & CERTIFICATIONS
+            </h2>
+            <div className="h-0.5 w-16 bg-[#8C6527] mx-auto" />
+          </AnimatedSection>
+
+          <div className="divide-y-2 divide-[#D8C8B6] border-y-2 border-[#D8C8B6]">
+            {certifications.map((item, index) => (
+              <div
+                key={index}
+                className="py-6 sm:py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 transition-colors hover:bg-[#F8F5F1] px-4 rounded-xl"
+              >
+                <div className="space-y-2 md:max-w-2xl">
+                  <h3 className="font-display text-xl sm:text-2xl text-[#261710] font-medium leading-snug">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs uppercase tracking-[0.2em] text-[#2C4A63] font-bold">
+                    {item.institution}
+                  </p>
+                </div>
+
+                <div className="md:text-right">
+                  <span className="inline-block rounded-full border-2 border-[#D8C8B6] px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-[#261710] bg-[#FFFFFF] shadow-sm">
+                    {item.location}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════
+          07 — WORK WITH ME
+          Exact client heading, intro, 8 offerings & closing sentence
+          Strong contrast overlays and clear text
+          ═══════════════════════════════════════════ */}
+      <section id="spaces" className="bg-[#EFE6DB] py-20 md:py-36 px-6">
+        <div className="mx-auto max-w-6xl">
+          <AnimatedSection direction="up" className="text-center space-y-4 mb-16 md:mb-20">
+            <h2 className="font-display text-4xl sm:text-5xl md:text-6xl text-[#261710] font-normal tracking-wide uppercase">
+              WORK WITH ME
+            </h2>
+            <div className="h-0.5 w-16 bg-[#8C6527] mx-auto" />
+            <p className="text-base md:text-lg font-normal text-[#33231A] max-w-2xl mx-auto leading-relaxed">
+              Spaces to remember, heal, and awaken your creative energy through the union of mind, body, and soul, allowing us to awaken our consciousness and liberate the spirit.
+            </p>
+          </AnimatedSection>
+
+          {/* 8 Offerings Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {workWithMeSpaces.map((space, index) => (
+              <Link
+                key={index}
+                href={space.href}
+                className="group relative block aspect-[3/4] overflow-hidden rounded-[28px] bg-[#33231A] shadow-md transition-all duration-500 hover:shadow-2xl hover:-translate-y-1.5 border border-[#D8C8B6]"
+              >
+                <Image
+                  src={space.image}
+                  alt={space.name}
+                  fill
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-110 opacity-90 group-hover:opacity-100"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1A110B]/95 via-[#1A110B]/35 to-transparent" />
+                <div className="absolute bottom-6 inset-x-6">
+                  <h3 className="font-display text-2xl text-[#FFFFFF] font-medium uppercase tracking-wide leading-tight group-hover:text-[#E2C98F] transition-colors drop-shadow-md">
+                    {space.name}
+                  </h3>
+                  <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-[#FFFFFF]/20 backdrop-blur-md px-3.5 py-1 text-[11px] uppercase tracking-[0.2em] text-[#FFFFFF] font-semibold group-hover:bg-[#C8A96B] group-hover:text-[#1A110B] transition-all">
+                    <span>Explore</span>
+                    <span className="transition-transform group-hover:translate-x-1">→</span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          {/* Exact Client Closing Sentence */}
+          <div className="mt-20 rounded-3xl bg-[#F8F5F1] border-2 border-[#D8C8B6] p-8 sm:p-12 text-center max-w-3xl mx-auto shadow-sm">
+            <SacredIcon type="lotus" className="mx-auto mb-4 h-7 w-7 text-[#8C6527]" />
+            <p className="font-display text-xl sm:text-2xl text-[#261710] font-normal italic leading-relaxed">
+              “I accompany you to awaken your creative energy and reconnect with your inner wisdom through the path of self-exploration and self-knowledge.”
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════
+          08 — FINAL PHRASE (CLIENT CLOSING)
+          Full-bleed image with strong dark overlay so text is 100% visible
+          ═══════════════════════════════════════════ */}
+      <section className="relative min-h-[70vh] py-28 overflow-hidden flex items-center justify-center">
         <Image
-          src={photos.roseMeditation}
-          alt="A living experience"
+          src={photos.ancestralLineage}
+          alt="Shakti Lotus"
           fill
           quality={95}
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-[#2a2a2a]/50" />
-        <div className="relative z-10 text-center px-6">
-          <AnimatedSection className="space-y-4 md:space-y-6">
-            <h2 className="font-display text-4xl md:text-7xl lg:text-8xl text-white font-light tracking-[0.12em] uppercase drop-shadow-lg">
-              More Than a Project.
-            </h2>
-            <p className="font-display text-xl md:text-5xl text-white italic font-light drop-shadow-md pt-2">
-              A living experience.
-            </p>
-            <div className="pt-6 md:pt-8">
-              <SacredIcon type="lotus" className="mx-auto h-8 w-8 md:h-10 md:w-10 text-[#C8A96B]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1A110B]/95 via-[#1A110B]/80 to-[#1A110B]/60" />
+        <div className="relative z-10 text-center px-6 max-w-4xl">
+          <AnimatedSection className="space-y-8">
+            <blockquote className="font-serif italic text-2xl sm:text-4xl md:text-5xl text-[#FFFFFF] font-normal leading-relaxed drop-shadow-2xl max-w-3xl mx-auto">
+              “Each space is an invitation to return to yourself,
+              <br className="hidden sm:inline" />
+              to inhabit your body as a temple,
+              <br className="hidden sm:inline" />
+              and to remember the wisdom that already lives within you.”
+            </blockquote>
+            <div className="h-0.5 w-16 bg-[#C8A96B] mx-auto" />
+            <div className="pt-2">
+              <Link
+                href="/contact"
+                className="inline-block rounded-full bg-[#C8A96B] px-10 py-4 text-xs font-bold uppercase tracking-[0.25em] text-[#1A110B] transition-all duration-500 hover:bg-[#FFFFFF] shadow-2xl hover:scale-105"
+              >
+                Contact
+              </Link>
             </div>
           </AnimatedSection>
         </div>

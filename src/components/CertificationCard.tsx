@@ -25,19 +25,19 @@ export default function CertificationCard({
         delay: index * 0.1,
         ease: [0.25, 0.1, 0.25, 1],
       }}
-      className="group flex items-start gap-4 p-6 rounded-2xl bg-surface/50 border border-lotusPink/10 hover:border-antiqueGold/20 hover:shadow-glow transition-all duration-700"
+      className="group flex items-start gap-4 p-6 rounded-2xl bg-[#F8F5F1] border-2 border-[#D8C8B6] hover:border-[#2C4A63] hover:shadow-md transition-all duration-700"
     >
-      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-antiqueGold/10 flex items-center justify-center text-antiqueGold group-hover:bg-antiqueGold/20 transition-colors duration-500">
+      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#2C4A63]/10 flex items-center justify-center text-[#2C4A63] group-hover:bg-[#2C4A63]/20 transition-colors duration-500">
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
-            strokeWidth={1.5}
+            strokeWidth={1.8}
             d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
           />
         </svg>
       </div>
-      <p className="font-body font-light text-textDark/80 leading-relaxed pt-2">
+      <p className="font-body font-medium text-[#261710] leading-relaxed pt-2">
         {title}
       </p>
     </motion.div>

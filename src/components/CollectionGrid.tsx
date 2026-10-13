@@ -33,17 +33,17 @@ export default function CollectionGrid() {
             </Link>
             
             <div className="pt-8 text-center space-y-3">
-              <h3 className="font-display text-xl md:text-2xl tracking-[0.18em] text-[#4D667D] uppercase font-light">
+              <h3 className="font-display text-xl md:text-2xl tracking-[0.18em] text-[#261710] uppercase font-medium">
                 {item.title}
               </h3>
-              <div className="h-px w-10 bg-[#C8A96B]/40 mx-auto" />
-              <p className="text-sm font-light text-[#4D667D]/65 leading-relaxed max-w-xs mx-auto">
+              <div className="h-0.5 w-10 bg-[#8C6527]/40 mx-auto" />
+              <p className="text-sm font-normal text-[#33231A] leading-relaxed max-w-xs mx-auto">
                 {item.description}
               </p>
-              <div className="pt-1">
+              <div className="pt-2">
                 <Link 
                   href={item.href}
-                  className="inline-block text-[9px] uppercase tracking-[0.25em] text-[#4D667D]/70 hover:text-[#C8A96B] transition-colors border-b border-transparent hover:border-[#C8A96B] pb-0.5"
+                  className="inline-block text-[11px] uppercase tracking-[0.2em] font-bold text-[#261710] hover:text-[#8C6527] transition-colors border-b-2 border-[#261710] hover:border-[#8C6527] pb-1"
                 >
                   {item.cta}
                 </Link>

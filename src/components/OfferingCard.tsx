@@ -50,12 +50,12 @@ export default function OfferingCard({
         {(duration || location) && (
           <div className="absolute bottom-4 left-4 flex gap-2">
             {duration && (
-              <span className="px-3 py-1 rounded-full bg-ivory/90 backdrop-blur-sm text-xs font-body font-medium text-textDark">
+              <span className="px-3 py-1 rounded-full bg-[#1A110B]/80 text-[#F8F5F1] backdrop-blur-sm text-xs font-body font-semibold">
                 {duration}
               </span>
             )}
             {location && (
-              <span className="px-3 py-1 rounded-full bg-ivory/90 backdrop-blur-sm text-xs font-body font-medium text-textDark">
+              <span className="px-3 py-1 rounded-full bg-[#1A110B]/80 text-[#F8F5F1] backdrop-blur-sm text-xs font-body font-semibold">
                 {location}
               </span>
             )}
@@ -65,15 +65,15 @@ export default function OfferingCard({
 
       {/* Content */}
       <div className="p-8">
-        <h3 className="font-display text-2xl mb-3 text-textDark group-hover:text-terracotta transition-colors duration-500">
+        <h3 className="font-display text-2xl mb-3 text-[#261710] font-medium group-hover:text-[#8C6527] transition-colors duration-500">
           {title}
         </h3>
-        <p className="text-sm font-body font-light text-textDark/60 leading-relaxed mb-6">
+        <p className="text-sm font-body font-normal text-[#33231A] leading-relaxed mb-6">
           {description}
         </p>
         <Link
           href={href}
-          className="inline-flex items-center gap-2 text-xs font-body font-medium uppercase tracking-[0.15em] text-antiqueGold hover:text-terracotta transition-colors duration-500 group/btn"
+          className="inline-flex items-center gap-2 text-xs font-body font-bold uppercase tracking-[0.18em] text-[#261710] hover:text-[#8C6527] transition-colors duration-500 group/btn"
         >
           Learn More
           <svg
