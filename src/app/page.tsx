@@ -13,7 +13,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 
-import mainHeroPhoto from "../../public/images/kunti/sunset-water-blessing.jpg";
+import mainHeroPhoto from "../../public/images/kunti/69CE473D-7C7E-43EB-883E-0375AFE9467A.jpg";
 
 export default function Home() {
   return (
