@@ -57,13 +57,13 @@ export async function POST(request: NextRequest) {
     const safeMessage = escapeHtml(message);
 
     await resend.emails.send({
-      from: `Shakti Loto Contact <${fromEmail}>`,
+      from: `Shakti Lotus Contact <${fromEmail}>`,
       to: [toEmail],
       replyTo: email,
       subject: `New Contact: ${interest || 'General Inquiry'} from ${name}`,
       html: `
         <div style="font-family: 'Georgia', serif; max-width: 600px; margin: 0 auto; padding: 40px 20px; background: #F8F5F1;">
-          <h1 style="color: #B8904F; font-size: 24px; font-weight: 300; border-bottom: 1px solid #C8A96B; padding-bottom: 16px;">New Contact from Shakti Loto</h1>
+          <h1 style="color: #B8904F; font-size: 24px; font-weight: 300; border-bottom: 1px solid #C8A96B; padding-bottom: 16px;">New Contact from Shakti Lotus</h1>
           <div style="padding: 20px 0;">
             <p style="color: #5A4636; margin: 8px 0;"><strong>Name:</strong> ${safeName}</p>
             <p style="color: #5A4636; margin: 8px 0;"><strong>Email:</strong> ${safeEmail}</p>
@@ -73,7 +73,7 @@ export async function POST(request: NextRequest) {
               <p style="color: #2F2A24; font-style: italic; white-space: pre-wrap;">${safeMessage}</p>
             </div>
           </div>
-          <p style="color: #9F7945; font-size: 12px; margin-top: 32px; text-align: center;">Sent from Shakti Loto Contact Form</p>
+          <p style="color: #9F7945; font-size: 12px; margin-top: 32px; text-align: center;">Sent from Shakti Lotus Contact Form</p>
         </div>
       `,
     });

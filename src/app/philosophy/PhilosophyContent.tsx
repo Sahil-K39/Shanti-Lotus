@@ -82,7 +82,7 @@ const philosophyPillars = [
                 "I believe there is something within you waiting to be remembered."
               </p>
               <p>
-                Shakti Loto is born from the deep realization that we are not separate from the sacred. We do not need to renounce the world or deny our human experience to touch the divine.
+                Shakti Lotus is born from the deep realization that we are not separate from the sacred. We do not need to renounce the world or deny our human experience to touch the divine.
               </p>
               <p>
                 Our philosophy embraces the union of Shiva (pure awareness) and Shakti (creative life current). When we allow the body to become an altar and ritual to become our language, life itself becomes a devotional return to truth.

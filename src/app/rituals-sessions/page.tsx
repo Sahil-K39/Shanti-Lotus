@@ -4,9 +4,9 @@ import RitualsSessionsContent from "./RitualsSessionsContent";
 export const metadata: Metadata = {
   title: "Rituals & Sessions",
   description:
-    "Individual sessions, ritual spaces, feminine energy work, and spiritual integration with Kunti Shakti Loto.",
+    "Individual sessions, ritual spaces, feminine energy work, and spiritual integration with Kunti at Shakti Lotus.",
   openGraph: {
-    title: "Rituals & Sessions | Shakti Loto",
+    title: "Rituals & Sessions | Shakti Lotus",
     description: "Deep guidance to reconnect with your energy, release blockages, and return to your center.",
   },
 };

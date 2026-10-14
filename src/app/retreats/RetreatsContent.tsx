@@ -196,7 +196,7 @@ export default function RetreatsContent() {
             <div className="flex items-center justify-center gap-4 pt-4">
               <div className="h-0.5 w-12 bg-[#8C6527]/50" />
               <p className="text-xs tracking-[0.25em] uppercase text-[#261710] font-bold">
-                Kunti Shakti Loto
+                Kunti · Shakti Lotus
               </p>
               <div className="h-0.5 w-12 bg-[#8C6527]/50" />
             </div>

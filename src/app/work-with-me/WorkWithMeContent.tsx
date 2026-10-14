@@ -4,7 +4,7 @@ import Link from "next/link";
 import AnimatedSection from "@/components/AnimatedSection";
 import EditorialImage from "@/components/EditorialImage";
 import SacredIcon from "@/components/SacredIcon";
-import { brand, offerings, photos, poeticPhrases } from "@/lib/brand";
+import { brand, offerings, photos, sacredPhrases } from "@/lib/brand";
 
 const descriptions = [
   "Tantric remembrance through mantra, ritual, subtle body devotion, and the living wisdom of Shakti.",
@@ -31,10 +31,10 @@ export default function WorkWithMeContent() {
           </h1>
           <div className="h-0.5 w-16 bg-[#8C6527] mx-auto" />
           <p className="mx-auto max-w-3xl text-base font-normal leading-relaxed text-[#33231A] md:text-lg">
-            Spaces to remember, heal, and awaken your creative energy through the union of mind, body, and soul, so we may awaken our consciousness and liberate the spirit.
+            {brand.workWithMeIntro}
           </p>
           <p className="mx-auto max-w-3xl text-base font-normal leading-relaxed text-[#33231A] md:text-lg">
-            I accompany you in awakening your creative energy and reconnecting with your inner wisdom through the path of self-exploration and self-knowledge.
+            {brand.workWithMeClosing}
           </p>
         </AnimatedSection>
       </section>
@@ -125,11 +125,11 @@ export default function WorkWithMeContent() {
               Identity Anchor
             </p>
             <h2 className="mt-5 font-display text-4xl leading-tight text-[#261710] md:text-6xl font-normal">
-              <span className="text-[#8C6527]">{poeticPhrases[3]}</span>
+              <span className="text-[#8C6527]">{sacredPhrases[3]}</span>
             </h2>
-            <p className="mt-8 font-serif italic text-xl md:text-2xl font-normal leading-relaxed text-[#33231A]">
-              “Each space is an invitation to return to yourself, to inhabit your body as a temple, and to remember the wisdom that already lives within you.”
-            </p>
+            <blockquote className="mt-8 font-serif italic text-xl md:text-2xl font-normal leading-relaxed text-[#33231A]">
+              “{brand.finalPhrase}”
+            </blockquote>
             <div className="pt-4">
               <Link
                 href="/contact"

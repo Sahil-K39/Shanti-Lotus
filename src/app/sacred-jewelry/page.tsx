@@ -4,9 +4,9 @@ import SacredJewelryContent from "./SacredJewelryContent";
 export const metadata: Metadata = {
   title: "Sacred Jewelry / Shop",
   description:
-    "Jewelry of the Soul by Kunti Shakti Loto: sacred adornments, ritual talismans, and devotional pieces.",
+    "Jewelry of the Soul by Kunti at Shakti Lotus: sacred adornments, ritual talismans, and devotional pieces.",
   openGraph: {
-    title: "Sacred Jewelry / Shop | Shakti Loto",
+    title: "Sacred Jewelry / Shop | Shakti Lotus",
     description: "Intentional adornments created as talismans for devotion, protection, beauty, and remembrance.",
   },
 };

@@ -6,7 +6,7 @@ type SacredVisualProps = {
   label?: string;
 };
 
-export default function SacredVisual({ className = "", icon = "lotus", label = "Shakti Loto" }: SacredVisualProps) {
+export default function SacredVisual({ className = "", icon = "lotus", label = "Shakti Lotus" }: SacredVisualProps) {
   return (
     <div
       className={`sacred-visual sacred-glow relative grid place-items-center overflow-hidden border border-lightGold/28 bg-blancoRitual ${className}`}

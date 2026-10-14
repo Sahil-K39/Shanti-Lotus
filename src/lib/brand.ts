@@ -13,6 +13,10 @@ My path and spiritual awakening began in Bolivia on December 21, 2012, during th
   finalPhrase: `Each space is an invitation to return to yourself,
 to inhabit your body as a temple,
 and to remember the wisdom that already lives within you.`,
+  workWithMeIntro:
+    "Spaces to remember, heal, and awaken your creative energy through the union of mind, body, and soul, allowing us to awaken our consciousness and liberate the spirit.",
+  workWithMeClosing:
+    "I accompany you to awaken your creative energy and reconnect with your inner wisdom through the path of self-exploration and self-knowledge.",
   contact: {
     instagram: "@shakti_loto_",
     instagramUrl: "https://www.instagram.com/shakti_loto_/",
@@ -45,7 +49,7 @@ export const individualSessions = [
     description:
       "Practices and guidance to expand your consciousness and root your spirituality in daily life.",
     cta: "Explore Integration",
-    href: "/mentorship",
+    href: "/rituals-sessions",
     image: "/media/gallery/IMG_5374.jpg",
   },
   {
@@ -54,46 +58,60 @@ export const individualSessions = [
     description:
       "Deep support to reconnect with your energy, release blockages, and return to your center.",
     cta: "Explore Mentorship",
-    href: "/mentorship",
+    href: "/rituals-sessions",
     image: "/media/gallery/IMG_1873.jpg",
   },
 ];
 
-export const certifications = [
+export interface Certification {
+  highlight: string;
+  detail: string;
+  title: string;
+  institution?: string;
+  location?: string;
+  place?: string;
+}
+
+export const certifications: Certification[] = [
   {
+    highlight: "CERTIFIED by natives",
+    detail: "in the tradition of Hatha Yoga and Kundalini Tantra Yoga in Rishikesh, INDIA",
     title: "CERTIFIED by natives in the tradition of Hatha Yoga and Kundalini Tantra Yoga in Rishikesh, INDIA",
     institution: "YOGAGARA & KUNDALINI ASHRAM",
     location: "Rishikesh, India",
     place: "YOGAGARA & KUNDALINI ASHRAM",
-    type: "Immersion & Tradition",
   },
   {
+    highlight: "Traditional Shaiva Shakta Tantra",
+    detail: "in the Himalayas",
     title: "Traditional Shaiva Shakta Tantra in the Himalayas",
     institution: "LALITA SHAKTA TANTRA TEMPLE",
     location: "Himalayas, India",
     place: "LALITA SHAKTA TANTRA TEMPLE",
-    type: "Temple Lineage",
   },
   {
+    highlight: "Mystic Sounds of the Himalayas",
+    detail: "",
     title: "Mystic Sounds of the Himalayas",
     institution: "HIMALAYAN ACADEMY OF SOUND",
     location: "Himalayas, India",
     place: "HIMALAYAN ACADEMY OF SOUND",
-    type: "Sound Alchemy",
   },
   {
+    highlight: "Ayurveda Practitioner",
+    detail: "in Kerala, Dharamshala, and Chile",
     title: "Ayurveda Practitioner in Kerala, Dharamshala, and Chile",
     institution: "ABSOLUTE AYURVEDA / AYUSKAMA & SOMOS INDIA",
     location: "Kerala · Dharamshala · Chile",
     place: "ABSOLUTE AYURVEDA / AYUSKAMA & SOMOS INDIA",
-    type: "Holistic Health",
   },
   {
+    highlight: "Reiki",
+    detail: "",
     title: "Reiki",
-    institution: "USUI REIKI RYOHO",
-    location: "Global Lineage",
-    place: "USUI REIKI RYOHO",
-    type: "Energy Medicine",
+    institution: "",
+    location: "",
+    place: "",
   },
 ];
 
@@ -124,7 +142,6 @@ export const poeticPhrases = [
   "Your body is a portal",
   "The sacred lives within you",
   "Awaken your creative energy",
-  "A space for deep reconnection with the life force",
 ];
 
 export const homepageExperiences = [
@@ -133,29 +150,29 @@ export const homepageExperiences = [
     description: "Spaces to activate your creative energy, heal your bond with the feminine, and inhabit your body with presence.",
     cta: "EXPLORE RITUALS →",
     href: "/rituals-sessions",
-    image: "/media/gallery/IMG_0596.jpg"
+    image: "/media/gallery/IMG_0596.jpg",
   },
   {
     title: "1:1 MENTORSHIP",
     description: "Deep support to reconnect with your energy, release blockages, and return to your center.",
     cta: "EXPLORE MENTORSHIP →",
-    href: "/mentorship",
-    image: "/media/gallery/IMG_5374.jpg"
+    href: "/rituals-sessions",
+    image: "/media/gallery/IMG_5374.jpg",
   },
   {
     title: "RETREATS",
     description: "Spaces to remember, heal, and awaken your creative energy through the union of mind, body, and soul.",
     cta: "EXPLORE RETREATS →",
     href: "/retreats",
-    image: "/media/gallery/IMG_1873.jpg"
+    image: "/media/gallery/IMG_1873.jpg",
   },
   {
     title: "SACRED JEWELRY",
     description: "Objects created with intention, symbolism, and connection to your universal divine essence.",
     cta: "DISCOVER THE JEWELRY →",
     href: "/sacred-jewelry",
-    image: "/media/gallery/IMG_2222.jpg"
-  }
+    image: "/media/gallery/IMG_2222.jpg",
+  },
 ];
 
 export const photos = {

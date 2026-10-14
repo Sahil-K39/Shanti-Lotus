@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div className="relative z-0 bg-[#EFE6DB] text-[#261710] selection:bg-[#C8A96B]/40 selection:text-[#1A110B]">
       {/* ═══════════════════════════════════════════
-          01 — EDITORIAL HERO (PURE RAW PHOTOGRAPHY)
+          01 — EDITORIAL HERO (SHAKTI LOTUS)
           Raw, authentic, unedited photography.
           High-contrast typography for 100% visibility.
           ═══════════════════════════════════════════ */}
@@ -75,7 +75,7 @@ export default function Home() {
 
       {/* ═══════════════════════════════════════════
           02 — SACRED INVOCATION
-          Client's exact invocation with deep crisp dark cacao text
+          Client's exact invocation quote & button
           ═══════════════════════════════════════════ */}
       <section id="invocation" className="bg-[#EFE6DB] py-24 md:py-36 px-6 border-b border-[#C8A96B]/30">
         <div className="mx-auto max-w-4xl text-center">
@@ -99,102 +99,22 @@ export default function Home() {
               </span>
               <div className="h-px w-16 bg-[#261710]/40" />
             </div>
+
+            <div className="pt-4 flex items-center justify-center">
+              <a
+                href="#spaces"
+                className="inline-block rounded-full bg-[#261710] px-9 py-3.5 text-xs font-bold uppercase tracking-[0.22em] text-[#FFFFFF] transition-all duration-500 hover:bg-[#8C6527] shadow-md hover:scale-105"
+              >
+                Explore my spaces (photos)
+              </a>
+            </div>
           </AnimatedSection>
         </div>
       </section>
 
       {/* ═══════════════════════════════════════════
-          03 — 4 SACRED PHRASES (IDENTITY ANCHORS)
-          Cards in Blanco Ritual (#F8F5F1) with crisp text
-          ═══════════════════════════════════════════ */}
-      <section className="bg-[#EFE6DB] py-20 md:py-32 px-6 border-b border-[#C8A96B]/20">
-        <div className="mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-[#261710] font-normal uppercase tracking-wide">
-              Shakti Lotus
-            </h2>
-            <div className="h-0.5 w-16 bg-[#8C6527] mx-auto mt-4" />
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {sacredPhrases.map((phrase, idx) => (
-              <div
-                key={idx}
-                className="rounded-2xl border-2 border-[#D8C8B6] bg-[#F8F5F1] p-8 text-center shadow-sm transition-all duration-500 hover:border-[#8C6527] hover:shadow-md hover:-translate-y-1 flex flex-col items-center justify-center min-h-[160px]"
-              >
-                <SacredIcon
-                  type="lotus"
-                  className={`mb-4 h-6 w-6 ${idx % 2 === 0 ? "text-[#8C6527]" : "text-[#4D667D]"}`}
-                />
-                <p className="font-display text-xl text-[#261710] font-medium leading-snug">
-                  “{phrase}”
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════
-          04 — INDIVIDUAL SESSIONS | 1:1 MENTORSHIP
-          Client's exact heading & 3 offerings
-          High-contrast cards, readable description & button
-          ═══════════════════════════════════════════ */}
-      <section id="sessions" className="bg-[#EFE6DB] py-20 md:py-36 px-6">
-        <div className="mx-auto max-w-6xl">
-          <AnimatedSection direction="up" className="text-center space-y-4 mb-16 md:mb-24">
-            <h2 className="font-display text-4xl sm:text-5xl md:text-6xl text-[#261710] font-normal tracking-wide uppercase">
-              Individual Sessions | 1:1 Mentorship
-            </h2>
-            <div className="h-0.5 w-16 bg-[#8C6527] mx-auto" />
-          </AnimatedSection>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {individualSessions.map((session, index) => (
-              <div
-                key={index}
-                className="group relative flex flex-col justify-between overflow-hidden rounded-[32px] bg-[#F8F5F1] border-2 border-[#D8C8B6] p-8 sm:p-10 transition-all duration-500 hover:border-[#8C6527] hover:shadow-xl hover:-translate-y-1.5"
-              >
-                <div className="relative mb-6 h-56 w-full overflow-hidden rounded-2xl">
-                  <Image
-                    src={session.image}
-                    alt={session.title}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1A110B]/85 via-transparent to-transparent" />
-                  <span className="absolute bottom-3 left-4 font-display text-2xl font-semibold text-[#FFFFFF] bg-[#1A110B]/70 rounded-xl px-3.5 py-1 backdrop-blur-sm drop-shadow-md">
-                    {session.number}
-                  </span>
-                </div>
-
-                <div className="flex-1 space-y-3">
-                  <h3 className="font-display text-2xl md:text-3xl font-medium uppercase tracking-wide text-[#261710]">
-                    {session.title}
-                  </h3>
-                  <p className="text-[15px] font-normal leading-relaxed text-[#33231A]">
-                    {session.description}
-                  </p>
-                </div>
-
-                <div className="mt-8 pt-4 border-t border-[#D8C8B6]">
-                  <Link
-                    href={session.href}
-                    className="inline-flex items-center gap-2 rounded-full bg-[#33231A] px-6 py-2.5 text-xs uppercase tracking-[0.2em] text-[#FFFFFF] font-semibold transition-all hover:bg-[#C8A96B] hover:text-[#1A110B] shadow-sm"
-                  >
-                    <span>{session.cta}</span>
-                    <span>→</span>
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════
-          05 — ABOUT KUNTI
-          Exact heading, subtitle & bio from client
+          03 — NAMASTE, I AM KUNTI (ABOUT KUNTI)
+          Follows directly after the invocation as specified
           Crisp white & cream text on warm Cacao Profundo
           ═══════════════════════════════════════════ */}
       <section id="about" className="bg-[#4D382A] text-[#F8F5F1] py-24 md:py-36 px-6 relative overflow-hidden">
@@ -269,15 +189,106 @@ export default function Home() {
       </section>
 
       {/* ═══════════════════════════════════════════
-          06 — TRAININGS & CERTIFICATIONS
-          Exact client list & titles
-          High-contrast blue institutions and dark location tags
+          04 — INDIVIDUAL SESSIONS | 1:1 MENTORSHIP
+          Client's exact heading & 3 offerings
+          High-contrast cards, readable description & button
+          ═══════════════════════════════════════════ */}
+      <section id="sessions" className="bg-[#EFE6DB] py-20 md:py-36 px-6">
+        <div className="mx-auto max-w-6xl">
+          <AnimatedSection direction="up" className="text-center space-y-4 mb-16 md:mb-24">
+            <h2 className="font-display text-4xl sm:text-5xl md:text-6xl text-[#261710] font-normal tracking-wide uppercase">
+              Individual Sessions | 1:1 Mentorship
+            </h2>
+            <div className="h-0.5 w-16 bg-[#8C6527] mx-auto" />
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {individualSessions.map((session, index) => (
+              <div
+                key={index}
+                className="group relative flex flex-col justify-between overflow-hidden rounded-[32px] bg-[#F8F5F1] border-2 border-[#D8C8B6] p-8 sm:p-10 transition-all duration-500 hover:border-[#8C6527] hover:shadow-xl hover:-translate-y-1.5"
+              >
+                <div className="relative mb-6 h-56 w-full overflow-hidden rounded-2xl">
+                  <Image
+                    src={session.image}
+                    alt={session.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1A110B]/85 via-transparent to-transparent" />
+                  <span className="absolute bottom-3 left-4 font-display text-2xl font-semibold text-[#FFFFFF] bg-[#1A110B]/70 rounded-xl px-3.5 py-1 backdrop-blur-sm drop-shadow-md">
+                    {session.number}
+                  </span>
+                </div>
+
+                <div className="flex-1 space-y-3">
+                  <h3 className="font-display text-2xl md:text-3xl font-medium uppercase tracking-wide text-[#261710]">
+                    {session.title}
+                  </h3>
+                  <p className="text-[15px] font-normal leading-relaxed text-[#33231A]">
+                    {session.description}
+                  </p>
+                </div>
+
+                <div className="mt-8 pt-4 border-t border-[#D8C8B6]">
+                  <Link
+                    href={session.href}
+                    className="inline-flex items-center gap-2 rounded-full bg-[#33231A] px-6 py-2.5 text-xs uppercase tracking-[0.2em] text-[#FFFFFF] font-semibold transition-all hover:bg-[#C8A96B] hover:text-[#1A110B] shadow-sm"
+                  >
+                    <span>{session.cta}</span>
+                    <span>→</span>
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════
+          05 — 4 PHRASES YOU CAN USE THROUGHOUT THE WEBSITE
+          Identity Anchors in Blanco Ritual (#F8F5F1) with crisp text
+          ═══════════════════════════════════════════ */}
+      <section className="bg-[#EFE6DB] py-20 md:py-32 px-6 border-b border-[#C8A96B]/20">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <p className="text-xs tracking-[0.3em] uppercase text-[#8C6527] font-bold mb-3">
+              Phrases That Sustain Our Identity
+            </p>
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-[#261710] font-normal uppercase tracking-wide">
+              Shakti Lotus
+            </h2>
+            <div className="h-0.5 w-16 bg-[#8C6527] mx-auto mt-4" />
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {sacredPhrases.map((phrase, idx) => (
+              <div
+                key={idx}
+                className="rounded-2xl border-2 border-[#D8C8B6] bg-[#F8F5F1] p-8 text-center shadow-sm transition-all duration-500 hover:border-[#8C6527] hover:shadow-md hover:-translate-y-1 flex flex-col items-center justify-center min-h-[160px]"
+              >
+                <SacredIcon
+                  type="lotus"
+                  className={`mb-4 h-6 w-6 ${idx % 2 === 0 ? "text-[#8C6527]" : "text-[#4D667D]"}`}
+                />
+                <p className="font-display text-xl text-[#261710] font-medium leading-snug">
+                  “{phrase}”
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════
+          06 — TRAININGS & CERTIFICATIONS:
+          Exact client list with bold highlights & lineage
           ═══════════════════════════════════════════ */}
       <section className="bg-[#EFE6DB] py-20 md:py-32 px-6 border-y border-[#C8A96B]/25">
         <div className="mx-auto max-w-5xl">
           <AnimatedSection direction="up" className="text-center space-y-3 mb-16">
             <h2 className="font-display text-4xl sm:text-5xl text-[#261710] font-normal tracking-wide uppercase">
-              TRAININGS & CERTIFICATIONS
+              TRAININGS & CERTIFICATIONS:
             </h2>
             <div className="h-0.5 w-16 bg-[#8C6527] mx-auto" />
           </AnimatedSection>
@@ -289,19 +300,24 @@ export default function Home() {
                 className="py-6 sm:py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 transition-colors hover:bg-[#F8F5F1] px-4 rounded-xl"
               >
                 <div className="space-y-2 md:max-w-2xl">
-                  <h3 className="font-display text-xl sm:text-2xl text-[#261710] font-medium leading-snug">
-                    {item.title}
+                  <h3 className="font-display text-xl sm:text-2xl text-[#261710] font-normal leading-snug">
+                    <strong className="font-semibold text-[#8C6527]">{item.highlight}</strong>
+                    {item.detail && <span> {item.detail}</span>}
+                    {item.institution && (
+                      <span className="italic text-[#2C4A63] text-lg sm:text-xl block sm:inline sm:ml-2">
+                        ({item.institution})
+                      </span>
+                    )}
                   </h3>
-                  <p className="text-xs uppercase tracking-[0.2em] text-[#2C4A63] font-bold">
-                    {item.institution}
-                  </p>
                 </div>
 
-                <div className="md:text-right">
-                  <span className="inline-block rounded-full border-2 border-[#D8C8B6] px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-[#261710] bg-[#FFFFFF] shadow-sm">
-                    {item.location}
-                  </span>
-                </div>
+                {item.location && (
+                  <div className="md:text-right flex-shrink-0">
+                    <span className="inline-block rounded-full border-2 border-[#D8C8B6] px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-[#261710] bg-[#FFFFFF] shadow-sm">
+                      {item.location}
+                    </span>
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -311,7 +327,6 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           07 — WORK WITH ME
           Exact client heading, intro, 8 offerings & closing sentence
-          Strong contrast overlays and clear text
           ═══════════════════════════════════════════ */}
       <section id="spaces" className="bg-[#EFE6DB] py-20 md:py-36 px-6">
         <div className="mx-auto max-w-6xl">
@@ -320,12 +335,12 @@ export default function Home() {
               WORK WITH ME
             </h2>
             <div className="h-0.5 w-16 bg-[#8C6527] mx-auto" />
-            <p className="text-base md:text-lg font-normal text-[#33231A] max-w-2xl mx-auto leading-relaxed">
-              Spaces to remember, heal, and awaken your creative energy through the union of mind, body, and soul, allowing us to awaken our consciousness and liberate the spirit.
+            <p className="text-base md:text-lg font-normal text-[#33231A] max-w-3xl mx-auto leading-relaxed">
+              {brand.workWithMeIntro}
             </p>
           </AnimatedSection>
 
-          {/* 8 Offerings Grid */}
+          {/* 8 Offerings Grid with Photos */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {workWithMeSpaces.map((space, index) => (
               <Link
@@ -357,7 +372,7 @@ export default function Home() {
           <div className="mt-20 rounded-3xl bg-[#F8F5F1] border-2 border-[#D8C8B6] p-8 sm:p-12 text-center max-w-3xl mx-auto shadow-sm">
             <SacredIcon type="lotus" className="mx-auto mb-4 h-7 w-7 text-[#8C6527]" />
             <p className="font-display text-xl sm:text-2xl text-[#261710] font-normal italic leading-relaxed">
-              “I accompany you to awaken your creative energy and reconnect with your inner wisdom through the path of self-exploration and self-knowledge.”
+              “{brand.workWithMeClosing}”
             </p>
           </div>
         </div>
@@ -365,7 +380,7 @@ export default function Home() {
 
       {/* ═══════════════════════════════════════════
           08 — FINAL PHRASE (CLIENT CLOSING)
-          Full-bleed image with strong dark overlay so text is 100% visible
+          Full-bleed image with strong dark overlay
           ═══════════════════════════════════════════ */}
       <section className="relative min-h-[70vh] py-28 overflow-hidden flex items-center justify-center">
         <Image
