@@ -41,7 +41,8 @@ export const individualSessions = [
       "Spaces to activate your creative energy, heal your bond with the feminine, and inhabit your body with presence.",
     cta: "Explore Rituals",
     href: "/rituals-sessions",
-    image: "/media/gallery/IMG_0596.jpg",
+    image: "/media/gallery/IMG_9749.jpg",
+    imagePosition: "object-[center_30%]",
   },
   {
     number: "02",
@@ -51,6 +52,7 @@ export const individualSessions = [
     cta: "Explore Integration",
     href: "/rituals-sessions",
     image: "/media/gallery/IMG_5374.jpg",
+    imagePosition: "object-[center_20%]",
   },
   {
     number: "03",
@@ -60,6 +62,7 @@ export const individualSessions = [
     cta: "Explore Mentorship",
     href: "/rituals-sessions",
     image: "/media/gallery/IMG_1873.jpg",
+    imagePosition: "object-[center_40%]",
   },
 ];
 
@@ -116,14 +119,14 @@ export const certifications: Certification[] = [
 ];
 
 export const workWithMeSpaces = [
-  { name: "SHAKTA TANTRA", href: "/rituals-sessions", image: "/media/gallery/IMG_0596.jpg" },
-  { name: "DEVI YOGA", href: "/rituals-sessions", image: "/media/gallery/IMG_5374.jpg" },
-  { name: "AYURVEDA", href: "/work-with-me", image: "/media/gallery/IMG_3600.jpg" },
-  { name: "DIVINE DANCE", href: "/rituals-sessions", image: "/media/gallery/IMG_9749.jpg" },
-  { name: "SACRED JEWELRY", href: "/sacred-jewelry", image: "/media/gallery/IMG_2222.jpg" },
-  { name: "ALCHEMY AND BOTANICALS", href: "/work-with-me", image: "/media/gallery/IMG_6693.jpg" },
-  { name: "RITUALS AND ALTARS", href: "/rituals-sessions", image: "/media/gallery/IMG_0593.jpg" },
-  { name: "RETREATS AND COURSES", href: "/retreats", image: "/media/gallery/IMG_1873.jpg" },
+  { name: "SHAKTA TANTRA", href: "/rituals-sessions", image: "/media/gallery/IMG_2222.jpg", imagePosition: "object-[center_45%]" },
+  { name: "DEVI YOGA", href: "/rituals-sessions", image: "/media/gallery/IMG_1873.jpg", imagePosition: "object-[center_35%]" },
+  { name: "AYURVEDA", href: "/work-with-me", image: "/media/gallery/IMG_3600.jpg", imagePosition: "object-center" },
+  { name: "DIVINE DANCE", href: "/rituals-sessions", image: "/media/gallery/IMG_5374.jpg", imagePosition: "object-[center_20%]" },
+  { name: "SACRED JEWELRY", href: "/sacred-jewelry", image: "/media/gallery/IMG_6693.jpg", imagePosition: "object-[center_30%]" },
+  { name: "ALCHEMY AND BOTANICALS", href: "/work-with-me", image: "/images/kunti/sacred-tree.jpg", imagePosition: "object-center" },
+  { name: "RITUALS AND ALTARS", href: "/rituals-sessions", image: "/media/gallery/IMG_9749.jpg", imagePosition: "object-[center_30%]" },
+  { name: "RETREATS AND COURSES", href: "/retreats", image: "/images/kunti/mountain-lake-prayer.jpg", imagePosition: "object-[center_25%]" },
 ];
 
 export const offerings = [
@@ -150,28 +153,32 @@ export const homepageExperiences = [
     description: "Spaces to activate your creative energy, heal your bond with the feminine, and inhabit your body with presence.",
     cta: "EXPLORE RITUALS →",
     href: "/rituals-sessions",
-    image: "/media/gallery/IMG_0596.jpg",
+    image: "/media/gallery/IMG_9749.jpg",
+    imagePosition: "object-[center_30%]",
   },
   {
     title: "1:1 MENTORSHIP",
     description: "Deep support to reconnect with your energy, release blockages, and return to your center.",
     cta: "EXPLORE MENTORSHIP →",
     href: "/rituals-sessions",
-    image: "/media/gallery/IMG_5374.jpg",
+    image: "/media/gallery/IMG_2222.jpg",
+    imagePosition: "object-[center_40%]",
   },
   {
     title: "RETREATS",
     description: "Spaces to remember, heal, and awaken your creative energy through the union of mind, body, and soul.",
     cta: "EXPLORE RETREATS →",
     href: "/retreats",
-    image: "/media/gallery/IMG_1873.jpg",
+    image: "/images/kunti/mountain-lake-prayer.jpg",
+    imagePosition: "object-[center_25%]",
   },
   {
     title: "SACRED JEWELRY",
     description: "Objects created with intention, symbolism, and connection to your universal divine essence.",
     cta: "DISCOVER THE JEWELRY →",
     href: "/sacred-jewelry",
-    image: "/media/gallery/IMG_2222.jpg",
+    image: "/media/gallery/IMG_6693.jpg",
+    imagePosition: "object-[center_30%]",
   },
 ];
 

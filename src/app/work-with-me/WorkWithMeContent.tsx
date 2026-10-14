@@ -49,6 +49,7 @@ export default function WorkWithMeContent() {
                 alt="Kunti at a vivid red temple doorway"
                 variant="circle"
                 className="aspect-square w-full"
+                imageClassName="object-cover object-[center_25%]"
               />
             </div>
           </AnimatedSection>
@@ -115,9 +116,10 @@ export default function WorkWithMeContent() {
             <EditorialImage
               src={photos.gardenPortrait}
               alt="Kunti in a garden portrait"
-              variant="organic-1"
+              variant="rounded"
               withBorder
               className="aspect-[4/5] w-full"
+              imageClassName="object-cover object-[center_20%]"
             />
           </AnimatedSection>
           <AnimatedSection className="flex flex-col justify-center rounded-3xl border-2 border-[#D8C8B6] bg-[#F8F5F1] p-8 shadow-sm backdrop-blur-md md:p-12 lg:col-span-2">

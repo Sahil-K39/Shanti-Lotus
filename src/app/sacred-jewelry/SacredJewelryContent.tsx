@@ -48,11 +48,12 @@ export default function SacredJewelryContent() {
         <div className="mx-auto grid max-w-[1200px] gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <AnimatedSection direction="left">
             <EditorialImage
-              src={photos.redTempleDoor}
-              alt="Kunti at a vivid red temple doorway with sacred adornments"
-              variant="organic-1"
+              src="/media/gallery/IMG_6693.jpg"
+              alt="Handcrafted Sacred Scarab Talisman Necklace - Shakti Lotus"
+              variant="rounded"
               withBorder
               className="aspect-[4/5] w-full"
+              imageClassName="object-cover object-[center_35%]"
             />
           </AnimatedSection>
           <AnimatedSection direction="right" className="space-y-6">

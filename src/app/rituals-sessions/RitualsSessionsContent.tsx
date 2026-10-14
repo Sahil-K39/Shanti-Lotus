@@ -91,9 +91,10 @@ export default function RitualsSessionsContent() {
             <EditorialImage
               src={photos.waterfallPrayer}
               alt="Waterfall prayer ritual field"
-              variant="organic-2"
+              variant="rounded"
               withBorder
               className="aspect-[4/5] w-full"
+              imageClassName="object-cover object-[center_20%]"
             />
           </AnimatedSection>
         </div>

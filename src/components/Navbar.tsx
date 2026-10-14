@@ -93,7 +93,7 @@ export default function Navbar() {
                     fill
                     priority
                     sizes="52px"
-                    className="object-cover p-0.5 rounded-full"
+                    className="object-contain p-1 rounded-full"
                   />
                 </div>
                 <div className="flex flex-col text-left">
@@ -196,7 +196,7 @@ export default function Navbar() {
                   alt="Shakti Lotus"
                   fill
                   sizes="64px"
-                  className="object-cover p-1 rounded-full"
+                  className="object-contain p-1 rounded-full"
                 />
               </div>
 

@@ -69,9 +69,10 @@ const philosophyPillars = [
             <EditorialImage
               src={photos.ancestralLineage}
               alt="Kunti holding ancestral sacred wisdom"
-              variant="organic-1"
+              variant="rounded"
               withBorder
-              className="aspect-[3/4] w-full"
+              className="aspect-[4/5] w-full"
+              imageClassName="object-cover object-[center_20%]"
             />
           </AnimatedSection>
 
@@ -193,9 +194,10 @@ const philosophyPillars = [
             <EditorialImage
               src={photos.roseMeditation}
               alt="Rose meditation and devotional presence"
-              variant="organic-2"
+              variant="rounded"
               withBorder
-              className="aspect-[4/3] w-full"
+              className="aspect-square w-full"
+              imageClassName="object-cover object-[center_20%]"
             />
           </AnimatedSection>
         </div>

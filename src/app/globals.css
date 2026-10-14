@@ -253,20 +253,16 @@ button {
 
 /* Image masks */
 .pebble-mask {
-  border-radius: 42% 58% 62% 38% / 44% 48% 52% 56%;
-  transition: border-radius 1.2s ease, transform 1.2s ease;
-}
-
-.pebble-mask:hover {
-  border-radius: 55% 45% 38% 62% / 50% 58% 42% 50%;
+  border-radius: 36px;
+  transition: transform 0.6s ease;
 }
 
 .organic-mask-1 {
-  border-radius: 58% 42% 52% 48% / 42% 52% 48% 58%;
+  border-radius: 32px;
 }
 
 .organic-mask-2 {
-  border-radius: 44% 56% 40% 60% / 56% 44% 60% 40%;
+  border-radius: 32px;
 }
 
 .editorial-border {

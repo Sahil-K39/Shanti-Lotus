@@ -29,9 +29,10 @@ export default function AboutContent() {
             <EditorialImage
               src={photos.mainPhoto}
               alt="Kunti honoring ancestral lineage"
-              variant="organic-1"
+              variant="rounded"
               withBorder
-              className="aspect-[3/4] w-full"
+              className="aspect-[4/5] w-full"
+              imageClassName="object-cover object-[center_top]"
             />
           </AnimatedSection>
           <AnimatedSection direction="right" className="bg-[#F8F5F1] p-8 md:p-12 shadow-md border-2 border-[#D8C8B6] rounded-3xl">

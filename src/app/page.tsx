@@ -33,7 +33,7 @@ export default function Home() {
             priority
             quality={100}
             unoptimized
-            className="object-cover object-[65%_10%] md:object-[65%_10%]"
+            className="object-cover object-[center_top] md:object-[45%_2%]"
           />
         </div>
 
@@ -115,18 +115,18 @@ export default function Home() {
             {/* Arched Portrait Column */}
             <div className="lg:col-span-5 order-2 lg:order-1">
               <div className="relative mx-auto max-w-md">
-                <div className="relative aspect-[3/4] w-full overflow-hidden rounded-t-[180px] rounded-b-3xl border-2 border-[#D8C8B6] shadow-2xl">
+                <div className="relative aspect-square w-full overflow-hidden rounded-3xl border-2 border-[#D8C8B6] shadow-2xl bg-[#3D2C20]">
                   <Image
                     src={photos.roseMeditation}
                     alt="Kunti - Tantric Yogini"
                     fill
                     quality={95}
-                    className="object-cover"
+                    className="object-cover object-[center_20%]"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1A110B]/90 via-transparent to-transparent" />
-                  <div className="absolute bottom-6 inset-x-0 text-center px-4">
-                    <p className="font-display text-3xl text-[#FFFFFF] font-normal drop-shadow-md">Kunti</p>
-                    <p className="text-xs tracking-[0.3em] uppercase text-[#E2C98F] font-bold drop-shadow-md">Tantric Yogini</p>
+                  <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#1A110B]/85 to-transparent pointer-events-none" />
+                  <div className="absolute bottom-5 inset-x-0 text-center px-4">
+                    <p className="font-display text-2xl sm:text-3xl text-[#FFFFFF] font-normal drop-shadow-md">Kunti</p>
+                    <p className="text-[11px] sm:text-xs tracking-[0.3em] uppercase text-[#E2C98F] font-bold drop-shadow-md">Tantric Yogini</p>
                   </div>
                 </div>
               </div>
@@ -200,12 +200,12 @@ export default function Home() {
                 key={index}
                 className="group relative flex flex-col justify-between overflow-hidden rounded-[32px] bg-[#F8F5F1] border-2 border-[#D8C8B6] p-8 sm:p-10 transition-all duration-500 hover:border-[#8C6527] hover:shadow-xl hover:-translate-y-1.5"
               >
-                <div className="relative mb-6 h-56 w-full overflow-hidden rounded-2xl">
+                <div className="relative mb-6 aspect-[4/3] w-full overflow-hidden rounded-2xl bg-[#EFE6DB]">
                   <Image
                     src={session.image}
                     alt={session.title}
                     fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    className={`object-cover ${session.imagePosition || "object-center"} transition-transform duration-700 group-hover:scale-105`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1A110B]/85 via-transparent to-transparent" />
                   <span className="absolute bottom-3 left-4 font-display text-2xl font-semibold text-[#FFFFFF] bg-[#1A110B]/70 rounded-xl px-3.5 py-1 backdrop-blur-sm drop-shadow-md">
@@ -344,7 +344,7 @@ export default function Home() {
                   src={space.image}
                   alt={space.name}
                   fill
-                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-110 opacity-90 group-hover:opacity-100"
+                  className={`object-cover ${space.imagePosition || "object-center"} transition-transform duration-700 ease-out group-hover:scale-110 opacity-90 group-hover:opacity-100`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1A110B]/95 via-[#1A110B]/35 to-transparent" />
                 <div className="absolute bottom-6 inset-x-6">
@@ -380,7 +380,7 @@ export default function Home() {
           alt="Shakti Lotus"
           fill
           quality={95}
-          className="object-cover"
+          className="object-cover object-[center_30%]"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#1A110B]/95 via-[#1A110B]/80 to-[#1A110B]/60" />
         <div className="relative z-10 text-center px-6 max-w-4xl">

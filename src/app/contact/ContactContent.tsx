@@ -105,7 +105,7 @@ export default function ContactContent() {
                 src={photos.gardenPortrait}
                 alt="Kunti garden portrait"
                 variant="rounded"
-                imageClassName="brightness-[0.98] saturate-[0.95]"
+                imageClassName="brightness-[0.98] saturate-[0.95] object-cover object-[center_20%]"
                 className="aspect-[4/3] w-full"
               />
             </div>

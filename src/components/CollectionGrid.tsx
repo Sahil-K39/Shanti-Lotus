@@ -28,7 +28,7 @@ export default function CollectionGrid() {
                 fill
                 quality={95}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                className="object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-[1.04]"
+                className={`object-cover ${item.imagePosition || "object-center"} transition-transform duration-[1.5s] ease-out group-hover:scale-[1.04]`}
               />
             </Link>
             

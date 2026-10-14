@@ -26,9 +26,9 @@ export default function EditorialImage({
   const [imgError, setImgError] = useState(false);
 
   const maskClass = 
-    variant === "pebble" ? "pebble-mask" :
-    variant === "organic-1" ? "organic-mask-1" :
-    variant === "organic-2" ? "organic-mask-2" :
+    variant === "pebble" ? "rounded-[36px]" :
+    variant === "organic-1" ? "rounded-[32px]" :
+    variant === "organic-2" ? "rounded-[32px]" :
     variant === "rounded" ? "rounded-[32px]" :
     variant === "circle" ? "rounded-full" :
     "rounded-none";
