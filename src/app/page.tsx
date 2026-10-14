@@ -43,14 +43,6 @@ export default function Home() {
         {/* Hero Content */}
         <div className="relative z-10 mx-auto max-w-4xl px-6 text-center text-[#FFFFFF]">
           <AnimatedSection direction="up" className="space-y-4 sm:space-y-6">
-            <div className="inline-flex flex-col items-center gap-2">
-              <div className="inline-flex items-center gap-2 rounded-full bg-[#1A110B]/80 backdrop-blur-md px-6 py-2 border border-[#C8A96B]/60 shadow-xl">
-                <span className="text-xs sm:text-[13px] uppercase tracking-[0.3em] text-[#F8F5F1] font-semibold">
-                  South America · Asia
-                </span>
-              </div>
-              <div className="h-0.5 w-20 bg-[#C8A96B]" />
-            </div>
 
             <h1 className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl uppercase tracking-[0.16em] font-normal leading-none text-[#FFFFFF] drop-shadow-[0_4px_30px_rgba(0,0,0,0.85)]">
               Shakti Lotus
